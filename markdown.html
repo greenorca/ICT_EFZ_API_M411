@@ -22,7 +22,10 @@
 </header>
 <nav id="TOC">
 <ul>
-<li><a href="#willkommen-zurück-bei-in-java"><span class="toc-section-number">1</span> Willkommen (zurück) bei in Java</a></li>
+<li><a href="#willkommen-zurück-bei-in-java"><span class="toc-section-number">1</span> Willkommen (zurück) bei in Java</a><ul>
+<li><a href="#handlungsziele-nach-ict-vorgaben-bivo-2014"><span class="toc-section-number">1.1</span> Handlungsziele nach ICT-Vorgaben (BiVo 2014)</a></li>
+<li><a href="#kursablauf"><span class="toc-section-number">1.2</span> Kursablauf</a></li>
+</ul></li>
 <li><a href="#klassen-erstellen"><span class="toc-section-number">2</span> Klassen erstellen</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">2.1</span> Lernziele</a></li>
 <li><a href="#die-main-methode"><span class="toc-section-number">2.2</span> Die main-Methode</a></li>
@@ -35,13 +38,8 @@
 </ul></li>
 <li><a href="#strukturiere-daten-lesen-und-schreiben"><span class="toc-section-number">4</span> Strukturiere Daten lesen und schreiben</a><ul>
 <li><a href="#lernziele-1"><span class="toc-section-number">4.1</span> Lernziele</a></li>
-<li><a href="#bufferedreader"><span class="toc-section-number">4.2</span> BufferedReader</a><ul>
-<li><a href="#erstellen-eines-bufferedreader"><span class="toc-section-number">4.2.1</span> Erstellen eines BufferedReader</a></li>
-<li><a href="#buffered-reader-oder-scanner"><span class="toc-section-number">4.2.2</span> Buffered Reader oder Scanner?</a></li>
-</ul></li>
-<li><a href="#strukturierte-textfiles"><span class="toc-section-number">4.3</span> Strukturierte Textfiles</a><ul>
-<li><a href="#nummerische-werte-behandeln"><span class="toc-section-number">4.3.1</span> Nummerische Werte behandeln</a></li>
-</ul></li>
+<li><a href="#bufferedreader"><span class="toc-section-number">4.2</span> BufferedReader</a></li>
+<li><a href="#strukturierte-textfiles"><span class="toc-section-number">4.3</span> Strukturierte Textfiles</a></li>
 <li><a href="#übung-textfiles"><span class="toc-section-number">4.4</span> Übung: Textfiles</a></li>
 <li><a href="#daten-strukturiert-in-ein-file-schreiben"><span class="toc-section-number">4.5</span> Daten strukturiert in ein File schreiben</a></li>
 <li><a href="#übung-csv-schreiben-todo-überarbeiten"><span class="toc-section-number">4.6</span> Übung: CSV schreiben (todo überarbeiten)</a></li>
@@ -50,76 +48,33 @@
 <li><a href="#arrays"><span class="toc-section-number">5</span> Arrays</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">5.1</span> Lernziele</a></li>
 <li><a href="#was-haben-algorithmen-und-datenstrukturen-miteinander-zu-tun"><span class="toc-section-number">5.2</span> Was haben Algorithmen und Datenstrukturen miteinander zu tun?</a></li>
-<li><a href="#die-elementare-datenstruktur-array"><span class="toc-section-number">5.3</span> Die elementare Datenstruktur: Array</a><ul>
-<li><a href="#initialisierung-und-zugriff-via-index"><span class="toc-section-number">5.3.1</span> Initialisierung und Zugriff via Index</a></li>
-<li><a href="#praktische-anwendung-von-arrays"><span class="toc-section-number">5.3.2</span> Praktische Anwendung von Arrays</a></li>
-<li><a href="#kopieren-vs.-aliasing"><span class="toc-section-number">5.3.3</span> Kopieren vs. Aliasing</a></li>
-<li><a href="#array-boundaries"><span class="toc-section-number">5.3.4</span> Array Boundaries</a></li>
-<li><a href="#benutzereingabe-über-konsole-oder-gui"><span class="toc-section-number">5.3.5</span> Benutzereingabe über Konsole oder GUI</a></li>
-</ul></li>
-<li><a href="#übung-elementare-array---funktionalität"><span class="toc-section-number">5.4</span> Übung: Elementare Array - Funktionalität</a><ul>
-<li><a href="#minimum-und-maximum-in-einem-array-suchen"><span class="toc-section-number">5.4.1</span> Minimum und Maximum in einem Array suchen</a></li>
-<li><a href="#arrays-addieren"><span class="toc-section-number">5.4.2</span> Arrays addieren</a></li>
-<li><a href="#elemente-nachrutschen"><span class="toc-section-number">5.4.3</span> Elemente nachrutschen</a></li>
-</ul></li>
+<li><a href="#die-elementare-datenstruktur-array"><span class="toc-section-number">5.3</span> Die elementare Datenstruktur: Array</a></li>
+<li><a href="#übung-elementare-array---funktionalität"><span class="toc-section-number">5.4</span> Übung: Elementare Array - Funktionalität</a></li>
 <li><a href="#wdh_array"><span class="toc-section-number">5.5</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#elementare-algorithmen-und-laufzeit-analysen"><span class="toc-section-number">6</span> Elementare Algorithmen und Laufzeit-Analysen</a><ul>
-<li><a href="#der-bubble-sort-algorithmus"><span class="toc-section-number">6.1</span> Der Bubble-Sort Algorithmus</a><ul>
-<li><a href="#bubble-sort-manuell-durchspielen"><span class="toc-section-number">6.1.1</span> Bubble-Sort manuell durchspielen</a></li>
-</ul></li>
-<li><a href="#laufzeitanalyse"><span class="toc-section-number">6.2</span> Laufzeitanalyse</a><ul>
-<li><a href="#anzahl-vergleichsoperationen"><span class="toc-section-number">6.2.1</span> Anzahl Vergleichsoperationen</a></li>
-<li><a href="#aufwand-im-besten-und-im-schlechtesten-fall"><span class="toc-section-number">6.2.2</span> Aufwand im besten und im schlechtesten Fall</a></li>
-<li><a href="#übung-bubblesort-implementieren-und-laufzeit-analysieren"><span class="toc-section-number">6.2.3</span> Übung: BubbleSort implementieren und Laufzeit analysieren</a></li>
-<li><a href="#komplexitätsklassen-von-algorithmen"><span class="toc-section-number">6.2.4</span> Komplexitätsklassen von Algorithmen</a></li>
-<li><a href="#übung-laufzeitkomplexität-von-algorithmen-bestimmen"><span class="toc-section-number">6.2.5</span> Übung: Laufzeitkomplexität von Algorithmen bestimmen</a></li>
-</ul></li>
-<li><a href="#übung-weiterführende-aufgaben-mit-bubble-sort"><span class="toc-section-number">6.3</span> Übung: Weiterführende Aufgaben mit Bubble-Sort</a><ul>
-<li><a href="#strings-sortieren"><span class="toc-section-number">6.3.1</span> Strings sortieren</a></li>
-<li><a href="#array-einer-benutzerdefinierten-klasse-sortieren"><span class="toc-section-number">6.3.2</span> Array einer benutzerdefinierten Klasse sortieren</a></li>
-</ul></li>
-<li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort"><span class="toc-section-number">6.4</span> Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a><ul>
-<li><a href="#optional-quick-sort"><span class="toc-section-number">6.4.1</span> Optional: Quick-Sort</a></li>
-<li><a href="#optional-insert-sort"><span class="toc-section-number">6.4.2</span> Optional: Insert-Sort</a></li>
-</ul></li>
+<li><a href="#der-bubble-sort-algorithmus"><span class="toc-section-number">6.1</span> Der Bubble-Sort Algorithmus</a></li>
+<li><a href="#laufzeitanalyse"><span class="toc-section-number">6.2</span> Laufzeitanalyse</a></li>
+<li><a href="#übung-weiterführende-aufgaben-mit-bubble-sort"><span class="toc-section-number">6.3</span> Übung: Weiterführende Aufgaben mit Bubble-Sort</a></li>
+<li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort"><span class="toc-section-number">6.4</span> Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a></li>
 <li><a href="#wdh_funkomplex"><span class="toc-section-number">6.5</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-verkettete-liste"><span class="toc-section-number">7</span> Dynamische Datenstrukturen: Verkettete Liste</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">7.1</span> Lernziele:</a></li>
-<li><a href="#eine-elementare-datenstruktur-verkettete-liste"><span class="toc-section-number">7.2</span> Eine elementare Datenstruktur: Verkettete Liste</a><ul>
-<li><a href="#implementierung"><span class="toc-section-number">7.2.1</span> Implementierung</a></li>
-</ul></li>
-<li><a href="#die-mylinkedlist---klasse"><span class="toc-section-number">7.3</span> Die MyLinkedList - Klasse</a><ul>
-<li><a href="#elemente-hinzufügen"><span class="toc-section-number">7.3.1</span> Elemente hinzufügen:</a></li>
-</ul></li>
-<li><a href="#übungen-verkettete-liste"><span class="toc-section-number">7.4</span> Übungen: Verkettete Liste</a><ul>
-<li><a href="#eigene-verkettete-liste-implementieren"><span class="toc-section-number">7.4.1</span> Eigene verkettete Liste implementieren</a></li>
-<li><a href="#elemente-entfernen"><span class="toc-section-number">7.4.2</span> Elemente entfernen</a></li>
-</ul></li>
+<li><a href="#eine-elementare-datenstruktur-verkettete-liste"><span class="toc-section-number">7.2</span> Eine elementare Datenstruktur: Verkettete Liste</a></li>
+<li><a href="#die-mylinkedlist---klasse"><span class="toc-section-number">7.3</span> Die MyLinkedList - Klasse</a></li>
+<li><a href="#übungen-verkettete-liste"><span class="toc-section-number">7.4</span> Übungen: Verkettete Liste</a></li>
 <li><a href="#verkettete-liste-vs.-array"><span class="toc-section-number">7.5</span> Verkettete Liste vs. Array</a></li>
-<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo"><span class="toc-section-number">7.6</span> Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a><ul>
-<li><a href="#verkettete-liste-sortieren-und-laufzeit-messen"><span class="toc-section-number">7.6.1</span> Verkettete Liste sortieren und Laufzeit messen</a></li>
-<li><a href="#verkettete-liste-umkehren"><span class="toc-section-number">7.6.2</span> Verkettete Liste umkehren</a></li>
-</ul></li>
+<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo"><span class="toc-section-number">7.6</span> Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a></li>
 <li><a href="#wdh_vk"><span class="toc-section-number">7.7</span> Wiederholungsfragen (TODO)</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-ii-stacks-und-queues"><span class="toc-section-number">8</span> Dynamische Datenstrukturen II: Stacks und Queues</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">8.1</span> Lernziele:</a></li>
 <li><a href="#die-verkettete-liste-als-stapel-speicher"><span class="toc-section-number">8.2</span> Die verkettete Liste als Stapel-Speicher</a></li>
-<li><a href="#übungen-stack-implementieren"><span class="toc-section-number">8.3</span> Übungen: Stack implementieren</a><ul>
-<li><a href="#stack-klasse-erstellen"><span class="toc-section-number">8.3.1</span> Stack Klasse erstellen</a></li>
-<li><a href="#stack-testen-und-elemente-ausgeben"><span class="toc-section-number">8.3.2</span> Stack testen und Elemente ausgeben</a></li>
-<li><a href="#isempty-methode-implementieren"><span class="toc-section-number">8.3.3</span> <code>isEmpty()</code>-Methode implementieren</a></li>
-<li><a href="#stack-ergänzen"><span class="toc-section-number">8.3.4</span> Stack ergänzen</a></li>
-<li><a href="#palindrome-prüfen"><span class="toc-section-number">8.3.5</span> Palindrome prüfen</a></li>
-</ul></li>
+<li><a href="#übungen-stack-implementieren"><span class="toc-section-number">8.3</span> Übungen: Stack implementieren</a></li>
 <li><a href="#die-verkettete-liste-als-warteschlange"><span class="toc-section-number">8.4</span> Die Verkettete Liste als Warteschlange</a></li>
 <li><a href="#verwendung-von-iterator-anstelle-von-for--oder-while-schleifen"><span class="toc-section-number">8.5</span> Verwendung von <code>Iterator</code> anstelle von <code>for</code>- oder <code>while</code>-Schleifen</a></li>
-<li><a href="#übung-arbeiten-mit-iteratoren"><span class="toc-section-number">8.6</span> Übung: Arbeiten mit Iteratoren</a><ul>
-<li><a href="#methode-next-implementieren"><span class="toc-section-number">8.6.1</span> Methode <code>next()</code> implementieren</a></li>
-<li><a href="#array-umgekehrt-ausgeben-mit-verwendung-von-iterator"><span class="toc-section-number">8.6.2</span> Array umgekehrt ausgeben mit Verwendung von <code>Iterator</code></a></li>
-</ul></li>
+<li><a href="#übung-arbeiten-mit-iteratoren"><span class="toc-section-number">8.6</span> Übung: Arbeiten mit Iteratoren</a></li>
 <li><a href="#wdh_stack_queue"><span class="toc-section-number">8.7</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-iii-java-collections"><span class="toc-section-number">9</span> Dynamische Datenstrukturen III: Java Collections</a><ul>
@@ -128,47 +83,21 @@
 <li><a href="#die-schnittstellen-collection-und-list"><span class="toc-section-number">9.3</span> Die Schnittstellen Collection und List</a></li>
 <li><a href="#implementierung-der-schnittstellen-in-klassen-des-java.util-pakets"><span class="toc-section-number">9.4</span> Implementierung der Schnittstellen in Klassen des <code>java.util</code> Pakets</a></li>
 <li><a href="#die-foreach-schleife-mit-collections"><span class="toc-section-number">9.5</span> Die <code>foreach</code>-Schleife mit Collections</a></li>
-<li><a href="#lambda-funktionen"><span class="toc-section-number">9.6</span> Lambda-Funktionen</a><ul>
-<li><a href="#sortieren-von-arraylist"><span class="toc-section-number">9.6.1</span> Sortieren von ArrayList</a></li>
-<li><a href="#listen-mit-lambda-ausdrücken-filtern"><span class="toc-section-number">9.6.2</span> Listen mit Lambda-Ausdrücken filtern</a></li>
-</ul></li>
-<li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken"><span class="toc-section-number">9.7</span> Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a><ul>
-<li><a href="#liste-von-zufallszahlen-sortieren"><span class="toc-section-number">9.7.1</span> Liste von Zufallszahlen sortieren</a></li>
-<li><a href="#flughafen-liste-implementieren"><span class="toc-section-number">9.7.2</span> Flughafen-Liste implementieren</a></li>
-</ul></li>
+<li><a href="#lambda-funktionen"><span class="toc-section-number">9.6</span> Lambda-Funktionen</a></li>
+<li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken"><span class="toc-section-number">9.7</span> Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a></li>
 <li><a href="#die-map-datenstruktur"><span class="toc-section-number">9.8</span> Die <code>Map</code>-Datenstruktur</a></li>
-<li><a href="#übung-anwenden-map-datenstruktur"><span class="toc-section-number">9.9</span> Übung: Anwenden <code>map</code>-Datenstruktur</a><ul>
-<li><a href="#aufgabe-hashmap-kennenlernen"><span class="toc-section-number">9.9.1</span> Aufgabe: <code>HashMap</code> kennenlernen</a></li>
-<li><a href="#zusatz-aufgabe-hashmap-für-grössere-datenmengen-verwenden"><span class="toc-section-number">9.9.2</span> Zusatz-Aufgabe: <code>HashMap</code> für grössere Datenmengen verwenden</a></li>
-<li><a href="#zusatz-aufgabe-tech-support-system-implementieren-todo-rework"><span class="toc-section-number">9.9.3</span> Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)</a></li>
-</ul></li>
+<li><a href="#übung-anwenden-map-datenstruktur"><span class="toc-section-number">9.9</span> Übung: Anwenden <code>map</code>-Datenstruktur</a></li>
 <li><a href="#wdh_javautils"><span class="toc-section-number">9.10</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-iv-xml-und-json"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</a><ul>
-<li><a href="#einführung-in-xml"><span class="toc-section-number">10.1</span> Einführung in XML</a><ul>
-<li><a href="#aufbau"><span class="toc-section-number">10.1.1</span> Aufbau</a></li>
-<li><a href="#xml-parser"><span class="toc-section-number">10.1.2</span> XML Parser</a></li>
-<li><a href="#aufgabe-aus-xml-ein-dom-erstellen"><span class="toc-section-number">10.1.3</span> Aufgabe: Aus XML ein DOM erstellen</a></li>
-<li><a href="#xml-webservices-nutzen"><span class="toc-section-number">10.1.4</span> XML – Webservices nutzen</a></li>
-</ul></li>
-<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.2</span> Die Datenstruktur JSON</a><ul>
-<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.2.1</span> JSON mit Java parsen</a></li>
-<li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.2.2</span> Übung: Google Web-Service mit JSON verwenden</a></li>
-<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.2.3</span> Generieren und Schreiben von XML und JSON</a></li>
-</ul></li>
+<li><a href="#einführung-in-xml"><span class="toc-section-number">10.1</span> Einführung in XML</a></li>
+<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.2</span> Die Datenstruktur JSON</a></li>
 </ul></li>
 <li><a href="#rekursion-und-backtracking"><span class="toc-section-number">11</span> Rekursion und Backtracking</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">11.1</span> Lernziele:</a></li>
-<li><a href="#rekursion"><span class="toc-section-number">11.2</span> Rekursion</a><ul>
-<li><a href="#rekursion-in-einer-datenstruktur"><span class="toc-section-number">11.2.1</span> Rekursion in einer Datenstruktur</a></li>
-<li><a href="#rekursive-algorithmen"><span class="toc-section-number">11.2.2</span> Rekursive Algorithmen</a></li>
-</ul></li>
+<li><a href="#rekursion"><span class="toc-section-number">11.2</span> Rekursion</a></li>
 <li><a href="#rekursion-vs-iteration"><span class="toc-section-number">11.3</span> Rekursion vs Iteration</a></li>
-<li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden"><span class="toc-section-number">11.4</span> Übung: Rekursive Algorithmen erstellen und anwenden</a><ul>
-<li><a href="#rekursives-durchgehen-aller-files-oder-elemente"><span class="toc-section-number">11.4.1</span> Rekursives Durchgehen aller Files oder Elemente</a></li>
-<li><a href="#binäre-suche"><span class="toc-section-number">11.4.2</span> Binäre-Suche</a></li>
-<li><a href="#fortgeschritten-die-türme-von-hanoi"><span class="toc-section-number">11.4.3</span> Fortgeschritten: Die Türme von Hanoi</a></li>
-</ul></li>
+<li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden"><span class="toc-section-number">11.4</span> Übung: Rekursive Algorithmen erstellen und anwenden</a></li>
 <li><a href="#backtracking"><span class="toc-section-number">11.5</span> Backtracking</a></li>
 </ul></li>
 </ul>
@@ -215,6 +144,98 @@ pandoc_title_block
 <p>Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.</p>
 <p>Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgestellt. Sie lernen in ersten Webapplikationsprogrammen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.</p>
 <p><strong>Wichtiger Hinweis:</strong> Programmieren lernt Sie nicht nur vom Zuhören, sondern vom selbstständigen (und häufigen) Anwenden. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!</p>
+<section id="handlungsziele-nach-ict-vorgaben-bivo-2014" class="level2">
+<h2><span class="header-section-number">1.1</span> Handlungsziele nach ICT-Vorgaben (BiVo 2014)</h2>
+<ol type="1">
+<li>Für ein gegebenes Problem eine geeignete Datenstruktur definieren und mit den Mitteln einer Programmiersprache, wie Structs, Referenzen / Zeiger und Arrays umsetzen.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt den Unterschied zwischen Wertevariablen und Referenzvariablen / Zeigervariablen.</li>
+<li>Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.</li>
+<li>Kennt Konzept und Nutzen von verketteten Datenstrukturen.</li>
+<li>Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.</li>
+</ul>
+<ol start="2" type="1">
+<li>Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt eine systematische Vorgehensweise für die Analyse eines Problems.</li>
+<li>Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.</li>
+<li>Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.</li>
+<li>Kennt Notationen um Algorithmen dazustellen wie z.B. Struktogrammen, PAP usw.</li>
+</ul>
+<ol start="3" type="1">
+<li>Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.</li>
+<li>Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).</li>
+<li>Kennt Notationen zur Dokumentation der Speicher- und Zeitkomplexität eines Algorithmus.</li>
+</ul>
+<ol start="4" type="1">
+<li>Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt ein Vorgehen bei der Aufteilung eines komplexen Problems in kleinere Teilprobleme.</li>
+<li>Kennt den Aufbau von iterativen Algorithmen.</li>
+<li>Kennt den Aufbau von rekursiven Algorithmen.</li>
+<li>Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.</li>
+</ul>
+<ol start="5" type="1">
+<li>Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.</li>
+<li>Kennt Eigenschaften von einzelnen abstrakten Datentypen.</li>
+</ul>
+<ol start="6" type="1">
+<li>Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen.<br />
+</li>
+</ol>
+<ul>
+<li>Kennt das Speicherlayout für einen Prozess mit den Bereichen Programmcode, globale Variablen, Stack und Heap.</li>
+<li>Kennt die Anordnung von lokalen Variablen und Parametern in einem Stackframe.</li>
+<li>Kennt die Funktionsweise des Stacks bei einem Funktionsaufruf.</li>
+<li>Kennt die Funktionsweise im Heap bei dynamisch erzeugten Objekten.</li>
+<li>Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.</li>
+</ul>
+</section>
+<section id="kursablauf" class="level2">
+<h2><span class="header-section-number">1.2</span> Kursablauf</h2>
+<p>Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:</p>
+<p><strong>Lektion 1 -4</strong></p>
+<ul>
+<li>einfache Klassen; main Methode</li>
+<li>Eingabe-/Ausgabe für Konsole und Dateien</li>
+</ul>
+<p><strong>Lektion 5 – 10</strong> - Arrays - Sortier-Algorithmen und Laufzeitkomplexität</p>
+<p><strong>Lektion 11 – 16</strong></p>
+<ul>
+<li>Dynamische Datenstrukturen I: Verkettete Liste</li>
+</ul>
+<p><strong>Lektion 17 – 20</strong></p>
+<ul>
+<li>Dynamische Datenstrukturen II</li>
+<li>Stack</li>
+<li>Java Collections</li>
+<li>Iterator</li>
+</ul>
+<p><strong>Lektion 21 – 24</strong></p>
+<p>Miniprojekt</p>
+<p><strong>Lektion 25 – 32</strong></p>
+<ul>
+<li>Weitere Datenstrukturen: HashMap, XML, JSON</li>
+</ul>
+<p><strong>Lektion 33 – 36</strong></p>
+<ul>
+<li>Rekursion und Backtracking</li>
+</ul>
+</section>
 </section>
 <section id="klassen-erstellen" class="level1">
 <h1><span class="header-section-number">2</span> Klassen erstellen</h1>
@@ -1490,14 +1511,27 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <h3><span class="header-section-number">10.1.1</span> Aufbau</h3>
 <p>Wie HTML besteht XML aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen befindet sich der Node-Inhalt.</p>
 <figure>
-<img src="media8/image1.png" width="247" height="176" />
+<img src="media8/image1.png" alt="Schematischer Aufbau eines XLM-Dokuments" /><figcaption>Schematischer Aufbau eines XLM-Dokuments</figcaption>
 </figure>
 <p>Im Gegensatz zu HTML sind die Namen der Nodes nicht von einem Consortium global festgeschrieben, sondern werden für den jeweiligen Anwendungsfall definiert. Wollen wir beispielsweise unsere Liste der Klasse Person als XML abspeichern, könnte das Dokument bzw. als Baumstruktur so aussehen:</p>
-<p>Das ″data″ Node enthält beliebig viele ″person″ Nodes. Diese wiederum enthalten die entsprechenden Klassenattribute und Werte (als Strings). Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte erreicht. Entsprechend können Daten unter anderem via XML zwischen C++, Java, PHP und .NET ausgetauscht werden. Und deshalb ist XML beispielsweise für Webservices so interessant geworden.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;data&gt;
+	&lt;person&gt;
+		&lt;name&gt;Quack&lt;/name&gt;
+		&lt;vorname&gt;Alfred Jodokus&lt;/vorname&gt;
+		&lt;geburtstag&gt;11.11.2011&lt;/geburtstag&gt;
+		&lt;strasse&gt;Narrenstrasse 11&lt;/strasse&gt;
+		&lt;ort&gt;Jeckendorf&lt;/ort&gt;
+		&lt;plz&gt;1111&lt;/plz&gt;
+	&lt;/person&gt;
+	&lt;person&gt;...&lt;/person&gt;
+	&lt;person&gt;...&lt;/person&gt;
+&lt;/data&gt;</code></pre>
+<p>Das <em>data</em>-Node enthält beliebig viele <em>person</em>-Nodes. Diese wiederum enthalten die entsprechenden Klassenattribute und Werte (als Strings). Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte erreicht. Entsprechend können Daten unter anderem via XML zwischen C++, Java, PHP und .NET ausgetauscht werden. Und deshalb ist XML beispielsweise für Webservices so interessant geworden.</p>
 </section>
 <section id="xml-parser" class="level3">
 <h3><span class="header-section-number">10.1.2</span> XML Parser</h3>
-<p>Zur Verarbeitung von XML oder JSON sind entsprechende ″Parser″ notwendig. Parser kommt aus dem Englischen und steht für ″analysieren″. Bei XML gibt es zwei Varianten:</p>
+<p>Zur Verarbeitung von XML oder JSON sind entsprechende &quot;Parser&quot; notwendig. Parser kommt aus dem Englischen und steht für Analysieren. Bei XML gibt es zwei Varianten:</p>
 <table style="width:99%;">
 <colgroup>
 <col style="width: 62%" />
@@ -1516,7 +1550,7 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </tr>
 <tr class="even">
 <td style="text-align: left;">Keine Navigation in der XML-Struktur möglich.</td>
-<td style="text-align: left;">Es kann über die Elemente navigiert werden mit <em>getParent</em>(), <em>getChild</em>(), etc.</td>
+<td style="text-align: left;">Es kann über die Elemente navigiert werden mit <code>getParent()</code>, <code>getChild()</code>, etc.</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sehr handlich, wenn es sich um grössere XML-Daten handelt und nur ein bestimmter Ausschnitt (also ein Element) benötigt wird.</td>
@@ -1536,7 +1570,22 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <section id="aufgabe-aus-xml-ein-dom-erstellen" class="level3">
 <h3><span class="header-section-number">10.1.3</span> Aufgabe: Aus XML ein DOM erstellen</h3>
 <p>Wir wollen den DOM XML-Parser zunächst an einem einfachen Beispiel umsetzen:</p>
-<p>Jedes Element im XML entspricht einem Knoten ( = <em>Node</em>). Somit besteht z.Bsp. der Knoten „CD“ aus den Sub-Knoten „TITLE“, „ARTIST“, etc. Dies entspricht einer Liste von Knoten (= <code>NodeList</code>).</p>
+<pre><code>&lt;?xmlversion=&quot;1.0&quot;encoding=&quot;UTF-8&quot;?&gt;
+&lt;CATALOG&gt;
+	&lt;CD&gt;
+		&lt;TITLE&gt;Greatest Hits&lt;/TITLE&gt;
+		&lt;ARTIST&gt;Elvis&lt;/ARTIST&gt;
+		&lt;COUNTRY&gt;USA&lt;/COUNTRY&gt;
+		&lt;YEAR&gt;1977&lt;/YEAR&gt;
+	&lt;/CD&gt;
+	&lt;CD&gt;
+		&lt;TITLE&gt;Eros&lt;/TITLE&gt;
+		&lt;ARTIST&gt;ErosRamazzotti&lt;/ARTIST&gt;
+		&lt;COUNTRY&gt;EU&lt;/COUNTRY&gt;
+		&lt;YEAR&gt;1997&lt;/YEAR&gt;
+	&lt;/CD&gt;
+&lt;/CATALOG&gt;</code></pre>
+<p>Jedes Element im XML entspricht einem Knoten ( = <em>Node</em>). Somit besteht z.Bsp. der Knoten <em>CD</em> aus den Sub-Knoten <em>TITLE</em>, <em>ARTIST</em>, etc. Dies entspricht einer Liste von Knoten (= <code>NodeList</code>).</p>
 <p>Um XML-Inhalte mit Java zu lesen, müssen einige Bibliotheken eingebunden werden:</p>
 <pre><code>import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -1577,7 +1626,25 @@ public NodeList generateNodeList(String filename){
 <p>Eine Knotenliste wird an einem bestimmten Tag-Element definiert (Punkt 2). Somit hat diese <code>NodeList</code> alle Knoten mit „CD“ und somit auch alle Kinder (children).</p>
 <p>Die Klasse <code>NodeList</code> implementiert das Collection-Interfase nicht. Stattdessen wird mit der NodeList-Methode <code>item(int i)</code> per Index auf die Elemente zugegriffen. Entsprech­end muss man in einer for-Schleife über diese Liste iterieren, um die weiteren Sub-Knoten auszulesen bzw. wiederum einer Liste zuweisen.</p>
 <p>Die Klasse Node bietet über die Funktion <code>String getTextContent()</code> eine einfache Variante, den Inhalt einer Node x (und aller darin enthaltenen Nodes) anzuschauen. Dabei werden die Namen der Kinder-Elemente verworfen und nur deren Text-Inhalte angezeigt:</p>
+<pre><code>NodeList list = generateNodeList(″cd_catalog.xml″);
+	for (int i=0; i &lt;list.getLength(); i++){
+		System.out.println(list.intem(i).getTextContent);
+}</code></pre>
 <p>Will man stattdessen auf den Inhalt bestimmter Kinder-Elemente zugreifen, geht man folgendermassen vor:</p>
+<pre><code>for (int i=0; i &lt; list.getLength(); i++){
+	Node node = list.item(i);
+	if (node.getNodeType()==Node.ELEMENT_NODE){
+			Element e = (Element)node;
+			NodeList titleElements = e.getElementsByTagName(&quot;TITLE&quot;).
+			item(0).getChildNodes();
+			NodeList artistElements = e.getElementsByTagName(&quot;ARTIST&quot;).
+			item(0).getChildNodes();
+
+			System.out.println(&quot;Title: &quot;+titleElements.item(0).getTextContent());
+			System.out.println(&quot;, Artist: &quot;+artistElements.item(0).getTextContent());
+			System.out.println();
+	}
+}</code></pre>
 <p>Durch das Casting der Nodes von <code>list</code> auf das org.w3c.dom – Interface <code>Element e</code> kann man wiederum mit der Methode <code>getElementsbyName(String name)</code> die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.</p>
 <p><strong>Fazit:</strong> Man muss als Entwickler den Aufbau der zu lesenden XML sehr genau kennen. Dann allerdings lassen sich sehr einfach Java-Klassen einlesen oder speichern.</p>
 <section id="aufgabe" class="level4">
@@ -1591,13 +1658,22 @@ public NodeList generateNodeList(String filename){
 <p>Wir wollen von einem Dictionaire-Webservice die Definitionen von einem Begriff holen:</p>
 <p><a href="http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml" class="uri">http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml</a></p>
 <p>Kopieren Sie zunächst diesen Link in Ihren Webbrowser und interpretieren Sie die Antwort des Servers.</p>
-<section id="aufgabe-xml-aus-web-service-in-ein-dom-parsen" class="level4">
-<h4><span class="header-section-number">10.1.4.1</span> Aufgabe: XML aus Web-Service in ein DOM parsen</h4>
 <p>Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:</p>
+<pre><code>String searchWord = &quot;xml&quot;;
+//call web-service and get input stream result:
+URL url = new URL(&quot;http://services.aonaware.com/&quot; +
+		&quot;DictService/DictService.asmx/Define?word=&quot;+ searchWord);
+URLConnection yc = url.openConnection();
+
+//test and show result as String:
+BufferedReader in = newBufferedReader(newInputStreamReader(yc.getInputStream()));
+String inputLine;
+while ((inputLine = in.readLine()) != null) 
+	System.out.println(inputLine);
+	
+in.close();</code></pre>
 <p>Welche Elemente erhalten Sie vom Service?</p>
 <p>Wir wollen nur das Element &quot;WordDefinition&quot; dem Benutzer anzeigen. Wie müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?</p>
-<p>Zeigen Sie Ihre Lösung der Lehrperson.</p>
-</section>
 </section>
 </section>
 <section id="die-datenstruktur-json" class="level2">
@@ -1608,22 +1684,29 @@ public NodeList generateNodeList(String filename){
 	{&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
   ],
 }</code></pre>
-<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt. Die Struktur wirkt übersichtlicher als XML.</p>
+<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
 <section id="json-mit-java-parsen" class="level3">
 <h3><span class="header-section-number">10.2.1</span> JSON mit Java parsen</h3>
 <p>Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf <a href="http://www.json.org">www.json.org</a> vorgeschlagene JSON-Java Bibliothek für Java SE1.8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:</p>
 <p><a href="https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar" class="uri">https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar</a></p>
-<p>Wichtigen Klassen sind <em>JSONObject</em> und <em>JSONArray.</em> Sie werden via import einge­bunden:</p>
+<p>Wichtigen Klassen sind <code>JSONObject</code> und <code>JSONArray</code>. Sie werden mit der <code>import</code> Anweisung einge­bunden:</p>
 <pre><code>import org.json.JSONObject; 
 import org.json.JSONArray;</code></pre>
-<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der JSONObject Klasse sind:</p>
+<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der <code>JSONObject Klasse</code> sind:</p>
 <ul>
-<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen key als JSONArray, wenn man es als solches castet.</p></li>
-<li><p><code>double getDouble(String key):</code> liefert den Attributwert für key als double; entsprechende Methoden sind auch für int und Co implementiert</p></li>
-<li><p><code>JSONObject getJSONObject(String key)</code>: liefert ein Child-Element für key als JSONObject</p></li>
+<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen <em>key</em> als JSONArray, wenn man es als solches castet.</p></li>
+<li><p><code>double getDouble(String key):</code> liefert den Attributwert für key als <code>double</code>; entsprechende Methoden sind auch für <code>int</code> und weitere Datentypen implementiert</p></li>
+<li><p><code>JSONObject getJSONObject(String key)</code>: liefert ein Child-Element für key als <code>JSONObject</code></p></li>
 <li><p><code>Set&lt;String&gt; keys()</code>: liefert die Schlüssel aller enthaltenen Elemente zurück.</p></li>
 </ul>
 <p>Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:</p>
+<pre><code>JSONObject obj = new JSONObject(jsonString);
+obj.keys().forEachRemaining(key -&gt; {
+	System.out.println(key);
+	System.out.println(obj.get(key).toString());
+	System.out.println(&quot;***********************************&quot;);
+	}
+);</code></pre>
 </section>
 <section id="übung-google-web-service-mit-json-verwenden" class="level3">
 <h3><span class="header-section-number">10.2.2</span> Übung: Google Web-Service mit JSON verwenden</h3>
@@ -1631,6 +1714,30 @@ import org.json.JSONArray;</code></pre>
 <p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
 <p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
 <p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
+<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
+	+&quot;Hohlstrasse+535,Zuerich&quot;;
+
+URL googleClient = new URL(url);		
+URLConnection urlc = googleClient.openConnection();
+		
+BufferedReader in = new BufferedReader(
+			new InputStreamReader(urlc.getInputStream()));
+String msg = &quot;&quot;;
+// just reading server response
+while(in.ready()){
+	//System.out.println(line);
+	msg = msg+in.readLine();
+}
+//putting this into a computable JSON format 
+JSONObject obj = new JSONObject(msg);
+//fetch &quot;result&quot; part of JSON obj
+JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
+JSONObject inner = (JSONObject)results.get(0);
+		
+//now get the actual values 
+JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
+System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
+System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
 <section id="zusatzaufgabe-google-api-nutzen" class="level4">
 <h4><span class="header-section-number">10.2.2.1</span> Zusatzaufgabe Google API nutzen</h4>
 <p>Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für private Zwecke mit limitierten Abfragen pro Tag können Sie die API kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.</p>

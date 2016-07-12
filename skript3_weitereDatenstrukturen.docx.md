@@ -24,8 +24,9 @@ Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node
 besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen
 befindet sich der Node-Inhalt.
 
-![](media8/image1.png){width="2.5791666666666666in"
-height="1.8333333333333333in"}
+![Schematischer Aufbau eines XLM-Dokuments](media8/image1.png){}
+
+
 
 Im Gegensatz zu HTML sind die Namen der
 Nodes nicht von einem Consortium global festgeschrieben, sondern werden
@@ -33,7 +34,23 @@ für den jeweiligen Anwendungsfall definiert. Wollen wir beispielsweise
 unsere Liste der Klasse Person als XML abspeichern, könnte das Dokument
 bzw. als Baumstruktur so aussehen:
 
-Das ″data″ Node enthält beliebig viele ″person″ Nodes. Diese wiederum
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<person>
+		<name>Quack</name>
+		<vorname>Alfred Jodokus</vorname>
+		<geburtstag>11.11.2011</geburtstag>
+		<strasse>Narrenstrasse 11</strasse>
+		<ort>Jeckendorf</ort>
+		<plz>1111</plz>
+	</person>
+	<person>...</person>
+	<person>...</person>
+</data>
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Das *data*-Node enthält beliebig viele *person*-Nodes. Diese wiederum
 enthalten die entsprechenden Klassenattribute und Werte (als Strings).
 Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte
 erreicht. Entsprechend können Daten unter anderem via XML zwischen C++,
@@ -42,8 +59,8 @@ beispielsweise für Webservices so interessant geworden.
 
 ###XML Parser
 
-Zur Verarbeitung von XML oder JSON sind entsprechende ″Parser″
-notwendig. Parser kommt aus dem Englischen und steht für ″analysieren″.
+Zur Verarbeitung von XML oder JSON sind entsprechende "Parser"
+notwendig. Parser kommt aus dem Englischen und steht für Analysieren.
 Bei XML gibt es zwei Varianten:
 
   ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -51,7 +68,7 @@ Bei XML gibt es zwei Varianten:
   ------------------------------------------------------------------------------------------------------------------------------------------------------------ ---------------------------------------------------------------------------------------------
   Sehr schnell, da es Ereignis-gesteuert wird. D.h. die Struktur muss zum voraus bekannt sein, um auf die entsprechenden Elemente /Tags reagieren zu können.   Eher langsam, da das gesamte XML als DOM Baum abgebildet wird.
 
-  Keine Navigation in der XML-Struktur möglich.                                                                                                                Es kann über die Elemente navigiert werden mit *getParent*(), *getChild*(), etc.
+  Keine Navigation in der XML-Struktur möglich.                                                                                                                Es kann über die Elemente navigiert werden mit `getParent()`, `getChild()`, etc.
 
   Sehr handlich, wenn es sich um grössere XML-Daten handelt und nur ein bestimmter Ausschnitt (also ein Element) benötigt wird.                                Handlich für kleinere Daten, bzw. wenn das Parsen nicht zu viel Zeit und Speicher benötigt.
                                                                                                                                                                
@@ -65,8 +82,27 @@ Bei XML gibt es zwei Varianten:
 Wir wollen den DOM XML-Parser zunächst an einem einfachen Beispiel
 umsetzen:
 
+~~~~~~~~~~~~~~~~~~~~~~
+<?xmlversion="1.0"encoding="UTF-8"?>
+<CATALOG>
+	<CD>
+		<TITLE>Greatest Hits</TITLE>
+		<ARTIST>Elvis</ARTIST>
+		<COUNTRY>USA</COUNTRY>
+		<YEAR>1977</YEAR>
+	</CD>
+	<CD>
+		<TITLE>Eros</TITLE>
+		<ARTIST>ErosRamazzotti</ARTIST>
+		<COUNTRY>EU</COUNTRY>
+		<YEAR>1997</YEAR>
+	</CD>
+</CATALOG>
+~~~~~~~~~~~~~~~~~~~~~~
+
+
 Jedes Element im XML entspricht einem Knoten ( = *Node*). Somit besteht
-z.Bsp. der Knoten „CD“ aus den Sub-Knoten „TITLE“, „ARTIST“, etc. Dies
+z.Bsp. der Knoten *CD* aus den Sub-Knoten *TITLE*, *ARTIST*, etc. Dies
 entspricht einer Liste von Knoten (= `NodeList`).
 
 Um XML-Inhalte mit Java zu lesen, müssen einige Bibliotheken eingebunden
@@ -132,8 +168,31 @@ einfache Variante, den Inhalt einer Node x (und aller darin enthaltenen
 Nodes) anzuschauen. Dabei werden die Namen der Kinder-Elemente verworfen
 und nur deren Text-Inhalte angezeigt:
 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+NodeList list = generateNodeList(″cd_catalog.xml″);
+	for (int i=0; i <list.getLength(); i++){
+		System.out.println(list.intem(i).getTextContent);
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Will man stattdessen auf den Inhalt bestimmter Kinder-Elemente
 zugreifen, geht man folgendermassen vor:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+for (int i=0; i < list.getLength(); i++){
+	Node node = list.item(i);
+	if (node.getNodeType()==Node.ELEMENT_NODE){
+			Element e = (Element)node;
+			NodeList titleElements = e.getElementsByTagName("TITLE").
+			item(0).getChildNodes();
+			NodeList artistElements = e.getElementsByTagName("ARTIST").
+			item(0).getChildNodes();
+
+			System.out.println("Title: "+titleElements.item(0).getTextContent());
+			System.out.println(", Artist: "+artistElements.item(0).getTextContent());
+			System.out.println();
+	}
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Durch das Casting der Nodes von `list` auf das org.w3c.dom – Interface
 `Element e` kann man wiederum mit der Methode `getElementsbyName(String
@@ -168,18 +227,31 @@ Begriff holen:
 Kopieren Sie zunächst diesen Link in Ihren Webbrowser und interpretieren
 Sie die Antwort des Servers.
 
-#### Aufgabe: XML aus Web-Service in ein DOM parsen
-
 Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung.
 Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache
 Ausgabe als String:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+String searchWord = "xml";
+//call web-service and get input stream result:
+URL url = new URL("http://services.aonaware.com/" +
+		"DictService/DictService.asmx/Define?word="+ searchWord);
+URLConnection yc = url.openConnection();
+
+//test and show result as String:
+BufferedReader in = newBufferedReader(newInputStreamReader(yc.getInputStream()));
+String inputLine;
+while ((inputLine = in.readLine()) != null) 
+	System.out.println(inputLine);
+	
+in.close();
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Welche Elemente erhalten Sie vom Service?
 
 Wir wollen nur das Element "WordDefinition" dem Benutzer anzeigen. Wie
 müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?
 
-Zeigen Sie Ihre Lösung der Lehrperson.
 
 Die Datenstruktur JSON
 -----------------------
@@ -204,7 +276,7 @@ immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java
 Maps. **Werte** können **atomar** sein, hier z.B. Strings. Werte können
 weitere JSON-Objekte oder *Listen* enthalten. Listen werden in JSON mit
 **\[\]** umschlossen, JSON-Objekte mit **{}**. Schlüssel und Wert sind
-mit **":"** getrennt. Die Struktur wirkt übersichtlicher als XML.
+mit **":"** getrennt. 
 
 ###JSON mit Java parsen
 
@@ -213,24 +285,35 @@ Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die au
 
 <https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar>
 
-Wichtigen Klassen sind *JSONObject* und *JSONArray.* Sie werden via import einge­bunden:
+Wichtigen Klassen sind `JSONObject` und `JSONArray`. Sie werden mit der `import` Anweisung einge­bunden:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 import org.json.JSONObject; 
 import org.json.JSONArray;
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der JSONObject Klasse sind:
+Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der `JSONObject Klasse` sind:
 
--   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen key als JSONArray, wenn man es als solches castet.
+-   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen *key* als JSONArray, wenn man es als solches castet.
 
--   `double getDouble(String key):` liefert den Attributwert für key als double; entsprechende Methoden sind auch für int und Co implementiert
+-   `double getDouble(String key):` liefert den Attributwert für key als `double`; entsprechende Methoden sind auch für `int` und weitere Datentypen implementiert
 
--   `JSONObject getJSONObject(String key)`: liefert ein Child-Element für key als JSONObject
+-   `JSONObject getJSONObject(String key)`: liefert ein Child-Element für key als `JSONObject`
 
 -   `Set<String> keys()`: liefert die Schlüssel aller enthaltenen Elemente zurück.
 
 Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+JSONObject obj = new JSONObject(jsonString);
+obj.keys().forEachRemaining(key -> {
+	System.out.println(key);
+	System.out.println(obj.get(key).toString());
+	System.out.println("***********************************");
+	}
+);
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 ###Übung: Google Web-Service mit JSON verwenden
 
@@ -245,6 +328,33 @@ Java-Webservice Client und parsen Sie die JSON Serverantwort mittels
 Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das
 Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles
 objektorientiertes Programm.
+
+~~~~~~~~~~~~~~~~~~~
+String url = "http://maps.googleapis.com/maps/api/geocode/json?address=" 
+	+"Hohlstrasse+535,Zuerich";
+
+URL googleClient = new URL(url);		
+URLConnection urlc = googleClient.openConnection();
+		
+BufferedReader in = new BufferedReader(
+			new InputStreamReader(urlc.getInputStream()));
+String msg = "";
+// just reading server response
+while(in.ready()){
+	//System.out.println(line);
+	msg = msg+in.readLine();
+}
+//putting this into a computable JSON format 
+JSONObject obj = new JSONObject(msg);
+//fetch "result" part of JSON obj
+JSONArray results = (JSONArray) obj.get("results");
+JSONObject inner = (JSONObject)results.get(0);
+		
+//now get the actual values 
+JSONObject o = inner.getJSONObject("geometry").getJSONObject("location");
+System.out.println("Latitude:" + o.getDouble("lat"));
+System.out.println("Longitude:" + o.getDouble("lng"));
+~~~~~~~~~~~~~~~~~~~~~
 
 ####Zusatzaufgabe Google API nutzen
 

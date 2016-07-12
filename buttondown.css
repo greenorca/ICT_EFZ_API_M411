@@ -39,7 +39,7 @@
    Only appears if one of those three are in the document.
 */
 body {
-	/*max-width: 700px;*/
+	max-width: 900px;
 }
 img{
 	max-width: 450px;
@@ -376,6 +376,7 @@ tbody /* Entire table  body */
 /* Table body rows */
 
 tr  {
+			border-bottom: 1pt solid #000;
     }
 tr.odd:hover, tr.even:hover /* Use .odd and .even classes to avoid styling rows in other tables */
     {

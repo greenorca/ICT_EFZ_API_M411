@@ -58,6 +58,79 @@ Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgest
 
 **Wichtiger Hinweis:** Programmieren lernt Sie nicht nur vom Zuhören, sondern vom selbstständigen (und häufigen) Anwenden. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
 
+Handlungsziele nach ICT-Vorgaben (BiVo 2014)
+-------------------------------------------
+
+1. Für ein gegebenes Problem eine geeignete Datenstruktur definieren und mit den Mitteln einer Programmiersprache, wie Structs, Referenzen / Zeiger und Arrays umsetzen. 	
+  + Kennt den Unterschied zwischen Wertevariablen und Referenzvariablen / Zeigervariablen.
+  + Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.
+  + Kennt Konzept und Nutzen von verketteten Datenstrukturen.
+  + Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.
+    	 
+2. Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen. 	
+  + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
+  + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
+  + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
+  + Kennt Notationen um Algorithmen dazustellen wie z.B. Struktogrammen, PAP usw.
+    	 
+3. Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren. 	
+  + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
+  + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
+  + Kennt Notationen zur Dokumentation der Speicher- und Zeitkomplexität eines Algorithmus.
+    	 
+4. Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen. 	
+  + Kennt ein Vorgehen bei der Aufteilung eines komplexen Problems in kleinere Teilprobleme.
+  + Kennt den Aufbau von iterativen Algorithmen.
+  + Kennt den Aufbau von rekursiven Algorithmen.
+  + Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.
+    	 
+5. Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können. 	
+  + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
+  + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
+    	 
+6. Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen. 	
+  + Kennt das Speicherlayout für einen Prozess mit den Bereichen Programmcode, globale Variablen, Stack und Heap.
+  + Kennt die Anordnung von lokalen Variablen und Parametern in einem Stackframe.
+  + Kennt die Funktionsweise des Stacks bei einem Funktionsaufruf.
+  + Kennt die Funktionsweise im Heap bei dynamisch erzeugten Objekten.
+  + Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.
+
+Kursablauf
+----------
+Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
+
+**Lektion 1 -4**
+
+- einfache Klassen; main Methode
+- Eingabe-/Ausgabe für Konsole und Dateien
+
+**Lektion 5 – 10**
+- Arrays
+- Sortier-Algorithmen und Laufzeitkomplexität 
+
+**Lektion 11 – 16**
+
+- Dynamische Datenstrukturen I: Verkettete Liste
+
+**Lektion 17 – 20**
+
+- Stack, Queue
+- Java Collections
+- Iterator
+
+**Lektion 21 – 24**
+
+- Miniprojekt 
+
+**Lektion 25 – 32**
+
+- Weitere Datenstrukturen: HashMap, XML, JSON
+
+**Lektion 33 – 36**
+
+- Rekursion und Backtracking
+
+
 Klassen erstellen
 ====================
 
