@@ -18,7 +18,10 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o markdown.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+
+pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
+
 
 # -s: Header (Title, etc)
 # -section: put chapters in <section> elements
