@@ -435,7 +435,7 @@ public static void main(String[] args) {
 
 **Aufgabe**
 
-Erstellen Sie eine Klasse `MyWriter`. In der `main`-Funktion wird **eine** beliebigen User-Input von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.
+Erstellen Sie eine Klasse `MyWriter`. In der `main`-Funktion wird **eine** beliebige Benutzereingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.
 
 <div class="lsg">
 ~~~~~~~~~~~~~
@@ -504,3 +504,4 @@ skript3_weitereDatenstrukturen.docx.md
 skript4_rekursionUndBacktracking.docx.md
 ```
 [Zurück zum Inhaltsverzeichnis](#TOC)
+-->

@@ -273,11 +273,8 @@ skript2c_ueb02_map.md
 
 ##Wiederholungsfragen {#wdh_javautils}
 
-+ Welche Gründe sprechen für den Einsatz vorgefertigter Datenstrukturen aus dem `java.util`-Package?
-
+* Welche Gründe sprechen für den Einsatz vorgefertigter Datenstrukturen aus dem `java.util`-Package?
 * Wie wird die Sortierfunktion der `ArrayList`-Klasse parametrisiert?
-
 * Wie lautet der Aufruf zum Filtern einer Double-ArrayList, wenn nur Elemente zwischen 10 und 20 ausgegeben werden sollen?
-
 * Welche Anforderungen gibt es an die `keys` bei der Verwendung der Map-Datenstruktur? 
 

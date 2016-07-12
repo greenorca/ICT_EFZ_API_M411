@@ -18,7 +18,7 @@ unterteilen. Eine einfache Definition von Rekursion ist:
 
 *Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das
 wiederum mit der gleichen Funktion weiter zerlegt wird, bis der Rest des
-Problems gelöst ist. *
+Problems gelöst ist.*
 
 Somit enthält eine Rekursion endlose Selbst-Aufrufe. Dem entsprechend
 wird Abbruch-bedingung benötigt, damit es nicht zu einer Endlos-Schlaufe
@@ -214,7 +214,7 @@ dass wir einen gültigen Lösungsweg haben.
 
 Der Algorithmus besteht aus 2 Teilen:
 
-Das Ende eines Lösungsweges, wo wir prüfen, ob wir erfolgreich sind:
+Am Ende eines Lösungsweges prüfen wir den Erfolg:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 if the leaf is a goal node:
@@ -223,7 +223,7 @@ else:
 	return false
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Und der rekursive Teil, wo wir solange in „Unter-Wegen“ Suchen (mit
+Und der rekursive Teil, wo wir solange in Unter-Wegen suchen (mit
 Rekursion) bis eine erfolgreiche Lösung gefunden wurde oder gar keine:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -15,7 +15,7 @@ Was haben Algorithmen und Datenstrukturen miteinander zu tun?
 Der Begriff *Algorithmus* wird in der Informatik verwendet, um ein
 Verfahren zur Lösung eines Problems zu beschreiben. Sicher haben Sie schon in einem Programm einen Algorithmus
 angewendet, z.B. zum Sortieren oder Durchsuchen von Datenbank-Tabellen.
-Algorithmen sind der „Stoff“ der Informatik. Sie definieren das Vorgehen, um ein bestimmtes Problem zu lösen.
+Algorithmen sind der *Stoff* der Informatik. Sie definieren das Vorgehen, um ein bestimmtes Problem zu lösen.
 
 Eine *Datenstruktur* ist wichtig für den Algorithmus. Die
 Datenstruktur organisiert die Daten auf eine bestimmte Weise, damit sie
@@ -160,7 +160,7 @@ Wir werden in den folgenden Aufgaben mit primitiven Arrays arbeiten
 Funktionen beschränken können (Funktionen, wie im mathematischen Sinn).
 Später werden wir klasseneigene Funktionen implementieren.
 
-**Hinweis:** Die Java – Standardbibliotheken decken viele Funktionen ab,
+**Hinweis:** Die Java-Standardbibliotheken decken viele Funktionen ab,
 welche wir in diesem Modul behandeln (`Arrays`, `LinkedList`, Sortieren,
 etc.). Wir wollen aber zuerst diese Datenstrukturen und Algorithmen
 *selbst implementieren*, bevor wir auf vorge­fertigte Klassen

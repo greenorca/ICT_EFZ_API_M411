@@ -151,7 +151,7 @@ public NodeList generateNodeList(String filename){
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Eine Knotenliste wird an einem bestimmten Tag-Element definiert. 
-Somit hat diese `NodeList` alle Knoten mit „CD“ und somit auch alle
+Somit hat diese `NodeList` alle Knoten mit "CD" und somit auch alle
 Kinder (children).
 
 Die Klasse `NodeList` implementiert das Collection-Interfase nicht.
@@ -166,7 +166,7 @@ Nodes) anzuschauen. Dabei werden die Namen der Kinder-Elemente verworfen
 und nur deren Text-Inhalte angezeigt:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-NodeList list = generateNodeList(″cd_catalog.xml″);
+NodeList list = generateNodeList("cd_catalog.xml");
 	for (int i=0; i <list.getLength(); i++){
 		System.out.println(list.intem(i).getTextContent);
 }
@@ -191,7 +191,7 @@ for (int i=0; i < list.getLength(); i++){
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Durch das Casting der Nodes von `list` auf das org.w3c.dom – Interface
+Durch das Casting der Nodes von `list` auf das org.w3c.dom-Interface
 `Element e` kann man wiederum mit der Methode `getElementsbyName(String
 name)` die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von
 der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.

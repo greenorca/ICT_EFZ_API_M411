@@ -32,7 +32,7 @@ Die Durchgänge werden solange wiederholt, bis die Eingabeliste
 vollständig sortiert ist. Dabei muss das letzte Element des vorherigen
 Durchlaufs nicht mehr betrachtet werden, da die restliche zu sortierende
 Eingabe keine größeren bzw. kleineren Elemente mehr enthält. Die
-Elemente bewegen sich also wie Blasen („Bubbles“) in einem Wasserglass
+Elemente bewegen sich also wie Blasen (engl. *Bubbles*) in einem Wasserglass
 nach oben (bzw. hinten), bis alle Blasen ihren Platz gefunden haben.
 
 ### Bubble-Sort manuell durchspielen

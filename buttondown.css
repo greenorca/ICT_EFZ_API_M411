@@ -110,7 +110,12 @@ div#TOC, nav#TOC
         /* Don't display TOC in print */
         /*display: none;*/
         }
-    }
+
+	section.level1{
+		border: none;
+	}
+    
+}
     
     section {
     	/* http://www.w3schools.com/cssref/pr_print_pageba.asp */

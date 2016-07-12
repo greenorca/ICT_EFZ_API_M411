@@ -21,7 +21,7 @@ haben.
 
 Hier kommt eine weitere elementare Datenstruktur zur Anwendung, welche
 ihre Grösse verändern kann (was wir bei einem Array nicht können). Die
-Verkettete Liste ("LinkedList") kann mit dynamischen Datenmengen
+Verkettete Liste (engl. *LinkedList*) kann mit dynamischen Datenmengen
 umgehen. Ein weiterer Vorteil ist, dass sie eine höhere Flexibilität
 ermöglicht, indem die Elemente in effizienter Weise umgeordnet werden
 können. Dafür ist ein schneller Zugriff auf ein Element über den

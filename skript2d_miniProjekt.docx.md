@@ -17,8 +17,8 @@ Projekt: Kleine Bildgalerie
 
 Eine solche Navigation wollen wir anhand einer einfachen Bildgalerie
 simulieren. Erstellen Sie dazu ein einfaches GUI. D.h. es wird auf dem
-GUI jeweils ein Bild gezeigt. Darunter haben Sie einen „Rückwärts-„ und
-„Vorwärts“-Knopf. Dabei soll diese Navigation über einen Stack erfolgen
+GUI jeweils ein Bild gezeigt. Darunter haben Sie einen Rückwärts- und
+Vorwärts-Knopf. Dabei soll diese Navigation über einen Stack erfolgen
 (d.h. die File-Namen der Bilder sind als Elemente im Stack abgelegt).
 
 Da hier auch GUI-Kenntnisse erarbeitet werden müssen, arbeiten Sie zu

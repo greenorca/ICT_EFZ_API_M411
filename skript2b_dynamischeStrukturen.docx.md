@@ -47,7 +47,7 @@ verwendet:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 public class MyStack {
 	//reference to the first element in stack (=last added element)
-	private **Node** first;
+	private Node first;
 	//counter
 	private int listCount;
 
