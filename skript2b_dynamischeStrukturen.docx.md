@@ -1,12 +1,10 @@
 Dynamische Datenstrukturen II: Stacks und Queues
 ==========================================
 
-Lernziele:
+Lernziele {#lernziele_stacks_queues}
 -----------
 * beschreiben Eigenschaften der Datenstruktur Stack (Stapel) und Queue
-
 * einsetzen Datatenstrukturen Stack und Queue
-
 * implementieren und anwenden Interface `Iterator`
 
 Die verkettete Liste als Stapel-Speicher
@@ -188,9 +186,6 @@ skript2b_ueb02_iteratoren.md
 ##Wiederholungsfragen {#wdh_stack_queue}
 
 * Was ist der Unterschied zwischen einer *Queue* und einer *Stack*-Datenstruktur?
-
 * Wie können Sie Ihre Verkettete Liste optimieren, damit die `Queue`-Funktionen `push` und `pop` performant arbeiten?
-
 * Was müssen Sie tun, wenn Sie in einer Klasse eine Schnittstelle implementieren?
-
 * Wozu dient die `Iterator`-Schnittstelle?

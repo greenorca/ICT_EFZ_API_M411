@@ -1,7 +1,7 @@
 Arrays
 =======================
 
-Lernziele
+Lernziele {#lernziele_array}
 ----------------
 
 * Sie verstehen und erklären die Begriffe Algorithmen und Datenstrukturen
@@ -177,4 +177,5 @@ skript1c_ueb01_array_elementar.md
 * Welchen Index nutzen Sie, um auf das erste Element eines Arrays zuzugreifen?
 * Wie bestimmen Sie die Anzahl der Elemente einer Array-Variable?
 * Ihr Programm liefert eine `IndexOutOfBounds` Exception. Was ist passiert?
+* Was versteht man unter Aliasing?
  

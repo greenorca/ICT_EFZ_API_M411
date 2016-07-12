@@ -119,7 +119,7 @@ mehreren hundert Jahren lösen kann?
 Vereinfacht kann die Rechenzeit eines Algorithmus wie folgt berechnet
 werden:
 
-Man multipliziert man die Anzahl der Rechenschritte der innersten
+Man multipliziert man die Anzahl der Rechenschritte der inneren
 Schleife mit dem Rechenaufwand des Schleifenkopfes, und multipliziert
 diesen Wert mit dem Rechenaufwand der umschliessenden Schleife.
 
@@ -154,5 +154,5 @@ skript1d_ueb04_adv_qsort.md
 
 * Wie funktioniert der BubbleSort-Algorithmus?
 * Welche Laufzeit-Komplexitätsklassen gibt es? Sortieren Sie diese nach Performanz absteigend.
-* Wie bestimmen Sie die Laufzeit einr Methode?
+* Wie bestimmen Sie die Laufzeit einer Methode?
 

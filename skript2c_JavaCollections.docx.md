@@ -1,7 +1,7 @@
 Dynamische Datenstrukturen III: Java Collections
 ================================================
 
-Lernziele:
+Lernziele {#lernziele_javacollections}
 -----------
 * kennen den Aufbau der Java Collections
 * erklären am Beispiel des Collection Interfaces die Bedeutung von
@@ -81,6 +81,29 @@ Die Verwendung des Interfaces `Collection` ermöglicht die Definition des *inner
 Solche Klassen und Schnittstellen werden in Java *generisch* bezeichnet.
 In C++ wird der Begriff Template-Klasse genutzt.
 
+Anwendungsgebiete von `ArrayList`, `Vector` und `LinkedList`
+------------------------------------------------------------
+
+Die Klassen `ArrayList`, `Vector` und `LinkedList` stellen dynamische Datenstrukturen dar. Die Anzahl der darin gespeicherten Elemente darf sich also zur Laufzeit des Programms ändern. Da alle diese Klassen das `List`-Interface implementieren, stehen (unter anderem) folgende Methoden zur Verfügung:
+
+* `add(int index, Element e)`
+* `remove(Element e)`
+* `remove(int index)`
+* `get(int index)`
+
+Äusserlich betrachtet erfüllen diese Funktionen das Gleiche in allen drei Klassen. Laufzeittechnisch bestehen jedoch Unterschiede:
+
+* `ArrayList` und `Vector` sind intern als Array implementiert. Zugriffe auf die einzelnen Elemente sind also sehr schnell und unabhängig von der Anzahl der enthaltenen Elemente. Jedoch sind Operationen wie das Hinzufügen oder Entfernen von Elementen rechenintensiv, da das gesamte Feld neu strukturiert werden muss. Der Vorteil bei der Benutzung der `Vector`-Klasse liegt insbesondere in der Absicherung für gleichzeitige Zugriffe bei paralleler Programmierung.
+* Die Klasse `LinkedList` ist intern als verkettete Liste implementiert und unterstützt das Durchschreiten von vorne nach hinten. Die Zugriffszeit auf einzelne Elemente ist abhängig von der Position und steigt linear mit der Anzahl der Elemente. Das Gleiche trifft auf Einfüge- und Löschoperationen zu.    
+
+Die folgende Abbildung illustriert die Laufzeitabhängigkeiten:
+
+![Laufzeitverhalten von LinkedList und ArrayList, Quelle: [www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)](media/arraylist-vs-linkedlist1.png) 
+
+**Zusammenfassung**: Setzen Sie `ArrayList` oder `Vector` ein, wenn Sie sehr schnelle Lesezugriffe benötigen und relativ wenige Einfüge- und Löschoperationen zu erwarten sind. Andernfalls ist die `LinkedList` ein guter Kandidat.
+
+Weitere Informationen finden Sie hier: [www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
+
 Die `foreach`-Schleife mit Collections 
 -------------------------------------------
 
@@ -117,10 +140,10 @@ Lambda-Funktionen stammen aus der Welt der funktionalen Programmierung
 ermöglichen sehr elegante Sortier- und Suchfunktionen. Wir wollen hier zwei
 Beispiele genauer ansehen.
 
-### Sortieren von ArrayList
+### Sortieren von `ArrayList` und `LinkedList`
 
 In der Praxis werden Listen häufig nach bestimmten Kriterien sortiert.
-Mit der Klassenfunktion `sort(..)` stellt ArrayList ein leistungsfähiges
+Mit der Klassenfunktion `sort(..)` stellen Klassen des `List`-Interfaces ein leistungsfähiges
 Werkzeug dazu bereit. `sort(..)` bekommt als Parameter eine sogenannte
 Lambda-Funktion übergeben.
 
@@ -130,7 +153,7 @@ Kunden der Topomedics AG instanziert. Nun kann die Liste mit der `sort()`
 Funktion beispielsweise nach `familyName` sortiert werden:
 
 ~~~~~~~~~~~~~~~~~~
-// loading all data from file into ArrayList...
+// loading all data from file into list...
 ArrayList<Person> kundenverwaltung = loadAllData();
 
 // in-place sort by familyName

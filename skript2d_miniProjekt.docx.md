@@ -1,7 +1,11 @@
-**Mini Projekt mit Stack**
+Mini Projekt
+============
 
-**Navigation mit einem Stack**
+Todo: Projekte importieren
+---------------------------
 
+Navigation mit einem Stack
+---------------------------
 In der Navigation eines Browsers (oder auch in einem Spiel) ist der
 Stack nicht wegzudenken. Wenn Sie einen Hyperlink anklicken, zeigt Ihr
 Browser eine neue Seite an (und legt sie oben auf einen Stack). Sie

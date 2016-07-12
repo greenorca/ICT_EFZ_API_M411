@@ -1,20 +1,17 @@
 Dynamische Datenstrukturen: Verkettete Liste
 ============================================
-Lernziele:
+Lernziele {#lernziele_vk}
 --------------
--   Sie kennen den Unterschied zwischen Wertevariablen und
+- kennen den Unterschied zwischen Wertevariablen und
     Referenzvariablen / Zeigervariablen.
-
--   Sie kennen Sprachmittel einer Programmiersprache für das Deklarieren
+- kennen Sprachmittel einer Programmiersprache für das Deklarieren
     und das Arbeiten mit Werte- und Referenzvariablen.
-
--   Sie kennen das Konzept und den Nutzen von
+- beschreiben das Konzept und den Nutzen von
     verketteten Datenstrukturen.
-
--   Sie kennen eine Notation für die Darstellung von
+- zeichen eine Notation für die Darstellung von
     verketteten Datenstrukturen.
-
--   Sie implementieren eine einfach verkettete Liste
+- implementieren eine einfach verkettete Liste
+- sortieren einfach verkettete Listen
 
 ##Eine elementare Datenstruktur: Verkettete Liste
 
@@ -179,6 +176,10 @@ gewünschten Element durchschreiten.
 skript2a_ueb02_adv_vk.md
 ```
 
-## Wiederholungsfragen (TODO){#wdh_vk}
+## Wiederholungsfragen {#wdh_vk}
 
-* TODO!
+* Welche Daten können in verketteten Listen gespeichert werden?
+* Welche Vor- und Nachteile ergeben sich beim Einsatz von verketteten Listen bzw. Arrays?
+* Beschreiben Sie Ihrem Nachbarn den Aufbau einer verketteten Liste.
+* Was ist zu beachten, wenn Sie ein Element aus einer verketteten Liste entfernen?
+* Vergleichen Sie die Laufzeit des BubbleSort-Algorithmus für Arrays und verkettete Listen.

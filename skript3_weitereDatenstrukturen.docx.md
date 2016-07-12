@@ -1,11 +1,11 @@
 Dynamische Datenstrukturen IV: XML und JSON
 ==========================================
 
-Lernziele
+Lernziele {#lernziele_xmljson}
 ----------
-*   beschreiben den Aufbau von XML und JSON Datenstrukturen
-*   nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln
-*		nutzen XML- und JSON basierte Webservices 
+* beschreiben den Aufbau von XML und JSON Datenstrukturen
+* nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln
+* nutzen XML- und JSON basierte Webservices 
 
 Einführung in XML
 ------------------
@@ -275,8 +275,7 @@ mit **":"** getrennt.
 
 ###JSON mit Java parsen
 
-
-Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf [www.json.org](http://www.json.org) vorgeschlagene JSON-Java Bibliothek für Java SE1.8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:
+Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf [www.json.org](http://www.json.org) vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:
 
 <https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar>
 
@@ -310,60 +309,9 @@ obj.keys().forEachRemaining(key -> {
 );
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-###Übung: Google Web-Service mit JSON verwenden
-
-Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:
-
-<http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich>
-
-Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen
-Java-Webservice Client und parsen Sie die JSON Serverantwort mittels
-*JSONArray* und *JSONObject*.
-
-Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das
-Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles
-objektorientiertes Programm.
-
-~~~~~~~~~~~~~~~~~~~
-String url = "http://maps.googleapis.com/maps/api/geocode/json?address=" 
-	+"Hohlstrasse+535,Zuerich";
-
-URL googleClient = new URL(url);		
-URLConnection urlc = googleClient.openConnection();
-		
-BufferedReader in = new BufferedReader(
-			new InputStreamReader(urlc.getInputStream()));
-String msg = "";
-// just reading server response
-while(in.ready()){
-	//System.out.println(line);
-	msg = msg+in.readLine();
-}
-//putting this into a computable JSON format 
-JSONObject obj = new JSONObject(msg);
-//fetch "result" part of JSON obj
-JSONArray results = (JSONArray) obj.get("results");
-JSONObject inner = (JSONObject)results.get(0);
-		
-//now get the actual values 
-JSONObject o = inner.getJSONObject("geometry").getJSONObject("location");
-System.out.println("Latitude:" + o.getDouble("lat"));
-System.out.println("Longitude:" + o.getDouble("lng"));
-~~~~~~~~~~~~~~~~~~~~~
-
-####Zusatzaufgabe Google API nutzen
-
-Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für
-private Zwecke mit limitierten Abfragen pro Tag können Sie die API
-kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie
-beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.
-
-<https://developers.google.com/maps/web-services/>
-
-<https://developers.google.com/maps/documentation/directions/intro>
-
-Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes
-Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.
+```include
+skript3_ueb2_json_ws.md
+```
 
 ### Generieren und Schreiben von XML und JSON
 
@@ -371,3 +319,11 @@ Die behandelten Java-Bibliotheken stellen ebenfalls Methoden zum
 Erstellen von XML / JSON Datenstrukturen zur Verfügung. Diese können in
 diesem Kurs nicht mehr behandelt werden, sind jedoch mit etwas Recherche
 und Übung leicht nachzuvollziehen.
+
+
+Wiederholungsfragen {#wdh_xml_json}
+---------------------
+
+* XML und JSON sind baumartige Datenstrukturen. Was bedeutet das?
+* Was ist der Unterschied zwischen XML und JSON?
+* Wie können XML- und JSON basierte Webservices mit Java benutzt werden?

@@ -1,7 +1,7 @@
 Rekursion und Backtracking
 ===========================
 
-Lernziele:
+Lernziele {#lernziele_rekursion}
 ----------
 * verstehen das Prinzip von Rekursion und wenden es Beispielen
  an

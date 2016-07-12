@@ -66,70 +66,89 @@ Handlungsziele nach ICT-Vorgaben (BiVo 2014)
   + Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.
   + Kennt Konzept und Nutzen von verketteten Datenstrukturen.
   + Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.
-    	 
+<hr/>    	 
 2. Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen. 	
   + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
   + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
   + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
   + Kennt Notationen um Algorithmen dazustellen wie z.B. Struktogrammen, PAP usw.
-    	 
+    	<hr/> 
 3. Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren. 	
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
   + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
   + Kennt Notationen zur Dokumentation der Speicher- und Zeitkomplexität eines Algorithmus.
-    	 
+    	<hr/> 
 4. Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen. 	
   + Kennt ein Vorgehen bei der Aufteilung eines komplexen Problems in kleinere Teilprobleme.
   + Kennt den Aufbau von iterativen Algorithmen.
   + Kennt den Aufbau von rekursiven Algorithmen.
   + Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.
-    	 
+    	<hr/> 
 5. Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können. 	
   + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
   + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
-    	 
+    	<hr/> 
 6. Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen. 	
   + Kennt das Speicherlayout für einen Prozess mit den Bereichen Programmcode, globale Variablen, Stack und Heap.
   + Kennt die Anordnung von lokalen Variablen und Parametern in einem Stackframe.
   + Kennt die Funktionsweise des Stacks bei einem Funktionsaufruf.
   + Kennt die Funktionsweise im Heap bei dynamisch erzeugten Objekten.
   + Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.
-
+<hr/>
 Kursablauf
 ----------
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
-**Lektion 1 -4**
-
-- einfache Klassen; main Methode
-- Eingabe-/Ausgabe für Konsole und Dateien
-
-**Lektion 5 – 10**
-- Arrays
-- Sortier-Algorithmen und Laufzeitkomplexität 
-
-**Lektion 11 – 16**
-
-- Dynamische Datenstrukturen I: Verkettete Liste
-
-**Lektion 17 – 20**
-
+<table>
+<tr>
+<th>Lektion 1 -4</th>
+<td>
+* einfache Klassen; main Methode
+* Eingabe-/Ausgabe für Konsole und Dateien
+</td>
+</tr>
+<tr>
+<th>Lektion 5 – 10</th>
+<td>
+* Arrays
+* Sortier-Algorithmen
+* Laufzeitkomplexität 
+</td>
+</tr>
+<tr>
+<th>Lektion 11 – 16</th>
+<td>
+- Verkettete Liste
+</td>
+</tr>
+<tr>
+<th>Lektion 17 – 20</th>
+<td>
 - Stack, Queue
 - Java Collections
-- Iterator
-
-**Lektion 21 – 24**
-
+- Iteratoren
+</td>
+</tr>
+<tr>
+<th>Lektion 21 – 24</th>
+<td>
 - Miniprojekt 
-
-**Lektion 25 – 32**
-
-- Weitere Datenstrukturen: HashMap, XML, JSON
-
-**Lektion 33 – 36**
-
-- Rekursion und Backtracking
-
+</td>
+</tr>
+<tr>
+<th>Lektion 25 – 32</th>
+<td>
+- HashMap
+- XML, JSON mit WebServices
+</td>
+<tr>
+<th>Lektion 33 – 36</th>
+<td>
+- Rekursion
+- Backtracking
+</td>
+</tr>
+</table>
 
 Klassen erstellen
 ====================
@@ -211,7 +230,7 @@ Quelle: BBW Unterlagen, St.Dütsch. August 2015
 Strukturiere Daten lesen und schreiben
 ======================================
 
-Lernziele
+Lernziele {#lernziele_file_io}
 ----------------------
 
 * Sie können in einem Programm aus einem File Daten lesen
@@ -383,46 +402,102 @@ skript1ab_ueb03_csvread.md
 ## Daten strukturiert in ein File schreiben
 
 Die geeignetste Klasse zum Schreiben von Textdateien ist `PrintWriter`.
-Ein PrintWriter kann erzeugt werden, indem man ihm beim Erstellen einen
-String mit dem Pfad und Dateinamen oder ein `File`-Objekt übergibt.
-
-Die Methoden sind dabei sehr ähnlich wie bei der Klasse `PrintStream`, mit der Sie
-beispielsweise bei `System.out.println` arbeiten:
+Einem neuen `PrintWriter-Objekt` (`prnt`) wird beim Erstellen ein
+String mit dem Pfad und Dateinamen oder ein `File`-Objekt übergeben. Das Objekt stellt die Methode `write` zur Verfügung. Diese ähnelt der Klasse `PrintStream`, mit der Sie
+beispielsweise bei `System.out.println` arbeiten.
 
 ~~~~~~~~~~~
-print //schreibt eine beliebige Zeichenkette ohne Zeilenumbruch
-println //eine Zeile mit Zeilenumbruch
-format
+public static void main(String[] args) {
+		try {
+			PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
+			String[] names = {"Alpha","Beta","Gaga"};
+			int i = 0;
+			for (String n : names){
+				prnt.write(""+i+";"+n+System.lineSeparator());
+				i++;
+			}
+			prnt.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 ~~~~~~~~~~~~~~~~~~~~~
 
-## Übung: CSV schreiben (todo überarbeiten)
+## Übung: CSV schreiben
+**Lernziele**
 
-Schreiben Sie eine Klasse „MyWriter“, welcher einen User-Input umgekehrt
-in ein File schreibt.
+* vertiefen Lese- und Schreiboperationen mit Java
 
-Quelle: BBW Unterlagen, St.Dütsch. August 2015 (ergänzt und angepasst
-durch J.Kaeser)
+**Zeit:** 25 Minuten
+
+**Aufgabe**
+
+Erstellen Sie eine Klasse `MyWriter`. In der `main`-Funktion wird **eine** beliebigen User-Input von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.
+
+<div class="lsg">
+~~~~~~~~~~~~~
+public static void main(String[] args) {
+		String fileName = "/tmp/guggus.txt";
+		String content = "";
+		try {
+			BufferedReader bfr = new BufferedReader(new FileReader(fileName));
+			while (bfr.ready()){
+				content+=bfr.readLine()+System.lineSeparator();
+			}
+			bfr.close();
+			
+			Scanner scanny = new Scanner(System.in);
+			System.out.println("Nachricht eingeben: ");
+			String message = scanny.nextLine();
+			
+			PrintWriter prnt = new PrintWriter(fileName);
+			prnt.println(message);
+			prnt.print(content);
+			prnt.close();		
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+}
+~~~~~~~~~~~~~
+</div>
+
 
 Wiederholungsfragen {#wdh_intro}
 --------------------
 1. Welche Methode einer Klasse wird beim Start des Programms zuerst aufgerufen?
 2. Wie können Sie eine Anzahl Attribute für ein bestimmtes Objekt schon beim Erstellen übergeben?
-3. Welche Klasse hilft Ihnen, Konsoleneingaben und Textdateien zu lesen?
+3. Welche Klassen helfen Ihnen, Konsoleneingaben und Textdateien zu lesen?
 4. Wie transformieren Sie `String x = 42;` als Ganzzahl oder Gleitkomma-Zahlenwert?
 
+[Zurück zum Inhaltsverzeichnis](#TOC)
 
 ```include 
 skript1c_arrays_anwenden.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 skript1d_sortalgo_laufzeit.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 skript2a_dynamischeStrukturen.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 skript2b_dynamischeStrukturen.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 skript2c_JavaCollections.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 <!--skript2d_miniProjekt.docx.md-->
 skript3_weitereDatenstrukturen.docx.md
+```
+[Zurück zum Inhaltsverzeichnis](#TOC)
+```include 
 <!--skript4b_Mandelbrot.docx.md-->
 skript4_rekursionUndBacktracking.docx.md
 ```
-<!--
-
-
--->
+[Zurück zum Inhaltsverzeichnis](#TOC)

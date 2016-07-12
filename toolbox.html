@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="buttondown.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC">
+<ul>
+<li><a href="#übung-java-ide-und-ein-ausgaben">Übung: Java IDE und Ein-/Ausgaben</a></li>
+<li><a href="#übung-numerische-ein-ausgaben">Übung: Numerische Ein-/Ausgaben</a></li>
+<li><a href="#übung-textdateien-einlesen">Übung: Textdateien einlesen</a></li>
+<li><a href="#übung-elementare-array---funktionalität">Übung: Elementare Array - Funktionalität</a></li>
+<li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort">Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a></li>
+<li><a href="#übungen-verkettete-liste">Übungen: Verkettete Liste</a></li>
+<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo">Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a></li>
+<li><a href="#übungen-stack-implementieren">Übungen: Stack implementieren</a></li>
+<li><a href="#übung-arbeiten-mit-iteratoren">Übung: Arbeiten mit Iteratoren</a></li>
+<li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken">Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a></li>
+<li><a href="#übung-anwenden-map-datenstruktur">Übung: Anwenden <code>map</code>-Datenstruktur</a></li>
+<li><a href="#übung-google-web-service-mit-json-verwenden">Übung: Google Web-Service mit JSON verwenden</a></li>
+<li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden">Übung: Rekursive Algorithmen erstellen und anwenden</a></li>
+</ul>
+</nav>
+<section id="übung-java-ide-und-ein-ausgaben" class="level2">
+<h2>Übung: Java IDE und Ein-/Ausgaben</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>beherrschen den Umgang mit einer Entwicklungsumgebung</li>
+<li>einlesen und verarbeiten Benutzereingaben</li>
+</ul>
+<p><strong>Zeit:</strong> 45 Minuten</p>
+<p>Erstellen Sie in Ihrer Entwicklungsumgebung ein neues Java-Projekt mit dem Namen <code>M411</code>. In diesem Projekt erstellen Sie alle folgenden Klassen.</p>
+<ul>
+<li><p>Erstellen Sie eine Java-Klasse <code>WelcomeMessage</code> gemäss dem Beispiel. Achten Sie darauf, das der Dateiname dem Klassennamen entspricht.</p></li>
+<li><p>Erweitern Sie die Klasse <code>WelcomeMessage</code> so, dass es eine zweite Methode gibt, welche eine Person verabschiedet. Erweitern Sie dann auch die main-Methode so, dass zuerst zwei Personen begrüsst und dann in umgekehrter Reihenfolge verabschiedet werden.</p></li>
+<li><p>Erstellen Sie eine Methode, welche so parametrisiert ist, dass sie von beiden vor­handenen Methoden verwendet werden kann, um die korrekte Meldung auszugeben. Es soll dann im ganzen Programm nur noch einmal der Aufruf von <code>System.out.println</code> vorkommen.</p></li>
+</ul>
+</section>
+<section id="übung-numerische-ein-ausgaben" class="level2">
+<h2>Übung: Numerische Ein-/Ausgaben</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>einlesen und verarbeiten Benutzereingaben</li>
+<li>einlesen Zahlenformate</li>
+</ul>
+<p><strong>Zeit:</strong> 30 Minuten</p>
+<p>Erstellen Sie eine Klasse <code>AgeCalculator</code> mit der Methode <code>public void tellAge()</code>. Diese Methode soll den Benutzer nach seinem Namen und seinem Jahrgang fragen und dann die folgende Meldung ausgeben:</p>
+<p><code>Hallo Peter, du wirst in diesem Jahr 34 Jahre alt.</code></p>
+<p>Dabei soll der Name und das Alter den Benutzereingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Jahr.</p>
+</section>
+<section id="übung-textdateien-einlesen" class="level2">
+<h2>Übung: Textdateien einlesen</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>erstellen Klasse zum zeilenweisen Lesen von Textdateien</li>
+<li>vergleichen Strings</li>
+<li>umwandeln String in numerische Datentypen</li>
+</ul>
+<p><strong>Zeit:</strong> 45 Minuten</p>
+<p>Wir werden eine Textdatei mit folgender Struktur verwenden:</p>
+<p><code>Huber;Peter;1955</code><br> <code>Meier;Irene;1960</code><br> <code>Muster;Anna;1974</code></p>
+<p>Speichern Sie obigen Text als Datei im Projektordner mit dem Namen <code>daten.csv</code> ab.</p>
+<ol type="1">
+<li><p>Erstellen Sie eine neue Java-Klasse <code>Skript1_SimpleCsvReader</code> im Projekt <code>M411</code>, welches diese Datei liest und Zeile für Zeile wieder auf der Konsole ausgibt. Geben Sie zusätzlich das Alter der Personen jeweils am Ende der Zeile aus.</p></li>
+<li><p>Kopieren Sie die Klasse und nennen Sie die Kopie <code>Skript1_SearchCsvReader</code>. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die <code>daten.csv</code> eingelsenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator <code>==</code> <strong>nicht</strong> verwendet werden kann. Stattdessen verwenden Sie die Methode <code>equals</code> der Klasse <code>String</code>.</p></li>
+</ol>
+</section>
+<section id="übung-elementare-array---funktionalität" class="level2">
+<h2>Übung: Elementare Array - Funktionalität</h2>
+<p><strong>Lernziel:</strong></p>
+<ul>
+<li>deklarieren und instanziieren Arrays</li>
+<li>beherrschen elementweisen Zugriff mit Indexen</li>
+<li>iterieren über alle Elemente eines Arrays</li>
+<li>erstellen elementare Array-Funktionen</li>
+</ul>
+<p><strong>Zeit:</strong> 45 Minuten</p>
+<p>Erstellen Sie in Ihren <code>M411</code> Projekt eine neue Klasse <code>Skript1c_ArrayOps</code>. In dieser Klasse implementieren und testen Sie die folgenden statischen Funktionen. Beachten Sie die Schnittstellenbeschreibungen - Ein- und Ausgaben sollen nur in der <code>main</code>-Methode vorkommen. Zu jeder Teilaufgabe erstellen Sie sinnvolle Testfälle in der <code>main</code>-Methode.</p>
+<section id="minimum-und-maximum-in-einem-array-suchen" class="level3">
+<h3>Minimum und Maximum in einem Array suchen</h3>
+<p>Erstellen Sie je eine Funktion <code>getMinimum</code> und <code>getMaximum</code>. Die Funktionen sollen einen <code>int</code> Array als Parameter übernehmen und jeweils das Minimum bzw. Maximum bestimmen und zurückliefern. Verwenden Sie zum Testen in der <code>main</code>-Methode Arrays mit zehn Elementen mit fix-definierten oder zufällig gewählten Werten.</p>
+</section>
+<section id="arrays-addieren" class="level3">
+<h3>Arrays addieren</h3>
+<p>In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder <code>a</code> und <code>b</code> in das Ergebnisfeld <code>c</code> wird elementweise das erste Element von <code>a</code> mit dem ersten Element von <code>b</code> addiert und im ersten Element von <code>c</code> gespeichert.</p>
+<p>Dies funktioniert nur, wenn die Arrays die gleiche Länge haben. Erstellen Sie eine statische Funktion <code>addArray</code>. <code>addArray</code> erhält zwei <code>int</code>-Arrays als Parameter und gibt einen <code>int</code>-Array als Summe der Eingabe-Arrays zurück. Vor der Addition soll die Funktion prüfen, ob die Eingabefelder gleich lang sind.</p>
+</section>
+<section id="elemente-nachrutschen" class="level3">
+<h3>Elemente nachrutschen</h3>
+<p>Erstellen Sie ein Funktion <code>prepend</code> mit einen Array und einen <code>int</code>-Wert in der Parameterliste. In der Funktion soll jeweils das neue Element an der ersten Stelle im Array eingefügt werden und die bereits vorhandenen Elemente hinten angefügt werden. Nach jeder Einfüge-Operation sollen alle Elemente des Arrays zurückgegeben werden.</p>
+</section>
+<section id="übung-bubblesort-implementieren-und-laufzeit-analysieren" class="level3">
+<h3>Übung: BubbleSort implementieren und Laufzeit analysieren</h3>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>üben systematische Vorgehensweise für Problemanalyse.</li>
+<li>erstellen Algorithmen in einer Programmiersprache.</li>
+<li>kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen</li>
+</ul>
+<p><strong>Zeit: </strong> 60 Minuten</p>
+<p>Überlegen Sie sich die Effizienz (Anzahl Durchläufe und Tauschoperationen) im schlechtesten Fall (d.h. wenn eine Liste absteigend sortiert ist und aufsteigend sortiert werden soll).</p>
+<ol type="1">
+<li><p>Implementieren Sie den Bubble-Sort als statische Funktion in eine neuen Klasse <code>MyBubbleSort</code>. Verwenden Sie ein eigenes kurzes int-Array und geben Sie dieses vor und nach dem Sortieren in der <code>main</code>-Funktion aus. Ist das Ergebnis korrekt?</p></li>
+<li><p>Wie viele Durchläufe gibt es, bis die Liste korrekt sortiert ist? Diese Frage können Sie nach unserem manuellen Beispiel einfach beantworten.</p></li>
+<li><p>Erweitern Sie Ihre Sortier-Funktion, um die Durchläufe und Tauschoperationen zu zählen. Messen Sie zusätzlich die Dauer, wie lange der Bubble-Sort hat. Verwenden Sie dabei die <em>System</em> Klasse mit der statischen Methode „currentTimeMillis()“. Testen Sie dann die in der Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle:</p></li>
+</ol>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Elemente</strong></th>
+<th style="text-align: left;"><strong>Art der Werte</strong></th>
+<th style="text-align: left;"><strong>n Durchläufe</strong></th>
+<th style="text-align: left;"><strong>n Tauschoperationen</strong></th>
+<th style="text-align: left;"><strong>Rechenzeit</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">aufsteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">zufällige Werte</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">1000</td>
+<td style="text-align: left;">absteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2000</td>
+<td style="text-align: left;">aufsteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2000</td>
+<td style="text-align: left;">zufällige Werte</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2000</td>
+<td style="text-align: left;">absteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4000</td>
+<td style="text-align: left;">aufsteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4000</td>
+<td style="text-align: left;">zufällige Werte</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4000</td>
+<td style="text-align: left;">absteigende Reihenfolge</td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="übung-laufzeitkomplexität-von-algorithmen-bestimmen" class="level3">
+<h3>Übung: Laufzeitkomplexität von Algorithmen bestimmen</h3>
+<p><strong>Lernziele</strong></p>
+<p><strong>Art:</strong> Partnerarbeit</p>
+<p><strong>Zeit:</strong> 30 Minuten</p>
+<p><strong>Hilfsmittel:</strong> Skript, kein PC</p>
+<p><strong>Aufgabe: </strong> Bestimmen Sie die Laufzeit und Komplexitätsklasse der folgenden drei Algorithmen. Schreiben Sie den Rechenweg vollständig unter oder neben die Funktionen.</p>
+<ol type="a">
+<li><pre><code>public int[][] calcCrossProduct(int[] vector){
+int[][] result = new int[vector.length][vector.length];
+for (int i=0; i &lt; vector.length;i++)
+    for (int j = 0; j&lt;vector.length;j++)
+        result[i][j]=vector[i]*vector[j];
+
+return result;
+}</code></pre></li>
+<li><pre><code>public float getMean(int[] arr){
+int sum = 0;
+for (int i : arr)
+    sum+=i;
+
+return sum/arr.length;
+}</code></pre></li>
+<li><pre><code>// arr must be sorted before
+public int findBinary(int [] arr, int search){
+int index = (int) Math.floor(arr.length/2);
+int inc = index;
+
+while (arr[index]!=search &amp;&amp; inc&gt;0){
+    inc = (int)Math.floor(inc / 2);
+    if (arr[index]&gt;search)
+        index -= inc;
+    else index += inc;
+}
+if (arr[index] != search)
+    return -1;
+
+return index;
+}</code></pre>
+<h2 id="übung-weiterführende-aufgaben-mit-bubble-sort">Übung: Weiterführende Aufgaben mit Bubble-Sort</h2></li>
+</ol>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>anwenden und ändern Sortierfunktionen</li>
+<li>anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen</li>
+</ul>
+<p><strong>Zeit:</strong> 60 Minuten</p>
+<p>Der Bubble-Sort ist für numerische wie auch alphanumerische Sortieraufgaben geeignet. Dies darum, weil sich die Problematik in den beiden Fällen nicht unterscheidet:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">5 &gt; 2</annotation></semantics></math> vs. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>′</mi><mi>D</mi><mi>′</mi><mo>&gt;</mo><mi>′</mi><mi>B</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">&#39;D&#39; &gt; &#39;B&#39;</annotation></semantics></math></p>
+<p>Vergleichen Sie dazu die ASCII-Tabelle <a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle">siehe Wikipedia</a>.</p>
+<p>Sollen nun ganze Worte alphabetisch geordnet werden, müssen ggf. weitere aufeinanderfolgende Buchstaben miteinander verglichen werden. Z.B. liegt &quot;Muheim&quot; vor &quot;Mutzer&quot;.</p>
+</section>
+<section id="strings-sortieren" class="level3">
+<h3>Strings sortieren</h3>
+<p>Erstellen Sie eine Klasse <code>StringBSort</code>. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.</p>
+</section>
+<section id="array-einer-benutzerdefinierten-klasse-sortieren" class="level3">
+<h3>Array einer benutzerdefinierten Klasse sortieren</h3>
+<p>Erstellen Sie eine Klasse <code>Person</code> mit den Attributen <code>Vorname</code>, <code>Nachname</code> und <code>Geburtsjahr</code>. Diese Attribute sollen im Konstruktor übergeben werden.</p>
+<p>In der <code>main</code>-Funktion legen Sie einen <code>personen</code>-Array mit 5 beliebigen Personen an. Erstellen Sie eine statische Sortierfunktion, die Ihren Array nach dem Personenalter <em>absteigend</em> sortiert. Geben Sie <code>personen</code> vor und nach dem Sortieren aus.</p>
+</section>
+</section>
+<section id="übungen-für-fortgeschrittene-quick-sort-und-insert-sort" class="level2">
+<h2>Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</h2>
+<section id="optional-quick-sort" class="level3">
+<h3>Optional: Quick-Sort</h3>
+<p>Der Quick-Sort ist ziemlich beliebt, weil er sich leicht implementieren lässt und mit verschiedenen Eingabedaten zurechtkommt. In typischen Anwendungen ist Quick-Sort erheblich schneller ist als jedes andere Sortierverfahren.</p>
+<ul>
+<li><p>Informieren Sie sich über die Funktionsweise des Quick-Sort Algorithmus.</p></li>
+<li><p>Skizzieren Sie den Ablauf in einem Struktogramm oder PAP.</p></li>
+<li><p>Implementieren Sie den Quick-Sort.</p></li>
+<li><p>Welche neue, bisher nicht benützte Eigenschaft benötigt der Quick-Sort?</p></li>
+</ul>
+</section>
+<section id="optional-insert-sort" class="level3">
+<h3>Optional: Insert-Sort</h3>
+<p>Ein weiterer Sortierungs-Algorithmus ist der Insert-Sort. Untersuchen Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?</p>
+<p>Implementieren Sie den Insert-Sort und zeigen Sie die Unterschiede zum Quick-Sort.</p>
+<hr />
+<hr />
+<p>Vergleichen Sie diese Sort-Algorithmen mit dem Bubble-Sort, indem Sie auch die Dauer messen. Es gibt dazu eine einfache Klasse „Stopwatch“.</p>
+<p>Zeigen Sie Ihre Lösungen zu Quick-Sort und Insert-Sort der Lehrperson.</p>
+</section>
+</section>
+<section id="übungen-verkettete-liste" class="level2">
+<h2>Übungen: Verkettete Liste</h2>
+<section id="eigene-verkettete-liste-implementieren" class="level3">
+<h3>Eigene verkettete Liste implementieren</h3>
+<p>Schreiben Sie eine eigene Klasse für verkettete Listen mit der entsprechenden <em>inneren Klasse</em> für die Datenstruktur.</p>
+<ol type="1">
+<li><p>Implementieren Sie die Methode <em>append.</em> Testen Sie, ob Ihre Liste funktioniert, indem der Benutzer Zahlen oder Wörter eingeben kann.</p></li>
+<li><p>Implementieren Sie eine Methode <em>showNodeAdressAndValue</em>, welche alle vorher eingegebenen Werte gefolgt von der tatsächlichen Speicheradresse der jeweiligen Node ausgibt. Die Speicheradresse eines Objects kann mittels (Object)x.toString() ausgegeben wrden. Testen Sie die Methode, indem Sie eine Liste automatisch mit 10 Zufallszahlen füllen. Danach beobachten Sie die Werte der aufeinander­folgenden Speicheraddressen.</p></li>
+<li><p>Erstellen Sie eine weitere Methode <em>showElementsReverse</em>, welche diese mittels einer Schleife wieder ausgibt. Die Wörter sollten in umgekehrter Reihenfolge erscheinen.</p></li>
+</ol>
+<p>Eingabe: Hello, Arnold, how are you doing?</p>
+<p>Ausgabe: doing? you are how Arnold, Hello,</p>
+</section>
+<section id="elemente-entfernen" class="level3">
+<h3>Elemente entfernen</h3>
+<p>Erweitern Sie Ihre Klasse, so dass jeweils das letzte Element entfernt wird.</p>
+<ol type="1">
+<li>Elemente an einer bestimmten Position einfügen / entfernen</li>
+</ol>
+<p>Jetzt erweitern wir unsere Liste, damit wir auch Elemente an einer bestimmten Position einfügen oder auch löschen können. Erstellen Sie eine verkettete Liste, welche aus String-Elementen besteht. Wir wollen folgenden Satz anpassen:</p>
+<p><em>„To be or not to be, that is the question“.</em></p>
+<p><em>„To be or not to be, my dear Hamlet, that is the question“.</em></p>
+<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
+<p>2.4 Weitere Aufgaben mit verketteten Listen</p>
+<ol type="a">
+<li>Schreiben Sie nochmals ein Programm, das Elemente von einem Benutzer jeweils am Anfang einer Liste abfüllt und dabei alle bereits vorhandenen Elemente entsprechend nach hinten rutscht. Das zuletzt eingegebene Element wird somit das erste Element in der Liste. Verwenden Sie dieses Mal Ihre Verkettete Liste. Welche Struktur ist einfacher? Der simple Array oder ihre Liste?</li>
+</ol>
+<p>Dokumentieren Sie beide Varianten (d.h. Sie haben beide Code-Varianten in separaten Klassen und verwenden Sie eine Start-Klasse, welche beide Varianten benützen kann).</p>
+<ol type="a">
+<li>Schreiben Sie eine Methode <em>insertAfter(Node after, Node newNode),</em> dass zwei Node-Objekte einer verket­teten Liste als Argumente übernimmt und das zweite nach dem ersten in die Liste einfügt. Testen Sie, ob nach dem Einfügen die vorherigen Listenelemente noch vorhanden sind.</li>
+</ol>
+<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
+</section>
+</section>
+<section id="übung-erweiterte-aufgaben-zu-verkettete-liste-todo" class="level2">
+<h2>Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</h2>
+<section id="verkettete-liste-sortieren-und-laufzeit-messen" class="level3">
+<h3>Verkettete Liste sortieren und Laufzeit messen</h3>
+<p>Kopieren Sie Ihren Quellcode der verketteten Liste in ein neues Java-File. Ändern Sie den Datentyp des <em>item</em> – Elements der <em>Node</em> Klasse von <em>Object</em> auf <em>double</em>. Ändern Sie ebenso alle entsprechenden Konstruktoren und Methoden der <em>Node</em> und <em>MyLinkedList</em> Klasse. Schreiben Sie eine Klassenmethode für <em>MyLinkedList</em>, welche die Listenelemente sortiert. Testen Sie Ihre Sortierfunktion zunächst mit einigen wenigen Elementen auf Richtigkeit. Danach füllen Sie drei Listen mit 100, 1000 und 10000 Zufallszahlen und lassen sich die Laufzeit der Sortierung ausgeben.</p>
+</section>
+<section id="verkettete-liste-umkehren" class="level3">
+<h3>Verkettete Liste umkehren</h3>
+<p>Schreiben Sie eine Methode, die eine bestehende verkettete Liste nimmt und die Elemente umkehrt. Verwenden Sie <em>Ihre</em> verkettete Liste.</p>
+<p>Stellen Sie Ihre Lösung im Lernraum mit folgender Namenskonvention ein: mod411_ll_name.zip</p>
+</section>
+</section>
+<section id="übungen-stack-implementieren" class="level2">
+<h2>Übungen: Stack implementieren</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>erstellen und benutzen Stack-Datenstruktur</li>
+</ul>
+<p><strong>Zeit:</strong> 45 Minuten</p>
+<section id="stack-klasse-erstellen" class="level3">
+<h3>Stack Klasse erstellen</h3>
+<p>Implementieren Sie Ihre <code>Stack</code> Klasse mit den <code>push</code> und <code>pop</code> Methoden. Bei <code>push</code> wird ein Element zuoberst hinzugefügt. Bei <code>pop</code> wird das aktuelle Element entfernt. Verwenden Sie wiederum Ihre <em>Node</em> Klasse für die Datenstruktur.</p>
+</section>
+<section id="stack-testen-und-elemente-ausgeben" class="level3">
+<h3>Stack testen und Elemente ausgeben</h3>
+<p>Schreiben Sie eine Methode <code>toString()</code>, welche die Elemente vom Stack als String ausgibt. Mit dieser Methode können Sie auch Ihre <code>Stack</code>-Klasse testen. Sie beginnen mit dem ersten Element (d.h. das Element, welches zuoberst auf dem Stack ist). Ihre Iteration sieht so aus:</p>
+<pre><code>while (current != null){
+    //add value to string:
+    // TODO
+
+    //get next Node
+    current = current.next;
+
+}</code></pre>
+</section>
+<section id="isempty-methode-implementieren" class="level3">
+<h3><code>isEmpty()</code>-Methode implementieren</h3>
+<p>Fügen Sie eine <code>isEmpty()</code>-Methode hinzu. Diese überprüft, ob es Elemente im <code>Stack</code> hat. Die Methode gibt einen boolean zurück.</p>
+<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
+</section>
+<section id="stack-ergänzen" class="level3">
+<h3>Stack ergänzen</h3>
+<p>Ergänzen Sie <code>Stack</code> um eine Methode <code>peek()</code>, welche das zuletzt auf dem Stapel gelegte Element zurückliefert ohne es zu entfernen.</p>
+</section>
+<section id="palindrome-prüfen" class="level3">
+<h3>Palindrome prüfen</h3>
+<p>Verwenden Sie den <code>Stack</code> um zu überprüfen, ob ein String ein Palindrome ist (d.h. Wort oder Satz ist dasselbe von vorne und von hinten). Mit einem <code>Stack</code> lässt sich das einfach überprüfen. Erweitern Sie den Code, so dass der Benutzer einen String eingeben kann.</p>
+<p>Verwenden Sie für diese Lösung ihren eigenen <code>Stack</code>.</p>
+</section>
+</section>
+<section id="übung-arbeiten-mit-iteratoren" class="level2">
+<h2>Übung: Arbeiten mit Iteratoren</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>implementieren und anwenden Iteratoren</li>
+</ul>
+<p><strong>Zeit:</strong> 45 Minuten</p>
+<section id="methode-next-implementieren" class="level3">
+<h3>Methode <code>next()</code> implementieren</h3>
+<p>Sie implementieren die Schnittstellen <code>Iterable&lt;Object&gt;</code> und <code>Iterator&lt;Object&gt;</code> in Ihrer Stack-Klasse.</p>
+<p>Wie muss die Methode <code>next()</code> aussehen, damit wir jeweils das nächste Element (und dessen Inhalt) bekommen? Ergänzen Sie den untenstehenden Code in Ihrem Programm:</p>
+<pre><code>@Override
+public Object next() {
+    Object item = this.currentIterPost.value;
+    //TODO: complete code here
+
+    return item;
+}</code></pre>
+<p>Testen Sie diese Methoden, indem Sie eine while-Schleife für <code>hasNext()</code> implementieren.</p>
+<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
+</section>
+<section id="array-umgekehrt-ausgeben-mit-verwendung-von-iterator" class="level3">
+<h3>Array umgekehrt ausgeben mit Verwendung von <code>Iterator</code></h3>
+<p>Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein <code>int</code>-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei das Interface <code>Iterator</code> und passen Sie dievom Interface verlangten Methoden an, also:</p>
+<p><code>public boolean hasNext()</code></p>
+<ul>
+<li>Prüfe, ob es noch Elemente im Array hat</li>
+</ul>
+<p><code>public Object next()</code></p>
+<ul>
+<li>Gib das Element in umgekehrter Position aus (also data[--i])</li>
+</ul>
+</section>
+</section>
+<section id="übung-sortieren-und-filtern-mit-lambda-ausdrücken" class="level2">
+<h2>Übung: Sortieren und Filtern mit Lambda-Ausdrücken</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>Sortieren und Filtern mit Lambda-Ausdrücken in akademischer und realistischer Umgebung</li>
+<li>Erstellen Datenhaltung-Klassen</li>
+<li>Einlesen Daten aus strukturierten Textdateien</li>
+</ul>
+<p><strong>Zeit:</strong> 15 + 60 Minuten</p>
+<section id="liste-von-zufallszahlen-sortieren" class="level3">
+<h3>Liste von Zufallszahlen sortieren</h3>
+<ol type="1">
+<li><p>Erstellen Sie eine Klasse <code>RandomNumbers</code>. Diese Klasse erhält eine Attribut <code>randomNumbers</code> vom Typ <code>ArrayList&lt;Integer&gt;</code>.</p></li>
+<li><p>Erstellen Sie den Konstruktor dieser Klasse so, dass 10 Zufallszahlen in <code>randomNumbers</code> abgefüllt werden. Erstellen Sie eine weitere Klassenfunktion <code>printNumbers()</code>, die alle Elemente untereinander ausgibt. Testen Sie die korrekte Funktionalität des Konstruktors.</p></li>
+<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>absteigenden</em> Sortieren der Liste und testen Sie die Funktionalität.</p></li>
+<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>aufsteigenden</em> Sortieren der Liste und testen Sie die Funktionalität.</p></li>
+</ol>
+</section>
+<section id="flughafen-liste-implementieren" class="level3">
+<h3>Flughafen-Liste implementieren</h3>
+<p>Sie nutzen eine <code>ArrayList</code> zur Verwaltung von Flughäfen samst dreistelligen Flughafencode, Land und Stadtnamen (siehe airports.txt).</p>
+<ol type="1">
+<li><p>Schreiben Sie zunächste eine Klasse, <code>Airport</code>, welche die notwendigen Attribute <code>airport</code>, <code>country</code> und <code>city</code> enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.</p></li>
+<li><p>Erstellen Sie eine Klasse <code>AirportManagement</code>. Diese enthält ein Attribut <code>airportList</code> vom Datentyp <code>ArrayList&lt;Airport&gt;</code>.</p></li>
+<li><p>Schreiben Sie eine Funktion <code>readAirports(String fileName)</code>. Die Funktion soll die in <code>filename</code> angegebene Datei öffnen und die entsprechenden <code>Airport</code>-Objekte in der <code>airportList</code>einfügen. Erstellen Sie in der <code>main()</code>-Funktion der <code>AirportManagementen</code>-Klasse einen geeigneten Testrahmen und prüfen Sie die korrekte Arbeitsweise Ihrer Funktion.</p></li>
+<li><p>Erstellen Sie eine Klassenfunktion <code>sortByCountry()</code>. Diese Funktion soll intern die <code>airportList</code> nach Land sortieren. Nutzen Sie dazu die <code>sort</code>-Methode aus dem <code>java.util</code>-Package. Prüfen Sie die korrekte Arbeitsweise, indem Sie sich die ersten 10 Flughäfen vor und nach dem Sortieren ausgeben lassen.</p></li>
+<li><p>Erstellen Sie eine Filterfunktion <code>getAirportsByCountry(String country)</code>, welche als Rückgabewert eine ArrayList mit nur den Flughäfen des Landes <code>country</code> liefert. Prüfen Sie die korrekte Arbeitsweise.</p></li>
+</ol>
+</section>
+</section>
+<section id="übung-anwenden-map-datenstruktur" class="level2">
+<h2>Übung: Anwenden <code>map</code>-Datenstruktur</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>Anwenden <code>map</code>-Datenstruktur in akademischer und realistischer Umgebung</li>
+<li>Erstellen Datenhaltung-Klassen</li>
+<li>Einlesen Daten aus strukturierten Textdateien</li>
+</ul>
+<p><strong>Zeit:</strong> 15 + 60 Minuten</p>
+<section id="aufgabe-hashmap-kennenlernen" class="level3">
+<h3>Aufgabe: <code>HashMap</code> kennenlernen</h3>
+<p>Schreiben Sie eine Klasse, welche ein <code>HashMap</code> benützt, um Telefon-Einträge zu verwalten. Dabei soll die Telefonnummern den <code>key</code> bilden und der Name den <code>value</code>.</p>
+<p>Der Benutzer kann via Konsole / GUI einen Kontakt eintragen, der in dieser <code>HashMap</code> abgelegt wird.</p>
+<p>Mittels <code>get(Object key)</code> erhalten wir den <code>value</code>. Wie kann über das ganze Map iteriert werden?</p>
+</section>
+<section id="zusatz-aufgabe-hashmap-für-grössere-datenmengen-verwenden" class="level3">
+<h3>Zusatz-Aufgabe: <code>HashMap</code> für grössere Datenmengen verwenden</h3>
+<p>Wir verwenden die <code>HashMap</code> für eine Liste von Flughäfen (siehe airports.txt). Schreiben Sie eine Klasse, welche die Datei airports.txt Liste zeilenweise einliest in ein HashMap einliest. Der Airport – Code steht jeweils am Zeilenende in Klammern.</p>
+<p>Erweitern Sie die Klasse, so dass nach einem Flughafen-Code gesucht werden kann. (entweder via Konsole oder GUI)</p>
+</section>
+<section id="zusatz-aufgabe-tech-support-system-implementieren-todo-rework" class="level3">
+<h3>Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)</h3>
+<p>Erstellen Sie ein Tech-Support System, welches anhand von bestimmten Schlüsselwörtern, dem User eine &quot;Hilfe&quot; anbietet. Diese Applikation sollte folgende Klassen beinhalten:</p>
+<p><em>InputReader</em>: diese Klasse benützt die <code>Scanner</code>-Klasse, um die Eingabe einzulesen.</p>
+<p><em>Responder</em>: diese Klasse hat ein <code>HashMap</code> mit Schlüsselwörtern (<em>key</em>) und entsprechenden Antworten (<em>value</em>).</p>
+<p><em>SupportSystem</em>: hier wird Eingabe und Ausgabe gesteuert.</p>
+<blockquote>
+<p>Diese Klasse benützt den <code>InputReader</code> für die Eingabe und den <code>Responder</code> für eine Antwort.</p>
+</blockquote>
+</section>
+</section>
+<section id="übung-google-web-service-mit-json-verwenden" class="level2">
+<h2>Übung: Google Web-Service mit JSON verwenden</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>erstellen Client-Server Kommunikation</li>
+<li>parsen JSON</li>
+</ul>
+<p><strong>Zeit:</strong> 45 + 45 min</p>
+<section id="google-maps-nutzen" class="level3">
+<h3>Google Maps nutzen</h3>
+<p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
+<p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
+<p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
+<p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
+<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
+    +&quot;Hohlstrasse+535,Zuerich&quot;;
+
+URL googleClient = new URL(url);        
+URLConnection urlc = googleClient.openConnection();
+        
+BufferedReader in = new BufferedReader(
+            new InputStreamReader(urlc.getInputStream()));
+String msg = &quot;&quot;;
+// just reading server response
+while(in.ready()){
+    //System.out.println(line);
+    msg = msg+in.readLine();
+}
+//putting this into a computable JSON format 
+JSONObject obj = new JSONObject(msg);
+//fetch &quot;result&quot; part of JSON obj
+JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
+JSONObject inner = (JSONObject)results.get(0);
+        
+//now get the actual values 
+JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
+System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
+System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
+</section>
+<section id="zusatzaufgabe-google-api-nutzen" class="level3">
+<h3>Zusatzaufgabe Google API nutzen</h3>
+<p>Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für private Zwecke mit limitierten Abfragen pro Tag können Sie die API kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.</p>
+<p><a href="https://developers.google.com/maps/web-services/" class="uri">https://developers.google.com/maps/web-services/</a></p>
+<p><a href="https://developers.google.com/maps/documentation/directions/intro" class="uri">https://developers.google.com/maps/documentation/directions/intro</a></p>
+<p>Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.</p>
+</section>
+</section>
+<section id="übung-rekursive-algorithmen-erstellen-und-anwenden" class="level2">
+<h2>Übung: Rekursive Algorithmen erstellen und anwenden</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>Erstellen einfache und komplexe rekursive Funktionen</li>
+</ul>
+<p><strong>Zeit:</strong> 25 + 25 + 60 Minuten</p>
+<section id="rekursives-durchgehen-aller-files-oder-elemente" class="level3">
+<h3>Rekursives Durchgehen aller Files oder Elemente</h3>
+<p>Erstellen Sie eine Klasse, welche mittels der <code>java.io.File</code> Klasse alle Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht. Implementieren Sie eine Benutzer­schnittstelle, damit der Benutzer nach einer bestimmten Datei suchen kann.</p>
+<p><strong>Alternative</strong>: Sie können dasselbe Prinzip auch auf eine XML-Struktur anwenden (mit DOM) und diese dabei nach einem bestimmten Element durchsuchen.</p>
+</section>
+<section id="binäre-suche" class="level3">
+<h3>Binäre-Suche</h3>
+<p>Implementieren Sie eine binäre Suche, welche eine Zahl sucht. Dabei wird bei der binären Suche der definierte Suchraum (Anfangspunkt und Endpunkt) jeweils halbiert:</p>
+<blockquote>
+<p><em>guess = (upperborder + lowerborder) / 2</em></p>
+</blockquote>
+<p>Mit jedem Schritt wird der Suchraum verkleinert. In Pseudo-code:</p>
+<p><em>if (guess == number) Okay, found it!</em></p>
+<p><em>else if (guess&gt; number)</em></p>
+<p><em>number is lower, so we change our upperborder: upperborder = guess -1</em></p>
+<p><em>else if (guess &lt; number)</em></p>
+<p><em>number is higher, so we change our lowerborder: lowerborder = guess + 1</em></p>
+<p>Verwenden Sie dabei die Rekursion, um das wiederholte Suchen nach der Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche benötigt.</p>
+</section>
+<section id="fortgeschritten-die-türme-von-hanoi" class="level3">
+<h3>Fortgeschritten: Die Türme von Hanoi</h3>
+<p>Es handelt sich hier um ein klassisches Denksport-Problem: Gegeben sind 3 Türme. Auf einem Turm sind n Platten gelegt. Die Platten haben unterschiedliche Grössen, mit der grössten Platte zuunterst und der kleinsten Platte zuoberst.</p>
+<p><strong>Aufgabe:</strong> Die Platten sollen vom 1.Turm zum 3.Turm transportiert werden. Folgende Regeln gelten:</p>
+<ol type="1">
+<li><p>Es darf nur eine Platte aufs Mal transportiert werden (von irgendeinem Turm zu irgendeinem Turm).</p></li>
+<li><p>Grössere Platten dürfen NICHT auf Kleinere gelegt werden.</p></li>
+</ol>
+<figure>
+<img src="media/hanoi.jpeg" width="467" height="205" />
+</figure>
+<p>Implementieren Sie eine Klasse, welches dieses Problem löst. Die Anzahl Platten soll vom Benutzer bestimmt werden.</p>
+<p><strong>Beispiel:</strong> Transportiere 2 Platten (a und b) von Turm 1 nach Turm 3:</p>
+<p>Wir benötigen 3 Schritte, um diese beiden Platten zu bewegen:</p>
+<pre><code>Schritt 1: bewege Platte a nach Turm 2
+Schritt 2: bewege Platte b nach Turm 3
+Schritt 3: bewege Platte a nach Turm 3</code></pre>
+<p><strong>Die rekursive Lösung:</strong></p>
+<p>Nehmen wir an, dass Platte a aus mehreren Platten besteht. Somit wären die Schritte wie oben, nur dass Schritt 1 und 3 eine <em>Sammlung von Platten</em> bewegt.</p>
+<p>Schritt 1: bewege (n – 1) Platten von Turm 1 nach Turm 2 (n=totale Anzahl Platten)</p>
+<p>Schritt 2: bewege die letzte Platte nach Turm 3</p>
+<p>Schritt 3: bewege (n – 1) Platten von Turm 2 nach Turm 3</p>
+<p>Schritte 1 und 3 sind rekursive Aufrufe derselben Methode. Dieser Methoden-Aufruf sieht wie folgt aus:</p>
+<p>move(n - 1, start, end, middle); //Schritt 1</p>
+<p>move(n - 1, middle, start, end); //Schritt 3</p>
+<ol type="a">
+<li><p>Implementieren Sie eine Klasse mit der besprochenen Lösung. Ihre Klasse soll die entsprechenden Schritte ausgeben.</p></li>
+<li><p>Vergleichen Sie die Anzahl Platten mit der Anzahl Schritte. Wie nimmt der Aufwand zu?</p></li>
+</ol>
+</section>
+</section>
+</body>
+</html>

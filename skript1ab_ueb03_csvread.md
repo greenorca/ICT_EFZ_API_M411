@@ -1,4 +1,4 @@
-##Übung: Textfiles
+##Übung: Textdateien einlesen
 
 **Lernziele:**
 
@@ -8,7 +8,7 @@
 
 **Zeit:** 45 Minuten
 
-Wir werden ein Textfile mit folgender Struktur verwenden:
+Wir werden eine Textdatei mit folgender Struktur verwenden:
 
 `Huber;Peter;1955`<br>
 `Meier;Irene;1960`<br>
