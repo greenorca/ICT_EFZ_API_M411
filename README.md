@@ -10,8 +10,13 @@ Das beiliegende CSS ist ein erster Entwurf für ein brauchbares Layout. Eigene (
 
 `PATH=$HOME/.cabal/bin:$PATH`
 
-**MD -> HTML**
+**MD -> HTML (entire book; all files `included` in skript1ab\*.md)**
 
 ~~~~~~~~~~~~~~~~~~~~~~~
 pandoc -s skript1ab_ersteSchritte.docx.md -o markdown.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
 ~~~~~~~~~~~~~~~~~~~~~~~
+
+**MD -> HTML (just toolbox exercises)**
+~~~~~~~~~~~~~~~~~~~~~~
+pandoc -s skrip*ueb*.md -o toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
+~~~~~~~~~~~~~~~~~~~~~~
