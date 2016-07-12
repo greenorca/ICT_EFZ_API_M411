@@ -1,11 +1,11 @@
 Dynamische Datenstrukturen IV: XML und JSON
 ==========================================
 
-**Lernziele: **
-
-*   Sie kennen den Aufbau von XML und JSON Datenstrukturen
-*   Sie kennen die relevanten Parser um XML und JSON Strukturen zu lesen
-    und in Objekte umzuwandeln
+Lernziele
+----------
+*   beschreiben den Aufbau von XML und JSON Datenstrukturen
+*   nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln
+*		nutzen XML- und JSON basierte Webservices 
 
 Einführung in XML
 ------------------
@@ -24,9 +24,7 @@ Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node
 besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen
 befindet sich der Node-Inhalt.
 
-![Schematischer Aufbau eines XLM-Dokuments](media8/image1.png){}
-
-
+![Schematischer Aufbau eines XML-Dokuments](media/xml-tree.png){}
 
 Im Gegensatz zu HTML sind die Namen der
 Nodes nicht von einem Consortium global festgeschrieben, sondern werden
@@ -119,8 +117,7 @@ import org.w3c.dom.NodeList;
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Die XML-Datei wird in der Klasse `Document` als DOM abgebildet. Dabei
-parst der *DocumentBuilder* das XML und wandelt es in ein `Document` um
-(Punkt 1):
+parst der `DocumentBuilder` das XML und wandelt es in ein `Document` (eine Java-interne Datenstruktur) um:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~
 \* parses XML File filename and returns a NodeList of CD Nodes *\
@@ -153,8 +150,8 @@ public NodeList generateNodeList(String filename){
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Eine Knotenliste wird an einem bestimmten Tag-Element definiert (Punkt
-2). Somit hat diese `NodeList` alle Knoten mit „CD“ und somit auch alle
+Eine Knotenliste wird an einem bestimmten Tag-Element definiert. 
+Somit hat diese `NodeList` alle Knoten mit „CD“ und somit auch alle
 Kinder (children).
 
 Die Klasse `NodeList` implementiert das Collection-Interfase nicht.
@@ -211,25 +208,23 @@ aus.
 
 ###XML – Webservices nutzen
 
-Wie bereits erwähnt sind XML Datenstrukturen sehr häufig als
+Wie bereits erwähnt, sind XML Datenstrukturen sehr häufig als
 Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein
 http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen
 wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl
-definierten XML oder JSON Datenstrukturen beantwortet. Der Client sendet
+definierten XML- oder JSON-Datenstrukturen beantwortet. Der Client sendet
 Parameter für den Webservice werden entweder via GET in der URL oder als
 POST Request.
 
-Wir wollen von einem Dictionaire-Webservice die Definitionen von einem
-Begriff holen:
+Holen wir uns von einem Dictionaire-Webservice die Definitionen für einen
+bestimmten Begriff:
 
 <http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml>
 
 Kopieren Sie zunächst diesen Link in Ihren Webbrowser und interpretieren
 Sie die Antwort des Servers.
 
-Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung.
-Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache
-Ausgabe als String:
+Wie können solche Webservices aus einem Programm benutzt werden? Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 String searchWord = "xml";

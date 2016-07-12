@@ -57,7 +57,7 @@ werden. Folgende Regeln gelten:
 
 2.  Grössere Platten dürfen NICHT auf Kleinere gelegt werden.
 
-![](media10/image1.jpeg){width="4.864583333333333in"
+![](media/hanoi.jpeg){width="4.864583333333333in"
 height="2.1413385826771654in"}
 
 Implementieren Sie eine Klasse, welches dieses Problem löst. Die Anzahl

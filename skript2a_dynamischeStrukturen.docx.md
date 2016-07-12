@@ -39,7 +39,7 @@ den jedes Element das nächste Element kennt.
 Ein Element ist somit ein Knoten ("Node"), welches durch Verkettung bzw.
 Verknüpfung auf den nächsten Knoten verweist ("next").
 
-![Notation einfach verkettete Liste, Quelle: CrunchifyCode](media4/image1.png){width="80%"}
+![Notation einfach verkettete Liste, Quelle: CrunchifyCode](media/vk.png){width="80%"}
 
 Neben der einfach verketteten Liste gibt es auch doppelt verkettete
 Listen. Die Nodes der doppelt verketteten Liste enthalten neben der

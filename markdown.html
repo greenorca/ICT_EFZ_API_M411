@@ -90,8 +90,9 @@
 <li><a href="#wdh_javautils"><span class="toc-section-number">9.10</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-iv-xml-und-json"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</a><ul>
-<li><a href="#einführung-in-xml"><span class="toc-section-number">10.1</span> Einführung in XML</a></li>
-<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.2</span> Die Datenstruktur JSON</a></li>
+<li><a href="#lernziele"><span class="toc-section-number">10.1</span> Lernziele</a></li>
+<li><a href="#einführung-in-xml"><span class="toc-section-number">10.2</span> Einführung in XML</a></li>
+<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.3</span> Die Datenstruktur JSON</a></li>
 </ul></li>
 <li><a href="#rekursion-und-backtracking"><span class="toc-section-number">11</span> Rekursion und Backtracking</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">11.1</span> Lernziele:</a></li>
@@ -220,13 +221,14 @@ pandoc_title_block
 </ul>
 <p><strong>Lektion 17 – 20</strong></p>
 <ul>
-<li>Dynamische Datenstrukturen II</li>
-<li>Stack</li>
+<li>Stack, Queue</li>
 <li>Java Collections</li>
 <li>Iterator</li>
 </ul>
 <p><strong>Lektion 21 – 24</strong></p>
-<p>Miniprojekt</p>
+<ul>
+<li>Miniprojekt</li>
+</ul>
 <p><strong>Lektion 25 – 32</strong></p>
 <ul>
 <li>Weitere Datenstrukturen: HashMap, XML, JSON</li>
@@ -503,7 +505,7 @@ for (int i=0; i &gt; myIntArray.length; i++)
 	System.out.println(&quot;Position: &quot; + i + &quot;; Wert: &quot; + myIntArray[i]);</code></pre>
 <p>Wichtig ist, dass das erste Element des Arrays mit <strong>0</strong> indiziert ist. Die Array-Eigenschaft <em>length</em> gibt die Anzahl der Elemente (N) des Arrays an. Der <strong>maximale Positionsindex ist N-1</strong>, da das erste Element des Arrays mit 0 indiziert wird.</p>
 <figure>
-<img src="media2/image1.png" alt="Java - Syntax für Deklaration eines double-Arrays und Zugriff über den Index" style="width:60.0%" /><figcaption>Java - Syntax für Deklaration eines double-Arrays und Zugriff über den Index</figcaption>
+<img src="media/array.png" alt="Java - Syntax für Deklaration eines double-Arrays und Zugriff über den Index" style="width:60.0%" /><figcaption>Java - Syntax für Deklaration eines double-Arrays und Zugriff über den Index</figcaption>
 </figure>
 <p>Betrachten Sie nochmals die Parameterliste der <code>main</code>-Funktion. Was für ein Datentyp wird übergeben? Wozu kann der Parameter <code>String[] args</code> genutzt werden?</p>
 <p>Werden Arrays mit Datentypen mit fester Breite <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math> (<code>int, float, double, Time</code> etc.) angelegt, kann die Speicheradresse <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mi>n</mi></msub><annotation encoding="application/x-tex">x_{n}</annotation></semantics></math> des <em>n</em>-ten Elements von der Startadresse des Arrays <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mn>0</mn></msub><annotation encoding="application/x-tex">s_{0}</annotation></semantics></math> ausgehend berechnet werden: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mo>+</mo><mi>n</mi><mo>⋅</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">x_{n}= s_{0} + n \cdot b</annotation></semantics></math></p>
@@ -593,7 +595,7 @@ for (int i = 0; i &gt; N; i++){
 <h2><span class="header-section-number">6.1</span> Der Bubble-Sort Algorithmus</h2>
 <p>Das Sortieren gehört zu den Standard-Abläufen in der Informatik und reicht von simplen Datensätzen zu grossen Datenvolumen. Es gibt sehr viele Sortier-Algorithmen. Den Klassiker <em>BubbleSort</em> werden wir hier näher betrachten:</p>
 <figure>
-<img src="media2/image2.png" alt="Quelle: http://www.tinohempel.de/info/info/ti/bubblesort.htm" style="width:80.0%" /><figcaption>Quelle: <a href="http://www.tinohempel.de/info/info/ti/bubblesort.htm"><em>http://www.tinohempel.de/info/info/ti/bubblesort.htm</em></a></figcaption>
+<img src="media/pap_bsort.png" alt="Quelle: http://www.tinohempel.de/info/info/ti/bubblesort.htm" style="width:80.0%" /><figcaption>Quelle: <a href="http://www.tinohempel.de/info/info/ti/bubblesort.htm"><em>http://www.tinohempel.de/info/info/ti/bubblesort.htm</em></a></figcaption>
 </figure>
 <p>In jedem Durchgang wird das Feld (bzw. Array) von links nach rechts durchlaufen. Dabei wird in jedem Schritt das aktuelle Element <code>feld[j]</code> mit dem rechten Nachbarn <code>feld[j+1]</code> verglichen. Bei <em>aufsteigender</em> Sortierung werden die beiden Werte getauscht, wenn <code>feld[j] &gt; feld[j+1]</code>. Am Ende des ersten Durchganges steht garantiert das grösste Element am Ende der Liste, am Ende des zweiten Durchgangs das zweitgrösste an vorletzter Stelle usw.</p>
 <p>Die Durchgänge werden solange wiederholt, bis die Eingabeliste vollständig sortiert ist. Dabei muss das letzte Element des vorherigen Durchlaufs nicht mehr betrachtet werden, da die restliche zu sortierende Eingabe keine größeren bzw. kleineren Elemente mehr enthält. Die Elemente bewegen sich also wie Blasen („Bubbles“) in einem Wasserglass nach oben (bzw. hinten), bis alle Blasen ihren Platz gefunden haben.</p>
@@ -966,7 +968,7 @@ return index;
 <p>Jedes Element der einfach verketteten Liste enthält neben dem eigentlichen Wert die Speicheradresse des nächsten Listenelements. Die Speicheradresse nennt man in der C / C++ Welt auch Zeiger. Der &quot;Zeiger&quot; ist damit die Verknüpfung oder das Bindeglied innerhalb der Liste, durch den jedes Element das nächste Element kennt.</p>
 <p>Ein Element ist somit ein Knoten (&quot;Node&quot;), welches durch Verkettung bzw. Verknüpfung auf den nächsten Knoten verweist (&quot;next&quot;).</p>
 <figure>
-<img src="media4/image1.png" alt="Notation einfach verkettete Liste, Quelle: CrunchifyCode" style="width:80.0%" /><figcaption>Notation einfach verkettete Liste, Quelle: CrunchifyCode</figcaption>
+<img src="media/vk.png" alt="Notation einfach verkettete Liste, Quelle: CrunchifyCode" style="width:80.0%" /><figcaption>Notation einfach verkettete Liste, Quelle: CrunchifyCode</figcaption>
 </figure>
 <p>Neben der einfach verketteten Liste gibt es auch doppelt verkettete Listen. Die Nodes der doppelt verketteten Liste enthalten neben der Zeigeradresse des Nachfolgeelements auch eine Zeigeradresse auf das Vorgängerelement.</p>
 <section id="implementierung" class="level3">
@@ -1111,7 +1113,7 @@ the list
 <h2><span class="header-section-number">8.2</span> Die verkettete Liste als Stapel-Speicher</h2>
 <p>Mit Hilfe der <em>verketteten Liste</em>, können wir eine weitere häufig benützte Datenstruktur mit speziellen Eigenschaften umsetzen: den Stapel, bzw. Stack.</p>
 <p>Der Stack arbeitet nach dem LIFO-Prinzip (&quot;last in – first out&quot;). Als Analogie können Sie sich den Stack wie einen Stapel Teller in der Mensa vorstellen:</p>
-<p><img src="media5/image1.png" width="159" height="222" /> <img src="media5/image2.png" width="476" height="176" /></p>
+<p><img src="media/teller.png" width="159" height="222" /> <img src="media/stack_ops.png" width="476" height="176" /></p>
 <p>Die Grundoperationen für einen Stack sind:</p>
 <p><em>push</em> -&gt; ein Element zuoberst hinzufügen</p>
 <p><em>pop</em> -&gt; das Element zuoberst entfernen</p>
@@ -1297,7 +1299,7 @@ public Object next() {
 <h2><span class="header-section-number">9.3</span> Die Schnittstellen Collection und List</h2>
 <p>Die Datenstrukturen aus <code>java.util</code> nutzen die gemeinsame Schnittstelle <code>Collection</code>. Diese Schnittstelle definiert allgemeine Methoden und Funktionen, die innerhalb der Klassen implementiert sind. Eine Schnittstelle selbst beinhaltet allerdings keinen Code. Schnittstelle heisst auf Englisch interface. Beide Begriffe werden hier synonym gebraucht.</p>
 <figure>
-<img src="media6/image2.png" alt="Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html" style="width:80.0%" /><figcaption>Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html</figcaption>
+<img src="media/java_util_collection.png" alt="Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html" style="width:80.0%" /><figcaption>Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html</figcaption>
 </figure>
 <p>Bei der Benutzung einer Klasse, die diese Schnittstelle imple­mentiert, wissen Entwickler, welche Funktionen vorhanden sind. Dies dient der schnelleren und stabileren Software-Entwicklung.</p>
 <p>Beispiele für Methoden des <code>Collection</code>-Interfaces sind:</p>
@@ -1442,7 +1444,7 @@ kundenverwaltung.sort((p1,p2)-&gt;p1.familyName.compareTo(p2.familyName));</code
 <li><code>get(key)</code> --&gt; suchen* nach dem Wert, der zu dem gegebenen Schlüssel gehört</li>
 </ul>
 <figure>
-<img src="media6/image3.png" style="width:80.0%" />
+<img src="media/hashmap.png" style="width:80.0%" />
 </figure>
 <p>Dabei muss darauf geachtet werden, dass es nicht zu doppelten Einträgen (doppelte Schlüssel) kommt. Somit wird folgende Regel implementiert:</p>
 <ul>
@@ -1499,19 +1501,22 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </section>
 <section id="dynamische-datenstrukturen-iv-xml-und-json" class="level1">
 <h1><span class="header-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</h1>
-<p><strong>Lernziele: </strong></p>
+<section id="lernziele" class="level2">
+<h2><span class="header-section-number">10.1</span> Lernziele</h2>
 <ul>
-<li>Sie kennen den Aufbau von XML und JSON Datenstrukturen</li>
-<li>Sie kennen die relevanten Parser um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln</li>
+<li>beschreiben den Aufbau von XML und JSON Datenstrukturen</li>
+<li>nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln</li>
+<li><pre><code>	nutzen XML- und JSON basierte Webservices </code></pre></li>
 </ul>
+</section>
 <section id="einführung-in-xml" class="level2">
-<h2><span class="header-section-number">10.1</span> Einführung in XML</h2>
+<h2><span class="header-section-number">10.2</span> Einführung in XML</h2>
 <p>XML (eXtensible Markup Language) ist eine sogenannte Baumstruktur bzw. hierarchische Datenstruktur. XML gibt es schon seit 1998 und war ursprünglich als Dokumenten-Format konzipiert. Microsoft Word Dokumente werden beispielsweise als XML-Dokumente gespeichert. XML wird häufig zur Datenübertragung bei Web-Services verwendet.</p>
 <section id="aufbau" class="level3">
-<h3><span class="header-section-number">10.1.1</span> Aufbau</h3>
+<h3><span class="header-section-number">10.2.1</span> Aufbau</h3>
 <p>Wie HTML besteht XML aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen befindet sich der Node-Inhalt.</p>
 <figure>
-<img src="media8/image1.png" alt="Schematischer Aufbau eines XLM-Dokuments" /><figcaption>Schematischer Aufbau eines XLM-Dokuments</figcaption>
+<img src="media/xml-tree.png" alt="Schematischer Aufbau eines XML-Dokuments" /><figcaption>Schematischer Aufbau eines XML-Dokuments</figcaption>
 </figure>
 <p>Im Gegensatz zu HTML sind die Namen der Nodes nicht von einem Consortium global festgeschrieben, sondern werden für den jeweiligen Anwendungsfall definiert. Wollen wir beispielsweise unsere Liste der Klasse Person als XML abspeichern, könnte das Dokument bzw. als Baumstruktur so aussehen:</p>
 <pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
@@ -1530,7 +1535,7 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <p>Das <em>data</em>-Node enthält beliebig viele <em>person</em>-Nodes. Diese wiederum enthalten die entsprechenden Klassenattribute und Werte (als Strings). Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte erreicht. Entsprechend können Daten unter anderem via XML zwischen C++, Java, PHP und .NET ausgetauscht werden. Und deshalb ist XML beispielsweise für Webservices so interessant geworden.</p>
 </section>
 <section id="xml-parser" class="level3">
-<h3><span class="header-section-number">10.1.2</span> XML Parser</h3>
+<h3><span class="header-section-number">10.2.2</span> XML Parser</h3>
 <p>Zur Verarbeitung von XML oder JSON sind entsprechende &quot;Parser&quot; notwendig. Parser kommt aus dem Englischen und steht für Analysieren. Bei XML gibt es zwei Varianten:</p>
 <table style="width:99%;">
 <colgroup>
@@ -1568,7 +1573,7 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </table>
 </section>
 <section id="aufgabe-aus-xml-ein-dom-erstellen" class="level3">
-<h3><span class="header-section-number">10.1.3</span> Aufgabe: Aus XML ein DOM erstellen</h3>
+<h3><span class="header-section-number">10.2.3</span> Aufgabe: Aus XML ein DOM erstellen</h3>
 <p>Wir wollen den DOM XML-Parser zunächst an einem einfachen Beispiel umsetzen:</p>
 <pre><code>&lt;?xmlversion=&quot;1.0&quot;encoding=&quot;UTF-8&quot;?&gt;
 &lt;CATALOG&gt;
@@ -1594,7 +1599,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;</code></pre>
-<p>Die XML-Datei wird in der Klasse <code>Document</code> als DOM abgebildet. Dabei parst der <em>DocumentBuilder</em> das XML und wandelt es in ein <code>Document</code> um (Punkt 1):</p>
+<p>Die XML-Datei wird in der Klasse <code>Document</code> als DOM abgebildet. Dabei parst der <code>DocumentBuilder</code> das XML und wandelt es in ein <code>Document</code> (eine Java-interne Datenstruktur) um:</p>
 <pre><code>\* parses XML File filename and returns a NodeList of CD Nodes *\
 
 public NodeList generateNodeList(String filename){
@@ -1623,7 +1628,7 @@ public NodeList generateNodeList(String filename){
 	return cdElements;
 }
 </code></pre>
-<p>Eine Knotenliste wird an einem bestimmten Tag-Element definiert (Punkt 2). Somit hat diese <code>NodeList</code> alle Knoten mit „CD“ und somit auch alle Kinder (children).</p>
+<p>Eine Knotenliste wird an einem bestimmten Tag-Element definiert. Somit hat diese <code>NodeList</code> alle Knoten mit „CD“ und somit auch alle Kinder (children).</p>
 <p>Die Klasse <code>NodeList</code> implementiert das Collection-Interfase nicht. Stattdessen wird mit der NodeList-Methode <code>item(int i)</code> per Index auf die Elemente zugegriffen. Entsprech­end muss man in einer for-Schleife über diese Liste iterieren, um die weiteren Sub-Knoten auszulesen bzw. wiederum einer Liste zuweisen.</p>
 <p>Die Klasse Node bietet über die Funktion <code>String getTextContent()</code> eine einfache Variante, den Inhalt einer Node x (und aller darin enthaltenen Nodes) anzuschauen. Dabei werden die Namen der Kinder-Elemente verworfen und nur deren Text-Inhalte angezeigt:</p>
 <pre><code>NodeList list = generateNodeList(″cd_catalog.xml″);
@@ -1648,17 +1653,17 @@ public NodeList generateNodeList(String filename){
 <p>Durch das Casting der Nodes von <code>list</code> auf das org.w3c.dom – Interface <code>Element e</code> kann man wiederum mit der Methode <code>getElementsbyName(String name)</code> die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.</p>
 <p><strong>Fazit:</strong> Man muss als Entwickler den Aufbau der zu lesenden XML sehr genau kennen. Dann allerdings lassen sich sehr einfach Java-Klassen einlesen oder speichern.</p>
 <section id="aufgabe" class="level4">
-<h4><span class="header-section-number">10.1.3.1</span> Aufgabe:</h4>
+<h4><span class="header-section-number">10.2.3.1</span> Aufgabe:</h4>
 <p>Parsen Sie das XML-File <code>cd_catalog.xml</code> wie im obigen Beispiel in ein DOM ab und geben Sie für jede CD den Titel, den Künstler und das Jahr aus.</p>
 </section>
 </section>
 <section id="xml-webservices-nutzen" class="level3">
-<h3><span class="header-section-number">10.1.4</span> XML – Webservices nutzen</h3>
-<p>Wie bereits erwähnt sind XML Datenstrukturen sehr häufig als Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl definierten XML oder JSON Datenstrukturen beantwortet. Der Client sendet Parameter für den Webservice werden entweder via GET in der URL oder als POST Request.</p>
-<p>Wir wollen von einem Dictionaire-Webservice die Definitionen von einem Begriff holen:</p>
+<h3><span class="header-section-number">10.2.4</span> XML – Webservices nutzen</h3>
+<p>Wie bereits erwähnt, sind XML Datenstrukturen sehr häufig als Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl definierten XML- oder JSON-Datenstrukturen beantwortet. Der Client sendet Parameter für den Webservice werden entweder via GET in der URL oder als POST Request.</p>
+<p>Holen wir uns von einem Dictionaire-Webservice die Definitionen für einen bestimmten Begriff:</p>
 <p><a href="http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml" class="uri">http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml</a></p>
 <p>Kopieren Sie zunächst diesen Link in Ihren Webbrowser und interpretieren Sie die Antwort des Servers.</p>
-<p>Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:</p>
+<p>Wie können solche Webservices aus einem Programm benutzt werden? Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:</p>
 <pre><code>String searchWord = &quot;xml&quot;;
 //call web-service and get input stream result:
 URL url = new URL(&quot;http://services.aonaware.com/&quot; +
@@ -1677,7 +1682,7 @@ in.close();</code></pre>
 </section>
 </section>
 <section id="die-datenstruktur-json" class="level2">
-<h2><span class="header-section-number">10.2</span> Die Datenstruktur JSON</h2>
+<h2><span class="header-section-number">10.3</span> Die Datenstruktur JSON</h2>
 <p>JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo, Google und viele andere JSON als Datenübertragungsformat für interaktive Webseiten (AJAX) und auch Web-Services ein.</p>
 <pre><code>{&quot;employees&quot;:[
 	{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
@@ -1686,7 +1691,7 @@ in.close();</code></pre>
 }</code></pre>
 <p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
 <section id="json-mit-java-parsen" class="level3">
-<h3><span class="header-section-number">10.2.1</span> JSON mit Java parsen</h3>
+<h3><span class="header-section-number">10.3.1</span> JSON mit Java parsen</h3>
 <p>Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf <a href="http://www.json.org">www.json.org</a> vorgeschlagene JSON-Java Bibliothek für Java SE1.8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:</p>
 <p><a href="https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar" class="uri">https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar</a></p>
 <p>Wichtigen Klassen sind <code>JSONObject</code> und <code>JSONArray</code>. Sie werden mit der <code>import</code> Anweisung einge­bunden:</p>
@@ -1709,7 +1714,7 @@ obj.keys().forEachRemaining(key -&gt; {
 );</code></pre>
 </section>
 <section id="übung-google-web-service-mit-json-verwenden" class="level3">
-<h3><span class="header-section-number">10.2.2</span> Übung: Google Web-Service mit JSON verwenden</h3>
+<h3><span class="header-section-number">10.3.2</span> Übung: Google Web-Service mit JSON verwenden</h3>
 <p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
 <p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
 <p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
@@ -1739,7 +1744,7 @@ JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;loc
 System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
 System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
 <section id="zusatzaufgabe-google-api-nutzen" class="level4">
-<h4><span class="header-section-number">10.2.2.1</span> Zusatzaufgabe Google API nutzen</h4>
+<h4><span class="header-section-number">10.3.2.1</span> Zusatzaufgabe Google API nutzen</h4>
 <p>Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für private Zwecke mit limitierten Abfragen pro Tag können Sie die API kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.</p>
 <p><a href="https://developers.google.com/maps/web-services/" class="uri">https://developers.google.com/maps/web-services/</a></p>
 <p><a href="https://developers.google.com/maps/documentation/directions/intro" class="uri">https://developers.google.com/maps/documentation/directions/intro</a></p>
@@ -1747,7 +1752,7 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 </section>
 </section>
 <section id="generieren-und-schreiben-von-xml-und-json" class="level3">
-<h3><span class="header-section-number">10.2.3</span> Generieren und Schreiben von XML und JSON</h3>
+<h3><span class="header-section-number">10.3.3</span> Generieren und Schreiben von XML und JSON</h3>
 <p>Die behandelten Java-Bibliotheken stellen ebenfalls Methoden zum Erstellen von XML / JSON Datenstrukturen zur Verfügung. Diese können in diesem Kurs nicht mehr behandelt werden, sind jedoch mit etwas Recherche und Übung leicht nachzuvollziehen.</p>
 </section>
 </section>
@@ -1797,7 +1802,7 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 <p><strong>Beispiel: Fibonacci-Reihe berechnen </strong></p>
 <p>Die Fibonacci-Reihe (1,1,2,3,5,8,…) kann mittels Rekursion berechnet werden:</p>
 <figure>
-<img src="media10/Fibonacci_sequence_-_optional_starting_with_zero.jpg" alt="Fibonacci-Folge, Quelle: https://de.wikipedia.org/wiki/Fibonacci-Folge" /><figcaption>Fibonacci-Folge, Quelle: <a href="https://de.wikipedia.org/wiki/Fibonacci-Folge"><em>https://de.wikipedia.org/wiki/Fibonacci-Folge</em></a></figcaption>
+<img src="media/Fibonacci_sequence_-_optional_starting_with_zero.jpg" alt="Fibonacci-Folge, Quelle: https://de.wikipedia.org/wiki/Fibonacci-Folge" /><figcaption>Fibonacci-Folge, Quelle: <a href="https://de.wikipedia.org/wiki/Fibonacci-Folge"><em>https://de.wikipedia.org/wiki/Fibonacci-Folge</em></a></figcaption>
 </figure>
 <pre><code>public int calculate(int number) {
 	if((number == 0) || (number == 1)){
@@ -1883,7 +1888,7 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 <li><p>Grössere Platten dürfen NICHT auf Kleinere gelegt werden.</p></li>
 </ol>
 <figure>
-<img src="media10/image1.jpeg" width="467" height="205" />
+<img src="media/hanoi.jpeg" width="467" height="205" />
 </figure>
 <p>Implementieren Sie eine Klasse, welches dieses Problem löst. Die Anzahl Platten soll vom Benutzer bestimmt werden.</p>
 <p><strong>Beispiel:</strong> Transportiere 2 Platten (a und b) von Turm 1 nach Turm 3:</p>

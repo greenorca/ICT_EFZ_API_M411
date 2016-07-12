@@ -77,7 +77,7 @@ Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `f
 Die Fibonacci-Reihe (1,1,2,3,5,8,…)
 kann mittels Rekursion berechnet werden:
 
-![Fibonacci-Folge, Quelle: [*https://de.wikipedia.org/wiki/Fibonacci-Folge*](https://de.wikipedia.org/wiki/Fibonacci-Folge)](media10/Fibonacci_sequence_-_optional_starting_with_zero.jpg){}
+![Fibonacci-Folge, Quelle: [*https://de.wikipedia.org/wiki/Fibonacci-Folge*](https://de.wikipedia.org/wiki/Fibonacci-Folge)](media/Fibonacci_sequence_-_optional_starting_with_zero.jpg){}
 
 ~~~~~~~~~~~~~~~~
 public int calculate(int number) {
@@ -172,7 +172,7 @@ gesucht. Am einfachsten stellt man sich das Suchen nach einer Lösung in
 Form eines Baumes vor:
 
 
-![](media10/image2.gif){}   
+![](media/tree.gif){}   
 
 1. Man beginnt bei *Root* und hat A oder B zur Auswahl. Man wählt A.                                                                          
 2. Bei A haben wir C oder D zur Auswahl. Man wählt C.                                                                          

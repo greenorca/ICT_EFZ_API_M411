@@ -30,7 +30,7 @@ Schnittstelle selbst beinhaltet allerdings keinen Code. Schnittstelle
 heisst auf Englisch interface. Beide Begriffe werden hier synonym
 gebraucht.
 
-![Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html](media6/image2.png){width="80%"}
+![Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html](media/java_util_collection.png){width="80%"}
 
 Bei der Benutzung einer Klasse, die diese Schnittstelle imple­mentiert, wissen Entwickler, welche Funktionen vorhanden sind.
 Dies dient der schnelleren und stabileren Software-Entwicklung.
@@ -221,7 +221,7 @@ Die `map`-Datenstruktur unterstützt üblicherweise 2 Operationen:
 * `get(key)` --&gt; suchen* nach dem Wert, der zu dem gegebenen
     Schlüssel gehört
 
-![](media6/image3.png){width="80%"}
+![](media/hashmap.png){width="80%"}
 
 Dabei muss darauf geachtet werden, dass es nicht zu doppelten Einträgen
 (doppelte Schlüssel) kommt. Somit wird folgende Regel implementiert:

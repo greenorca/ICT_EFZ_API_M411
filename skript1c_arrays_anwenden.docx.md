@@ -85,7 +85,7 @@ an. Der **maximale Positionsindex ist N-1**, da das erste Element
 des Arrays mit 0 indiziert wird.
 
 ![Java - Syntax für Deklaration eines double-Arrays und Zugriff
-über den Index](media2/image1.png){width="60%"}
+über den Index](media/array.png){width="60%"}
 
 Betrachten Sie nochmals die Parameterliste der `main`-Funktion. Was für ein Datentyp wird 
 übergeben? Wozu kann der Parameter `String[] args` genutzt werden?
