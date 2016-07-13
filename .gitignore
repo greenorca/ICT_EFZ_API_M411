@@ -1,5 +1,6 @@
 *.zip
-lb*.md
+lb3.md
 M411_LB*.html
-lb_files/*
+/lb_files
+
 

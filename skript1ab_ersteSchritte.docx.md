@@ -44,6 +44,11 @@ author:
 - Sven Schirmer
 ---
 
+TODO-Liste
+----------
+* Mandelbrot-Übung ergänzen
+* Debugger, Heap und Stack bei Rekursion einbauen
+
 Willkommen (zurück) bei in Java
 ========================================
 
