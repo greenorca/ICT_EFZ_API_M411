@@ -1,0 +1,51 @@
+artist_name	album_name	track_name
+Beatles	The White Album	Help
+Beatles	The White Album	Yesterday
+Beatles	The White Album	Ticket to Ride
+Beatles	Anthology	Three cool cats
+Beatles	Anthology	And I love her
+Rolling Stones	Rolling Stones	Satisfaction
+Rolling Stones	Rolling Stones	Stoned
+The Doors	LA Woman	LA Woman
+The Doors	LA Woman	Riders on the Storm
+The Doors	Waiting for the Sun	Hello, I love you
+The Doors	Waiting for the Sun	Spanish Caravan
+Bob Marley	Rastaman Vibration	Positive Vibrations
+Bob Marley	Rastaman Vibration	Roots, Rock, Reggae
+Bob Marley	Rastaman Vibration	Johnny Was
+Bob Marley	Rastaman Vibration	Want More
+Bob Marley	Rastaman Vibration	Rat Race
+Depeche Mode	Master and Servant	Never Let Me Down Again (Split Mix)
+Depeche Mode	Master and Servant	Policy Of Truth (Capitol Mix)
+Depeche Mode	Master and Servant	Shout (Rio Remix)
+Depeche Mode	Master and Servant	Home (Air 'Around The Golf' Remix)
+Depeche Mode	Master and Servant	Strangelove (Blind Mix)
+Depeche Mode	Master and Servant	Rush (Spiritual Guidance Mix)
+Depeche Mode	Master and Servant	I Feel You (Renegade Soundwave Afghan Surgery
+Depeche Mode	Master and Servant	Barrel Of A Gun (Underworld Hard Mix)
+Depeche Mode	Master and Servant	Route 66 (Beatmasters Mix)
+Depeche Mode	Master and Servant	Freelove (DJ Muggs Remix)
+Depeche Mode	Master and Servant	I Feel Loved (Chamber's Remix)
+Depeche Mode	Master and Servant	Just Can't Get Enough (Schizo Mix)
+Depeche Mode	Master and Servant	Personal Jesus (Pump Mix)
+Depeche Mode	Master and Servant	World In My Eyes (Mode To Joy)
+Depeche Mode	Master and Servant	Get The Balance Right! (Combination Mix)
+Depeche Mode	Master and Servant	Everything Counts (Absolut Mix)
+Depeche Mode	Master and Servant	Breathing In Fumes
+Depeche Mode	Remixes 84...03	Never Let Me Down Again (Split Mix)
+Depeche Mode	Remixes 84...03	Policy Of Truth (Capitol Mix)
+Depeche Mode	Remixes 84...03	Shout (Rio Remix)
+Depeche Mode	Remixes 84...03	Home (Air 'Around The Golf' Remix)
+Depeche Mode	Remixes 84...03	Strangelove (Blind Mix)
+Depeche Mode	Remixes 84...03	Rush (Spiritual Guidance Mix)
+Depeche Mode	Remixes 84...03	I Feel You (Renegade Soundwave Afghan Surgery
+Depeche Mode	Remixes 84...03	Barrel Of A Gun (Underworld Hard Mix)
+Depeche Mode	Remixes 84...03	Route 66 (Beatmasters Mix)
+Depeche Mode	Remixes 84...03	Freelove (DJ Muggs Remix)
+Depeche Mode	Remixes 84...03	I Feel Loved (Chamber's Remix)
+Depeche Mode	Remixes 84...03	Just Can't Get Enough (Schizo Mix)
+Depeche Mode	Remixes 84...03	Personal Jesus (Pump Mix)
+Depeche Mode	Remixes 84...03	World In My Eyes (Mode To Joy)
+Depeche Mode	Remixes 84...03	Get The Balance Right! (Combination Mix)
+Depeche Mode	Remixes 84...03	Everything Counts (Absolut Mix)
+Depeche Mode	Remixes 84...03	Breathing In Fumes
