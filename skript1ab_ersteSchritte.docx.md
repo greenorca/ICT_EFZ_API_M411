@@ -98,8 +98,10 @@ Handlungsziele nach ICT-Vorgaben (BiVo 2014)
   + Kennt die Funktionsweise im Heap bei dynamisch erzeugten Objekten.
   + Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.
 <hr/>
+
 Kursablauf
 ----------
+
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
 <table>

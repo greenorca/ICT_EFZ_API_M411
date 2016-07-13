@@ -24,6 +24,7 @@
 <ul>
 <li><a href="#willkommen-zurück-bei-in-java"><span class="toc-section-number">1</span> Willkommen (zurück) bei in Java</a><ul>
 <li><a href="#handlungsziele-nach-ict-vorgaben-bivo-2014"><span class="toc-section-number">1.1</span> Handlungsziele nach ICT-Vorgaben (BiVo 2014)</a></li>
+<li><a href="#kursablauf"><span class="toc-section-number">1.2</span> Kursablauf</a></li>
 </ul></li>
 <li><a href="#klassen-erstellen"><span class="toc-section-number">2</span> Klassen erstellen</a><ul>
 <li><a href="#lernziele"><span class="toc-section-number">2.1</span> Lernziele</a></li>
@@ -37,8 +38,13 @@
 </ul></li>
 <li><a href="#strukturiere-daten-lesen-und-schreiben"><span class="toc-section-number">4</span> Strukturiere Daten lesen und schreiben</a><ul>
 <li><a href="#lernziele_file_io"><span class="toc-section-number">4.1</span> Lernziele</a></li>
-<li><a href="#bufferedreader"><span class="toc-section-number">4.2</span> BufferedReader</a></li>
-<li><a href="#strukturierte-textfiles"><span class="toc-section-number">4.3</span> Strukturierte Textfiles</a></li>
+<li><a href="#bufferedreader"><span class="toc-section-number">4.2</span> BufferedReader</a><ul>
+<li><a href="#erstellen-eines-bufferedreader"><span class="toc-section-number">4.2.1</span> Erstellen eines BufferedReader</a></li>
+<li><a href="#buffered-reader-oder-scanner"><span class="toc-section-number">4.2.2</span> Buffered Reader oder Scanner?</a></li>
+</ul></li>
+<li><a href="#strukturierte-textfiles"><span class="toc-section-number">4.3</span> Strukturierte Textfiles</a><ul>
+<li><a href="#nummerische-werte-behandeln"><span class="toc-section-number">4.3.1</span> Nummerische Werte behandeln</a></li>
+</ul></li>
 <li><a href="#übung-textdateien-einlesen"><span class="toc-section-number">4.4</span> Übung: Textdateien einlesen</a></li>
 <li><a href="#daten-strukturiert-in-ein-file-schreiben"><span class="toc-section-number">4.5</span> Daten strukturiert in ein File schreiben</a></li>
 <li><a href="#übung-csv-schreiben"><span class="toc-section-number">4.6</span> Übung: CSV schreiben</a></li>
@@ -47,33 +53,76 @@
 <li><a href="#arrays"><span class="toc-section-number">5</span> Arrays</a><ul>
 <li><a href="#lernziele_array"><span class="toc-section-number">5.1</span> Lernziele</a></li>
 <li><a href="#was-haben-algorithmen-und-datenstrukturen-miteinander-zu-tun"><span class="toc-section-number">5.2</span> Was haben Algorithmen und Datenstrukturen miteinander zu tun?</a></li>
-<li><a href="#die-elementare-datenstruktur-array"><span class="toc-section-number">5.3</span> Die elementare Datenstruktur: Array</a></li>
-<li><a href="#übung-elementare-array---funktionalität"><span class="toc-section-number">5.4</span> Übung: Elementare Array - Funktionalität</a></li>
+<li><a href="#die-elementare-datenstruktur-array"><span class="toc-section-number">5.3</span> Die elementare Datenstruktur: Array</a><ul>
+<li><a href="#initialisierung-und-zugriff-via-index"><span class="toc-section-number">5.3.1</span> Initialisierung und Zugriff via Index</a></li>
+<li><a href="#praktische-anwendung-von-arrays"><span class="toc-section-number">5.3.2</span> Praktische Anwendung von Arrays</a></li>
+<li><a href="#kopieren-vs.-aliasing"><span class="toc-section-number">5.3.3</span> Kopieren vs. Aliasing</a></li>
+<li><a href="#array-boundaries"><span class="toc-section-number">5.3.4</span> Array Boundaries</a></li>
+<li><a href="#benutzereingabe-über-konsole-oder-gui"><span class="toc-section-number">5.3.5</span> Benutzereingabe über Konsole oder GUI</a></li>
+</ul></li>
+<li><a href="#übung-elementare-array---funktionalität"><span class="toc-section-number">5.4</span> Übung: Elementare Array - Funktionalität</a><ul>
+<li><a href="#minimum-und-maximum-in-einem-array-suchen"><span class="toc-section-number">5.4.1</span> Minimum und Maximum in einem Array suchen</a></li>
+<li><a href="#arrays-addieren"><span class="toc-section-number">5.4.2</span> Arrays addieren</a></li>
+<li><a href="#elemente-nachrutschen"><span class="toc-section-number">5.4.3</span> Elemente nachrutschen</a></li>
+</ul></li>
 <li><a href="#wdh_array"><span class="toc-section-number">5.5</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#elementare-algorithmen-und-laufzeit-analysen"><span class="toc-section-number">6</span> Elementare Algorithmen und Laufzeit-Analysen</a><ul>
-<li><a href="#der-bubble-sort-algorithmus"><span class="toc-section-number">6.1</span> Der Bubble-Sort Algorithmus</a></li>
-<li><a href="#laufzeitanalyse"><span class="toc-section-number">6.2</span> Laufzeitanalyse</a></li>
-<li><a href="#übung-weiterführende-aufgaben-mit-bubble-sort"><span class="toc-section-number">6.3</span> Übung: Weiterführende Aufgaben mit Bubble-Sort</a></li>
-<li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort"><span class="toc-section-number">6.4</span> Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a></li>
+<li><a href="#der-bubble-sort-algorithmus"><span class="toc-section-number">6.1</span> Der Bubble-Sort Algorithmus</a><ul>
+<li><a href="#bubble-sort-manuell-durchspielen"><span class="toc-section-number">6.1.1</span> Bubble-Sort manuell durchspielen</a></li>
+</ul></li>
+<li><a href="#laufzeitanalyse"><span class="toc-section-number">6.2</span> Laufzeitanalyse</a><ul>
+<li><a href="#anzahl-vergleichsoperationen"><span class="toc-section-number">6.2.1</span> Anzahl Vergleichsoperationen</a></li>
+<li><a href="#aufwand-im-besten-und-im-schlechtesten-fall"><span class="toc-section-number">6.2.2</span> Aufwand im besten und im schlechtesten Fall</a></li>
+<li><a href="#übung-bubblesort-implementieren-und-laufzeit-analysieren"><span class="toc-section-number">6.2.3</span> Übung: BubbleSort implementieren und Laufzeit analysieren</a></li>
+<li><a href="#komplexitätsklassen-von-algorithmen"><span class="toc-section-number">6.2.4</span> Komplexitätsklassen von Algorithmen</a></li>
+<li><a href="#übung-laufzeitkomplexität-von-algorithmen-bestimmen"><span class="toc-section-number">6.2.5</span> Übung: Laufzeitkomplexität von Algorithmen bestimmen</a></li>
+</ul></li>
+<li><a href="#übung-weiterführende-aufgaben-mit-bubble-sort"><span class="toc-section-number">6.3</span> Übung: Weiterführende Aufgaben mit Bubble-Sort</a><ul>
+<li><a href="#strings-sortieren"><span class="toc-section-number">6.3.1</span> Strings sortieren</a></li>
+<li><a href="#array-einer-benutzerdefinierten-klasse-sortieren"><span class="toc-section-number">6.3.2</span> Array einer benutzerdefinierten Klasse sortieren</a></li>
+</ul></li>
+<li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort"><span class="toc-section-number">6.4</span> Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a><ul>
+<li><a href="#optional-quick-sort"><span class="toc-section-number">6.4.1</span> Optional: Quick-Sort</a></li>
+<li><a href="#optional-insert-sort"><span class="toc-section-number">6.4.2</span> Optional: Insert-Sort</a></li>
+</ul></li>
 <li><a href="#wdh_funkomplex"><span class="toc-section-number">6.5</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-verkettete-liste"><span class="toc-section-number">7</span> Dynamische Datenstrukturen: Verkettete Liste</a><ul>
 <li><a href="#lernziele_vk"><span class="toc-section-number">7.1</span> Lernziele</a></li>
-<li><a href="#eine-elementare-datenstruktur-verkettete-liste"><span class="toc-section-number">7.2</span> Eine elementare Datenstruktur: Verkettete Liste</a></li>
-<li><a href="#die-mylinkedlist---klasse"><span class="toc-section-number">7.3</span> Die MyLinkedList - Klasse</a></li>
-<li><a href="#übungen-verkettete-liste"><span class="toc-section-number">7.4</span> Übungen: Verkettete Liste</a></li>
+<li><a href="#eine-elementare-datenstruktur-verkettete-liste"><span class="toc-section-number">7.2</span> Eine elementare Datenstruktur: Verkettete Liste</a><ul>
+<li><a href="#implementierung"><span class="toc-section-number">7.2.1</span> Implementierung</a></li>
+</ul></li>
+<li><a href="#die-mylinkedlist---klasse"><span class="toc-section-number">7.3</span> Die MyLinkedList - Klasse</a><ul>
+<li><a href="#elemente-hinzufügen"><span class="toc-section-number">7.3.1</span> Elemente hinzufügen:</a></li>
+</ul></li>
+<li><a href="#übungen-verkettete-liste"><span class="toc-section-number">7.4</span> Übungen: Verkettete Liste</a><ul>
+<li><a href="#eigene-verkettete-liste-implementieren"><span class="toc-section-number">7.4.1</span> Eigene verkettete Liste implementieren</a></li>
+<li><a href="#elemente-entfernen"><span class="toc-section-number">7.4.2</span> Elemente entfernen</a></li>
+</ul></li>
 <li><a href="#verkettete-liste-vs.-array"><span class="toc-section-number">7.5</span> Verkettete Liste vs. Array</a></li>
-<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo"><span class="toc-section-number">7.6</span> Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a></li>
+<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo"><span class="toc-section-number">7.6</span> Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a><ul>
+<li><a href="#verkettete-liste-sortieren-und-laufzeit-messen"><span class="toc-section-number">7.6.1</span> Verkettete Liste sortieren und Laufzeit messen</a></li>
+<li><a href="#verkettete-liste-umkehren"><span class="toc-section-number">7.6.2</span> Verkettete Liste umkehren</a></li>
+</ul></li>
 <li><a href="#wdh_vk"><span class="toc-section-number">7.7</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-ii-stacks-und-queues"><span class="toc-section-number">8</span> Dynamische Datenstrukturen II: Stacks und Queues</a><ul>
 <li><a href="#lernziele_stacks_queues"><span class="toc-section-number">8.1</span> Lernziele</a></li>
 <li><a href="#die-verkettete-liste-als-stapel-speicher"><span class="toc-section-number">8.2</span> Die verkettete Liste als Stapel-Speicher</a></li>
-<li><a href="#übungen-stack-implementieren"><span class="toc-section-number">8.3</span> Übungen: Stack implementieren</a></li>
+<li><a href="#übungen-stack-implementieren"><span class="toc-section-number">8.3</span> Übungen: Stack implementieren</a><ul>
+<li><a href="#stack-klasse-erstellen"><span class="toc-section-number">8.3.1</span> Stack Klasse erstellen</a></li>
+<li><a href="#stack-testen-und-elemente-ausgeben"><span class="toc-section-number">8.3.2</span> Stack testen und Elemente ausgeben</a></li>
+<li><a href="#isempty-methode-implementieren"><span class="toc-section-number">8.3.3</span> <code>isEmpty()</code>-Methode implementieren</a></li>
+<li><a href="#stack-ergänzen"><span class="toc-section-number">8.3.4</span> Stack ergänzen</a></li>
+<li><a href="#palindrome-prüfen"><span class="toc-section-number">8.3.5</span> Palindrome prüfen</a></li>
+</ul></li>
 <li><a href="#die-verkettete-liste-als-warteschlange"><span class="toc-section-number">8.4</span> Die Verkettete Liste als Warteschlange</a></li>
 <li><a href="#verwendung-von-iterator-anstelle-von-for--oder-while-schleifen"><span class="toc-section-number">8.5</span> Verwendung von <code>Iterator</code> anstelle von <code>for</code>- oder <code>while</code>-Schleifen</a></li>
-<li><a href="#übung-arbeiten-mit-iteratoren"><span class="toc-section-number">8.6</span> Übung: Arbeiten mit Iteratoren</a></li>
+<li><a href="#übung-arbeiten-mit-iteratoren"><span class="toc-section-number">8.6</span> Übung: Arbeiten mit Iteratoren</a><ul>
+<li><a href="#methode-next-implementieren"><span class="toc-section-number">8.6.1</span> Methode <code>next()</code> implementieren</a></li>
+<li><a href="#array-umgekehrt-ausgeben-mit-verwendung-von-iterator"><span class="toc-section-number">8.6.2</span> Array umgekehrt ausgeben mit Verwendung von <code>Iterator</code></a></li>
+</ul></li>
 <li><a href="#wdh_stack_queue"><span class="toc-section-number">8.7</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-iii-java-collections"><span class="toc-section-number">9</span> Dynamische Datenstrukturen III: Java Collections</a><ul>
@@ -83,24 +132,52 @@
 <li><a href="#implementierung-der-schnittstellen-in-klassen-des-java.util-pakets"><span class="toc-section-number">9.4</span> Implementierung der Schnittstellen in Klassen des <code>java.util</code> Pakets</a></li>
 <li><a href="#anwendungsgebiete-von-arraylist-vector-und-linkedlist"><span class="toc-section-number">9.5</span> Anwendungsgebiete von <code>ArrayList</code>, <code>Vector</code> und <code>LinkedList</code></a></li>
 <li><a href="#die-foreach-schleife-mit-collections"><span class="toc-section-number">9.6</span> Die <code>foreach</code>-Schleife mit Collections</a></li>
-<li><a href="#lambda-funktionen"><span class="toc-section-number">9.7</span> Lambda-Funktionen</a></li>
-<li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken"><span class="toc-section-number">9.8</span> Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a></li>
+<li><a href="#lambda-funktionen"><span class="toc-section-number">9.7</span> Lambda-Funktionen</a><ul>
+<li><a href="#sortieren-von-arraylist-und-linkedlist"><span class="toc-section-number">9.7.1</span> Sortieren von <code>ArrayList</code> und <code>LinkedList</code></a></li>
+<li><a href="#listen-mit-lambda-ausdrücken-filtern"><span class="toc-section-number">9.7.2</span> Listen mit Lambda-Ausdrücken filtern</a></li>
+</ul></li>
+<li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken"><span class="toc-section-number">9.8</span> Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a><ul>
+<li><a href="#liste-von-zufallszahlen-sortieren"><span class="toc-section-number">9.8.1</span> Liste von Zufallszahlen sortieren</a></li>
+<li><a href="#flughafen-liste-implementieren"><span class="toc-section-number">9.8.2</span> Flughafen-Liste implementieren</a></li>
+</ul></li>
 <li><a href="#die-map-datenstruktur"><span class="toc-section-number">9.9</span> Die <code>Map</code>-Datenstruktur</a></li>
-<li><a href="#übung-anwenden-map-datenstruktur"><span class="toc-section-number">9.10</span> Übung: Anwenden <code>map</code>-Datenstruktur</a></li>
+<li><a href="#übung-anwenden-map-datenstruktur"><span class="toc-section-number">9.10</span> Übung: Anwenden <code>map</code>-Datenstruktur</a><ul>
+<li><a href="#aufgabe-hashmap-kennenlernen"><span class="toc-section-number">9.10.1</span> Aufgabe: <code>HashMap</code> kennenlernen</a></li>
+<li><a href="#zusatz-aufgabe-hashmap-für-grössere-datenmengen-verwenden"><span class="toc-section-number">9.10.2</span> Zusatz-Aufgabe: <code>HashMap</code> für grössere Datenmengen verwenden</a></li>
+<li><a href="#zusatz-aufgabe-tech-support-system-implementieren-todo-rework"><span class="toc-section-number">9.10.3</span> Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)</a></li>
+</ul></li>
 <li><a href="#wdh_javautils"><span class="toc-section-number">9.11</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#dynamische-datenstrukturen-iv-xml-und-json"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</a><ul>
 <li><a href="#lernziele_xmljson"><span class="toc-section-number">10.1</span> Lernziele</a></li>
-<li><a href="#einführung-in-xml"><span class="toc-section-number">10.2</span> Einführung in XML</a></li>
-<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.3</span> Die Datenstruktur JSON</a></li>
-<li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.4</span> Übung: Google Web-Service mit JSON verwenden</a></li>
+<li><a href="#einführung-in-xml"><span class="toc-section-number">10.2</span> Einführung in XML</a><ul>
+<li><a href="#aufbau"><span class="toc-section-number">10.2.1</span> Aufbau</a></li>
+<li><a href="#xml-parser"><span class="toc-section-number">10.2.2</span> XML Parser</a></li>
+<li><a href="#aufgabe-aus-xml-ein-dom-erstellen"><span class="toc-section-number">10.2.3</span> Aufgabe: Aus XML ein DOM erstellen</a></li>
+<li><a href="#xml-webservices-nutzen"><span class="toc-section-number">10.2.4</span> XML – Webservices nutzen</a></li>
+</ul></li>
+<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.3</span> Die Datenstruktur JSON</a><ul>
+<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.3.1</span> JSON mit Java parsen</a></li>
+</ul></li>
+<li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.4</span> Übung: Google Web-Service mit JSON verwenden</a><ul>
+<li><a href="#google-maps-nutzen"><span class="toc-section-number">10.4.1</span> Google Maps nutzen</a></li>
+<li><a href="#zusatzaufgabe-google-api-nutzen"><span class="toc-section-number">10.4.2</span> Zusatzaufgabe Google API nutzen</a></li>
+<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.4.3</span> Generieren und Schreiben von XML und JSON</a></li>
+</ul></li>
 <li><a href="#wdh_xml_json"><span class="toc-section-number">10.5</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#rekursion-und-backtracking"><span class="toc-section-number">11</span> Rekursion und Backtracking</a><ul>
 <li><a href="#lernziele_rekursion"><span class="toc-section-number">11.1</span> Lernziele</a></li>
-<li><a href="#rekursion"><span class="toc-section-number">11.2</span> Rekursion</a></li>
+<li><a href="#rekursion"><span class="toc-section-number">11.2</span> Rekursion</a><ul>
+<li><a href="#rekursion-in-einer-datenstruktur"><span class="toc-section-number">11.2.1</span> Rekursion in einer Datenstruktur</a></li>
+<li><a href="#rekursive-algorithmen"><span class="toc-section-number">11.2.2</span> Rekursive Algorithmen</a></li>
+</ul></li>
 <li><a href="#rekursion-vs-iteration"><span class="toc-section-number">11.3</span> Rekursion vs Iteration</a></li>
-<li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden"><span class="toc-section-number">11.4</span> Übung: Rekursive Algorithmen erstellen und anwenden</a></li>
+<li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden"><span class="toc-section-number">11.4</span> Übung: Rekursive Algorithmen erstellen und anwenden</a><ul>
+<li><a href="#rekursives-durchgehen-aller-files-oder-elemente"><span class="toc-section-number">11.4.1</span> Rekursives Durchgehen aller Files oder Elemente</a></li>
+<li><a href="#binäre-suche"><span class="toc-section-number">11.4.2</span> Binäre-Suche</a></li>
+<li><a href="#fortgeschritten-die-türme-von-hanoi"><span class="toc-section-number">11.4.3</span> Fortgeschritten: Die Türme von Hanoi</a></li>
+</ul></li>
 <li><a href="#backtracking"><span class="toc-section-number">11.5</span> Backtracking</a></li>
 </ul></li>
 </ul>
@@ -125,7 +202,10 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o markdown.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+
+pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
+
 
 # -s: Header (Title, etc)
 # -section: put chapters in <section> elements
@@ -211,10 +291,12 @@ pandoc_title_block
 <li>Kennt die Funktionsweise des Stacks bei einem Funktionsaufruf.</li>
 <li>Kennt die Funktionsweise im Heap bei dynamisch erzeugten Objekten.</li>
 <li>Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.
-<hr/>
-<h2 id="kursablauf"><span class="header-section-number">1.1</span> Kursablauf</h2>
-Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:</li>
+<hr/></li>
 </ul>
+</section>
+<section id="kursablauf" class="level2">
+<h2><span class="header-section-number">1.2</span> Kursablauf</h2>
+<p>Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:</p>
 <table>
 <tr>
 <th>
@@ -528,7 +610,7 @@ double doubleVal = Double.parseDouble(doubleStr);</code></pre>
 </ul>
 <p><strong>Zeit:</strong> 25 Minuten</p>
 <p><strong>Aufgabe</strong></p>
-<p>Erstellen Sie eine Klasse <code>MyWriter</code>. In der <code>main</code>-Funktion wird <strong>eine</strong> beliebigen User-Input von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.</p>
+<p>Erstellen Sie eine Klasse <code>MyWriter</code>. In der <code>main</code>-Funktion wird <strong>eine</strong> beliebige Benutzereingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.</p>
 <div class="lsg">
 <pre><code>public static void main(String[] args) {
         String fileName = &quot;/tmp/guggus.txt&quot;;
@@ -577,7 +659,7 @@ double doubleVal = Double.parseDouble(doubleStr);</code></pre>
 </section>
 <section id="was-haben-algorithmen-und-datenstrukturen-miteinander-zu-tun" class="level2">
 <h2><span class="header-section-number">5.2</span> Was haben Algorithmen und Datenstrukturen miteinander zu tun?</h2>
-<p>Der Begriff <em>Algorithmus</em> wird in der Informatik verwendet, um ein Verfahren zur Lösung eines Problems zu beschreiben. Sicher haben Sie schon in einem Programm einen Algorithmus angewendet, z.B. zum Sortieren oder Durchsuchen von Datenbank-Tabellen. Algorithmen sind der „Stoff“ der Informatik. Sie definieren das Vorgehen, um ein bestimmtes Problem zu lösen.</p>
+<p>Der Begriff <em>Algorithmus</em> wird in der Informatik verwendet, um ein Verfahren zur Lösung eines Problems zu beschreiben. Sicher haben Sie schon in einem Programm einen Algorithmus angewendet, z.B. zum Sortieren oder Durchsuchen von Datenbank-Tabellen. Algorithmen sind der <em>Stoff</em> der Informatik. Sie definieren das Vorgehen, um ein bestimmtes Problem zu lösen.</p>
 <p>Eine <em>Datenstruktur</em> ist wichtig für den Algorithmus. Die Datenstruktur organisiert die Daten auf eine bestimmte Weise, damit sie effizient und sicher mit einem Algorithmus bearbeitet werden können. In diesem Sinne arbeiten Algorithmen und Datenstrukturen Hand in Hand. Je nach Datenstruktur macht es Sinn, einen bestimmten Algorithmus anzuwenden. Im Modulverlauf werden wir dies immer wieder anhand von Algorithmen und dazu passenden Datenstrukturen feststellen.</p>
 <p>Wie bei jedem Handwerk (und ja, auch Programmieren ist ein Handwerk), gibt es sinnvolle Werkzeuge und passende Verfahren oder Arbeitsschritte, um etwas herzustellen. Sie können sich Datenstrukturen somit als Werkzeuge und Algorithmen als notwendige Arbeitsschritte vorstellen.</p>
 </section>
@@ -638,7 +720,7 @@ for (int i = 0; i &gt; N; i++){
 <p>Die Wahl der Benutzereingabe (und Ausgabe) werden wir nicht festlegen. Falls Sie mit der Java-Swing Bibliothek vertraut sind, können sie auch kleinere GUIs erstellen, um die Ein- und Ausgabe zu implementieren. Andernfalls verwenden Sie die Ein-und Ausgabe der Konsole.</p>
 <p>Verwenden Sie dazu eine <code>InputReader</code> Klasse, so wie Sie es bereits erstellt haben (bzw. fragen Sie die Lehrperson).</p>
 <p>Wir werden in den folgenden Aufgaben mit primitiven Arrays arbeiten (z.B. für int oder double Daten). In diesem Lernabschnitt erstellen wir <em>statische</em> Methoden, damit wir uns auf die Programmierung unserer Funktionen beschränken können (Funktionen, wie im mathematischen Sinn). Später werden wir klasseneigene Funktionen implementieren.</p>
-<p><strong>Hinweis:</strong> Die Java – Standardbibliotheken decken viele Funktionen ab, welche wir in diesem Modul behandeln (<code>Arrays</code>, <code>LinkedList</code>, Sortieren, etc.). Wir wollen aber zuerst diese Datenstrukturen und Algorithmen <em>selbst implementieren</em>, bevor wir auf vorge­fertigte Klassen zurückgreifen.</p>
+<p><strong>Hinweis:</strong> Die Java-Standardbibliotheken decken viele Funktionen ab, welche wir in diesem Modul behandeln (<code>Arrays</code>, <code>LinkedList</code>, Sortieren, etc.). Wir wollen aber zuerst diese Datenstrukturen und Algorithmen <em>selbst implementieren</em>, bevor wir auf vorge­fertigte Klassen zurückgreifen.</p>
 </section>
 </section>
 <section id="übung-elementare-array---funktionalität" class="level2">
@@ -696,7 +778,7 @@ for (int i = 0; i &gt; N; i++){
 <img src="media/pap_bsort.png" alt="Quelle: http://www.tinohempel.de/info/info/ti/bubblesort.htm" style="width:80.0%" /><figcaption>Quelle: <a href="http://www.tinohempel.de/info/info/ti/bubblesort.htm"><em>http://www.tinohempel.de/info/info/ti/bubblesort.htm</em></a></figcaption>
 </figure>
 <p>In jedem Durchgang wird das Feld (bzw. Array) von links nach rechts durchlaufen. Dabei wird in jedem Schritt das aktuelle Element <code>feld[j]</code> mit dem rechten Nachbarn <code>feld[j+1]</code> verglichen. Bei <em>aufsteigender</em> Sortierung werden die beiden Werte getauscht, wenn <code>feld[j] &gt; feld[j+1]</code>. Am Ende des ersten Durchganges steht garantiert das grösste Element am Ende der Liste, am Ende des zweiten Durchgangs das zweitgrösste an vorletzter Stelle usw.</p>
-<p>Die Durchgänge werden solange wiederholt, bis die Eingabeliste vollständig sortiert ist. Dabei muss das letzte Element des vorherigen Durchlaufs nicht mehr betrachtet werden, da die restliche zu sortierende Eingabe keine größeren bzw. kleineren Elemente mehr enthält. Die Elemente bewegen sich also wie Blasen („Bubbles“) in einem Wasserglass nach oben (bzw. hinten), bis alle Blasen ihren Platz gefunden haben.</p>
+<p>Die Durchgänge werden solange wiederholt, bis die Eingabeliste vollständig sortiert ist. Dabei muss das letzte Element des vorherigen Durchlaufs nicht mehr betrachtet werden, da die restliche zu sortierende Eingabe keine größeren bzw. kleineren Elemente mehr enthält. Die Elemente bewegen sich also wie Blasen (engl. <em>Bubbles</em>) in einem Wasserglass nach oben (bzw. hinten), bis alle Blasen ihren Platz gefunden haben.</p>
 <section id="bubble-sort-manuell-durchspielen" class="level3">
 <h3><span class="header-section-number">6.1.1</span> Bubble-Sort manuell durchspielen</h3>
 <p>Bevor wir den Algorithmus in Code umsetzen, werden wir diesen Algorithmus manuell durchspielen. Dazu brauchen Sie Papierschnitzel mit den unten stehenden Zahlen:</p>
@@ -1064,7 +1146,7 @@ return index;
 <section id="eine-elementare-datenstruktur-verkettete-liste" class="level2">
 <h2><span class="header-section-number">7.2</span> Eine elementare Datenstruktur: Verkettete Liste</h2>
 <p>Das Arbeiten mit einer fixen Grösse von Elementen stösst sehr schnell an seine Grenzen, vor allem wenn wir es mit dynamischen Datenmengen zu tun haben.</p>
-<p>Hier kommt eine weitere elementare Datenstruktur zur Anwendung, welche ihre Grösse verändern kann (was wir bei einem Array nicht können). Die Verkettete Liste (&quot;LinkedList&quot;) kann mit dynamischen Datenmengen umgehen. Ein weiterer Vorteil ist, dass sie eine höhere Flexibilität ermöglicht, indem die Elemente in effizienter Weise umgeordnet werden können. Dafür ist ein schneller Zugriff auf ein Element über den Positionsindex nicht möglich.</p>
+<p>Hier kommt eine weitere elementare Datenstruktur zur Anwendung, welche ihre Grösse verändern kann (was wir bei einem Array nicht können). Die Verkettete Liste (engl. <em>LinkedList</em>) kann mit dynamischen Datenmengen umgehen. Ein weiterer Vorteil ist, dass sie eine höhere Flexibilität ermöglicht, indem die Elemente in effizienter Weise umgeordnet werden können. Dafür ist ein schneller Zugriff auf ein Element über den Positionsindex nicht möglich.</p>
 <p>Jedes Element der einfach verketteten Liste enthält neben dem eigentlichen Wert die Speicheradresse des nächsten Listenelements. Die Speicheradresse nennt man in der C / C++ Welt auch Zeiger. Der &quot;Zeiger&quot; ist damit die Verknüpfung oder das Bindeglied innerhalb der Liste, durch den jedes Element das nächste Element kennt.</p>
 <p>Ein Element ist somit ein Knoten (&quot;Node&quot;), welches durch Verkettung bzw. Verknüpfung auf den nächsten Knoten verweist (&quot;next&quot;).</p>
 <figure>
@@ -1226,7 +1308,7 @@ the list
 <p>Die innere Datenstruktur der verketteten Liste (<code>class Node</code>) eignet sich sehr gut, um einen Stack umzusetzen. Wir schreiben somit eine <code>Stack</code>-Klasse, welche die Datenstruktur der verketteten Liste wieder verwendet:</p>
 <pre><code>public class MyStack {
 	//reference to the first element in stack (=last added element)
-	private **Node** first;
+	private Node first;
 	//counter
 	private int listCount;
 
@@ -1619,10 +1701,10 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <section id="wdh_javautils" class="level2">
 <h2><span class="header-section-number">9.11</span> Wiederholungsfragen</h2>
 <ul>
-<li><p>Welche Gründe sprechen für den Einsatz vorgefertigter Datenstrukturen aus dem <code>java.util</code>-Package?</p></li>
-<li><p>Wie wird die Sortierfunktion der <code>ArrayList</code>-Klasse parametrisiert?</p></li>
-<li><p>Wie lautet der Aufruf zum Filtern einer Double-ArrayList, wenn nur Elemente zwischen 10 und 20 ausgegeben werden sollen?</p></li>
-<li><p>Welche Anforderungen gibt es an die <code>keys</code> bei der Verwendung der Map-Datenstruktur?</p></li>
+<li>Welche Gründe sprechen für den Einsatz vorgefertigter Datenstrukturen aus dem <code>java.util</code>-Package?</li>
+<li>Wie wird die Sortierfunktion der <code>ArrayList</code>-Klasse parametrisiert?</li>
+<li>Wie lautet der Aufruf zum Filtern einer Double-ArrayList, wenn nur Elemente zwischen 10 und 20 ausgegeben werden sollen?</li>
+<li>Welche Anforderungen gibt es an die <code>keys</code> bei der Verwendung der Map-Datenstruktur?</li>
 </ul>
 <p><a href="#TOC">Zurück zum Inhaltsverzeichnis</a></p>
 </section>
@@ -1756,10 +1838,10 @@ public NodeList generateNodeList(String filename){
 	return cdElements;
 }
 </code></pre>
-<p>Eine Knotenliste wird an einem bestimmten Tag-Element definiert. Somit hat diese <code>NodeList</code> alle Knoten mit „CD“ und somit auch alle Kinder (children).</p>
+<p>Eine Knotenliste wird an einem bestimmten Tag-Element definiert. Somit hat diese <code>NodeList</code> alle Knoten mit &quot;CD&quot; und somit auch alle Kinder (children).</p>
 <p>Die Klasse <code>NodeList</code> implementiert das Collection-Interfase nicht. Stattdessen wird mit der NodeList-Methode <code>item(int i)</code> per Index auf die Elemente zugegriffen. Entsprech­end muss man in einer for-Schleife über diese Liste iterieren, um die weiteren Sub-Knoten auszulesen bzw. wiederum einer Liste zuweisen.</p>
 <p>Die Klasse Node bietet über die Funktion <code>String getTextContent()</code> eine einfache Variante, den Inhalt einer Node x (und aller darin enthaltenen Nodes) anzuschauen. Dabei werden die Namen der Kinder-Elemente verworfen und nur deren Text-Inhalte angezeigt:</p>
-<pre><code>NodeList list = generateNodeList(″cd_catalog.xml″);
+<pre><code>NodeList list = generateNodeList(&quot;cd_catalog.xml&quot;);
 	for (int i=0; i &lt;list.getLength(); i++){
 		System.out.println(list.intem(i).getTextContent);
 }</code></pre>
@@ -1778,7 +1860,7 @@ public NodeList generateNodeList(String filename){
 			System.out.println();
 	}
 }</code></pre>
-<p>Durch das Casting der Nodes von <code>list</code> auf das org.w3c.dom – Interface <code>Element e</code> kann man wiederum mit der Methode <code>getElementsbyName(String name)</code> die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.</p>
+<p>Durch das Casting der Nodes von <code>list</code> auf das org.w3c.dom-Interface <code>Element e</code> kann man wiederum mit der Methode <code>getElementsbyName(String name)</code> die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.</p>
 <p><strong>Fazit:</strong> Man muss als Entwickler den Aufbau der zu lesenden XML sehr genau kennen. Dann allerdings lassen sich sehr einfach Java-Klassen einlesen oder speichern.</p>
 <section id="aufgabe" class="level4">
 <h4><span class="header-section-number">10.2.3.1</span> Aufgabe:</h4>
@@ -1915,7 +1997,7 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 <section id="rekursion" class="level2">
 <h2><span class="header-section-number">11.2</span> Rekursion</h2>
 <p>Die Rekursion ist ein zentrales Konzept in der Computerwissenschaft, um komplexere Probleme in einfache-überschaubare Problemgebiete zu unterteilen. Eine einfache Definition von Rekursion ist:</p>
-<p><em>Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das wiederum mit der gleichen Funktion weiter zerlegt wird, bis der Rest des Problems gelöst ist. </em></p>
+<p><em>Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das wiederum mit der gleichen Funktion weiter zerlegt wird, bis der Rest des Problems gelöst ist.</em></p>
 <p>Somit enthält eine Rekursion endlose Selbst-Aufrufe. Dem entsprechend wird Abbruch-bedingung benötigt, damit es nicht zu einer Endlos-Schlaufe kommt.</p>
 <p>Die Rekursion kann also ein Problem aufteilen (um es somit überschaubarer und lösbarer zu machen). Eine Rekursion kann aber auch in einer Datenstruktur abgebildet werden.</p>
 <section id="rekursion-in-einer-datenstruktur" class="level3">
@@ -2095,18 +2177,18 @@ Schritt 3: bewege Platte a nach Turm 3</code></pre>
 }</code></pre>
 <p>Wichtig ist, dass die Backtracking-Funktion als <em>boolean</em> umgesetzt wird. Somit wissen wir, wenn ein bestimmter Knoten (<em>Node</em>) <em>true</em> ist, dass wir einen gültigen Lösungsweg haben.</p>
 <p>Der Algorithmus besteht aus 2 Teilen:</p>
-<p>Das Ende eines Lösungsweges, wo wir prüfen, ob wir erfolgreich sind:</p>
+<p>Am Ende eines Lösungsweges prüfen wir den Erfolg:</p>
 <pre><code>if the leaf is a goal node:
 	return true
 else: 
 	return false</code></pre>
-<p>Und der rekursive Teil, wo wir solange in „Unter-Wegen“ Suchen (mit Rekursion) bis eine erfolgreiche Lösung gefunden wurde oder gar keine:</p>
+<p>Und der rekursive Teil, wo wir solange in Unter-Wegen suchen (mit Rekursion) bis eine erfolgreiche Lösung gefunden wurde oder gar keine:</p>
 <pre><code>foreach child c of n {
 	if solve(c) succeeds, return true
 }
 return false</code></pre>
 <p>Quelle: <a href="http://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking.html"><em>http://www.cis.upenn.edu/~matuszek/cit594-2012/Pages/backtracking.html</em></a> (Stand Sept. 2015)</p>
-<p><a href="#TOC">Zurück zum Inhaltsverzeichnis</a></p>
+<p><a href="#TOC">Zurück zum Inhaltsverzeichnis</a> --&gt;</p>
 </section>
 </section>
 </body>
