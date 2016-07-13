@@ -57,41 +57,64 @@ deren Rechenzeit abzuschätzen.
 Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv
 reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
 
-Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgestellt. Sie lernen in ersten Webapplikationsprogrammen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
+Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
-**Wichtiger Hinweis:** Programmieren lernt Sie nicht nur vom Zuhören, sondern vom selbstständigen (und häufigen) Anwenden. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+Wichtige Hinweise 
+------------------
+
+Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+
+Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillianten Ideen wieder zu verstehen :-)
+
+~~~~~~~~~~~~~~~~~~
+/** 
+	Genius provides the answer to the question of Life, the Universe and everything 
+*/
+public class Genius{
+
+	/**
+	 * answers a question
+	 * @param question is the query
+	 * @return the answer to the question of Life, the Universe and everything
+	 */
+	public int answerQuestion(String question){
+		return 42;	
+	}
+}
+~~~~~~~~~~~~~~~~~~
+
 
 Handlungsziele nach ICT-Vorgaben (BiVo 2014)
 -------------------------------------------
 
-1. Für ein gegebenes Problem eine geeignete Datenstruktur definieren und mit den Mitteln einer Programmiersprache, wie Structs, Referenzen / Zeiger und Arrays umsetzen. 	
+1. **Für ein gegebenes Problem eine geeignete Datenstruktur definieren und mit den Mitteln einer Programmiersprache, wie Structs, Referenzen / Zeiger und Arrays umsetzen.** 	
   + Kennt den Unterschied zwischen Wertevariablen und Referenzvariablen / Zeigervariablen.
   + Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.
   + Kennt Konzept und Nutzen von verketteten Datenstrukturen.
   + Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.
 <hr/>    	 
-2. Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen. 	
+2. **Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen.**
   + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
   + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
   + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
   + Kennt Notationen um Algorithmen dazustellen wie z.B. Struktogrammen, PAP usw.
     	<hr/> 
-3. Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren. 	
+3. **Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren.** 	
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
   + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
   + Kennt Notationen zur Dokumentation der Speicher- und Zeitkomplexität eines Algorithmus.
     	<hr/> 
-4. Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen. 	
+4. **Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen.** 	
   + Kennt ein Vorgehen bei der Aufteilung eines komplexen Problems in kleinere Teilprobleme.
   + Kennt den Aufbau von iterativen Algorithmen.
   + Kennt den Aufbau von rekursiven Algorithmen.
   + Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.
     	<hr/> 
-5. Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können. 	
+5. **Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können.** 	
   + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
   + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
     	<hr/> 
-6. Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen. 	
+6. **Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen.** 	
   + Kennt das Speicherlayout für einen Prozess mit den Bereichen Programmcode, globale Variablen, Stack und Heap.
   + Kennt die Anordnung von lokalen Variablen und Parametern in einem Stackframe.
   + Kennt die Funktionsweise des Stacks bei einem Funktionsaufruf.
@@ -104,56 +127,28 @@ Kursablauf
 
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
-<table>
-<tr>
-<th>Lektion 1 -4</th>
-<td>
-* einfache Klassen; main Methode
-* Eingabe-/Ausgabe für Konsole und Dateien
-</td>
-</tr>
-<tr>
-<th>Lektion 5 – 10</th>
-<td>
-* Arrays
-* Sortier-Algorithmen
-* Laufzeitkomplexität 
-</td>
-</tr>
-<tr>
-<th>Lektion 11 – 16</th>
-<td>
-- Verkettete Liste
-</td>
-</tr>
-<tr>
-<th>Lektion 17 – 20</th>
-<td>
-- Stack, Queue
-- Java Collections
-- Iteratoren
-</td>
-</tr>
-<tr>
-<th>Lektion 21 – 24</th>
-<td>
-- Miniprojekt 
-</td>
-</tr>
-<tr>
-<th>Lektion 25 – 32</th>
-<td>
-- HashMap
-- XML, JSON mit WebServices
-</td>
-<tr>
-<th>Lektion 33 – 36</th>
-<td>
-- Rekursion
-- Backtracking
-</td>
-</tr>
-</table>
+--------------------- ------------------------------------------------------
+**Lektion 1 -4**      * einfache Klassen; main Methode
+                      * Eingabe-/Ausgabe für Konsole und Dateien
+                    
+**Lektion 5 – 10**    * Arrays
+                      * Sortier-Algorithmen
+                      * Laufzeitkomplexität 
+
+**Lektion 11 – 16**    Verkettete Liste
+
+**Lektion 17 – 20**   * Stack, Queue
+                      * Java Collections
+                      * Iteratoren
+
+**Lektion 21 – 24**   Miniprojekt 
+
+**Lektion 25 – 32**   * HashMap
+                      * XML, JSON mit WebServices
+
+**Lektion 33 – 36**   * Rekursion
+                      * Backtracking
+--------------------- -----------------------------------------------------
 
 Klassen erstellen
 ====================
