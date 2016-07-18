@@ -62,7 +62,7 @@ deren Rechenzeit abzuschätzen.
 Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv
 reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
 
-Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
+Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
 Wichtige Hinweise 
 ------------------
@@ -132,28 +132,53 @@ Kursablauf
 
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
++---------------------+------------------------------------------------------+
+|**Lektion 1 -4**     | *einfache Klassen; main Methode                      |
+|                     |*Eingabe-/Ausgabe für Konsole und Dateien						 |
++---------------------+------------------------------------------------------+                
+|**Lektion 5 – 10**   |- Arrays                                              |
+|                     |- Sortier-Algorithmen                                 |
+|                     |- Laufzeitkomplexität                                 |
++---------------------+------------------------------------------------------+
+|**Lektion 11 – 16**  | Verkettete Liste                                     |
++---------------------+------------------------------------------------------+
+|**Lektion 17 – 20**  | - Stack, Queue                                       |
+|                     | - Java Collections                                   |
+|                     | - Iteratoren                                         |
++---------------------+------------------------------------------------------+
+|**Lektion 21 – 24**  | Miniprojekt (LB2)                                    |
++---------------------+------------------------------------------------------+
+|**Lektion 25 – 32**  | - HashMap                                            |
+|                     | - JSON mit WebServices, optional XML                 |
++---------------------+------------------------------------------------------+
+|**Lektion 33 – 36**  | - Rekursion                                          |
+|                     | - Backtracking                                       |
++---------------------+------------------------------------------------------+
+
+<!--
 --------------------- ------------------------------------------------------
-**Lektion 1 -4**      * einfache Klassen; main Methode
-                      * Eingabe-/Ausgabe für Konsole und Dateien
+**Lektion 1 -4**      *einfache Klassen; main Methode
+                      *Eingabe-/Ausgabe für Konsole und Dateien
                     
-**Lektion 5 – 10**    * Arrays
-                      * Sortier-Algorithmen
-                      * Laufzeitkomplexität 
+**Lektion 5 – 10**    *Arrays
+                      *Sortier-Algorithmen
+                      *Laufzeitkomplexität 
 
 **Lektion 11 – 16**    Verkettete Liste
 
-**Lektion 17 – 20**   * Stack, Queue
-                      * Java Collections
-                      * Iteratoren
+**Lektion 17 – 20**   *Stack, Queue
+                      *Java Collections
+                      *Iteratoren
 
 **Lektion 21 – 24**   Miniprojekt 
 
-**Lektion 25 – 32**   * HashMap
-                      * XML, JSON mit WebServices
+**Lektion 25 – 32**   *HashMap
+                      *JSON mit WebServices, optional XML
 
-**Lektion 33 – 36**   * Rekursion
-                      * Backtracking
+**Lektion 33 – 36**   *Rekursion
+                      *Backtracking
 --------------------- -----------------------------------------------------
+-->
 
 Klassen erstellen
 ====================

@@ -1,11 +1,84 @@
-Dynamische Datenstrukturen IV: XML und JSON
+Dynamische Datenstrukturen IV: JSON und XML
 ==========================================
 
 Lernziele {#lernziele_xmljson}
 ----------
-* beschreiben den Aufbau von XML und JSON Datenstrukturen
-* nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln
-* nutzen XML- und JSON basierte Webservices 
+* beschreiben den Aufbau von baumartigen JSON- und XML-Datenstrukturen
+* nutzen Parser, um JSON- und XML-Strukturen zu lesen und in Objekte umzuwandeln
+* nutzen JSON- und XML-basierte Webservices 
+
+Die Datenstruktur JSON
+-----------------------
+
+JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur
+hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur
+eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo,
+Google und viele andere JSON als Datenübertragungsformat für interaktive
+Webseiten (AJAX) und auch Web-Services ein.
+
+~~~~~~~~~~~~~~~~~~~~~~~
+{"employees":[
+	{"firstName":"John", "lastName":"Doe"},
+	{"firstName":"Anna", "lastName":"Smith"},
+  ],
+}
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit
+den **"Schlüsseln"** *firstName* und *lastName*. JSON-Objekte bestehen
+immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java
+Maps. **Werte** können **atomar** sein, hier z.B. Strings. Werte können
+weitere JSON-Objekte oder *Listen* enthalten. Listen werden in JSON mit
+**\[\]** umschlossen, JSON-Objekte mit **{}**. Schlüssel und Wert sind
+mit **":"** getrennt. 
+
+### Aufbau baumartiger Datenstrukturen
+
+Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen
+verschachtelten Unterelementen mit beliebig vielen Unterelementen und
+Attributen. 
+
+![Schematischer Aufbau eines Baum-Struktur](media/xml-tree.png){}
+
+###JSON mit Java parsen
+
+Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf [www.json.org](http://www.json.org) vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:
+
+<https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar>
+
+Wichtigen Klassen sind `JSONObject` und `JSONArray`. Sie werden mit der `import` Anweisung einge­bunden:
+
+~~~~~~~~~~~~~~~~~~~~~~~~
+import org.json.JSONObject; 
+import org.json.JSONArray;
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der `JSONObject Klasse` sind:
+
+-   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen *key* als JSONArray, wenn man es als solches castet.
+
+-   `double getDouble(String key):` liefert den Attributwert für key als `double`; entsprechende Methoden sind auch für `int` und weitere Datentypen implementiert
+
+-   `JSONObject getJSONObject(String key)`: liefert ein Child-Element für key als `JSONObject`
+
+-   `Set<String> keys()`: liefert die Schlüssel aller enthaltenen Elemente zurück.
+
+Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:
+
+
+~~~~~~~~~~~~~~~~~~~~~~~
+JSONObject obj = new JSONObject(jsonString);
+obj.keys().forEachRemaining(key -> {
+	System.out.println(key);
+	System.out.println(obj.get(key).toString());
+	System.out.println("***********************************");
+	}
+);
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```include
+skript3_ueb2_json_ws.md
+```
 
 Einführung in XML
 ------------------
@@ -248,70 +321,7 @@ Wir wollen nur das Element "WordDefinition" dem Benutzer anzeigen. Wie
 müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?
 
 
-Die Datenstruktur JSON
------------------------
 
-JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur
-hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur
-eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo,
-Google und viele andere JSON als Datenübertragungsformat für interaktive
-Webseiten (AJAX) und auch Web-Services ein.
-
-~~~~~~~~~~~~~~~~~~~~~~~
-{"employees":[
-	{"firstName":"John", "lastName":"Doe"},
-	{"firstName":"Anna", "lastName":"Smith"},
-  ],
-}
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit
-den **"Schlüsseln"** *firstName* und *lastName*. JSON-Objekte bestehen
-immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java
-Maps. **Werte** können **atomar** sein, hier z.B. Strings. Werte können
-weitere JSON-Objekte oder *Listen* enthalten. Listen werden in JSON mit
-**\[\]** umschlossen, JSON-Objekte mit **{}**. Schlüssel und Wert sind
-mit **":"** getrennt. 
-
-###JSON mit Java parsen
-
-Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf [www.json.org](http://www.json.org) vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:
-
-<https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar>
-
-Wichtigen Klassen sind `JSONObject` und `JSONArray`. Sie werden mit der `import` Anweisung einge­bunden:
-
-~~~~~~~~~~~~~~~~~~~~~~~~
-import org.json.JSONObject; 
-import org.json.JSONArray;
-~~~~~~~~~~~~~~~~~~~~~~~~
-
-Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der `JSONObject Klasse` sind:
-
--   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen *key* als JSONArray, wenn man es als solches castet.
-
--   `double getDouble(String key):` liefert den Attributwert für key als `double`; entsprechende Methoden sind auch für `int` und weitere Datentypen implementiert
-
--   `JSONObject getJSONObject(String key)`: liefert ein Child-Element für key als `JSONObject`
-
--   `Set<String> keys()`: liefert die Schlüssel aller enthaltenen Elemente zurück.
-
-Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:
-
-
-~~~~~~~~~~~~~~~~~~~~~~~
-JSONObject obj = new JSONObject(jsonString);
-obj.keys().forEachRemaining(key -> {
-	System.out.println(key);
-	System.out.println(obj.get(key).toString());
-	System.out.println("***********************************");
-	}
-);
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
-```include
-skript3_ueb2_json_ws.md
-```
 
 ### Generieren und Schreiben von XML und JSON
 

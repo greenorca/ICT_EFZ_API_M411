@@ -151,21 +151,22 @@
 </ul></li>
 <li><a href="#wdh_javautils"><span class="toc-section-number">9.11</span> Wiederholungsfragen</a></li>
 </ul></li>
-<li><a href="#dynamische-datenstrukturen-iv-xml-und-json"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</a><ul>
+<li><a href="#dynamische-datenstrukturen-iv-json-und-xml"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: JSON und XML</a><ul>
 <li><a href="#lernziele_xmljson"><span class="toc-section-number">10.1</span> Lernziele</a></li>
-<li><a href="#einführung-in-xml"><span class="toc-section-number">10.2</span> Einführung in XML</a><ul>
-<li><a href="#aufbau"><span class="toc-section-number">10.2.1</span> Aufbau</a></li>
-<li><a href="#xml-parser"><span class="toc-section-number">10.2.2</span> XML Parser</a></li>
-<li><a href="#aufgabe-aus-xml-ein-dom-erstellen"><span class="toc-section-number">10.2.3</span> Aufgabe: Aus XML ein DOM erstellen</a></li>
-<li><a href="#xml-webservices-nutzen"><span class="toc-section-number">10.2.4</span> XML – Webservices nutzen</a></li>
+<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.2</span> Die Datenstruktur JSON</a><ul>
+<li><a href="#aufbau-baumartiger-datenstrukturen"><span class="toc-section-number">10.2.1</span> Aufbau baumartiger Datenstrukturen</a></li>
+<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.2.2</span> JSON mit Java parsen</a></li>
 </ul></li>
-<li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.3</span> Die Datenstruktur JSON</a><ul>
-<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.3.1</span> JSON mit Java parsen</a></li>
+<li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.3</span> Übung: Google Web-Service mit JSON verwenden</a><ul>
+<li><a href="#google-maps-nutzen"><span class="toc-section-number">10.3.1</span> Google Maps nutzen</a></li>
+<li><a href="#zusatzaufgabe-google-api-nutzen"><span class="toc-section-number">10.3.2</span> Zusatzaufgabe Google API nutzen</a></li>
 </ul></li>
-<li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.4</span> Übung: Google Web-Service mit JSON verwenden</a><ul>
-<li><a href="#google-maps-nutzen"><span class="toc-section-number">10.4.1</span> Google Maps nutzen</a></li>
-<li><a href="#zusatzaufgabe-google-api-nutzen"><span class="toc-section-number">10.4.2</span> Zusatzaufgabe Google API nutzen</a></li>
-<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.4.3</span> Generieren und Schreiben von XML und JSON</a></li>
+<li><a href="#einführung-in-xml"><span class="toc-section-number">10.4</span> Einführung in XML</a><ul>
+<li><a href="#aufbau"><span class="toc-section-number">10.4.1</span> Aufbau</a></li>
+<li><a href="#xml-parser"><span class="toc-section-number">10.4.2</span> XML Parser</a></li>
+<li><a href="#aufgabe-aus-xml-ein-dom-erstellen"><span class="toc-section-number">10.4.3</span> Aufgabe: Aus XML ein DOM erstellen</a></li>
+<li><a href="#xml-webservices-nutzen"><span class="toc-section-number">10.4.4</span> XML – Webservices nutzen</a></li>
+<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.4.5</span> Generieren und Schreiben von XML und JSON</a></li>
 </ul></li>
 <li><a href="#wdh_xml_json"><span class="toc-section-number">10.5</span> Wiederholungsfragen</a></li>
 </ul></li>
@@ -235,7 +236,7 @@ pandoc_title_block
 <p>In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Vorausgesetzt werden gute Kenntnisse aus den Modulen 403 (Prozedurale Programmierung) und 226A+B (Objektorientierte Programmierung). Sie können frei wählen, mit welcher Entwicklungsumgebung Sie arbeiten. Bevorzugte Umgebungen sind Netbeans und Eclipse.</p>
 <p>Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortieralgorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortieralgorithmen selbst zu implementieren und deren Rechenzeit abzuschätzen.</p>
 <p>Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.</p>
-<p>Abschliessend werden wichtige moderne Datenstrukturen und deren Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.</p>
+<p>Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.</p>
 <section id="wichtige-hinweise" class="level2">
 <h2><span class="header-section-number">1.1</span> Wichtige Hinweise</h2>
 <p>Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!</p>
@@ -331,35 +332,73 @@ public class Genius{
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Lektion 1 -4</strong></td>
-<td style="text-align: left;">* einfache Klassen; main Methode * Eingabe-/Ausgabe für Konsole und Dateien</td>
+<td><p><strong>Lektion 1 -4</strong></p></td>
+<td><p><em>einfache Klassen; main Methode </em>Eingabe-/Ausgabe für Konsole und Dateien</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Lektion 5 – 10</strong></td>
-<td style="text-align: left;">* Arrays * Sortier-Algorithmen * Laufzeitkomplexität</td>
+<td><p><strong>Lektion 5 – 10</strong></p></td>
+<td><ul>
+<li>Arrays</li>
+<li>Sortier-Algorithmen</li>
+<li>Laufzeitkomplexität</li>
+</ul></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Lektion 11 – 16</strong></td>
-<td style="text-align: left;">Verkettete Liste</td>
+<td><p><strong>Lektion 11 – 16</strong></p></td>
+<td><p>Verkettete Liste</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Lektion 17 – 20</strong></td>
-<td style="text-align: left;">* Stack, Queue * Java Collections * Iteratoren</td>
+<td><p><strong>Lektion 17 – 20</strong></p></td>
+<td><ul>
+<li>Stack, Queue</li>
+<li>Java Collections</li>
+<li>Iteratoren</li>
+</ul></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Lektion 21 – 24</strong></td>
-<td style="text-align: left;">Miniprojekt</td>
+<td><p><strong>Lektion 21 – 24</strong></p></td>
+<td><p>Miniprojekt (LB2)</p></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Lektion 25 – 32</strong></td>
-<td style="text-align: left;">* HashMap * XML, JSON mit WebServices</td>
+<td><p><strong>Lektion 25 – 32</strong></p></td>
+<td><ul>
+<li>HashMap</li>
+<li>JSON mit WebServices, optional XML</li>
+</ul></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Lektion 33 – 36</strong></td>
-<td style="text-align: left;">* Rekursion * Backtracking</td>
+<td><p><strong>Lektion 33 – 36</strong></p></td>
+<td><ul>
+<li>Rekursion</li>
+<li>Backtracking</li>
+</ul></td>
 </tr>
 </tbody>
 </table>
+<!--
+--------------------- ------------------------------------------------------
+**Lektion 1 -4**      *einfache Klassen; main Methode
+                      *Eingabe-/Ausgabe für Konsole und Dateien
+                    
+**Lektion 5 – 10**    *Arrays
+                      *Sortier-Algorithmen
+                      *Laufzeitkomplexität 
+
+**Lektion 11 – 16**    Verkettete Liste
+
+**Lektion 17 – 20**   *Stack, Queue
+                      *Java Collections
+                      *Iteratoren
+
+**Lektion 21 – 24**   Miniprojekt 
+
+**Lektion 25 – 32**   *HashMap
+                      *JSON mit WebServices, optional XML
+
+**Lektion 33 – 36**   *Rekursion
+                      *Backtracking
+--------------------- -----------------------------------------------------
+-->
 </section>
 </section>
 <section id="klassen-erstellen" class="level1">
@@ -1703,21 +1742,108 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <p><a href="#TOC">Zurück zum Inhaltsverzeichnis</a></p>
 </section>
 </section>
-<section id="dynamische-datenstrukturen-iv-xml-und-json" class="level1">
-<h1><span class="header-section-number">10</span> Dynamische Datenstrukturen IV: XML und JSON</h1>
+<section id="dynamische-datenstrukturen-iv-json-und-xml" class="level1">
+<h1><span class="header-section-number">10</span> Dynamische Datenstrukturen IV: JSON und XML</h1>
 <section id="lernziele_xmljson" class="level2">
 <h2><span class="header-section-number">10.1</span> Lernziele</h2>
 <ul>
-<li>beschreiben den Aufbau von XML und JSON Datenstrukturen</li>
-<li>nutzen Parser, um XML und JSON Strukturen zu lesen und in Objekte umzuwandeln</li>
-<li>nutzen XML- und JSON basierte Webservices</li>
+<li>beschreiben den Aufbau von baumartigen JSON- und XML-Datenstrukturen</li>
+<li>nutzen Parser, um JSON- und XML-Strukturen zu lesen und in Objekte umzuwandeln</li>
+<li>nutzen JSON- und XML-basierte Webservices</li>
 </ul>
 </section>
+<section id="die-datenstruktur-json" class="level2">
+<h2><span class="header-section-number">10.2</span> Die Datenstruktur JSON</h2>
+<p>JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo, Google und viele andere JSON als Datenübertragungsformat für interaktive Webseiten (AJAX) und auch Web-Services ein.</p>
+<pre><code>{&quot;employees&quot;:[
+	{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
+	{&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+  ],
+}</code></pre>
+<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
+<section id="aufbau-baumartiger-datenstrukturen" class="level3">
+<h3><span class="header-section-number">10.2.1</span> Aufbau baumartiger Datenstrukturen</h3>
+<p>Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen.</p>
+<figure>
+<img src="media/xml-tree.png" alt="Schematischer Aufbau eines Baum-Struktur" /><figcaption>Schematischer Aufbau eines Baum-Struktur</figcaption>
+</figure>
+</section>
+<section id="json-mit-java-parsen" class="level3">
+<h3><span class="header-section-number">10.2.2</span> JSON mit Java parsen</h3>
+<p>Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf <a href="http://www.json.org">www.json.org</a> vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:</p>
+<p><a href="https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar" class="uri">https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar</a></p>
+<p>Wichtigen Klassen sind <code>JSONObject</code> und <code>JSONArray</code>. Sie werden mit der <code>import</code> Anweisung einge­bunden:</p>
+<pre><code>import org.json.JSONObject; 
+import org.json.JSONArray;</code></pre>
+<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der <code>JSONObject Klasse</code> sind:</p>
+<ul>
+<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen <em>key</em> als JSONArray, wenn man es als solches castet.</p></li>
+<li><p><code>double getDouble(String key):</code> liefert den Attributwert für key als <code>double</code>; entsprechende Methoden sind auch für <code>int</code> und weitere Datentypen implementiert</p></li>
+<li><p><code>JSONObject getJSONObject(String key)</code>: liefert ein Child-Element für key als <code>JSONObject</code></p></li>
+<li><p><code>Set&lt;String&gt; keys()</code>: liefert die Schlüssel aller enthaltenen Elemente zurück.</p></li>
+</ul>
+<p>Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:</p>
+<pre><code>JSONObject obj = new JSONObject(jsonString);
+obj.keys().forEachRemaining(key -&gt; {
+	System.out.println(key);
+	System.out.println(obj.get(key).toString());
+	System.out.println(&quot;***********************************&quot;);
+	}
+);</code></pre>
+</section>
+</section>
+<section id="übung-google-web-service-mit-json-verwenden" class="level2">
+<h2><span class="header-section-number">10.3</span> Übung: Google Web-Service mit JSON verwenden</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>erstellen Client-Server Kommunikation</li>
+<li>parsen JSON</li>
+</ul>
+<p><strong>Zeit:</strong> 45 + 45 min</p>
+<section id="google-maps-nutzen" class="level3">
+<h3><span class="header-section-number">10.3.1</span> Google Maps nutzen</h3>
+<p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
+<p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
+<p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
+<p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
+<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
+	+&quot;Hohlstrasse+535,Zuerich&quot;;
+
+URL googleClient = new URL(url);		
+URLConnection urlc = googleClient.openConnection();
+		
+BufferedReader in = new BufferedReader(
+			new InputStreamReader(urlc.getInputStream()));
+String msg = &quot;&quot;;
+// just reading server response
+while(in.ready()){
+	//System.out.println(line);
+	msg = msg+in.readLine();
+}
+//putting this into a computable JSON format 
+JSONObject obj = new JSONObject(msg);
+//fetch &quot;result&quot; part of JSON obj
+JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
+JSONObject inner = (JSONObject)results.get(0);
+		
+//now get the actual values 
+JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
+System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
+System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
+</section>
+<section id="zusatzaufgabe-google-api-nutzen" class="level3">
+<h3><span class="header-section-number">10.3.2</span> Zusatzaufgabe Google API nutzen</h3>
+<p>Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für private Zwecke mit limitierten Abfragen pro Tag können Sie die API kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.</p>
+<p><a href="https://developers.google.com/maps/web-services/" class="uri">https://developers.google.com/maps/web-services/</a></p>
+<p><a href="https://developers.google.com/maps/documentation/directions/intro" class="uri">https://developers.google.com/maps/documentation/directions/intro</a></p>
+<p>Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.</p>
+</section>
+</section>
 <section id="einführung-in-xml" class="level2">
-<h2><span class="header-section-number">10.2</span> Einführung in XML</h2>
+<h2><span class="header-section-number">10.4</span> Einführung in XML</h2>
 <p>XML (eXtensible Markup Language) ist eine sogenannte Baumstruktur bzw. hierarchische Datenstruktur. XML gibt es schon seit 1998 und war ursprünglich als Dokumenten-Format konzipiert. Microsoft Word Dokumente werden beispielsweise als XML-Dokumente gespeichert. XML wird häufig zur Datenübertragung bei Web-Services verwendet.</p>
 <section id="aufbau" class="level3">
-<h3><span class="header-section-number">10.2.1</span> Aufbau</h3>
+<h3><span class="header-section-number">10.4.1</span> Aufbau</h3>
 <p>Wie HTML besteht XML aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen befindet sich der Node-Inhalt.</p>
 <figure>
 <img src="media/xml-tree.png" alt="Schematischer Aufbau eines XML-Dokuments" /><figcaption>Schematischer Aufbau eines XML-Dokuments</figcaption>
@@ -1739,7 +1865,7 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 <p>Das <em>data</em>-Node enthält beliebig viele <em>person</em>-Nodes. Diese wiederum enthalten die entsprechenden Klassenattribute und Werte (als Strings). Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte erreicht. Entsprechend können Daten unter anderem via XML zwischen C++, Java, PHP und .NET ausgetauscht werden. Und deshalb ist XML beispielsweise für Webservices so interessant geworden.</p>
 </section>
 <section id="xml-parser" class="level3">
-<h3><span class="header-section-number">10.2.2</span> XML Parser</h3>
+<h3><span class="header-section-number">10.4.2</span> XML Parser</h3>
 <p>Zur Verarbeitung von XML oder JSON sind entsprechende &quot;Parser&quot; notwendig. Parser kommt aus dem Englischen und steht für Analysieren. Bei XML gibt es zwei Varianten:</p>
 <table style="width:99%;">
 <colgroup>
@@ -1777,7 +1903,7 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </table>
 </section>
 <section id="aufgabe-aus-xml-ein-dom-erstellen" class="level3">
-<h3><span class="header-section-number">10.2.3</span> Aufgabe: Aus XML ein DOM erstellen</h3>
+<h3><span class="header-section-number">10.4.3</span> Aufgabe: Aus XML ein DOM erstellen</h3>
 <p>Wir wollen den DOM XML-Parser zunächst an einem einfachen Beispiel umsetzen:</p>
 <pre><code>&lt;?xmlversion=&quot;1.0&quot;encoding=&quot;UTF-8&quot;?&gt;
 &lt;CATALOG&gt;
@@ -1857,12 +1983,12 @@ public NodeList generateNodeList(String filename){
 <p>Durch das Casting der Nodes von <code>list</code> auf das org.w3c.dom-Interface <code>Element e</code> kann man wiederum mit der Methode <code>getElementsbyName(String name)</code> die Child-Nodes parsen. Dies ergibt wiederum eine NodeList, von der wir in diesem Fall wissen, dass wir nur das erste Element benötigen.</p>
 <p><strong>Fazit:</strong> Man muss als Entwickler den Aufbau der zu lesenden XML sehr genau kennen. Dann allerdings lassen sich sehr einfach Java-Klassen einlesen oder speichern.</p>
 <section id="aufgabe" class="level4">
-<h4><span class="header-section-number">10.2.3.1</span> Aufgabe:</h4>
+<h4><span class="header-section-number">10.4.3.1</span> Aufgabe:</h4>
 <p>Parsen Sie das XML-File <code>cd_catalog.xml</code> wie im obigen Beispiel in ein DOM ab und geben Sie für jede CD den Titel, den Künstler und das Jahr aus.</p>
 </section>
 </section>
 <section id="xml-webservices-nutzen" class="level3">
-<h3><span class="header-section-number">10.2.4</span> XML – Webservices nutzen</h3>
+<h3><span class="header-section-number">10.4.4</span> XML – Webservices nutzen</h3>
 <p>Wie bereits erwähnt, sind XML Datenstrukturen sehr häufig als Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl definierten XML- oder JSON-Datenstrukturen beantwortet. Der Client sendet Parameter für den Webservice werden entweder via GET in der URL oder als POST Request.</p>
 <p>Holen wir uns von einem Dictionaire-Webservice die Definitionen für einen bestimmten Begriff:</p>
 <p><a href="http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml" class="uri">http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml</a></p>
@@ -1884,88 +2010,8 @@ in.close();</code></pre>
 <p>Welche Elemente erhalten Sie vom Service?</p>
 <p>Wir wollen nur das Element &quot;WordDefinition&quot; dem Benutzer anzeigen. Wie müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?</p>
 </section>
-</section>
-<section id="die-datenstruktur-json" class="level2">
-<h2><span class="header-section-number">10.3</span> Die Datenstruktur JSON</h2>
-<p>JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo, Google und viele andere JSON als Datenübertragungsformat für interaktive Webseiten (AJAX) und auch Web-Services ein.</p>
-<pre><code>{&quot;employees&quot;:[
-	{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
-	{&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
-  ],
-}</code></pre>
-<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
-<section id="json-mit-java-parsen" class="level3">
-<h3><span class="header-section-number">10.3.1</span> JSON mit Java parsen</h3>
-<p>Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf <a href="http://www.json.org">www.json.org</a> vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:</p>
-<p><a href="https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar" class="uri">https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar</a></p>
-<p>Wichtigen Klassen sind <code>JSONObject</code> und <code>JSONArray</code>. Sie werden mit der <code>import</code> Anweisung einge­bunden:</p>
-<pre><code>import org.json.JSONObject; 
-import org.json.JSONArray;</code></pre>
-<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der <code>JSONObject Klasse</code> sind:</p>
-<ul>
-<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen <em>key</em> als JSONArray, wenn man es als solches castet.</p></li>
-<li><p><code>double getDouble(String key):</code> liefert den Attributwert für key als <code>double</code>; entsprechende Methoden sind auch für <code>int</code> und weitere Datentypen implementiert</p></li>
-<li><p><code>JSONObject getJSONObject(String key)</code>: liefert ein Child-Element für key als <code>JSONObject</code></p></li>
-<li><p><code>Set&lt;String&gt; keys()</code>: liefert die Schlüssel aller enthaltenen Elemente zurück.</p></li>
-</ul>
-<p>Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:</p>
-<pre><code>JSONObject obj = new JSONObject(jsonString);
-obj.keys().forEachRemaining(key -&gt; {
-	System.out.println(key);
-	System.out.println(obj.get(key).toString());
-	System.out.println(&quot;***********************************&quot;);
-	}
-);</code></pre>
-</section>
-</section>
-<section id="übung-google-web-service-mit-json-verwenden" class="level2">
-<h2><span class="header-section-number">10.4</span> Übung: Google Web-Service mit JSON verwenden</h2>
-<p><strong>Lernziele:</strong></p>
-<ul>
-<li>erstellen Client-Server Kommunikation</li>
-<li>parsen JSON</li>
-</ul>
-<p><strong>Zeit:</strong> 45 + 45 min</p>
-<section id="google-maps-nutzen" class="level3">
-<h3><span class="header-section-number">10.4.1</span> Google Maps nutzen</h3>
-<p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
-<p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
-<p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
-<p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
-<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
-	+&quot;Hohlstrasse+535,Zuerich&quot;;
-
-URL googleClient = new URL(url);		
-URLConnection urlc = googleClient.openConnection();
-		
-BufferedReader in = new BufferedReader(
-			new InputStreamReader(urlc.getInputStream()));
-String msg = &quot;&quot;;
-// just reading server response
-while(in.ready()){
-	//System.out.println(line);
-	msg = msg+in.readLine();
-}
-//putting this into a computable JSON format 
-JSONObject obj = new JSONObject(msg);
-//fetch &quot;result&quot; part of JSON obj
-JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
-JSONObject inner = (JSONObject)results.get(0);
-		
-//now get the actual values 
-JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
-System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
-System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
-</section>
-<section id="zusatzaufgabe-google-api-nutzen" class="level3">
-<h3><span class="header-section-number">10.4.2</span> Zusatzaufgabe Google API nutzen</h3>
-<p>Die GoogleMaps API kann für viele weitere Zwecke genutzt werden. Für private Zwecke mit limitierten Abfragen pro Tag können Sie die API kostenfrei nutzen. Informieren Sie sich unter folgenden Links, wie Sie beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.</p>
-<p><a href="https://developers.google.com/maps/web-services/" class="uri">https://developers.google.com/maps/web-services/</a></p>
-<p><a href="https://developers.google.com/maps/documentation/directions/intro" class="uri">https://developers.google.com/maps/documentation/directions/intro</a></p>
-<p>Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.</p>
-</section>
 <section id="generieren-und-schreiben-von-xml-und-json" class="level3">
-<h3><span class="header-section-number">10.4.3</span> Generieren und Schreiben von XML und JSON</h3>
+<h3><span class="header-section-number">10.4.5</span> Generieren und Schreiben von XML und JSON</h3>
 <p>Die behandelten Java-Bibliotheken stellen ebenfalls Methoden zum Erstellen von XML / JSON Datenstrukturen zur Verfügung. Diese können in diesem Kurs nicht mehr behandelt werden, sind jedoch mit etwas Recherche und Übung leicht nachzuvollziehen.</p>
 </section>
 </section>
