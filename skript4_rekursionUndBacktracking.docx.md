@@ -14,19 +14,11 @@ Rekursion
 
 Die Rekursion ist ein zentrales Konzept in der Computerwissenschaft, um
 komplexere Probleme in einfache-überschaubare Problemgebiete zu
-unterteilen. Eine einfache Definition von Rekursion ist:
+unterteilen. Auch hier gilt das alte Sprichwort: *Teile und Herrsche*. Eine einfache Definition von Rekursion ist:
 
 *Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das
 wiederum mit der gleichen Funktion weiter zerlegt wird, bis der Rest des
 Problems gelöst ist.*
-
-Somit enthält eine Rekursion endlose Selbst-Aufrufe. Dem entsprechend
-wird Abbruch-bedingung benötigt, damit es nicht zu einer Endlos-Schlaufe
-kommt.
-
-Die Rekursion kann also ein Problem aufteilen (um es somit
-überschaubarer und lösbarer zu machen). Eine Rekursion kann aber auch in
-einer Datenstruktur abgebildet werden.
 
 ### Rekursion in einer Datenstruktur
 
@@ -53,13 +45,13 @@ nächste Element zu verweisen.
 
 ###Rekursive Algorithmen
 
-Unter rekursiven Algorithmen versteht man Funktionen, die sich selbst wieder aufrufen. Entsprechend in der rekursiven Funktion die *Abbruchbedingung* sichergestellt sein, damit
-es nicht zu unendlichen Aufrufen der Methode kommt.
+Unter rekursiven Algorithmen versteht man Funktionen, in denen Aufrufe zu sich selbst vorkommen. Entsprechend muss eine *Abbruchbedingung* definiert sein, damit
+es nicht zu unendlichen Aufrufen der Methode kommt. 
 
 **Beispiel: Fakultätsberechnung **
 
 Es gibt unzählige Beispiele für Probleme, die man am einfachsten mittels
-einer Rekursion löst. Ein bekanntes mathematisches Problem ist die
+einer Rekursion löst. Ein einfaches mathematisches Problem ist die
 Berechnung der Fakultät (`fak(n)` = Produkt der Zahlen von 1 bis `n`) , hier in Pseudo-Code:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -70,7 +62,7 @@ int fak(n){
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `fak(n-1)` aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (respektive im Stack) angelegt, und erst beim Erreichen der Abbruchbedingung (hier `n==1`) wird der Stack wieder von oben nach unten freigegeben.
+Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `fak(n-1)` aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (auf dem *Stack*) angelegt. Beim Erreichen der Abbruchbedingung (hier `n==1`) werden die Speicherbereiche vom Stack wieder von oben nach unten freigegeben.
 
 **Beispiel: Fibonacci-Reihe berechnen **
 
@@ -90,17 +82,14 @@ public int calculate(int number) {
 }
 ~~~~~~~~~~~~~~~~~~~
 
-
-Übrigens ist obige Methode `calculate` ein Beispiel einer
-**Mehrfach-Rekursion**, da die Methode gleich mehrmals (hier zweimal)
+Die Methode `calculate` ist ein Beispiel einer
+*Mehrfach-Rekursion*, da die Methode gleich mehrmals (hier zweimal)
 aufgerufen wird.
 
 **Beispiel: Rekursives durchlaufen von Baumstrukturen**
 
-Rekursion findet sich auch im Bearbeiten einer Baum-Struktur, um die
-einzelnen Knoten durchzugehen. Wir können beispielsweise das bekannte
-DOM (Document Object Model) für XML verwenden und dabei die
-Child-Elemente (Kinder) in der XML-Struktur rekursiv aufrufen:
+Rekursion eignen sich auch zum Durchsuchen von Baum-Strukturen, um die
+einzelnen Knoten durchzugehen. Wir können mit der Function `visitRecursively` JSON- oder XML-Srukturen durchlaufen und dabei alle Child-Elemente (Kinder) in der Struktur rekursiv aufrufen:
 
 ~~~~~~~~~~~~~~~~~~~~~~~
 public void visitRecursively(Node node) {
@@ -123,8 +112,7 @@ Rekursion vs Iteration
 --------------------------
 
 Jede Rekursion kann in eine Iteration umgewandelt werden. Die Rekursion
-ist meistens die elegantere Lösung, jedoch mit dem Nachteil, dass sie
-langsamer ist. Ja nach geforderter Performance macht es also mehr Sinn,
+ist meistens die elegantere Lösung. Jedoch sind rekursive Funktionen aufgrund des oben beschriebenen Stack-Speicherhandlings oft weniger performant. Ja nach geforderter Performance macht es also mehr Sinn,
 ein Problem iterativ (also mit einer Schleife) oder rekursiv zu lösen.
 Gewisse Programmiersprachen verbieten explizit die Iteration und
 bevorzugen die Rekursion (z.Bsp. LISP oder Prolog).
@@ -159,6 +147,7 @@ public static void printSeries(int n1, int n2){
 
 ```include
 skript4_ueb01_rekursion.md
+skript4_ueb02_Mandelbrot.md
 ```
 
 Backtracking

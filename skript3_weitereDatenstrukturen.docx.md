@@ -10,35 +10,52 @@ Lernziele {#lernziele_xmljson}
 Die Datenstruktur JSON
 -----------------------
 
-JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur
+Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen
+verschachtelten Unterelementen mit beliebig vielen Unterelementen und
+Attributen. Im Vegleich zu den normalisierten Tabellenstrukturen relationaler Datenbanken stellen Bäume gewissermassen die Daten *nicht-normalisierte* Ansicht über alle Tabellen dar. 
+
+![Schematischer Aufbau einer Baum-Struktur](media/xml-tree.png){}
+
+
+JSON (JavaScript Object Notation) ist eine populäre Variante zur
 hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur
-eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo,
+eine Erweiterung von JavaScript. Seit 2005 bzw. 2006 setzen Yahoo,
 Google und viele andere JSON als Datenübertragungsformat für interaktive
-Webseiten (AJAX) und auch Web-Services ein.
+Webseiten (AJAX) und Web-Services ein.
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-{"employees":[
-	{"firstName":"John", "lastName":"Doe"},
-	{"firstName":"Anna", "lastName":"Smith"},
+{"data":[
+	{"person":{
+			"name":"Melmak",
+			"vorname":"Alf",
+			"plz": 1234,
+		}
+	}
+	{"person":{
+			"name":"Nachhaus",
+			"vorname":"ET",
+			"plz": 1248,
+		}
+	}
+	{"person":{
+			"name":"Quack",
+			"vorname":"Alfred J.",
+			"plz": 1111,
+		}
+	}
   ],
 }
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit
-den **"Schlüsseln"** *firstName* und *lastName*. JSON-Objekte bestehen
+den **"Schlüsseln"** *name*, *vorname* und *plz*. JSON-Objekte bestehen
 immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java
 Maps. **Werte** können **atomar** sein, hier z.B. Strings. Werte können
 weitere JSON-Objekte oder *Listen* enthalten. Listen werden in JSON mit
 **\[\]** umschlossen, JSON-Objekte mit **{}**. Schlüssel und Wert sind
 mit **":"** getrennt. 
 
-### Aufbau baumartiger Datenstrukturen
-
-Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen
-verschachtelten Unterelementen mit beliebig vielen Unterelementen und
-Attributen. 
-
-![Schematischer Aufbau eines Baum-Struktur](media/xml-tree.png){}
+Listenobjekte haben oft ein zusätzliches *ID*-Attribut, ähnlich dem Primärschlüssel einer Tabelle in mySQL.
 
 ###JSON mit Java parsen
 
@@ -53,9 +70,16 @@ import org.json.JSONObject;
 import org.json.JSONArray;
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der `JSONObject Klasse` sind:
 
--   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen *key* als JSONArray, wenn man es als solches castet.
+Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die Variable `jsonString` wurde vorher aus einem beliebigen Datenstrom (`BufferedReader, StreamReader` etc.) eingelesen. 
+
+~~~~~~~~~~
+JSONObject obj = new JSONObject(jsonString);
+~~~~~~~~~~
+
+Die vorerst wichtigsten Methoden der `JSONObject Klasse` sind:
+
+-   `JSONArray get(String key):` liefert alle Child-Elemente mit Namen *key* als JSONArray, wenn man es als solches *castet*.
 
 -   `double getDouble(String key):` liefert den Attributwert für key als `double`; entsprechende Methoden sind auch für `int` und weitere Datentypen implementiert
 
@@ -67,7 +91,6 @@ Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstr
 
 
 ~~~~~~~~~~~~~~~~~~~~~~~
-JSONObject obj = new JSONObject(jsonString);
 obj.keys().forEachRemaining(key -> {
 	System.out.println(key);
 	System.out.println(obj.get(key).toString());
@@ -75,6 +98,18 @@ obj.keys().forEachRemaining(key -> {
 	}
 );
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wenn JSON gleichartig aufgebaut Daten verwendet, können Sie die Listen-Objekte in eine entsprechende Java-Klassen einlesen und beipielsweise als `ArrayList` ablegen. Dies spart für die weitere Verarbeitung viel Zeit, da JSON nicht immer und immer wieder geparst werden muss.  
+
+###JSON – Webservices nutzen
+
+Wie bereits erwähnt, sind JSON-Datenstrukturen sehr häufig als
+Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein
+http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen
+wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl
+definierten JSON- oder XML-Datenstrukturen beantwortet. Der Client sendet
+Parameter für den Webservice werden entweder via GET in der URL oder als
+POST Request. Ein ausführliches Beispiel dazu finden Sie in der nachfolgenden Übung.
 
 ```include
 skript3_ueb2_json_ws.md
@@ -323,7 +358,7 @@ müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?
 
 
 
-### Generieren und Schreiben von XML und JSON
+## Generieren und Schreiben von XML und JSON
 
 Die behandelten Java-Bibliotheken stellen ebenfalls Methoden zum
 Erstellen von XML / JSON Datenstrukturen zur Verfügung. Diese können in

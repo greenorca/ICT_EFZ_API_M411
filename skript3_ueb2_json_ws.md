@@ -22,30 +22,32 @@ Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles
 objektorientiertes Programm.
 
 ~~~~~~~~~~~~~~~~~~~
-String url = "http://maps.googleapis.com/maps/api/geocode/json?address=" 
-	+"Hohlstrasse+535,Zuerich";
-
-URL googleClient = new URL(url);		
-URLConnection urlc = googleClient.openConnection();
-		
-BufferedReader in = new BufferedReader(
-			new InputStreamReader(urlc.getInputStream()));
-String msg = "";
-// just reading server response
-while(in.ready()){
-	//System.out.println(line);
-	msg = msg+in.readLine();
+public static void main(String[] args){
+	String url = "http://maps.googleapis.com/maps/api/geocode/json?address=" 
+		+"Hohlstrasse+535,Zuerich";
+	
+	URL googleClient = new URL(url);		
+	URLConnection urlc = googleClient.openConnection();
+			
+	BufferedReader in = new BufferedReader(
+				new InputStreamReader(urlc.getInputStream()));
+	String msg = "";
+	// just reading server response
+	while(in.ready()){
+		//System.out.println(line);
+		msg = msg+in.readLine();
+	}
+	//putting this into a computable JSON format 
+	JSONObject obj = new JSONObject(msg);
+	//fetch "result" part of JSON obj
+	JSONArray results = (JSONArray) obj.get("results");
+	JSONObject inner = (JSONObject)results.get(0);
+			
+	//now get the actual values 
+	JSONObject o = inner.getJSONObject("geometry").getJSONObject("location");
+	System.out.println("Latitude:" + o.getDouble("lat"));
+	System.out.println("Longitude:" + o.getDouble("lng"));
 }
-//putting this into a computable JSON format 
-JSONObject obj = new JSONObject(msg);
-//fetch "result" part of JSON obj
-JSONArray results = (JSONArray) obj.get("results");
-JSONObject inner = (JSONObject)results.get(0);
-		
-//now get the actual values 
-JSONObject o = inner.getJSONObject("geometry").getJSONObject("location");
-System.out.println("Latitude:" + o.getDouble("lat"));
-System.out.println("Longitude:" + o.getDouble("lng"));
 ~~~~~~~~~~~~~~~~~~~~~
 
 ### Zusatzaufgabe Google API nutzen

@@ -154,8 +154,8 @@
 <li><a href="#dynamische-datenstrukturen-iv-json-und-xml"><span class="toc-section-number">10</span> Dynamische Datenstrukturen IV: JSON und XML</a><ul>
 <li><a href="#lernziele_xmljson"><span class="toc-section-number">10.1</span> Lernziele</a></li>
 <li><a href="#die-datenstruktur-json"><span class="toc-section-number">10.2</span> Die Datenstruktur JSON</a><ul>
-<li><a href="#aufbau-baumartiger-datenstrukturen"><span class="toc-section-number">10.2.1</span> Aufbau baumartiger Datenstrukturen</a></li>
-<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.2.2</span> JSON mit Java parsen</a></li>
+<li><a href="#json-mit-java-parsen"><span class="toc-section-number">10.2.1</span> JSON mit Java parsen</a></li>
+<li><a href="#json-webservices-nutzen"><span class="toc-section-number">10.2.2</span> JSON – Webservices nutzen</a></li>
 </ul></li>
 <li><a href="#übung-google-web-service-mit-json-verwenden"><span class="toc-section-number">10.3</span> Übung: Google Web-Service mit JSON verwenden</a><ul>
 <li><a href="#google-maps-nutzen"><span class="toc-section-number">10.3.1</span> Google Maps nutzen</a></li>
@@ -166,9 +166,9 @@
 <li><a href="#xml-parser"><span class="toc-section-number">10.4.2</span> XML Parser</a></li>
 <li><a href="#aufgabe-aus-xml-ein-dom-erstellen"><span class="toc-section-number">10.4.3</span> Aufgabe: Aus XML ein DOM erstellen</a></li>
 <li><a href="#xml-webservices-nutzen"><span class="toc-section-number">10.4.4</span> XML – Webservices nutzen</a></li>
-<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.4.5</span> Generieren und Schreiben von XML und JSON</a></li>
 </ul></li>
-<li><a href="#wdh_xml_json"><span class="toc-section-number">10.5</span> Wiederholungsfragen</a></li>
+<li><a href="#generieren-und-schreiben-von-xml-und-json"><span class="toc-section-number">10.5</span> Generieren und Schreiben von XML und JSON</a></li>
+<li><a href="#wdh_xml_json"><span class="toc-section-number">10.6</span> Wiederholungsfragen</a></li>
 </ul></li>
 <li><a href="#rekursion-und-backtracking"><span class="toc-section-number">11</span> Rekursion und Backtracking</a><ul>
 <li><a href="#lernziele_rekursion"><span class="toc-section-number">11.1</span> Lernziele</a></li>
@@ -182,7 +182,12 @@
 <li><a href="#binäre-suche"><span class="toc-section-number">11.4.2</span> Binäre-Suche</a></li>
 <li><a href="#fortgeschritten-die-türme-von-hanoi"><span class="toc-section-number">11.4.3</span> Fortgeschritten: Die Türme von Hanoi</a></li>
 </ul></li>
-<li><a href="#backtracking"><span class="toc-section-number">11.5</span> Backtracking</a></li>
+<li><a href="#übung-mandelbrot---funktion-erstellen"><span class="toc-section-number">11.5</span> Übung: Mandelbrot - Funktion erstellen</a><ul>
+<li><a href="#fremden-java-code-zum-laufe-bringen"><span class="toc-section-number">11.5.1</span> Fremden Java Code zum Laufe bringen</a></li>
+<li><a href="#mit-rekursionen-arbeiten"><span class="toc-section-number">11.5.2</span> Mit Rekursionen arbeiten</a></li>
+<li><a href="#bedienungsfreundlichkeit"><span class="toc-section-number">11.5.3</span> Bedienungsfreundlichkeit</a></li>
+</ul></li>
+<li><a href="#backtracking"><span class="toc-section-number">11.6</span> Backtracking</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -1754,42 +1759,62 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </section>
 <section id="die-datenstruktur-json" class="level2">
 <h2><span class="header-section-number">10.2</span> Die Datenstruktur JSON</h2>
-<p>JSON (JavaScript Object Notation) ist eine weitere populäre Variante zur hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur eine Erweiterung der JavaScript. Seit 2005 bzw. 2006 setzen Yahoo, Google und viele andere JSON als Datenübertragungsformat für interaktive Webseiten (AJAX) und auch Web-Services ein.</p>
-<pre><code>{&quot;employees&quot;:[
-	{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},
-	{&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},
+<p>Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen. Im Vegleich zu den normalisierten Tabellenstrukturen relationaler Datenbanken stellen Bäume gewissermassen die Daten <em>nicht-normalisierte</em> Ansicht über alle Tabellen dar.</p>
+<figure>
+<img src="media/xml-tree.png" alt="Schematischer Aufbau einer Baum-Struktur" /><figcaption>Schematischer Aufbau einer Baum-Struktur</figcaption>
+</figure>
+<p>JSON (JavaScript Object Notation) ist eine populäre Variante zur hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur eine Erweiterung von JavaScript. Seit 2005 bzw. 2006 setzen Yahoo, Google und viele andere JSON als Datenübertragungsformat für interaktive Webseiten (AJAX) und Web-Services ein.</p>
+<pre><code>{&quot;data&quot;:[
+	{&quot;person&quot;:{
+			&quot;name&quot;:&quot;Melmak&quot;,
+			&quot;vorname&quot;:&quot;Alf&quot;,
+			&quot;plz&quot;: 1234,
+		}
+	}
+	{&quot;person&quot;:{
+			&quot;name&quot;:&quot;Nachhaus&quot;,
+			&quot;vorname&quot;:&quot;ET&quot;,
+			&quot;plz&quot;: 1248,
+		}
+	}
+	{&quot;person&quot;:{
+			&quot;name&quot;:&quot;Quack&quot;,
+			&quot;vorname&quot;:&quot;Alfred J.&quot;,
+			&quot;plz&quot;: 1111,
+		}
+	}
   ],
 }</code></pre>
-<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>firstName</em> und <em>lastName</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
-<section id="aufbau-baumartiger-datenstrukturen" class="level3">
-<h3><span class="header-section-number">10.2.1</span> Aufbau baumartiger Datenstrukturen</h3>
-<p>Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen verschachtelten Unterelementen mit beliebig vielen Unterelementen und Attributen.</p>
-<figure>
-<img src="media/xml-tree.png" alt="Schematischer Aufbau eines Baum-Struktur" /><figcaption>Schematischer Aufbau eines Baum-Struktur</figcaption>
-</figure>
-</section>
+<p>Das Beispiel illustriert einen Array (oder Liste) von JSON-Objekten mit den <strong>&quot;Schlüsseln&quot;</strong> <em>name</em>, <em>vorname</em> und <em>plz</em>. JSON-Objekte bestehen immer aus ein oder mehreren Schlüssel-Wert Paaren, ähnlich wie Java Maps. <strong>Werte</strong> können <strong>atomar</strong> sein, hier z.B. Strings. Werte können weitere JSON-Objekte oder <em>Listen</em> enthalten. Listen werden in JSON mit <strong>[]</strong> umschlossen, JSON-Objekte mit <strong>{}</strong>. Schlüssel und Wert sind mit <strong>&quot;:&quot;</strong> getrennt.</p>
+<p>Listenobjekte haben oft ein zusätzliches <em>ID</em>-Attribut, ähnlich dem Primärschlüssel einer Tabelle in mySQL.</p>
 <section id="json-mit-java-parsen" class="level3">
-<h3><span class="header-section-number">10.2.2</span> JSON mit Java parsen</h3>
+<h3><span class="header-section-number">10.2.1</span> JSON mit Java parsen</h3>
 <p>Es gibt eine Vielzahl von JSON-Parsern für Java. Wir nutzen exemplarisch die auf <a href="http://www.json.org">www.json.org</a> vorgeschlagene JSON-Java Bibliothek für Java SE 8. Laden Sie das JAR unter folgendem Link und binden Sie diese in Ihr Eclipse-Projekt ein:</p>
 <p><a href="https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar" class="uri">https://search.maven.org/remotecontent?filepath=org/json/json/20151123/json-20151123.jar</a></p>
 <p>Wichtigen Klassen sind <code>JSONObject</code> und <code>JSONArray</code>. Sie werden mit der <code>import</code> Anweisung einge­bunden:</p>
 <pre><code>import org.json.JSONObject; 
 import org.json.JSONArray;</code></pre>
-<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die vorerst wichtigsten Methoden der <code>JSONObject Klasse</code> sind:</p>
+<p>Zunächst wird die gesamte JSON-Zeichenkette als Parameter dem JSONObject Konstruktor übergeben. Die Variable <code>jsonString</code> wurde vorher aus einem beliebigen Datenstrom (<code>BufferedReader, StreamReader</code> etc.) eingelesen.</p>
+<pre><code>JSONObject obj = new JSONObject(jsonString);</code></pre>
+<p>Die vorerst wichtigsten Methoden der <code>JSONObject Klasse</code> sind:</p>
 <ul>
-<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen <em>key</em> als JSONArray, wenn man es als solches castet.</p></li>
+<li><p><code>JSONArray get(String key):</code> liefert alle Child-Elemente mit Namen <em>key</em> als JSONArray, wenn man es als solches <em>castet</em>.</p></li>
 <li><p><code>double getDouble(String key):</code> liefert den Attributwert für key als <code>double</code>; entsprechende Methoden sind auch für <code>int</code> und weitere Datentypen implementiert</p></li>
 <li><p><code>JSONObject getJSONObject(String key)</code>: liefert ein Child-Element für key als <code>JSONObject</code></p></li>
 <li><p><code>Set&lt;String&gt; keys()</code>: liefert die Schlüssel aller enthaltenen Elemente zurück.</p></li>
 </ul>
 <p>Über die in JSONArrays enthaltenen JSONObjects kann man elegant iterieren. Das Gleiche gilt natürlich auch für key-Sets:</p>
-<pre><code>JSONObject obj = new JSONObject(jsonString);
-obj.keys().forEachRemaining(key -&gt; {
+<pre><code>obj.keys().forEachRemaining(key -&gt; {
 	System.out.println(key);
 	System.out.println(obj.get(key).toString());
 	System.out.println(&quot;***********************************&quot;);
 	}
 );</code></pre>
+<p>Wenn JSON gleichartig aufgebaut Daten verwendet, können Sie die Listen-Objekte in eine entsprechende Java-Klassen einlesen und beipielsweise als <code>ArrayList</code> ablegen. Dies spart für die weitere Verarbeitung viel Zeit, da JSON nicht immer und immer wieder geparst werden muss.</p>
+</section>
+<section id="json-webservices-nutzen" class="level3">
+<h3><span class="header-section-number">10.2.2</span> JSON – Webservices nutzen</h3>
+<p>Wie bereits erwähnt, sind JSON-Datenstrukturen sehr häufig als Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl definierten JSON- oder XML-Datenstrukturen beantwortet. Der Client sendet Parameter für den Webservice werden entweder via GET in der URL oder als POST Request. Ein ausführliches Beispiel dazu finden Sie in der nachfolgenden Übung.</p>
 </section>
 </section>
 <section id="übung-google-web-service-mit-json-verwenden" class="level2">
@@ -1806,30 +1831,32 @@ obj.keys().forEachRemaining(key -&gt; {
 <p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
 <p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
 <p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
-<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
-	+&quot;Hohlstrasse+535,Zuerich&quot;;
-
-URL googleClient = new URL(url);		
-URLConnection urlc = googleClient.openConnection();
-		
-BufferedReader in = new BufferedReader(
-			new InputStreamReader(urlc.getInputStream()));
-String msg = &quot;&quot;;
-// just reading server response
-while(in.ready()){
-	//System.out.println(line);
-	msg = msg+in.readLine();
-}
-//putting this into a computable JSON format 
-JSONObject obj = new JSONObject(msg);
-//fetch &quot;result&quot; part of JSON obj
-JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
-JSONObject inner = (JSONObject)results.get(0);
-		
-//now get the actual values 
-JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
-System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
-System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
+<pre><code>public static void main(String[] args){
+	String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
+		+&quot;Hohlstrasse+535,Zuerich&quot;;
+	
+	URL googleClient = new URL(url);		
+	URLConnection urlc = googleClient.openConnection();
+			
+	BufferedReader in = new BufferedReader(
+				new InputStreamReader(urlc.getInputStream()));
+	String msg = &quot;&quot;;
+	// just reading server response
+	while(in.ready()){
+		//System.out.println(line);
+		msg = msg+in.readLine();
+	}
+	//putting this into a computable JSON format 
+	JSONObject obj = new JSONObject(msg);
+	//fetch &quot;result&quot; part of JSON obj
+	JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
+	JSONObject inner = (JSONObject)results.get(0);
+			
+	//now get the actual values 
+	JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
+	System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
+	System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));
+}</code></pre>
 </section>
 <section id="zusatzaufgabe-google-api-nutzen" class="level3">
 <h3><span class="header-section-number">10.3.2</span> Zusatzaufgabe Google API nutzen</h3>
@@ -2010,13 +2037,13 @@ in.close();</code></pre>
 <p>Welche Elemente erhalten Sie vom Service?</p>
 <p>Wir wollen nur das Element &quot;WordDefinition&quot; dem Benutzer anzeigen. Wie müssen Sie über die XML-Struktur iterieren, damit Sie den Wert erhalten?</p>
 </section>
-<section id="generieren-und-schreiben-von-xml-und-json" class="level3">
-<h3><span class="header-section-number">10.4.5</span> Generieren und Schreiben von XML und JSON</h3>
+</section>
+<section id="generieren-und-schreiben-von-xml-und-json" class="level2">
+<h2><span class="header-section-number">10.5</span> Generieren und Schreiben von XML und JSON</h2>
 <p>Die behandelten Java-Bibliotheken stellen ebenfalls Methoden zum Erstellen von XML / JSON Datenstrukturen zur Verfügung. Diese können in diesem Kurs nicht mehr behandelt werden, sind jedoch mit etwas Recherche und Übung leicht nachzuvollziehen.</p>
 </section>
-</section>
 <section id="wdh_xml_json" class="level2">
-<h2><span class="header-section-number">10.5</span> Wiederholungsfragen</h2>
+<h2><span class="header-section-number">10.6</span> Wiederholungsfragen</h2>
 <ul>
 <li>XML und JSON sind baumartige Datenstrukturen. Was bedeutet das?</li>
 <li>Was ist der Unterschied zwischen XML und JSON?</li>
@@ -2036,10 +2063,8 @@ in.close();</code></pre>
 </section>
 <section id="rekursion" class="level2">
 <h2><span class="header-section-number">11.2</span> Rekursion</h2>
-<p>Die Rekursion ist ein zentrales Konzept in der Computerwissenschaft, um komplexere Probleme in einfache-überschaubare Problemgebiete zu unterteilen. Eine einfache Definition von Rekursion ist:</p>
+<p>Die Rekursion ist ein zentrales Konzept in der Computerwissenschaft, um komplexere Probleme in einfache-überschaubare Problemgebiete zu unterteilen. Auch hier gilt das alte Sprichwort: <em>Teile und Herrsche</em>. Eine einfache Definition von Rekursion ist:</p>
 <p><em>Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das wiederum mit der gleichen Funktion weiter zerlegt wird, bis der Rest des Problems gelöst ist.</em></p>
-<p>Somit enthält eine Rekursion endlose Selbst-Aufrufe. Dem entsprechend wird Abbruch-bedingung benötigt, damit es nicht zu einer Endlos-Schlaufe kommt.</p>
-<p>Die Rekursion kann also ein Problem aufteilen (um es somit überschaubarer und lösbarer zu machen). Eine Rekursion kann aber auch in einer Datenstruktur abgebildet werden.</p>
 <section id="rekursion-in-einer-datenstruktur" class="level3">
 <h3><span class="header-section-number">11.2.1</span> Rekursion in einer Datenstruktur</h3>
 <p>Wir haben die Rekursion bereits bei Datenstrukturen wie verkettete Listen und Stapel kennengelernt:</p>
@@ -2058,15 +2083,15 @@ in.close();</code></pre>
 </section>
 <section id="rekursive-algorithmen" class="level3">
 <h3><span class="header-section-number">11.2.2</span> Rekursive Algorithmen</h3>
-<p>Unter rekursiven Algorithmen versteht man Funktionen, die sich selbst wieder aufrufen. Entsprechend in der rekursiven Funktion die <em>Abbruchbedingung</em> sichergestellt sein, damit es nicht zu unendlichen Aufrufen der Methode kommt.</p>
+<p>Unter rekursiven Algorithmen versteht man Funktionen, in denen Aufrufe zu sich selbst vorkommen. Entsprechend muss eine <em>Abbruchbedingung</em> definiert sein, damit es nicht zu unendlichen Aufrufen der Methode kommt.</p>
 <p><strong>Beispiel: Fakultätsberechnung </strong></p>
-<p>Es gibt unzählige Beispiele für Probleme, die man am einfachsten mittels einer Rekursion löst. Ein bekanntes mathematisches Problem ist die Berechnung der Fakultät (<code>fak(n)</code> = Produkt der Zahlen von 1 bis <code>n</code>) , hier in Pseudo-Code:</p>
+<p>Es gibt unzählige Beispiele für Probleme, die man am einfachsten mittels einer Rekursion löst. Ein einfaches mathematisches Problem ist die Berechnung der Fakultät (<code>fak(n)</code> = Produkt der Zahlen von 1 bis <code>n</code>) , hier in Pseudo-Code:</p>
 <pre><code>int fak(n){
 	if (n==1)
 		return 1;
 	return n * fak(n-1);
 }</code></pre>
-<p>Die Funktion gibt das Produkt von <code>n</code> multipliziert mit dem Rückgabewert von <code>fak(n-1)</code> aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (respektive im Stack) angelegt, und erst beim Erreichen der Abbruchbedingung (hier <code>n==1</code>) wird der Stack wieder von oben nach unten freigegeben.</p>
+<p>Die Funktion gibt das Produkt von <code>n</code> multipliziert mit dem Rückgabewert von <code>fak(n-1)</code> aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (auf dem <em>Stack</em>) angelegt. Beim Erreichen der Abbruchbedingung (hier <code>n==1</code>) werden die Speicherbereiche vom Stack wieder von oben nach unten freigegeben.</p>
 <p><strong>Beispiel: Fibonacci-Reihe berechnen </strong></p>
 <p>Die Fibonacci-Reihe (1,1,2,3,5,8,…) kann mittels Rekursion berechnet werden:</p>
 <figure>
@@ -2080,9 +2105,9 @@ in.close();</code></pre>
 		return calculate(number -1) + calculate(number-2);
 	}
 }</code></pre>
-<p>Übrigens ist obige Methode <code>calculate</code> ein Beispiel einer <strong>Mehrfach-Rekursion</strong>, da die Methode gleich mehrmals (hier zweimal) aufgerufen wird.</p>
+<p>Die Methode <code>calculate</code> ist ein Beispiel einer <em>Mehrfach-Rekursion</em>, da die Methode gleich mehrmals (hier zweimal) aufgerufen wird.</p>
 <p><strong>Beispiel: Rekursives durchlaufen von Baumstrukturen</strong></p>
-<p>Rekursion findet sich auch im Bearbeiten einer Baum-Struktur, um die einzelnen Knoten durchzugehen. Wir können beispielsweise das bekannte DOM (Document Object Model) für XML verwenden und dabei die Child-Elemente (Kinder) in der XML-Struktur rekursiv aufrufen:</p>
+<p>Rekursion eignen sich auch zum Durchsuchen von Baum-Strukturen, um die einzelnen Knoten durchzugehen. Wir können mit der Function <code>visitRecursively</code> JSON- oder XML-Srukturen durchlaufen und dabei alle Child-Elemente (Kinder) in der Struktur rekursiv aufrufen:</p>
 <pre><code>public void visitRecursively(Node node) {
 	// get child nodes:
 	NodeList list = node.getChildNodes();
@@ -2100,7 +2125,7 @@ in.close();</code></pre>
 </section>
 <section id="rekursion-vs-iteration" class="level2">
 <h2><span class="header-section-number">11.3</span> Rekursion vs Iteration</h2>
-<p>Jede Rekursion kann in eine Iteration umgewandelt werden. Die Rekursion ist meistens die elegantere Lösung, jedoch mit dem Nachteil, dass sie langsamer ist. Ja nach geforderter Performance macht es also mehr Sinn, ein Problem iterativ (also mit einer Schleife) oder rekursiv zu lösen. Gewisse Programmiersprachen verbieten explizit die Iteration und bevorzugen die Rekursion (z.Bsp. LISP oder Prolog).</p>
+<p>Jede Rekursion kann in eine Iteration umgewandelt werden. Die Rekursion ist meistens die elegantere Lösung. Jedoch sind rekursive Funktionen aufgrund des oben beschriebenen Stack-Speicherhandlings oft weniger performant. Ja nach geforderter Performance macht es also mehr Sinn, ein Problem iterativ (also mit einer Schleife) oder rekursiv zu lösen. Gewisse Programmiersprachen verbieten explizit die Iteration und bevorzugen die Rekursion (z.Bsp. LISP oder Prolog).</p>
 <p>Beispiel: Eine Funktion soll die Zahlen von n1 bis n2 ausgeben, wobei n1 &lt;= n2 sein soll.</p>
 <p>Als Iteration würden wir es so programmieren:</p>
 <pre><code>public static void printSeries(int n1, int n2){
@@ -2178,8 +2203,146 @@ Schritt 3: bewege Platte a nach Turm 3</code></pre>
 </ol>
 </section>
 </section>
+<section id="übung-mandelbrot---funktion-erstellen" class="level2">
+<h2><span class="header-section-number">11.5</span> Übung: Mandelbrot - Funktion erstellen</h2>
+<p><strong>Lernziele:</strong></p>
+<ol type="1">
+<li><p>Sie lernen, fremden Java-Code auf der eigenen IDE (hier Eclipse) zum Laufen zu bringen. Dabei lernen Sie auch, wie man die Code-Qualität gleichzeitig verbessern kann.</p></li>
+<li><p>Sie erkennen rekursive Algorithmen und programmieren diese am Beispiel des <strong>Mandelbrot-Fraktals</strong>.</p></li>
+<li><p>Wenn Sie effizient arbeiten (oder die entsprechenden Teilaufgaben zu Hause beenden), dann lernen Sie, wie man ein (Java-)Programm benutzerfreundlicher macht und seine Qualität erhöht.</p></li>
+</ol>
+<p><strong>Zeit:</strong> 105 Min. (+ca. 120 Min. für den optionalen Teil)</p>
+<p><strong>Erlaubte Hilfen:</strong></p>
+<ul>
+<li><p>Arbeiten Sie an diesem Programm, bis Probleme auftreten. Versuchen Sie, in max. 5-10 Min. das Problem selber zu lösen (zum Bsp. mit dem Internet). Danach Frage jemanden aus der Klasse, der Dir gerne helfen möchte.</p></li>
+<li><p>Wenn das nichts bringt oder weitere Zweifel bestehen, frage unbedingt den Dozenten nach Hinweisen und Bestätigungen für den Lösungsweg.</p></li>
+</ul>
+<p><strong>Kontrolle:</strong> Selbstkontrolle der Teilschritte, durch Erfolgs- und Funktionstests oder Vergleich mit dem Nachbarn.</p>
+<blockquote>
+<p><strong>Viel Spass!</strong></p>
+</blockquote>
+<section id="fremden-java-code-zum-laufe-bringen" class="level3">
+<h3><span class="header-section-number">11.5.1</span> Fremden Java Code zum Laufe bringen</h3>
+<p>Für diese Aufgabe wollen wir ein <strong>Mandelbrot Java-Programm</strong> aus dem Internet in unsere Eclipse-Umgebung einlesen und kompilieren lassen.</p>
+<ol type="a">
+<li><p>Die erste Schwierigkeit, ist den geeigneten Code zu finden. Dazu müssen wir die richtigen Suchwörter eingeben (s.o. Fett gerucktes plus Suchwort <em>Quellcode</em>) und wissen was wir genau suchen, denn oft besteht zuerst so etwas wie die Qual der Wahl. Wir eliminieren sofort Lösungen für Applets, da wir eine <strong>Stand-Alone Lösung</strong>, die Eclipse kompatibel ist, wollen und im Moment keine Lust auf diese Art von Anpassung von Applet auf Stand-Alone haben). Wir eliminieren auch alle Webseiten, die zwar gut klingen, aber leider nur Downloads von Class oder JAR Dateien anbieten (keine Lust auf das Reverse-Engineering, da zudem auch alle Kommentare fehlen werden). Schliesslich soll das Ganze mit einem schon installierten <strong>GUI-Toolkit</strong> (zum Bsp. SWT, AWT oder Swing) laufen. Bleibt also zur Auswahl zum Bsp. eine Webseite mit sehr wenig Text, auf der der Code nur mit Copy-Paste herunterkopiert und in Eclipse eingefügt werden muss.</p></li>
+<li><p>Offenbar lässt sich dieser Code nicht kompilieren. Er benötigt noch zwei weitere Java-Klassen. Die müssen auf der gleichen Weise heruntergeladen werden. Nach was suchst Du?</p></li>
+<li><p>Bleiben zwei Probleme. 1. im der <code>main()</code>-Funktion gibt es ein Kompilierproblem. Versuche zu verstehen, warum das so ist (was soll dieser Code?) und wie Du die Kompilation mit einem <strong>Workaround</strong> (Alternative Lösung) lösen willst.</p></li>
+<li><p>Bravo, Du kannst jetzt kompilieren. Bleibt aber leider das 2. Problem, dass Du hier 3 Werte eingeben musst. Der Programmierer hat leider vergessen eine Anleitung in den Kommentaren zu schreiben und auf der Webseite wird man auch nicht schlau, oder? Was tun? Wie finden wir heraus welche Werte, was bewirken diese Werte? Hast Du die Lösung und weisst Du jetzt was Sache ist? Dann schleunigst die Kommentare mit den Anweisungen und Erklärungen einfügen!</p></li>
+<li><p>Gratuliere! Du bekommst jetzt folgende Applikation mit folgendem Ergebnis zum Laufen:</p>
+<figure>
+<img src="media/mandelbrot.png" />
+</figure></li>
+</ol>
+<p>Man kann das Ergebnisbild sogar abspeichern!</p>
+<p>Dir sind sicherlich schon ein paar Schwachstellen dieses Programms aufgefallen. Insbesondere die Bedienungsfreundlichkeit lässt einiges zu wünschen übrig! Da schauen uns wir weiter unten genauer an.</p>
+</section>
+<section id="mit-rekursionen-arbeiten" class="level3">
+<h3><span class="header-section-number">11.5.2</span> Mit Rekursionen arbeiten</h3>
+<p>Mach zuerst eine <strong>Kopie</strong> des laufenden Projekts und arbeite mit der Kopie.</p>
+<ol type="a">
+<li><strong>Mandelbrot</strong> Figuren sind Fraktale und diese programmiert man häufig und am elegantesten mit <strong>Rekursionen</strong>. Frage: ist oder obige Code eine Rekursion?</li>
+</ol>
+<blockquote>
+<p>□ JA □ NEIN</p>
+</blockquote>
+<ol type="a">
+<li>Genau! Tue nun folgendes:</li>
+</ol>
+<p>Baue den bisherigen Code in folgendem Code um:</p>
+<p><strong>Bemerkung</strong>: der Code ist rein statisch umgesetzt, d.h. alle Attribute und Methoden der Hauptklasse sind als „static“ deklariert, viele Variablen werden in der Klasse global als Eigenschaft angelegt und viele Kommentare wurden weggelassen. Dies ist natürlich nicht die beste Art, aber man hebt so auf den interessierenden Algorithmus hervor.</p>
+<pre><code>public class Mandelbrot {
+	private static double size = 5;
+	private static double xc_s2 = 0 - 5 / 2.0; // xc-size/2
+	private static double yc_s2 = 0 - 5 / 2.0; // yc-size/2
+	private static int N = 60; // Anzahl Iterationen
+	private static Picture pic;
+	private static int max = 255;
+	/** die Mandelbrot-Funktion 
+	*/
+	public static int mand(Complex z0) {
+		Complex z = z0;
+		for (int t = 0; t &gt; max; t++) {
+			if (z.abs() &gt; 2.0)	//Abbruchbedingung 
+				return t;
+		
+			z = z.times(z).plus(z0); //rekursiver Aufruf
+		}
+		return max;
+	}
+
+	public static void drawMand(int i, int j) {
+		if (j &lt; N) {
+			if (i &lt; N) {
+				Complex z0 = new Complex(
+					xc_s2 + size *i/N, 
+					yc_s2 +size*j/N);
+
+				int gray = max - mand(z0);
+				System.out.println(&quot;C:&quot;+gray+&quot; /i:&quot;+i+&quot; /j:&quot;+j); // debug
+				pic.set(i, N-1-j, new Color(gray, gray, gray));
+				drawMand(i, j+1);
+			}
+		} 
+		else if (i &lt; N) {
+			drawMand(i+1, 0);
+		}
+	}
+
+	public static void main(String[] args) {
+		pic = new Picture(N, N);
+		drawMand(0, 0);
+		pic.show();
+	}
+
+}</code></pre>
+<p>Kannst Du diesen Code jetzt kompilieren und testen?</p>
+<ol type="a">
+<li>Nachmals die Frage: ist der neue Code eine Rekursion?</li>
+</ol>
+<blockquote>
+<p>□ JA □ NEIN</p>
+</blockquote>
+<p>Deine Antwort sollte jetzt genau das Gegenteil von deiner obigen Antwort sein! Oder? Warum sollte Deine Antwort richtig sein? Tipp: schau im Skript nach und begründe:</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>Auf dem ersten Blick tun beide Codierungen mit/ohne Rekursion fast genau das Gleiche (ist ja eigentlich auch das gleiche Vorgehen)! Wo liegen aber genau die Unterschiede zwischen beiden Codierungen und gibt es evtl. unterschiedliche Auswirkungen? Ein Unterschied wird schnell klar, wenn Du beim zweiten Code N=512 setzt (wie beim ersten). Was passiert genau (Fehlermeldung?) und warum? Wie hoch kann ich beim ersten Programm mit N gehen?</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+</section>
+<section id="bedienungsfreundlichkeit" class="level3">
+<h3><span class="header-section-number">11.5.3</span> Bedienungsfreundlichkeit</h3>
+<p>Sie haben sicher bemerkt, dass die Berechnungen des Mandelbrot-Fraktals etwas dauern (vor allem ab einem 512x512 Bild). Der Benutzer könnte glatt denken, das Mandelbrot-Programm ist abgestürzt. Zudem liefert das Programm immer das gleiche Ergebnis, wenn der Benutzer gewisse Parameter nicht selber auf komfortable Art wählen kann. Auch sind Fenster und Dekoration nicht gerade ansprechend und informativ. Haben Sie versucht, das Bild abzuspeichern? Was ist mit dem Bildformat?</p>
+<p>Folgende Schritte sind optional und Fach- und Modul-übergreifend. Sie breiten auf Ihre Praxis und weitere Module vor. Lesen Sie sie daheim einmal durch. Vielleicht bekommen Sie Lust, etwas anzupassen. Die Farne (s.u.) sind übrigens auch sehr interessant.</p>
+<p>Also legen wir mal los:</p>
+<ol type="a">
+<li><p>Denken Sie sich eine einfache und eine etwas luxuriösere Lösung für das Warteproblem bei grossen Bilder aus. Welche Lösung trauen Sie sich zu? Dann versuchen Sie es einfach! Wo holen Sie sich Hilfestellungen und den Beispielcode?</p></li>
+<li><p>Dasselbe Vorgehen gilt für die Benutzereingaben. Welche Lösung soll es sein? Übernehmen Sie sich nicht, denn je nachdem was Sie dem Benutzer anbieten, wird das Ganze etwas aufwendig. Vielleicht sind Ihnen bei der anfänglichen Suche im Internet diverse Mandelbrote aufgefallen, die viel schöner als das obige sind. Zum Bsp. hier:</p>
+<p><a href="http://www.hameister.org/projects_fractal.html">http://www.hameister.org/projects_fractal.html*</a></p>
+<p>Wenn Sie die mandelbrot-Fraktale verstehen wollen, dann müssen Sie sich unweigerlich mit dem Thema fachlich auseinandersetzen und zudem auch in Mathe sattelfest sein (das meiste verlangt Hochschulniveau). In unserem Fall gilt: <em>Probieren geht über Studieren</em>. Es gibt auch einfachere Alternativen, wie zum Beispiel die Farn-Fraktale, siehe:</p>
+<p><a href="http://www.gk-informatik.de/sdhp/recugra.html"><em>http://www.gk-informatik.de/sdhp/recugra.html</em></a></p>
+<p><a href="http://www.toves.org/books/java/ch18-recurex/"><em>http://www.toves.org/books/java/ch18-recurex/</em></a></p>
+<p><a href="http://introcs.cs.princeton.edu/java/23recursion/Tree.java.html"><em>http://introcs.cs.princeton.edu/java/23recursion/Tree.java.html</em></a></p>
+<p><a href="http://www.aplu.ch/home/apluhomex.jsp?site=104"><em>http://www.aplu.ch/home/apluhomex.jsp?site=104</em></a></p>
+<p>Probieren Sie nun auch diese Codes aus und erweitern Sie sie.</p></li>
+<li><p>Wie verhindern oder behandeln Sie ungültige Eingaben? Vielleicht machen Sie hier ein Konzept (in ToDo-Kommentare einfügen) und verschieben die Implementation ein anderes Mal.</p></li>
+<li><p>Gestalten Sie die Titelzeile und den Hintergrund etwas ansprechender und informativer. Welche Code-Stellen müssen geändert werden?</p></li>
+<li><p>Was ist mit dem Abspeichern los? Welches Bildformat wird genutzt? Was ist mit der Datei-Extension - muss der Benutzer diese eingeben? Wie kann man das benutzerfreundlicher und vor allem DAU-sicher gestalten? Ein Information oder eine Hilfestellung wäre da schon hilfreich!</p></li>
+<li><p>Ja-ja, Sie hättest einen Testplan schon früher machen sollen, aber wir arbeiten ja hier <em>agil</em>. Umso wichtiger wird es dann, keinen der repräsentativen Tests hier auszulassen und wirklich alle Funktionen zu testen. Als ran an den Testplan! Geben Sie dessen Durchführung an jemanden anders weiter. Mal schauen, ob er mit Ihrer Testanleitung klar kommt. Wie das genau geht wissen Sie schon, oder?</p></li>
+</ol>
+<blockquote>
+<p>Gratulation Sie haben jetzt alles erledigt!</p>
+</blockquote>
+</section>
+</section>
 <section id="backtracking" class="level2">
-<h2><span class="header-section-number">11.5</span> Backtracking</h2>
+<h2><span class="header-section-number">11.6</span> Backtracking</h2>
 <p>Backtracking ist eine Form von Rekursion, bei der verschiedene Lösungswege für ein Problem durchsucht werden. Wenn man beim Suchen der Lösung merkt, dass dies der falsche Weg ist, wird der Weg bis zur letzten Entscheidung zurückgegangen und es wird nach einer neuen Lösung gesucht. Am einfachsten stellt man sich das Suchen nach einer Lösung in Form eines Baumes vor:</p>
 <figure>
 <img src="media/tree.gif" />
