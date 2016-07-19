@@ -46,8 +46,7 @@ author:
 
 TODO-Liste
 ----------
-* Mandelbrot-Übung ergänzen
-* Debugger, Heap und Stack bei Rekursion einbauen
+* Mandelbrot-Übung eventuell auf Farn umbauen...
 
 Willkommen (zurück) bei in Java
 ========================================

@@ -64,6 +64,8 @@ int fak(n){
 
 Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `fak(n-1)` aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (auf dem *Stack*) angelegt. Beim Erreichen der Abbruchbedingung (hier `n==1`) werden die Speicherbereiche vom Stack wieder von oben nach unten freigegeben.
 
+![Auf- und Abbau des Programmstacks](media/rekursion_stack.png)
+
 **Beispiel: Fibonacci-Reihe berechnen **
 
 Die Fibonacci-Reihe (1,1,2,3,5,8,…)

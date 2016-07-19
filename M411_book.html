@@ -231,8 +231,7 @@ pandoc_title_block
 <section id="todo-liste" class="level2">
 <h2><span class="header-section-number">0.1</span> TODO-Liste</h2>
 <ul>
-<li>Mandelbrot-Übung ergänzen</li>
-<li>Debugger, Heap und Stack bei Rekursion einbauen</li>
+<li>Mandelbrot-Übung eventuell auf Farn umbauen...</li>
 </ul>
 </section>
 <section id="willkommen-zurück-bei-in-java" class="level1">
@@ -2092,6 +2091,9 @@ in.close();</code></pre>
 	return n * fak(n-1);
 }</code></pre>
 <p>Die Funktion gibt das Produkt von <code>n</code> multipliziert mit dem Rückgabewert von <code>fak(n-1)</code> aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (auf dem <em>Stack</em>) angelegt. Beim Erreichen der Abbruchbedingung (hier <code>n==1</code>) werden die Speicherbereiche vom Stack wieder von oben nach unten freigegeben.</p>
+<figure>
+<img src="media/rekursion_stack.png" alt="Auf- und Abbau des Stacks" /><figcaption>Auf- und Abbau des Stacks</figcaption>
+</figure>
 <p><strong>Beispiel: Fibonacci-Reihe berechnen </strong></p>
 <p>Die Fibonacci-Reihe (1,1,2,3,5,8,…) kann mittels Rekursion berechnet werden:</p>
 <figure>
