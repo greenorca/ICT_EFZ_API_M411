@@ -132,52 +132,28 @@ Kursablauf
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
 +---------------------+------------------------------------------------------+
-|**Lektion 1 -4**     | *einfache Klassen; main Methode                      |
-|                     |*Eingabe-/Ausgabe für Konsole und Dateien						 |
+|**Lektion 1 -4**     |- einfache Klassen; main Methode                      |
+|                     |- Eingabe-/Ausgabe für Konsole und Dateien						 |
 +---------------------+------------------------------------------------------+                
 |**Lektion 5 – 10**   |- Arrays                                              |
 |                     |- Sortier-Algorithmen                                 |
 |                     |- Laufzeitkomplexität                                 |
 +---------------------+------------------------------------------------------+
-|**Lektion 11 – 16**  | Verkettete Liste                                     |
+|**Lektion 11 – 16**  | - Verkettete Liste                                   |
 +---------------------+------------------------------------------------------+
 |**Lektion 17 – 20**  | - Stack, Queue                                       |
 |                     | - Java Collections                                   |
 |                     | - Iteratoren                                         |
 +---------------------+------------------------------------------------------+
-|**Lektion 21 – 24**  | Miniprojekt (LB2)                                    |
+|**Lektion 21 – 24**  | - Miniprojekt (LB2)                                  |
 +---------------------+------------------------------------------------------+
 |**Lektion 25 – 32**  | - HashMap                                            |
 |                     | - JSON mit WebServices, optional XML                 |
 +---------------------+------------------------------------------------------+
 |**Lektion 33 – 36**  | - Rekursion                                          |
-|                     | - Backtracking                                       |
+|                     | - optional Backtracking                              |
 +---------------------+------------------------------------------------------+
 
-<!--
---------------------- ------------------------------------------------------
-**Lektion 1 -4**      *einfache Klassen; main Methode
-                      *Eingabe-/Ausgabe für Konsole und Dateien
-                    
-**Lektion 5 – 10**    *Arrays
-                      *Sortier-Algorithmen
-                      *Laufzeitkomplexität 
-
-**Lektion 11 – 16**    Verkettete Liste
-
-**Lektion 17 – 20**   *Stack, Queue
-                      *Java Collections
-                      *Iteratoren
-
-**Lektion 21 – 24**   Miniprojekt 
-
-**Lektion 25 – 32**   *HashMap
-                      *JSON mit WebServices, optional XML
-
-**Lektion 33 – 36**   *Rekursion
-                      *Backtracking
---------------------- -----------------------------------------------------
--->
 
 Klassen erstellen
 ====================
@@ -452,43 +428,10 @@ public static void main(String[] args) {
 	}
 ~~~~~~~~~~~~~~~~~~~~~
 
-## Übung: CSV schreiben
-**Lernziele**
 
-* vertiefen Lese- und Schreiboperationen mit Java
-
-**Zeit:** 25 Minuten
-
-**Aufgabe**
-
-Erstellen Sie eine Klasse `MyWriter`. In der `main`-Funktion wird **eine** beliebige Benutzereingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei einfügt werden.
-
-<div class="lsg">
-~~~~~~~~~~~~~
-public static void main(String[] args) {
-		String fileName = "/tmp/guggus.txt";
-		String content = "";
-		try {
-			BufferedReader bfr = new BufferedReader(new FileReader(fileName));
-			while (bfr.ready()){
-				content+=bfr.readLine()+System.lineSeparator();
-			}
-			bfr.close();
-			
-			Scanner scanny = new Scanner(System.in);
-			System.out.println("Nachricht eingeben: ");
-			String message = scanny.nextLine();
-			
-			PrintWriter prnt = new PrintWriter(fileName);
-			prnt.println(message);
-			prnt.print(content);
-			prnt.close();		
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-}
-~~~~~~~~~~~~~
-</div>
+```include
+skript1ab_ueb04_csvwrite.md
+```
 
 
 Wiederholungsfragen {#wdh_intro}

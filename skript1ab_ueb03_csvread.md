@@ -12,7 +12,9 @@ Wir werden eine Textdatei mit folgender Struktur verwenden:
 
 `Huber;Peter;1955`<br>
 `Meier;Irene;1960`<br>
-`Muster;Anna;1974`
+`Muster;Anna;1974`<br>
+`Kohli;Jan;1998`<br>
+`Manser;Mario;1999`
 
 Speichern Sie obigen Text als Datei im Projektordner mit dem Namen `daten.csv` ab.
 
@@ -20,7 +22,14 @@ Speichern Sie obigen Text als Datei im Projektordner mit dem Namen `daten.csv` a
 Zeile wieder auf der Konsole ausgibt. Geben Sie zusätzlich das Alter der
 Personen jeweils am Ende der Zeile aus.
 
+	**Lösunsvorschlag:**
+	
+	`Skript1_SimpleCsvReader.java`
+
 2. Kopieren Sie die Klasse und nennen Sie die Kopie `Skript1_SearchCsvReader`. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die `daten.csv` eingelsenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum
 Vergleich von zwei String-Variablen der Operator `==` **nicht** verwendet
 werden kann. Stattdessen verwenden Sie die Methode `equals` der Klasse `String`.
 
+	**Lösunsvorschlag:**
+	
+	`Skript1_SearchCsvReader.java`

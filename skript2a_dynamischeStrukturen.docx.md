@@ -139,8 +139,7 @@ Innerhalb der MyLinkedListKlasse:
 ~~~~~~~~~~~~~~~~~~~~
 public void append(Object value){
 	Node newElement = new Node(value);
-	Node current = this.head; //set current to head (start) of
-the list
+	Node current = this.head; //set current to head (start) of the list
 	//make sure to add at the end of the list, loop through the elements:
 	while (current.getNext() != null){
 		current = current.getNext();

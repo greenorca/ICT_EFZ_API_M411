@@ -24,6 +24,20 @@ public int[][] calcCrossProduct(int[] vector){
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
+<br/><br/><hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>
+
+
+	
 b) 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 public float getMean(int[] arr){
@@ -34,6 +48,18 @@ public float getMean(int[] arr){
 	return sum/arr.length;
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<br/><br/><hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>
 
 c)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -54,3 +80,15 @@ public int findBinary(int [] arr, int search){
 	return index;
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+<br/><br/><hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>
+
+<hr/>
+<br/>

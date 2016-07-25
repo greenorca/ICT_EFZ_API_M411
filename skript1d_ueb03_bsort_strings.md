@@ -4,6 +4,7 @@
 
 * anwenden und ändern Sortierfunktionen
 * anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
+* anwenden obejktorientierte Programmierparadigmen 
 
 **Zeit:** 60 Minuten
 
@@ -21,12 +22,24 @@ aufeinanderfolgende Buchstaben miteinander verglichen werden. Z.B. liegt
 
 ###Strings sortieren
 
-Erstellen Sie eine Klasse `StringBSort`. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in
-alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings
-in der Konsole aus.
+Erstellen Sie eine Klasse `Skript1c_StringBSort`. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in
+alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.
+
+**Lösungsvorschlag:**
+	
+	`Skript1c_StringSort.java`
+
 
 ###Array einer benutzerdefinierten Klasse sortieren
 
-Erstellen Sie eine Klasse `Person` mit den Attributen `Vorname`, `Nachname` und `Geburtsjahr`. Diese Attribute sollen im Konstruktor übergeben werden. 
+In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier arbeiten Sie wieder richtig objektorientiert, d.h. Daten werden in Klassenvariablen gespeichert und Funktionalität ist in Klassenmethoden implementiert. Die `main`-Funktion dient nur als Testrahmen.
 
-In der `main`-Funktion legen Sie einen `personen`-Array mit 5 beliebigen Personen an. Erstellen Sie eine statische Sortierfunktion, die Ihren Array nach dem Personenalter *absteigend* sortiert. Geben Sie `personen` vor und nach dem Sortieren aus.
+1. Erstellen Sie eine Klasse `Skript1c_PersonBsort`. Erstellen Sie nun eine Klasse `Person` mit den Attributen `Vorname`, `Nachname` und `Geburtsjahr`. Der Konstruktor der Klasse `Person` übergibt alle diese Parameter. 
+
+2. Erstellen Sie eine Klassenvariable `Person[] personenArray`. Diese soll in einer Klassenfunktion `readPersonFile` mit den Personen aus das Datei `daten.csv` gefüllt werden (siehe `Skript1_SimpleCsvReader`). Beachten Sie, dass die Anzahl der Personen variable ist und am Ende der Funktion der Array `personenArray` nur gültige Werte enthält.  
+
+3. Erstellen Sie eine Sortierfunktion, die Ihren Array nach dem Nachnamen *absteigend* sortiert. Geben Sie `personen` vor und nach dem Sortieren aus.
+
+**Lösungsvorschlag:**
+	
+	`Skript1c_Personen.java`

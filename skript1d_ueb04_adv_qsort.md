@@ -25,20 +25,13 @@ Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?
 Implementieren Sie den Insert-Sort und zeigen Sie die Unterschiede zum
 Quick-Sort.
 
-  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-                                                                                                                                   
-  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+<hr>
 
 Vergleichen Sie diese Sort-Algorithmen mit dem Bubble-Sort, indem Sie
-auch die Dauer messen. Es gibt dazu eine einfache Klasse „Stopwatch“.
+auch die Dauer messen.
 
 Zeigen Sie Ihre Lösungen zu Quick-Sort und Insert-Sort der Lehrperson.
+
+**Lösungsvorschlag:**
+
+	**TODO**

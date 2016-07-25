@@ -19,8 +19,8 @@ absteigend sortiert ist und aufsteigend sortiert werden soll).
 
 3. Erweitern Sie Ihre Sortier-Funktion, um die Durchläufe und
 Tauschoperationen zu zählen. Messen Sie zusätzlich die Dauer, wie lange
-der Bubble-Sort hat. Verwenden Sie dabei die *System* Klasse mit der
-statischen Methode „currentTimeMillis()“. Testen Sie dann die in der
+der Bubble-Sort hat. Verwenden Sie dabei die `System`-Klasse mit der
+statischen Methode `currentTimeMillis()`. Testen Sie dann die in der
 Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle:
 
   **Elemente**   **Art der Werte**          **n Durchläufe**   **n Tauschoperationen**   **Rechenzeit**
@@ -34,4 +34,9 @@ Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle:
   4000           aufsteigende Reihenfolge                                                
   4000           zufällige Werte                                                         
   4000           absteigende Reihenfolge                                                 
+  -------------- -------------------------- ------------------ ------------------------- ----------------
 
+	
+**Lösungsvorschlag:**
+	
+	`Skript1c_BSortPerformance.java`
