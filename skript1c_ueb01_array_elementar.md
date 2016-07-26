@@ -20,6 +20,8 @@ Erstellen Sie je eine Funktion `getMinimum` und `getMaximum`. Die Funktionen sol
 
 In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder `a` und `b` in das Ergebnisfeld `c` wird elementweise das erste Element von `a` mit dem ersten Element von `b` addiert und im ersten Element von `c` gespeichert. 
 
+![Array addieren](media/array_addition.png)
+
 Dies funktioniert nur, wenn die Arrays die gleiche Länge haben.
 Erstellen Sie eine statische Funktion `addArray`. `addArray` erhält zwei `int`-Arrays als Parameter und gibt einen `int`-Array als Summe der Eingabe-Arrays zurück. Vor der Addition soll die Funktion prüfen, ob die Eingabefelder gleich lang sind. 
 
