@@ -17,16 +17,17 @@
 <li><a href="#übung-java-ide-und-ein-ausgaben">Übung: Java IDE und Ein-/Ausgaben</a></li>
 <li><a href="#übung-numerische-ein-ausgaben">Übung: Numerische Ein-/Ausgaben</a></li>
 <li><a href="#übung-textdateien-einlesen">Übung: Textdateien einlesen</a></li>
-<li><a href="#übung-elementare-array---funktionalität">Übung: Elementare Array - Funktionalität</a></li>
+<li><a href="#übung-csv-schreiben">Übung: CSV schreiben</a></li>
+<li><a href="#übung-weiterführende-aufgaben-mit-bubble-sort">Übung: Weiterführende Aufgaben mit Bubble-Sort</a></li>
 <li><a href="#übungen-für-fortgeschrittene-quick-sort-und-insert-sort">Übungen für Fortgeschrittene: Quick-Sort und Insert-Sort</a></li>
 <li><a href="#übungen-verkettete-liste">Übungen: Verkettete Liste</a></li>
-<li><a href="#übung-erweiterte-aufgaben-zu-verkettete-liste-todo">Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</a></li>
-<li><a href="#übungen-stack-implementieren">Übungen: Stack implementieren</a></li>
+<li><a href="#übung-erweiterte-aufgaben-zu-verketteten-listen">Übung: Erweiterte Aufgaben zu verketteten Listen</a></li>
 <li><a href="#übung-arbeiten-mit-iteratoren">Übung: Arbeiten mit Iteratoren</a></li>
 <li><a href="#übung-sortieren-und-filtern-mit-lambda-ausdrücken">Übung: Sortieren und Filtern mit Lambda-Ausdrücken</a></li>
 <li><a href="#übung-anwenden-map-datenstruktur">Übung: Anwenden <code>map</code>-Datenstruktur</a></li>
 <li><a href="#übung-google-web-service-mit-json-verwenden">Übung: Google Web-Service mit JSON verwenden</a></li>
 <li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden">Übung: Rekursive Algorithmen erstellen und anwenden</a></li>
+<li><a href="#übung-mandelbrot---funktion-erstellen">Übung: Mandelbrot - Funktion erstellen</a></li>
 </ul>
 </nav>
 <section id="übung-java-ide-und-ein-ausgaben" class="level2">
@@ -40,9 +41,12 @@
 <p>Erstellen Sie in Ihrer Entwicklungsumgebung ein neues Java-Projekt mit dem Namen <code>M411</code>. In diesem Projekt erstellen Sie alle folgenden Klassen.</p>
 <ul>
 <li><p>Erstellen Sie eine Java-Klasse <code>WelcomeMessage</code> gemäss dem Beispiel. Achten Sie darauf, das der Dateiname dem Klassennamen entspricht.</p></li>
-<li><p>Erweitern Sie die Klasse <code>WelcomeMessage</code> so, dass es eine zweite Methode gibt, welche eine Person verabschiedet. Erweitern Sie dann auch die main-Methode so, dass zuerst zwei Personen begrüsst und dann in umgekehrter Reihenfolge verabschiedet werden.</p></li>
+<li><p>Erweitern Sie die Klasse <code>WelcomeMessage</code> so, dass es eine zweite Methode gibt, welche eine Person verabschiedet. Erweitern Sie dann auch die main-Methode so, dass zuerst zwei Personen begrüsst und dann in umgekehrter Reihenfolge verabschiedet werden. Speichern Sie die Personennamen in geeigneten lokalen Variablen ab und übergeben Sie nur die Variablen an die Funktionen.</p></li>
 <li><p>Erstellen Sie eine Methode, welche so parametrisiert ist, dass sie von beiden vor­handenen Methoden verwendet werden kann, um die korrekte Meldung auszugeben. Es soll dann im ganzen Programm nur noch einmal der Aufruf von <code>System.out.println</code> vorkommen.</p></li>
 </ul>
+<p><lsg> <strong>Lösungsvorschlag</strong></p>
+<p><code>WelcomeMessage.java</code></p>
+<p></lsg></p>
 </section>
 <section id="übung-numerische-ein-ausgaben" class="level2">
 <h2>Übung: Numerische Ein-/Ausgaben</h2>
@@ -50,11 +54,19 @@
 <ul>
 <li>einlesen und verarbeiten Benutzereingaben</li>
 <li>einlesen Zahlenformate</li>
+<li>Arbeiten mit <code>Java-Calendar</code> Klassen.</li>
 </ul>
-<p><strong>Zeit:</strong> 30 Minuten</p>
-<p>Erstellen Sie eine Klasse <code>AgeCalculator</code> mit der Methode <code>public void tellAge()</code>. Diese Methode soll den Benutzer nach seinem Namen und seinem Jahrgang fragen und dann die folgende Meldung ausgeben:</p>
+<p><strong>Zeit:</strong> 60 Minuten</p>
+<ul>
+<li><p>Suchen Sie im Internet oder in der Java-Hilfe Informationen zur <code>Calendar</code>-Klasse. Geben Sie zunächst das aktuelle Datum zeilenweise aus: zuerst das Jahr, dann den Monat und schliesslich den Tag und Wochentag. Vermeiden Sie die Benutzung von <code>depreciated</code>-Funktionen.</p></li>
+<li><p>Erstellen Sie eine Klasse <code>AgeCalculator</code> mit der Methode <code>public void tellAge()</code>. Diese Methode soll den Benutzer nach seinem Namen und seinem Jahrgang und Geburtsmonat fragen. Wenn der Geburtsmonat dem aktuellen Monat entspricht, soll zusätzlich nach dem Geburtstag gefragt werden. Im Anschluss wird die folgende Meldung ausgeben:</p>
 <p><code>Hallo Peter, du wirst in diesem Jahr 34 Jahre alt.</code></p>
-<p>Dabei soll der Name und das Alter den Benutzereingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Jahr.</p>
+<p>Dabei soll der Name und das Alter den Benutzereingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Datum aus der <code>Calendar</code>-Klasse.</p></li>
+</ul>
+<p>Erstellen Sie zunächst ein Struktogramm für die Funktion <code>tellAge()</code>. Dann implementieren und testen Sie Ihre Funktion.</p>
+<p><lsg> <strong>Lösungsvorschlag</strong></p>
+<p><code>WelcomeMessage.java</code></p>
+<p></lsg></p>
 </section>
 <section id="übung-textdateien-einlesen" class="level2">
 <h2>Übung: Textdateien einlesen</h2>
@@ -66,15 +78,28 @@
 </ul>
 <p><strong>Zeit:</strong> 45 Minuten</p>
 <p>Wir werden eine Textdatei mit folgender Struktur verwenden:</p>
-<p><code>Huber;Peter;1955</code><br> <code>Meier;Irene;1960</code><br> <code>Muster;Anna;1974</code></p>
+<p><code>Huber;Peter;1955</code><br> <code>Meier;Irene;1960</code><br> <code>Muster;Anna;1974</code><br> <code>Kohli;Jan;1998</code><br> <code>Manser;Mario;1999</code></p>
 <p>Speichern Sie obigen Text als Datei im Projektordner mit dem Namen <code>daten.csv</code> ab.</p>
 <ol type="1">
-<li><p>Erstellen Sie eine neue Java-Klasse <code>Skript1_SimpleCsvReader</code> im Projekt <code>M411</code>, welches diese Datei liest und Zeile für Zeile wieder auf der Konsole ausgibt. Geben Sie zusätzlich das Alter der Personen jeweils am Ende der Zeile aus.</p></li>
-<li><p>Kopieren Sie die Klasse und nennen Sie die Kopie <code>Skript1_SearchCsvReader</code>. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die <code>daten.csv</code> eingelsenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator <code>==</code> <strong>nicht</strong> verwendet werden kann. Stattdessen verwenden Sie die Methode <code>equals</code> der Klasse <code>String</code>.</p></li>
+<li><p>Erstellen Sie eine neue Java-Klasse <code>Skript1_SimpleCsvReader</code> im Projekt <code>M411</code>, welches diese Datei liest und Zeile für Zeile wieder auf der Konsole ausgibt. Geben Sie zusätzlich das Alter der Personen jeweils am Ende der Zeile aus.</p>
+<p><strong>Lösunsvorschlag:</strong></p>
+<p><code>Skript1_SimpleCsvReader.java</code></p></li>
+<li><p>Kopieren Sie die Klasse und nennen Sie die Kopie <code>Skript1_SearchCsvReader</code>. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die <code>daten.csv</code> eingelsenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator <code>==</code> <strong>nicht</strong> verwendet werden kann. Stattdessen verwenden Sie die Methode <code>equals</code> der Klasse <code>String</code>.</p>
+<p><strong>Lösunsvorschlag:</strong></p>
+<p><code>Skript1_SearchCsvReader.java</code></p></li>
 </ol>
 </section>
-<section id="übung-elementare-array---funktionalität" class="level2">
-<h2>Übung: Elementare Array - Funktionalität</h2>
+<section id="übung-csv-schreiben" class="level2">
+<h2>Übung: CSV schreiben</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>vertiefen Lese- und Schreiboperationen mit Java</li>
+</ul>
+<p><strong>Zeit:</strong> 25 Minuten</p>
+<p><strong>Aufgabe</strong></p>
+<p>Erstellen Sie eine Klasse <code>Skript1_MyWriter</code>. In der <code>main</code>-Funktion wird <strong>eine</strong> beliebige Benutzereingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei als neue Zeile einfügt werden.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript1_MyWriter.java</code> ## Übung: Elementare Array - Funktionalität</p>
 <p><strong>Lernziel:</strong></p>
 <ul>
 <li>deklarieren und instanziieren Arrays</li>
@@ -96,6 +121,9 @@
 <section id="elemente-nachrutschen" class="level3">
 <h3>Elemente nachrutschen</h3>
 <p>Erstellen Sie ein Funktion <code>prepend</code> mit einen Array und einen <code>int</code>-Wert in der Parameterliste. In der Funktion soll jeweils das neue Element an der ersten Stelle im Array eingefügt werden und die bereits vorhandenen Elemente hinten angefügt werden. Nach jeder Einfüge-Operation sollen alle Elemente des Arrays zurückgegeben werden.</p>
+<pre><code>**Lösunsvorschlag:**
+
+`Skript1c_ArrayOps.java`</code></pre>
 </section>
 <section id="übung-bubblesort-implementieren-und-laufzeit-analysieren" class="level3">
 <h3>Übung: BubbleSort implementieren und Laufzeit analysieren</h3>
@@ -110,7 +138,7 @@
 <ol type="1">
 <li><p>Implementieren Sie den Bubble-Sort als statische Funktion in eine neuen Klasse <code>MyBubbleSort</code>. Verwenden Sie ein eigenes kurzes int-Array und geben Sie dieses vor und nach dem Sortieren in der <code>main</code>-Funktion aus. Ist das Ergebnis korrekt?</p></li>
 <li><p>Wie viele Durchläufe gibt es, bis die Liste korrekt sortiert ist? Diese Frage können Sie nach unserem manuellen Beispiel einfach beantworten.</p></li>
-<li><p>Erweitern Sie Ihre Sortier-Funktion, um die Durchläufe und Tauschoperationen zu zählen. Messen Sie zusätzlich die Dauer, wie lange der Bubble-Sort hat. Verwenden Sie dabei die <em>System</em> Klasse mit der statischen Methode „currentTimeMillis()“. Testen Sie dann die in der Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle:</p></li>
+<li><p>Erweitern Sie Ihre Sortier-Funktion, um die Durchläufe und Tauschoperationen zu zählen. Messen Sie zusätzlich die Dauer, wie lange der Bubble-Sort hat. Verwenden Sie dabei die <code>System</code>-Klasse mit der statischen Methode <code>currentTimeMillis()</code>. Testen Sie dann die in der Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle:</p></li>
 </ol>
 <table>
 <thead>
@@ -188,10 +216,8 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="übung-laufzeitkomplexität-von-algorithmen-bestimmen" class="level3">
-<h3>Übung: Laufzeitkomplexität von Algorithmen bestimmen</h3>
-<p><strong>Lernziele</strong></p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript1c_BSortPerformance.java</code> ### Übung: Laufzeitkomplexität von Algorithmen bestimmen <strong>Lernziele</strong></p>
 <p><strong>Art:</strong> Partnerarbeit</p>
 <p><strong>Zeit:</strong> 30 Minuten</p>
 <p><strong>Hilfsmittel:</strong> Skript, kein PC</p>
@@ -205,6 +231,17 @@ for (int i=0; i &lt; vector.length;i++)
 
 return result;
 }</code></pre></li>
+</ol>
+<br/><br/>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<ol start="2" type="a">
 <li><pre><code>public float getMean(int[] arr){
 int sum = 0;
 for (int i : arr)
@@ -212,6 +249,17 @@ for (int i : arr)
 
 return sum/arr.length;
 }</code></pre></li>
+</ol>
+<br/><br/>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<ol start="3" type="a">
 <li><pre><code>// arr must be sorted before
 public int findBinary(int [] arr, int search){
 int index = (int) Math.floor(arr.length/2);
@@ -227,28 +275,48 @@ if (arr[index] != search)
     return -1;
 
 return index;
-}</code></pre>
-<h2 id="übung-weiterführende-aufgaben-mit-bubble-sort">Übung: Weiterführende Aufgaben mit Bubble-Sort</h2></li>
+}</code></pre></li>
 </ol>
+<br/><br/>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+<hr/>
+<p><br/></p>
+</section>
+</section>
+<section id="übung-weiterführende-aufgaben-mit-bubble-sort" class="level2">
+<h2>Übung: Weiterführende Aufgaben mit Bubble-Sort</h2>
 <p><strong>Lernziele:</strong></p>
 <ul>
 <li>anwenden und ändern Sortierfunktionen</li>
 <li>anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen</li>
+<li>anwenden objektorientierte Programmierparadigmen</li>
 </ul>
 <p><strong>Zeit:</strong> 60 Minuten</p>
 <p>Der Bubble-Sort ist für numerische wie auch alphanumerische Sortieraufgaben geeignet. Dies darum, weil sich die Problematik in den beiden Fällen nicht unterscheidet:</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">5 &gt; 2</annotation></semantics></math> vs. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>′</mi><mi>D</mi><mi>′</mi><mo>&gt;</mo><mi>′</mi><mi>B</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">&#39;D&#39; &gt; &#39;B&#39;</annotation></semantics></math></p>
 <p>Vergleichen Sie dazu die ASCII-Tabelle <a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle">siehe Wikipedia</a>.</p>
 <p>Sollen nun ganze Worte alphabetisch geordnet werden, müssen ggf. weitere aufeinanderfolgende Buchstaben miteinander verglichen werden. Z.B. liegt &quot;Muheim&quot; vor &quot;Mutzer&quot;.</p>
-</section>
 <section id="strings-sortieren" class="level3">
 <h3>Strings sortieren</h3>
-<p>Erstellen Sie eine Klasse <code>StringBSort</code>. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.</p>
+<p>Erstellen Sie eine Klasse <code>Skript1c_StringBSort</code>. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript1c_StringSort.java</code></p>
 </section>
 <section id="array-einer-benutzerdefinierten-klasse-sortieren" class="level3">
 <h3>Array einer benutzerdefinierten Klasse sortieren</h3>
-<p>Erstellen Sie eine Klasse <code>Person</code> mit den Attributen <code>Vorname</code>, <code>Nachname</code> und <code>Geburtsjahr</code>. Diese Attribute sollen im Konstruktor übergeben werden.</p>
-<p>In der <code>main</code>-Funktion legen Sie einen <code>personen</code>-Array mit 5 beliebigen Personen an. Erstellen Sie eine statische Sortierfunktion, die Ihren Array nach dem Personenalter <em>absteigend</em> sortiert. Geben Sie <code>personen</code> vor und nach dem Sortieren aus.</p>
+<p>In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier arbeiten Sie wieder richtig objektorientiert, d.h. Daten werden in Klassenvariablen gespeichert und Funktionalität ist in Klassenmethoden implementiert. Die <code>main</code>-Funktion dient nur als Testrahmen.</p>
+<ol type="1">
+<li><p>Erstellen Sie eine Klasse <code>Skript1c_PersonBsort</code>. Erstellen Sie nun eine Klasse <code>Person</code> mit den Attributen <code>Vorname</code>, <code>Nachname</code> und <code>Geburtsjahr</code>. Der Konstruktor der Klasse <code>Person</code> übergibt alle diese Parameter.</p></li>
+<li><p>Erstellen Sie eine Klassenvariable <code>Person[] personenArray</code>. Diese soll in einer Klassenfunktion <code>readPersonFile</code> mit den Personen aus das Datei <code>daten.csv</code> gefüllt werden (siehe <code>Skript1_SimpleCsvReader</code>). Beachten Sie, dass die Anzahl der Personen variable ist und am Ende der Funktion der Array <code>personenArray</code> nur gültige Werte enthält.</p></li>
+<li><p>Erstellen Sie eine Sortierfunktion, die Ihren Array nach dem Nachnamen <em>absteigend</em> sortiert. Geben Sie <code>personen</code> vor und nach dem Sortieren aus.</p></li>
+</ol>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript1c_Personen.java</code></p>
 </section>
 </section>
 <section id="übungen-für-fortgeschrittene-quick-sort-und-insert-sort" class="level2">
@@ -267,94 +335,100 @@ return index;
 <h3>Optional: Insert-Sort</h3>
 <p>Ein weiterer Sortierungs-Algorithmus ist der Insert-Sort. Untersuchen Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?</p>
 <p>Implementieren Sie den Insert-Sort und zeigen Sie die Unterschiede zum Quick-Sort.</p>
-<hr />
-<hr />
-<p>Vergleichen Sie diese Sort-Algorithmen mit dem Bubble-Sort, indem Sie auch die Dauer messen. Es gibt dazu eine einfache Klasse „Stopwatch“.</p>
+<hr>
+<p>Vergleichen Sie diese Sort-Algorithmen mit dem Bubble-Sort, indem Sie auch die Dauer messen.</p>
 <p>Zeigen Sie Ihre Lösungen zu Quick-Sort und Insert-Sort der Lehrperson.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<pre><code>**TODO**</code></pre>
 </section>
 </section>
 <section id="übungen-verkettete-liste" class="level2">
 <h2>Übungen: Verkettete Liste</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>erstellen eigene verkettete Liste</li>
+<li>erstellen Grundfunktionen für Verkettete Liste</li>
+</ul>
+<p><strong>Zeit:</strong> 60 Minuten</p>
+<p><strong>Art:</strong> Sie können gern in Zweier-Teams arbeiten</p>
 <section id="eigene-verkettete-liste-implementieren" class="level3">
 <h3>Eigene verkettete Liste implementieren</h3>
-<p>Schreiben Sie eine eigene Klasse für verkettete Listen mit der entsprechenden <em>inneren Klasse</em> für die Datenstruktur.</p>
+<p>Schreiben Sie eine Klasse <code>Skript2a_VK</code> für verkettete Listen mit der entsprechenden <em>inneren Klasse</em> <code>Node</code> für die Datenstruktur. Ihre Liste soll zunächst beliebige Daten abspeichern können.</p>
 <ol type="1">
-<li><p>Implementieren Sie die Methode <em>append.</em> Testen Sie, ob Ihre Liste funktioniert, indem der Benutzer Zahlen oder Wörter eingeben kann.</p></li>
-<li><p>Implementieren Sie eine Methode <em>showNodeAdressAndValue</em>, welche alle vorher eingegebenen Werte gefolgt von der tatsächlichen Speicheradresse der jeweiligen Node ausgibt. Die Speicheradresse eines Objects kann mittels (Object)x.toString() ausgegeben wrden. Testen Sie die Methode, indem Sie eine Liste automatisch mit 10 Zufallszahlen füllen. Danach beobachten Sie die Werte der aufeinander­folgenden Speicheraddressen.</p></li>
-<li><p>Erstellen Sie eine weitere Methode <em>showElementsReverse</em>, welche diese mittels einer Schleife wieder ausgibt. Die Wörter sollten in umgekehrter Reihenfolge erscheinen.</p></li>
+<li><p>Implementieren Sie die Methode <code>append</code>. Testen Sie, ob Ihre Liste funktioniert, indem der Benutzer Zahlen oder Wörter eingeben kann.</p></li>
+<li><p>Implementieren Sie eine Methode <code>showNodeAdressAndValue</code>, welche alle vorher eingegebenen Werte gefolgt von der tatsächlichen Speicheradresse der jeweiligen Node ausgibt. Die Speicheradresse eines Objekts kann mittels <code>(Object)x.toString()</code> ausgegeben werden. Testen Sie die Methode, indem Sie eine Liste automatisch mit 10 Zufallszahlen füllen. Danach beobachten Sie die Werte der aufeinander­folgenden Speicheraddressen.</p></li>
+<li><p>Erstellen Sie eine weitere Methode <code>showElementsReverse</code>, welche diese mittels einer Schleife wieder ausgibt. Die Wörter sollten in umgekehrter Reihenfolge erscheinen.</p>
+<p>Eingabe: <em>Hello, Arnold, how are you doing?</em></p>
+<p>Ausgabe: <em>doing? you are how Arnold, Hello,</em></p></li>
+<li><p>Elemente entfernen</p>
+<p>Erweitern Sie Ihre Klasse um eine Funktion <code>public Object pop()</code>, die jeweils das letzte Element entfernt und den Wert dieses Elements zurück gibt.</p></li>
+<li><p>Erstellen Sie eine Funktion <code>prepend</code>, welche Elemente jeweils am Anfang der Liste abfüllt und dabei alle bereits vorhandenen Elemente entsprechend nach hinten rutscht. Das zuletzt eingegebene Element wird somit das erste Element in der Liste. Verwenden Sie dieses Mal Ihre Verkettete Liste. Welche Struktur ist einfacher? Der simple Array oder die Verkettete Liste?</p></li>
+<li><p>Elemente an einer bestimmten Position einfügen / entfernen</p>
+<p>Jetzt erweitern wir die Liste, damit Elemente an einer bestimmten Position eingefügt oder gelöscht werden können. Erstellen Sie eine verkettete Liste, welche aus String-Elementen besteht. Wir wollen folgenden Satz anpassen:</p>
+<p><em>To be or not to be, that is the question.</em></p>
+<p><em>To be or not to be, my dear Hamlet, that is the question.</em></p></li>
 </ol>
-<p>Eingabe: Hello, Arnold, how are you doing?</p>
-<p>Ausgabe: doing? you are how Arnold, Hello,</p>
-</section>
-<section id="elemente-entfernen" class="level3">
-<h3>Elemente entfernen</h3>
-<p>Erweitern Sie Ihre Klasse, so dass jeweils das letzte Element entfernt wird.</p>
-<ol type="1">
-<li>Elemente an einer bestimmten Position einfügen / entfernen</li>
-</ol>
-<p>Jetzt erweitern wir unsere Liste, damit wir auch Elemente an einer bestimmten Position einfügen oder auch löschen können. Erstellen Sie eine verkettete Liste, welche aus String-Elementen besteht. Wir wollen folgenden Satz anpassen:</p>
-<p><em>„To be or not to be, that is the question“.</em></p>
-<p><em>„To be or not to be, my dear Hamlet, that is the question“.</em></p>
-<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
-<p>2.4 Weitere Aufgaben mit verketteten Listen</p>
-<ol type="a">
-<li>Schreiben Sie nochmals ein Programm, das Elemente von einem Benutzer jeweils am Anfang einer Liste abfüllt und dabei alle bereits vorhandenen Elemente entsprechend nach hinten rutscht. Das zuletzt eingegebene Element wird somit das erste Element in der Liste. Verwenden Sie dieses Mal Ihre Verkettete Liste. Welche Struktur ist einfacher? Der simple Array oder ihre Liste?</li>
-</ol>
-<p>Dokumentieren Sie beide Varianten (d.h. Sie haben beide Code-Varianten in separaten Klassen und verwenden Sie eine Start-Klasse, welche beide Varianten benützen kann).</p>
-<ol type="a">
-<li>Schreiben Sie eine Methode <em>insertAfter(Node after, Node newNode),</em> dass zwei Node-Objekte einer verket­teten Liste als Argumente übernimmt und das zweite nach dem ersten in die Liste einfügt. Testen Sie, ob nach dem Einfügen die vorherigen Listenelemente noch vorhanden sind.</li>
-</ol>
-<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2a_VK.java</code></p>
 </section>
 </section>
-<section id="übung-erweiterte-aufgaben-zu-verkettete-liste-todo" class="level2">
-<h2>Übung: Erweiterte Aufgaben zu verkettete Liste (TODO)</h2>
+<section id="übung-erweiterte-aufgaben-zu-verketteten-listen" class="level2">
+<h2>Übung: Erweiterte Aufgaben zu verketteten Listen</h2>
+<p><strong>Lernziele:</strong></p>
+<ul>
+<li>erstellen eigene verkettete Liste</li>
+<li>anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen</li>
+<li>anwenden objektorientierte Programmierparadigmen</li>
+</ul>
+<p><strong>Zeit:</strong> 60 Minuten</p>
+<p><strong>Art:</strong> Sie können gern in Zweier-Teams arbeiten</p>
 <section id="verkettete-liste-sortieren-und-laufzeit-messen" class="level3">
 <h3>Verkettete Liste sortieren und Laufzeit messen</h3>
-<p>Kopieren Sie Ihren Quellcode der verketteten Liste in ein neues Java-File. Ändern Sie den Datentyp des <em>item</em> – Elements der <em>Node</em> Klasse von <em>Object</em> auf <em>double</em>. Ändern Sie ebenso alle entsprechenden Konstruktoren und Methoden der <em>Node</em> und <em>MyLinkedList</em> Klasse. Schreiben Sie eine Klassenmethode für <em>MyLinkedList</em>, welche die Listenelemente sortiert. Testen Sie Ihre Sortierfunktion zunächst mit einigen wenigen Elementen auf Richtigkeit. Danach füllen Sie drei Listen mit 100, 1000 und 10000 Zufallszahlen und lassen sich die Laufzeit der Sortierung ausgeben.</p>
+<p>Kopieren Sie Ihren Quellcode der verketteten Liste in eine neue Java-Klasse <code>Skript2a_VK2</code>. Ändern Sie den Datentyp des <em>item</em>-Elements der <code>Node</code> Klasse von <code>Object</code> auf <code>Double</code>. Ändern Sie ebenso alle entsprechenden Konstruktoren und Methoden der <code>Node</code> und <code>Skript2a_VK2</code> Klasse. Schreiben Sie eine Klassenmethode für <code>Skript2a_VK2</code>, welche die Listenelemente sortiert. Testen Sie Ihre Sortierfunktion zunächst mit einigen wenigen Elementen auf Richtigkeit. Danach füllen Sie drei Listen mit 100, 1000 und 10000 Zufallszahlen und lassen sich die Laufzeit der Sortierung ausgeben.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2a_VK2.java</code></p>
 </section>
-<section id="verkettete-liste-umkehren" class="level3">
-<h3>Verkettete Liste umkehren</h3>
-<p>Schreiben Sie eine Methode, die eine bestehende verkettete Liste nimmt und die Elemente umkehrt. Verwenden Sie <em>Ihre</em> verkettete Liste.</p>
-<p>Stellen Sie Ihre Lösung im Lernraum mit folgender Namenskonvention ein: mod411_ll_name.zip</p>
-</section>
-</section>
-<section id="übungen-stack-implementieren" class="level2">
-<h2>Übungen: Stack implementieren</h2>
+<section id="verkette-liste-für-person-klasse" class="level3">
+<h3>Verkette Liste für <code>Person</code>-Klasse</h3>
+<p>Kopieren Sie Ihren Quellcode der verketteten Liste in eine neue Java-Klasse <code>Skript2a_VK_Person</code>. Ändern Sie den Datentyp des <em>item</em>-Elements der <code>Node</code> Klasse von <code>Object</code> auf <code>Person</code>. Das funktioniert prima, wenn Sie die Klasse <code>Person</code> bereits in den vorigen Übungen im gleichen <em>package</em> erstellt haben. Ändern Sie nun alle entsprechenden Konstruktoren und Methoden der <code>Node</code> und <code>Skript2a_VK_Person</code> Klasse. Schreiben Sie eine Klassenmethode für <code>Skript2a_VK_Person</code>, welche die Listenelemente nach Nachname <strong>absteigend</strong> sortiert. Testen Sie Ihre Sortierfunktion auf Richtigkeit.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2a_VK_Person.java</code> ##Übungen: Stack implementieren und für Kartenspiel nutzen</p>
 <p><strong>Lernziele</strong></p>
 <ul>
-<li>erstellen und benutzen Stack-Datenstruktur</li>
+<li>erstellen und benutzen Stack-Datenstruktur in akademischer und praktischer Variante</li>
 </ul>
-<p><strong>Zeit:</strong> 45 Minuten</p>
+<p><strong>Zeit:</strong> 30 + 45 + x Minuten</p>
+</section>
 <section id="stack-klasse-erstellen" class="level3">
 <h3>Stack Klasse erstellen</h3>
-<p>Implementieren Sie Ihre <code>Stack</code> Klasse mit den <code>push</code> und <code>pop</code> Methoden. Bei <code>push</code> wird ein Element zuoberst hinzugefügt. Bei <code>pop</code> wird das aktuelle Element entfernt. Verwenden Sie wiederum Ihre <em>Node</em> Klasse für die Datenstruktur.</p>
-</section>
-<section id="stack-testen-und-elemente-ausgeben" class="level3">
-<h3>Stack testen und Elemente ausgeben</h3>
-<p>Schreiben Sie eine Methode <code>toString()</code>, welche die Elemente vom Stack als String ausgibt. Mit dieser Methode können Sie auch Ihre <code>Stack</code>-Klasse testen. Sie beginnen mit dem ersten Element (d.h. das Element, welches zuoberst auf dem Stack ist). Ihre Iteration sieht so aus:</p>
-<pre><code>while (current != null){
-    //add value to string:
-    // TODO
-
-    //get next Node
-    current = current.next;
-
-}</code></pre>
+<p>Implementieren Sie Ihre <code>Stack</code> Klasse mit den <code>push</code> und <code>pop</code> Methoden. Bei <code>push</code> wird ein Element zuoberst hinzugefügt. Bei <code>pop</code> wird das aktuelle Element entfernt. Sie könen den Code Ihrer <code>Node</code>- Klasse der Verketten Liste für die interne Datenstruktur übernehmen.</p>
+<p>Testen Sie die Funktionalität mit einem geeigneten Testrahmen.</p>
 </section>
 <section id="isempty-methode-implementieren" class="level3">
 <h3><code>isEmpty()</code>-Methode implementieren</h3>
 <p>Fügen Sie eine <code>isEmpty()</code>-Methode hinzu. Diese überprüft, ob es Elemente im <code>Stack</code> hat. Die Methode gibt einen boolean zurück.</p>
-<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
 </section>
 <section id="stack-ergänzen" class="level3">
 <h3>Stack ergänzen</h3>
 <p>Ergänzen Sie <code>Stack</code> um eine Methode <code>peek()</code>, welche das zuletzt auf dem Stapel gelegte Element zurückliefert ohne es zu entfernen.</p>
 </section>
-<section id="palindrome-prüfen" class="level3">
-<h3>Palindrome prüfen</h3>
-<p>Verwenden Sie den <code>Stack</code> um zu überprüfen, ob ein String ein Palindrome ist (d.h. Wort oder Satz ist dasselbe von vorne und von hinten). Mit einem <code>Stack</code> lässt sich das einfach überprüfen. Erweitern Sie den Code, so dass der Benutzer einen String eingeben kann.</p>
+<section id="palindrome-prüfen-25-minuten" class="level3">
+<h3>Palindrome prüfen (25 Minuten)</h3>
+<p>Verwenden Sie den <code>Stack</code> um zu überprüfen, ob ein String ein Palindrom ist. Gültige Palindrome sind beispielsweise <em>OTTO</em>, <em>ANNA</em>, oder <em>RACECAR</em> - also Worte oder Sätze, die dasselbe von vorne und von hinten gelesen gleich sind. Mit einem <code>Stack</code> lässt sich das einfach überprüfen. Erweitern Sie den Code, so dass der Benutzer einen String eingeben kann.</p>
 <p>Verwenden Sie für diese Lösung ihren eigenen <code>Stack</code>.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2b_ObjectStack.java</code></p>
+</section>
+<section id="kartenstapel-implementieren-45-minuten" class="level3">
+<h3>Kartenstapel implementieren (45 Minuten)</h3>
+<p><em>Einführung:</em> Sie wollen gern ein PC-Kartenspiel entwickeln. Dazu wird zunächst ein Kartenstapel benötigt. Die einzelnen Karten sollen als Objekte der Klasse <code>Card</code> mit den Attributen <code>String farbe</code>, <code>int wert</code> und <code>String anzeige</code> angelegt werden. Damit es ein echter Kartenstapel wird, speichern Sie alle Karten in einem Stack ab.</p>
+<p><em>Auftrag:</em> Erstellen Sie einen Stack von Patience- bzw. Solitär-Karten (52 Karten, 4 Farben {Karo, Herz, Pik, Kreuz} mit den Zahlen 2 bis 10, Bube, Dame, König, Ass). Zur späteren Spielimplementierung geben Sie den Zahlen-Karten die Werte 2 - 10 zu. Bube bekommt Wert 11, Dame den Wert 12, König = 13 und Ass = 14. Nutzen Sie sinnvolle Schleifenkonstrukte zum Generieren der Karten.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2b_CardStack.java</code></p>
+<p><em>Zusatz:</em> 1. Mischen Sie die Karten in Ihrem Stack. 2. Entwerfen Sie eine grafische Oberfläche für ein Kartenspiel. Dazu leiten Sie Ihre <code>Card</code>-Klasse von <code>JPanel</code> ab und erstellen eine Klassenmethode <code>public void paint(Graphics g)</code>, in der die jeweilige Karte als JPanel gerendert wird. Den Stack können Sie beispielsweise auf einer JLayeredPane realisieren.</p>
+<figure>
+<img src="media/swing_blackjack.png" alt="Beispiel Black Jack" /><figcaption>Beispiel Black Jack</figcaption>
+</figure>
 </section>
 </section>
 <section id="übung-arbeiten-mit-iteratoren" class="level2">
@@ -363,32 +437,38 @@ return index;
 <ul>
 <li>implementieren und anwenden Iteratoren</li>
 </ul>
-<p><strong>Zeit:</strong> 45 Minuten</p>
+<p><strong>Zeit:</strong> 25 Minuten</p>
 <section id="methode-next-implementieren" class="level3">
 <h3>Methode <code>next()</code> implementieren</h3>
 <p>Sie implementieren die Schnittstellen <code>Iterable&lt;Object&gt;</code> und <code>Iterator&lt;Object&gt;</code> in Ihrer Stack-Klasse.</p>
 <p>Wie muss die Methode <code>next()</code> aussehen, damit wir jeweils das nächste Element (und dessen Inhalt) bekommen? Ergänzen Sie den untenstehenden Code in Ihrem Programm:</p>
 <pre><code>@Override
 public Object next() {
-    Object item = this.currentIterPost.value;
-    //TODO: complete code here
 
+    //TODO: complete code here
+        
+    Object item = this.currentIterPost.value;   
     return item;
 }</code></pre>
 <p>Testen Sie diese Methoden, indem Sie eine while-Schleife für <code>hasNext()</code> implementieren.</p>
-<p>Zeigen Sie Ihre Lösungen der Lehrperson.</p>
-</section>
-<section id="array-umgekehrt-ausgeben-mit-verwendung-von-iterator" class="level3">
-<h3>Array umgekehrt ausgeben mit Verwendung von <code>Iterator</code></h3>
-<p>Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein <code>int</code>-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei das Interface <code>Iterator</code> und passen Sie dievom Interface verlangten Methoden an, also:</p>
-<p><code>public boolean hasNext()</code></p>
-<ul>
-<li>Prüfe, ob es noch Elemente im Array hat</li>
-</ul>
-<p><code>public Object next()</code></p>
-<ul>
-<li>Gib das Element in umgekehrter Position aus (also data[--i])</li>
-</ul>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2b_Iterator.java</code></p>
+<!-- skipping this
+### Array umgekehrt ausgeben mit Verwendung von `Iterator`
+
+Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein `int`-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei
+das Interface `Iterator` und passen Sie dievom Interface verlangten
+Methoden an, also:
+
+`public boolean hasNext()`
+
+-   Prüfe, ob es noch Elemente im Array hat
+
+`public Object next()`
+
+-   Gib das Element in umgekehrter Position aus (also data\[--i\])
+
+-->
 </section>
 </section>
 <section id="übung-sortieren-und-filtern-mit-lambda-ausdrücken" class="level2">
@@ -404,21 +484,26 @@ public Object next() {
 <h3>Liste von Zufallszahlen sortieren</h3>
 <ol type="1">
 <li><p>Erstellen Sie eine Klasse <code>RandomNumbers</code>. Diese Klasse erhält eine Attribut <code>randomNumbers</code> vom Typ <code>ArrayList&lt;Integer&gt;</code>.</p></li>
-<li><p>Erstellen Sie den Konstruktor dieser Klasse so, dass 10 Zufallszahlen in <code>randomNumbers</code> abgefüllt werden. Erstellen Sie eine weitere Klassenfunktion <code>printNumbers()</code>, die alle Elemente untereinander ausgibt. Testen Sie die korrekte Funktionalität des Konstruktors.</p></li>
-<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>absteigenden</em> Sortieren der Liste und testen Sie die Funktionalität.</p></li>
-<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>aufsteigenden</em> Sortieren der Liste und testen Sie die Funktionalität.</p></li>
+<li><p>Erstellen Sie den Konstruktor dieser Klasse so, dass 10 Zufallszahlen in <code>randomNumbers</code> abgefüllt werden. Erstellen Sie eine weitere Klassenfunktion <code>printNumbers()</code>, die alle Elemente untereinander ausgibt. Nutzen Sie dazu Lambda-Funktionen. Testen Sie die korrekte Funktionalität des Konstruktors.</p></li>
+<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>absteigenden</em> Sortieren der Liste. Nutzen Sie dazu entsprechende Lambda-Funktionen. Testen Sie die Funktionalität.</p></li>
+<li><p>Erstellen Sie eine weitere Klassenfunktion zum <em>aufsteigenden</em> Sortieren der Liste. Nutzen Sie dazu entsprechende Lambda-Funktionen. Testen Sie die Funktionalität.</p></li>
 </ol>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2c_RandomNumbers.java</code></p>
 </section>
 <section id="flughafen-liste-implementieren" class="level3">
 <h3>Flughafen-Liste implementieren</h3>
-<p>Sie nutzen eine <code>ArrayList</code> zur Verwaltung von Flughäfen samst dreistelligen Flughafencode, Land und Stadtnamen (siehe airports.txt).</p>
+<p>Sie nutzen eine <code>ArrayList</code> zur Verwaltung von Flughäfen samst dreistelligen Flughafencode, Land und Stadtnamen (siehe airport_codes.txt). Der Airport-Code steht jeweils am Zeilenende in Klammern.</p>
 <ol type="1">
 <li><p>Schreiben Sie zunächste eine Klasse, <code>Airport</code>, welche die notwendigen Attribute <code>airport</code>, <code>country</code> und <code>city</code> enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.</p></li>
 <li><p>Erstellen Sie eine Klasse <code>AirportManagement</code>. Diese enthält ein Attribut <code>airportList</code> vom Datentyp <code>ArrayList&lt;Airport&gt;</code>.</p></li>
-<li><p>Schreiben Sie eine Funktion <code>readAirports(String fileName)</code>. Die Funktion soll die in <code>filename</code> angegebene Datei öffnen und die entsprechenden <code>Airport</code>-Objekte in der <code>airportList</code>einfügen. Erstellen Sie in der <code>main()</code>-Funktion der <code>AirportManagementen</code>-Klasse einen geeigneten Testrahmen und prüfen Sie die korrekte Arbeitsweise Ihrer Funktion.</p></li>
-<li><p>Erstellen Sie eine Klassenfunktion <code>sortByCountry()</code>. Diese Funktion soll intern die <code>airportList</code> nach Land sortieren. Nutzen Sie dazu die <code>sort</code>-Methode aus dem <code>java.util</code>-Package. Prüfen Sie die korrekte Arbeitsweise, indem Sie sich die ersten 10 Flughäfen vor und nach dem Sortieren ausgeben lassen.</p></li>
-<li><p>Erstellen Sie eine Filterfunktion <code>getAirportsByCountry(String country)</code>, welche als Rückgabewert eine ArrayList mit nur den Flughäfen des Landes <code>country</code> liefert. Prüfen Sie die korrekte Arbeitsweise.</p></li>
+<li><p>Studieren Sie den Aufbau der <code>airport_codes.txt</code>. Schreiben Sie eine Funktion <code>readAirports(String fileName)</code>. Die Funktion soll die in <code>filename</code> angegebene Datei öffnen und die entsprechenden <code>Airport</code>-Objekte in der <code>airportList</code>einfügen. Dazu müssen Sie bestimmte Sonderfälle unterscheiden und gerne auch fehlerhafte Zeilen für die Fehlersuche anzeigen. Erstellen Sie in der <code>main()</code>-Funktion der <code>AirportManagement</code>-Klasse einen geeigneten Testrahmen und prüfen Sie die korrekte Arbeitsweise Ihrer Funktion.</p></li>
+<li><p>Erstellen Sie eine Klassenfunktion <code>sortByCode()</code>. Diese Funktion soll intern die <code>airportList</code> nach dem dreistelligen Code sortieren. Nutzen Sie dazu die <code>sort</code>-Methode aus dem <code>java.util</code>-Package. Prüfen Sie die korrekte Arbeitsweise, indem Sie sich die ersten 10 Flughäfen vor und nach dem Sortieren ausgeben lassen.</p></li>
+<li><p>Erstellen Sie eine Klassenfunktion <code>getAirportsByCountry(String country)</code>, welche als Rückgabewert eine ArrayList mit nur den Flughäfen des Landes <code>country</code> liefert. Prüfen Sie die korrekte Arbeitsweise.</p></li>
+<li><p>Erstellen Sie eine Klassenfunktion <code>getAirport(String code)</code>, die für den gegebenen Code Stadt und Land als zusammengesetzten String zurück liefert.</p></li>
 </ol>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2c_AirportCodes.java</code></p>
 </section>
 </section>
 <section id="übung-anwenden-map-datenstruktur" class="level2">
@@ -429,27 +514,41 @@ public Object next() {
 <li>Erstellen Datenhaltung-Klassen</li>
 <li>Einlesen Daten aus strukturierten Textdateien</li>
 </ul>
-<p><strong>Zeit:</strong> 15 + 60 Minuten</p>
+<p><strong>Zeit:</strong> 30 + 60 Minuten</p>
 <section id="aufgabe-hashmap-kennenlernen" class="level3">
 <h3>Aufgabe: <code>HashMap</code> kennenlernen</h3>
-<p>Schreiben Sie eine Klasse, welche ein <code>HashMap</code> benützt, um Telefon-Einträge zu verwalten. Dabei soll die Telefonnummern den <code>key</code> bilden und der Name den <code>value</code>.</p>
+<p>Schreiben Sie eine Klasse, welche ein <code>HashMap</code> benützt, um einige eigene Telefon-Einträge zu verwalten. Dabei soll die Telefonnummern den <code>key</code> bilden und der Name den <code>value</code>.</p>
 <p>Der Benutzer kann via Konsole / GUI einen Kontakt eintragen, der in dieser <code>HashMap</code> abgelegt wird.</p>
-<p>Mittels <code>get(Object key)</code> erhalten wir den <code>value</code>. Wie kann über das ganze Map iteriert werden?</p>
+<p>Mittels <code>get(Object key)</code> erhalten wir den zugehörigen <code>value</code>. Wie kann über das ganze Map iteriert werden?</p>
+<p>Wie können Sie die eingegebenen Telefonnummern persistent abspeichern, so dass sie beim nächsten Programmstart wieder verfügbar sind?</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2c_PhoneMap.java</code></p>
 </section>
 <section id="zusatz-aufgabe-hashmap-für-grössere-datenmengen-verwenden" class="level3">
 <h3>Zusatz-Aufgabe: <code>HashMap</code> für grössere Datenmengen verwenden</h3>
-<p>Wir verwenden die <code>HashMap</code> für eine Liste von Flughäfen (siehe airports.txt). Schreiben Sie eine Klasse, welche die Datei airports.txt Liste zeilenweise einliest in ein HashMap einliest. Der Airport – Code steht jeweils am Zeilenende in Klammern.</p>
+<p>Wir verwenden nun die <code>HashMap</code> für die Flughafen-Liste (siehe airport-codes.txt). Sie können die Klasse <code>Airport</code> weiter verwenden. Erstellen Sie eine Klasse <code>AirportMap</code>, welche die Datei airport-codes.txt zeilenweise einliest in ein HashMap einliest. Der Airport – Code steht jeweils am Zeilenende in Klammern.</p>
 <p>Erweitern Sie die Klasse, so dass nach einem Flughafen-Code gesucht werden kann. (entweder via Konsole oder GUI)</p>
-</section>
-<section id="zusatz-aufgabe-tech-support-system-implementieren-todo-rework" class="level3">
-<h3>Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)</h3>
-<p>Erstellen Sie ein Tech-Support System, welches anhand von bestimmten Schlüsselwörtern, dem User eine &quot;Hilfe&quot; anbietet. Diese Applikation sollte folgende Klassen beinhalten:</p>
-<p><em>InputReader</em>: diese Klasse benützt die <code>Scanner</code>-Klasse, um die Eingabe einzulesen.</p>
-<p><em>Responder</em>: diese Klasse hat ein <code>HashMap</code> mit Schlüsselwörtern (<em>key</em>) und entsprechenden Antworten (<em>value</em>).</p>
-<p><em>SupportSystem</em>: hier wird Eingabe und Ausgabe gesteuert.</p>
-<blockquote>
-<p>Diese Klasse benützt den <code>InputReader</code> für die Eingabe und den <code>Responder</code> für eine Antwort.</p>
-</blockquote>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript2c_AirportMap.java</code></p>
+<!--
+###Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)
+
+Erstellen Sie ein Tech-Support System, welches anhand von bestimmten
+Schlüsselwörtern, dem User eine "Hilfe" anbietet. Diese Applikation
+sollte folgende Klassen beinhalten:
+
+*InputReader*: diese Klasse benützt die `Scanner`-Klasse, um die Eingabe
+einzulesen.
+
+*Responder*: diese Klasse hat ein `HashMap` mit Schlüsselwörtern (*key*)
+und entsprechenden Antworten (*value*).
+
+*SupportSystem*: hier wird Eingabe und Ausgabe gesteuert.
+
+> Diese Klasse benützt den `InputReader` für die Eingabe und den
+> `Responder` für eine Antwort.
+
+-->
 </section>
 </section>
 <section id="übung-google-web-service-mit-json-verwenden" class="level2">
@@ -459,37 +558,39 @@ public Object next() {
 <li>erstellen Client-Server Kommunikation</li>
 <li>parsen JSON</li>
 </ul>
-<p><strong>Zeit:</strong> 45 + 45 min</p>
+<p><strong>Zeit:</strong> 45 + 60 min</p>
 <section id="google-maps-nutzen" class="level3">
 <h3>Google Maps nutzen</h3>
 <p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
 <p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
 <p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
 <p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
-<pre><code>String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
-    +&quot;Hohlstrasse+535,Zuerich&quot;;
-
-URL googleClient = new URL(url);        
-URLConnection urlc = googleClient.openConnection();
-        
-BufferedReader in = new BufferedReader(
-            new InputStreamReader(urlc.getInputStream()));
-String msg = &quot;&quot;;
-// just reading server response
-while(in.ready()){
-    //System.out.println(line);
-    msg = msg+in.readLine();
-}
-//putting this into a computable JSON format 
-JSONObject obj = new JSONObject(msg);
-//fetch &quot;result&quot; part of JSON obj
-JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
-JSONObject inner = (JSONObject)results.get(0);
-        
-//now get the actual values 
-JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
-System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
-System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code></pre>
+<pre><code>public static void main(String[] args){
+    String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
+        +&quot;Hohlstrasse+535,Zuerich&quot;;
+    
+    URL googleClient = new URL(url);        
+    URLConnection urlc = googleClient.openConnection();
+            
+    BufferedReader in = new BufferedReader(
+                new InputStreamReader(urlc.getInputStream()));
+    String msg = &quot;&quot;;
+    // just reading server response
+    while(in.ready()){
+        //System.out.println(line);
+        msg = msg+in.readLine();
+    }
+    //putting this into a computable JSON format 
+    JSONObject obj = new JSONObject(msg);
+    //fetch &quot;result&quot; part of JSON obj
+    JSONArray results = (JSONArray) obj.get(&quot;results&quot;);
+    JSONObject inner = (JSONObject)results.get(0);
+            
+    //now get the actual values 
+    JSONObject o = inner.getJSONObject(&quot;geometry&quot;).getJSONObject(&quot;location&quot;);
+    System.out.println(&quot;Latitude:&quot; + o.getDouble(&quot;lat&quot;));
+    System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));
+}</code></pre>
 </section>
 <section id="zusatzaufgabe-google-api-nutzen" class="level3">
 <h3>Zusatzaufgabe Google API nutzen</h3>
@@ -497,6 +598,8 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 <p><a href="https://developers.google.com/maps/web-services/" class="uri">https://developers.google.com/maps/web-services/</a></p>
 <p><a href="https://developers.google.com/maps/documentation/directions/intro" class="uri">https://developers.google.com/maps/documentation/directions/intro</a></p>
 <p>Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>GoogleMapApiClient.java</code></p>
 </section>
 </section>
 <section id="übung-rekursive-algorithmen-erstellen-und-anwenden" class="level2">
@@ -505,25 +608,36 @@ System.out.println(&quot;Longitude:&quot; + o.getDouble(&quot;lng&quot;));</code
 <ul>
 <li>Erstellen einfache und komplexe rekursive Funktionen</li>
 </ul>
-<p><strong>Zeit:</strong> 25 + 25 + 60 Minuten</p>
+<p><strong>Zeit:</strong> 30 + 25 + 60 Minuten</p>
 <section id="rekursives-durchgehen-aller-files-oder-elemente" class="level3">
 <h3>Rekursives Durchgehen aller Files oder Elemente</h3>
 <p>Erstellen Sie eine Klasse, welche mittels der <code>java.io.File</code> Klasse alle Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht. Implementieren Sie eine Benutzer­schnittstelle, damit der Benutzer nach einer bestimmten Datei suchen kann.</p>
 <p><strong>Alternative</strong>: Sie können dasselbe Prinzip auch auf eine XML-Struktur anwenden (mit DOM) und diese dabei nach einem bestimmten Element durchsuchen.</p>
+<p><strong>Lösungsvorschlag (erweitert):</strong></p>
+<p><code>Skript4a_RekursiveDirectoryLister.java</code></p>
 </section>
 <section id="binäre-suche" class="level3">
-<h3>Binäre-Suche</h3>
-<p>Implementieren Sie eine binäre Suche, welche eine Zahl sucht. Dabei wird bei der binären Suche der definierte Suchraum (Anfangspunkt und Endpunkt) jeweils halbiert:</p>
-<blockquote>
-<p><em>guess = (upperborder + lowerborder) / 2</em></p>
-</blockquote>
-<p>Mit jedem Schritt wird der Suchraum verkleinert. In Pseudo-code:</p>
-<p><em>if (guess == number) Okay, found it!</em></p>
-<p><em>else if (guess&gt; number)</em></p>
-<p><em>number is lower, so we change our upperborder: upperborder = guess -1</em></p>
-<p><em>else if (guess &lt; number)</em></p>
-<p><em>number is higher, so we change our lowerborder: lowerborder = guess + 1</em></p>
-<p>Verwenden Sie dabei die Rekursion, um das wiederholte Suchen nach der Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche benötigt.</p>
+<h3>Binäre Suche</h3>
+<p>Implementieren Sie eine binäre Suche, welche eine Zahl in einem vorab definierten und sortierten Zahlenfeld sucht.</p>
+<pre><code>int[] testArr = { 5, 3, 5, 228, 14, 69, 18, 27, 109, 85 }; 
+Arrays.sort(testArr); 
+for (int i = 0; i &lt; testArr.length; i++) { 
+    System.out.print(testArr[i] + &quot; &quot; ); 
+}</code></pre>
+<p>Bei der binären Suche halbiert sich der Suchraum (Anfangspunkt und Endpunkt) mit jedem Schritt wie folgt:</p>
+<pre><code>guess=(upperborder+lowerborder)/2;
+//reduce search space with every step, pseudo code:
+if (guess == number) //found it!
+    finish();
+else {
+    if (guess &gt; number) //number is lower: change upperborder 
+        upperborder = guess-1;
+    else if (guess &lt; number) //number is higher: change lowerborder
+        lowerborder = guess+1;
+}</code></pre>
+<p>Verwenden Sie die Rekursion, um das wiederholte Suchen nach der Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche benötigt.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript4_RecursiveBinarySearch.java</code></p>
 </section>
 <section id="fortgeschritten-die-türme-von-hanoi" class="level3">
 <h3>Fortgeschritten: Die Türme von Hanoi</h3>
@@ -554,6 +668,143 @@ Schritt 3: bewege Platte a nach Turm 3</code></pre>
 <li><p>Implementieren Sie eine Klasse mit der besprochenen Lösung. Ihre Klasse soll die entsprechenden Schritte ausgeben.</p></li>
 <li><p>Vergleichen Sie die Anzahl Platten mit der Anzahl Schritte. Wie nimmt der Aufwand zu?</p></li>
 </ol>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript4_Hanoi.java</code></p>
+</section>
+</section>
+<section id="übung-mandelbrot---funktion-erstellen" class="level2">
+<h2>Übung: Mandelbrot - Funktion erstellen</h2>
+<p><strong>Lernziele:</strong></p>
+<ol type="1">
+<li><p>Sie lernen, fremden Java-Code auf der eigenen IDE (hier Eclipse) zum Laufen zu bringen. Dabei lernen Sie auch, wie man die Code-Qualität gleichzeitig verbessern kann.</p></li>
+<li><p>Sie erkennen rekursive Algorithmen und programmieren diese am Beispiel des <strong>Mandelbrot-Fraktals</strong>.</p></li>
+<li><p>Wenn Sie effizient arbeiten (oder die entsprechenden Teilaufgaben zu Hause beenden), dann lernen Sie, wie man ein (Java-)Programm benutzerfreundlicher macht und seine Qualität erhöht.</p></li>
+</ol>
+<p><strong>Zeit:</strong> 105 Min. (+ca. 120 Min. für den optionalen Teil)</p>
+<p><strong>Erlaubte Hilfen:</strong></p>
+<ul>
+<li><p>Arbeiten Sie an diesem Programm, bis Probleme auftreten. Versuchen Sie, in max. 5-10 Min. das Problem selber zu lösen (zum Bsp. mit dem Internet). Danach Frage jemanden aus der Klasse, der Dir gerne helfen möchte.</p></li>
+<li><p>Wenn das nichts bringt oder weitere Zweifel bestehen, frage unbedingt den Dozenten nach Hinweisen und Bestätigungen für den Lösungsweg.</p></li>
+</ul>
+<p><strong>Kontrolle:</strong> Selbstkontrolle der Teilschritte, durch Erfolgs- und Funktionstests oder Vergleich mit dem Nachbarn.</p>
+<blockquote>
+<p><strong>Viel Spass!</strong></p>
+</blockquote>
+<section id="fremden-java-code-zum-laufe-bringen" class="level3">
+<h3>Fremden Java Code zum Laufe bringen</h3>
+<p>Für diese Aufgabe wollen wir ein <strong>Mandelbrot Java-Programm</strong> aus dem Internet in unsere Eclipse-Umgebung einlesen und kompilieren lassen.</p>
+<ol type="a">
+<li><p>Die erste Schwierigkeit, ist den geeigneten Code zu finden. Dazu müssen wir die richtigen Suchwörter eingeben (s.o. Fett gerucktes plus Suchwort <em>Quellcode</em>) und wissen was wir genau suchen, denn oft besteht zuerst so etwas wie die Qual der Wahl. Wir eliminieren sofort Lösungen für Applets, da wir eine <strong>Stand-Alone Lösung</strong>, die Eclipse kompatibel ist, wollen und im Moment keine Lust auf diese Art von Anpassung von Applet auf Stand-Alone haben). Wir eliminieren auch alle Webseiten, die zwar gut klingen, aber leider nur Downloads von Class oder JAR Dateien anbieten (keine Lust auf das Reverse-Engineering, da zudem auch alle Kommentare fehlen werden). Schliesslich soll das Ganze mit einem schon installierten <strong>GUI-Toolkit</strong> (zum Bsp. SWT, AWT oder Swing) laufen. Bleibt also zur Auswahl zum Bsp. eine Webseite mit sehr wenig Text, auf der der Code nur mit Copy-Paste herunterkopiert und in Eclipse eingefügt werden muss.</p></li>
+<li><p>Offenbar lässt sich dieser Code nicht kompilieren. Er benötigt noch zwei weitere Java-Klassen. Die müssen auf der gleichen Weise heruntergeladen werden. Mit welchen Begriffen googlen Sie?</p></li>
+<li><p>Bleiben zwei Probleme. 1. im der <code>main()</code>-Funktion gibt es ein Kompilierproblem. Versuchen Sie zu verstehen, warum das so ist (was soll dieser Code?) und wie Sie die Kompilation mit einem <strong>Workaround</strong> (Alternative Lösung) lösen.</p></li>
+<li><p>Bravo, Sie können jetzt kompilieren. Bleibt aber leider das 2. Problem, dass man hier 3 Werte eingeben muss. Der Programmierer hat leider vergessen eine Anleitung in den Kommentaren zu schreiben und auf der Webseite wird man auch nicht schlau, oder? Was tun? Wie finden wir heraus welche Werte, was bewirken diese Werte? Haben Sie die Lösung und wissen Sie jetzt, was Sache ist? Dann schleunigst die Kommentare mit den Anweisungen und Erklärungen einfügen!</p></li>
+<li><p>Gratuliere! Sie bekommen jetzt folgende Applikation mit folgendem Ergebnis zum Laufen:</p>
+<figure>
+<img src="media/mandelbrot.png" />
+</figure></li>
+</ol>
+<p>Man kann das Ergebnisbild sogar abspeichern!</p>
+<p>Ihnen sind sicherlich schon ein paar Schwachstellen dieses Programms aufgefallen. Insbesondere die Bedienungsfreundlichkeit lässt einiges zu wünschen übrig! Das schauen uns wir weiter unten genauer an.</p>
+</section>
+<section id="mit-rekursionen-arbeiten" class="level3">
+<h3>Mit Rekursionen arbeiten</h3>
+<p>Mach zuerst eine <strong>Kopie</strong> des laufenden Projekts und arbeite mit der Kopie.</p>
+<ol type="a">
+<li><strong>Mandelbrot</strong> Figuren sind Fraktale und diese programmiert man häufig und am elegantesten mit <strong>Rekursionen</strong>. Frage: ist oder obige Code eine Rekursion?</li>
+</ol>
+<blockquote>
+<p>□ JA □ NEIN</p>
+</blockquote>
+<p>Genau, a ist richtig!</p>
+<p>Bauen Sie den bisherigen Code in folgendem Code um:</p>
+<p><strong>Bemerkung</strong>: der Code ist rein statisch umgesetzt, d.h. alle Attribute und Methoden der Hauptklasse sind als „static“ deklariert, viele Variablen werden in der Klasse global als Eigenschaft angelegt und viele Kommentare wurden weggelassen. Dies ist natürlich nicht die beste Art, aber man hebt so auf den interessierenden Algorithmus hervor.</p>
+<pre><code>public class Mandelbrot {
+    private static double size = 5;
+    private static double xc_s2 = 0 - 5 / 2.0; // xc-size/2
+    private static double yc_s2 = 0 - 5 / 2.0; // yc-size/2
+    private static int N = 60; // Anzahl Iterationen
+    private static Picture pic;
+    private static int max = 255;
+    /** die Mandelbrot-Funktion */
+    public static int mand(Complex z0) {
+        Complex z = z0;
+        for (int t = 0; t &gt; max; t++) {
+            if (z.abs() &gt; 2.0)  //Abbruchbedingung 
+                return t;
+        
+            z = z.times(z).plus(z0); //rekursiver Aufruf
+        }
+        return max;
+    }
+
+    public static void drawMand(int i, int j) {
+        if (j &lt; N) {
+            if (i &lt; N) {
+                Complex z0 = new Complex(
+                    xc_s2 + size *i/N, 
+                    yc_s2 +size*j/N);
+
+                int gray = max - mand(z0);
+                System.out.println(&quot;C:&quot;+gray+&quot; /i:&quot;+i+&quot; /j:&quot;+j); // debug
+                pic.set(i, N-1-j, new Color(gray, gray, gray));
+                drawMand(i, j+1);
+            }
+        } 
+        else if (i &lt; N) {
+            drawMand(i+1, 0);
+        }
+    }
+
+    public static void main(String[] args) {
+        pic = new Picture(N, N);
+        drawMand(0, 0);
+        pic.show();
+    }
+
+}</code></pre>
+<p>Können Sie diesen Code jetzt kompilieren und testen?</p>
+<ol type="a">
+<li>Nochmals die Frage: ist der neue Code eine Rekursion?</li>
+</ol>
+<blockquote>
+<p>□ JA □ NEIN</p>
+</blockquote>
+<p>Die Antwort sollte jetzt genau das Gegenteil von der obigen Antwort sein! Oder? Warum sollte Ihre Antwort richtig sein? Tipp: schauen Sie im Skript nach und begründen Sie:</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>Auf dem ersten Blick tun beide Codierungen mit/ohne Rekursion fast genau das Gleiche (ist ja eigentlich auch das gleiche Vorgehen)! Wo liegen aber genau die Unterschiede zwischen beiden Codierungen und gibt es evtl. unterschiedliche Auswirkungen? Ein Unterschied wird schnell klar, wenn man beim zweiten Code N=512 setzt (wie beim ersten). Was passiert genau (Fehlermeldung?) und warum? Wie hoch kann beim ersten Programm mit N gehen?</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+<p>__________________________________________________________</p>
+</section>
+<section id="bedienungsfreundlichkeit" class="level3">
+<h3>Bedienungsfreundlichkeit</h3>
+<p>Sie haben sicher bemerkt, dass die Berechnungen des Mandelbrot-Fraktals etwas dauern (vor allem ab einem 512x512 Bild). Der Benutzer könnte glatt denken, das Mandelbrot-Programm ist abgestürzt. Zudem liefert das Programm immer das gleiche Ergebnis, wenn der Benutzer gewisse Parameter nicht selber auf komfortable Art wählen kann. Auch sind Fenster und Dekoration nicht gerade ansprechend und informativ. Haben Sie versucht, das Bild abzuspeichern? Was ist mit dem Bildformat?</p>
+<p>Folgende Schritte sind optional und Fach- und Modul-übergreifend. Sie breiten auf Ihre Praxis und weitere Module vor. Lesen Sie sie daheim einmal durch. Vielleicht bekommen Sie Lust, etwas anzupassen. Die Farne (s.u.) sind übrigens auch sehr interessant.</p>
+<p>Also legen wir mal los:</p>
+<ol type="a">
+<li><p>Denken Sie sich eine einfache und eine etwas luxuriösere Lösung für das Warteproblem bei grossen Bilder aus. Welche Lösung trauen Sie sich zu? Dann versuchen Sie es einfach! Wo holen Sie sich Hilfestellungen und den Beispielcode?</p></li>
+<li><p>Dasselbe Vorgehen gilt für die Benutzereingaben. Welche Lösung soll es sein? Übernehmen Sie sich nicht, denn je nachdem was Sie dem Benutzer anbieten, wird das Ganze etwas aufwendig. Vielleicht sind Ihnen bei der anfänglichen Suche im Internet diverse Mandelbrote aufgefallen, die viel schöner als das obige sind. Zum Bsp. hier:</p>
+<p><a href="http://www.hameister.org/projects_fractal.html">http://www.hameister.org/projects_fractal.html*</a></p>
+<p>Wenn Sie die mandelbrot-Fraktale verstehen wollen, dann müssen Sie sich unweigerlich mit dem Thema fachlich auseinandersetzen und zudem auch in Mathe sattelfest sein (das meiste verlangt Hochschulniveau). In unserem Fall gilt: <em>Probieren geht über Studieren</em>. Es gibt auch einfachere Alternativen, wie zum Beispiel die Farn-Fraktale, siehe:</p>
+<p><a href="http://www.gk-informatik.de/sdhp/recugra.html"><em>http://www.gk-informatik.de/sdhp/recugra.html</em></a></p>
+<p><a href="http://www.toves.org/books/java/ch18-recurex/"><em>http://www.toves.org/books/java/ch18-recurex/</em></a></p>
+<p><a href="http://introcs.cs.princeton.edu/java/23recursion/Tree.java.html"><em>http://introcs.cs.princeton.edu/java/23recursion/Tree.java.html</em></a></p>
+<p><a href="http://www.aplu.ch/home/apluhomex.jsp?site=104"><em>http://www.aplu.ch/home/apluhomex.jsp?site=104</em></a></p>
+<p>Probieren Sie nun auch diese Codes aus und erweitern Sie sie.</p></li>
+<li><p>Wie verhindern oder behandeln Sie ungültige Eingaben? Vielleicht machen Sie hier ein Konzept (in ToDo-Kommentare einfügen) und verschieben die Implementation ein anderes Mal.</p></li>
+<li><p>Gestalten Sie die Titelzeile und den Hintergrund etwas ansprechender und informativer. Welche Code-Stellen müssen geändert werden?</p></li>
+<li><p>Was ist mit dem Abspeichern los? Welches Bildformat wird genutzt? Was ist mit der Datei-Extension - muss der Benutzer diese eingeben? Wie kann man das benutzerfreundlicher und vor allem DAU-sicher gestalten? Ein Information oder eine Hilfestellung wäre da schon hilfreich!</p></li>
+<li><p>Ja-ja, Sie hättest einen Testplan schon früher machen sollen, aber wir arbeiten ja hier <em>agil</em>. Umso wichtiger wird es dann, keinen der repräsentativen Tests hier auszulassen und wirklich alle Funktionen zu testen. Als ran an den Testplan! Geben Sie dessen Durchführung an jemanden anders weiter. Mal schauen, ob er mit Ihrer Testanleitung klar kommt. Wie das genau geht wissen Sie schon, oder?</p></li>
+</ol>
+<blockquote>
+<p>Gratulation, Sie haben jetzt alles erledigt!</p>
+</blockquote>
 </section>
 </section>
 </body>

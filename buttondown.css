@@ -69,6 +69,22 @@ section.level1{
 #TOC ul, #TOC ul ul{
 	list-style: none;
 }
+
+#TOC ul li{
+	background-color: #eee;
+	padding: 4px 2px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+#TOC ul ul{
+/*	display: none;*/
+}
+
+#TOC ul ul li{
+	border: none;
+}
+
 div#header, header
     {
     /* Put border on bottom. Separates it from TOC or body that comes after it. */
@@ -482,6 +498,12 @@ a[href^="#fnref"], a.reversefootnote /* Pandoc, MultiMarkdown, ?? footnote back 
         /* Don't display these at all in print since the arrow is only something to click on */
         display: none;
         }
+        
+    #TOC ul li{
+				background-color: #fff;
+				padding: 4px 2px;
+				border: none;
+			}
     }
     
 div.footnotes /* Pandoc footnotes div at end of the document */
@@ -491,6 +513,8 @@ div.footnotes /* Pandoc footnotes div at end of the document */
 div.footnotes li[id^="fn"] /* A footnote item within that div */
     {
     }
+
+
 
 /* You can class stuff as "noprint" to not print. 
    Useful since you can't set this media conditional inside an HTML element's 
