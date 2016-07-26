@@ -4,41 +4,21 @@
 
 * erstellen und benutzen Stack-Datenstruktur in akademischer und praktischer Variante
 
-**Zeit:** 30 + 45 + 25 Minuten
+**Zeit:** 30 + 45 + x Minuten
 
 ###Stack Klasse erstellen 
 
 Implementieren Sie Ihre `Stack` Klasse mit den `push` und `pop`
 Methoden. Bei `push` wird ein Element zuoberst hinzugefügt. Bei `pop`
-wird das aktuelle Element entfernt. Verwenden Sie wiederum Ihre *Node*
-Klasse für die Datenstruktur.
+wird das aktuelle Element entfernt. Sie könen den Code Ihrer `Node`-
+Klasse der Verketten Liste für die interne Datenstruktur übernehmen.
 
-###Stack testen und Elemente ausgeben
-
-Schreiben Sie eine Methode `toString()`, welche die Elemente vom Stack
-als String ausgibt. Mit dieser Methode können Sie auch Ihre
-`Stack`-Klasse testen. Sie beginnen mit dem ersten Element (d.h. das
-Element, welches zuoberst auf dem Stack ist). Ihre Iteration sieht so
-aus:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-while (current != null){
-	//add value to string:
-	// TODO
-
-	//get next Node
-	current = current.next;
-
-}
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+Testen Sie die Funktionalität mit einem geeigneten Testrahmen.
 
 ###`isEmpty()`-Methode implementieren
 
 Fügen Sie eine `isEmpty()`-Methode hinzu. Diese überprüft, ob es Elemente
 im `Stack` hat. Die Methode gibt einen boolean zurück.
-
-Zeigen Sie Ihre Lösungen der Lehrperson.
 
 ###Stack ergänzen
 
@@ -53,10 +33,20 @@ so dass der Benutzer einen String eingeben kann.
 
 Verwenden Sie für diese Lösung ihren eigenen `Stack`.
 
+**Lösungsvorschlag:**
+
+`Skript2b_ObjectStack.java`
+
+
 ###Kartenstapel implementieren (45 Minuten)
 *Einführung:* Sie wollen gern ein PC-Kartenspiel entwickeln. Dazu wird zunächst ein Kartenstapel benötigt. Die einzelnen Karten sollen als Objekte der Klasse `Card` mit den Attributen `String farbe`, `int wert` und `String anzeige` angelegt werden. Damit es ein echter Kartenstapel wird, speichern Sie alle Karten in einem Stack ab.
 
 *Auftrag:* Erstellen Sie einen Stack von Patience- bzw. Solitär-Karten (52 Karten, 4 Farben {Karo, Herz, Pik, Kreuz} mit den Zahlen 2 bis 10, Bube, Dame, König, Ass). Zur späteren Spielimplementierung geben Sie den Zahlen-Karten die Werte 2 - 10 zu. Bube bekommt Wert 11, Dame den Wert 12, König = 13 und Ass = 14. Nutzen Sie sinnvolle Schleifenkonstrukte zum Generieren der Karten.
+
+**Lösungsvorschlag:**
+
+`Skript2b_CardStack.java`
+
 
 *Zusatz:* 
 1. Mischen Sie die Karten in Ihrem Stack.

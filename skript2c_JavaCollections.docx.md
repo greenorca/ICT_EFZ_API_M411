@@ -216,11 +216,9 @@ eine neue Liste. Diese speichern wir in der neuen Variable
 `List<person> appenzeller` ab. 
 
 Entsprechend kann beispielsweise eine Zahlenliste nach Zahlen grösser 10
-und kleiner 20 wie folgt gefiltert werden:
+und kleiner 20 wie gefiltert werden?
 
-Probieren Sie es aus!
-
-
+Probieren Sie es aus! Anbei - hinter den Kulissen verwenden die Lambda-Funktionen ebenfalls *Iteratoren*. 
 
 ```include
 skript2c_ueb01_lambda.md
@@ -274,7 +272,8 @@ skript2c_ueb02_map.md
 ##Wiederholungsfragen {#wdh_javautils}
 
 * Welche Gründe sprechen für den Einsatz vorgefertigter Datenstrukturen aus dem `java.util`-Package?
+* Was steht man unter *generischen* Datenstrukturen?
 * Wie wird die Sortierfunktion der `ArrayList`-Klasse parametrisiert?
-* Wie lautet der Aufruf zum Filtern einer Double-ArrayList, wenn nur Elemente zwischen 10 und 20 ausgegeben werden sollen?
+* Wie lautet der Aufruf zum Filtern einer ArrayList<Double>, wenn nur Elemente zwischen 10.0 und 20.0 ausgegeben werden sollen?
 * Welche Anforderungen gibt es an die `keys` bei der Verwendung der Map-Datenstruktur? 
 

@@ -149,7 +149,10 @@ public static void printSeries(int n1, int n2){
 
 ```include
 skript4_ueb01_rekursion.md
-skript4_ueb02_Mandelbrot.md
+
+skript4_ueb02_farn.md
+
+skript4_ueb03_Mandelbrot.md
 ```
 
 Backtracking

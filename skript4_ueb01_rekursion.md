@@ -1,12 +1,12 @@
 ## Übung: Rekursive Algorithmen erstellen und anwenden
+
 **Lernziele**
 
 * Erstellen einfache und komplexe rekursive Funktionen 
 
-**Zeit:** 25 + 25 + 60 Minuten
+**Zeit:** 30 + 25 + 60 Minuten
 
 ###Rekursives Durchgehen aller Files oder Elemente
-
 
 Erstellen Sie eine Klasse, welche mittels der `java.io.File` Klasse alle
 Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht.
@@ -17,30 +17,44 @@ einer bestimmten Datei suchen kann.
 anwenden (mit DOM) und diese dabei nach einem bestimmten Element
 durchsuchen.
 
-###Binäre-Suche
+**Lösungsvorschlag (erweitert):**
 
-Implementieren Sie eine binäre Suche, welche eine Zahl sucht. Dabei wird
-bei der binären Suche der definierte Suchraum (Anfangspunkt und
-Endpunkt) jeweils halbiert:
+`Skript4a_RekursiveDirectoryLister.java`
 
-> *guess = (upperborder + lowerborder) / 2*
+###Binäre Suche
 
-Mit jedem Schritt wird der Suchraum verkleinert. In Pseudo-code:
+Implementieren Sie eine binäre Suche, welche eine Zahl in einem vorab definierten und sortierten Zahlenfeld sucht. 
 
-*if (guess == number) Okay, found it!*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+int[] testArr = { 5, 3, 5, 228, 14, 69, 18, 27, 109, 85 }; 
+Arrays.sort(testArr); 
+for (int i = 0; i < testArr.length; i++) { 
+    System.out.print(testArr[i] + " " ); 
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
 
-*else if (guess&gt; number)*
+Bei der binären Suche halbiert sich der Suchraum (Anfangspunkt und Endpunkt) mit jedem Schritt wie folgt:
 
-*number is lower, so we change our upperborder: upperborder = guess -1*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+guess=(upperborder+lowerborder)/2;
+//reduce search space with every step, pseudo code:
+if (guess == number) //found it!
+	finish();
+else {
+	if (guess > number) //number is lower: change upperborder 
+		upperborder = guess-1;
+	else if (guess < number) //number is higher: change lowerborder
+		lowerborder = guess+1;
+}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-*else if (guess &lt; number)*
-
-*number is higher, so we change our lowerborder: lowerborder = guess +
-1*
-
-Verwenden Sie dabei die Rekursion, um das wiederholte Suchen nach der
+Verwenden Sie die Rekursion, um das wiederholte Suchen nach der
 Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche
 benötigt.
+
+**Lösungsvorschlag:**
+
+`Skript4_RecursiveBinarySearch.java`
 
 ###Fortgeschritten: Die Türme von Hanoi
 
@@ -96,4 +110,8 @@ a)  Implementieren Sie eine Klasse mit der besprochenen Lösung. Ihre
 
 b)  Vergleichen Sie die Anzahl Platten mit der Anzahl Schritte. Wie
     nimmt der Aufwand zu?
+
+**Lösungsvorschlag:**
+
+`Skript4_Hanoi.java`
 

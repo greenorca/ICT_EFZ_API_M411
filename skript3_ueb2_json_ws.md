@@ -5,7 +5,7 @@
 * erstellen Client-Server Kommunikation
 * parsen JSON
 
-**Zeit:** 45 + 45 min
+**Zeit:** 45 + 60 min
 
 ### Google Maps nutzen
 
@@ -63,3 +63,8 @@ beispielsweise Fahrtrouten (mit PKW oder ÖV) planen können.
 
 Setzen Sie exemplarisch ein Routenplanungsbeispiel oder ein eigenes
 Beispiel mit GooglePlaces, GoogleMaps Elevation o.ä. um.
+
+
+**Lösungsvorschlag:**
+
+`GoogleMapApiClient.java`

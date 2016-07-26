@@ -3,7 +3,7 @@
 
 * implementieren und anwenden Iteratoren 
 
-**Zeit:** 45 Minuten
+**Zeit:** 25 Minuten
 
 ### Methode `next()` implementieren
 Sie implementieren die Schnittstellen `Iterable<Object>` und `Iterator<Object>` in Ihrer Stack-Klasse.
@@ -15,9 +15,10 @@ Code in Ihrem Programm:
 ~~~~~~~~~~~~~~~~~
 @Override
 public Object next() {
-	Object item = this.currentIterPost.value;
-	//TODO: complete code here
 
+	//TODO: complete code here
+		
+	Object item = this.currentIterPost.value;	
 	return item;
 }
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -25,8 +26,11 @@ public Object next() {
 Testen Sie diese Methoden, indem Sie eine while-Schleife für `hasNext()`
 implementieren.
 
-Zeigen Sie Ihre Lösungen der Lehrperson.
+**Lösungsvorschlag:**
+	
+`Skript2b_Iterator.java`
 
+<!-- skipping this
 ### Array umgekehrt ausgeben mit Verwendung von `Iterator`
 
 Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein `int`-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei
@@ -41,3 +45,4 @@ Methoden an, also:
 
 -   Gib das Element in umgekehrter Position aus (also data\[--i\])
 
+-->

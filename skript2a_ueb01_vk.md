@@ -1,9 +1,18 @@
 ## Übungen: Verkettete Liste
 
+**Lernziele:**
+
+* erstellen eigene verkettete Liste
+* erstellen Grundfunktionen für Verkettete Liste
+
+**Zeit:** 60 Minuten
+
+**Art:** Sie können gern in Zweier-Teams arbeiten
+
 ### Eigene verkettete Liste implementieren
 
-Schreiben Sie eine eigene Klasse für verkettete Listen mit der
-entsprechenden *inneren Klasse* für die Datenstruktur.
+Schreiben Sie eine Klasse `Skript2a_VK` für verkettete Listen mit der
+entsprechenden *inneren Klasse* `Node` für die Datenstruktur. Ihre Liste soll zunächst beliebige Daten abspeichern können.
 
 1.  Implementieren Sie die Methode `append`. Testen Sie, ob Ihre Liste
     funktioniert, indem der Benutzer Zahlen oder Wörter eingeben kann.
@@ -20,45 +29,34 @@ entsprechenden *inneren Klasse* für die Datenstruktur.
     diese mittels einer Schleife wieder ausgibt. Die Wörter sollten in
     umgekehrter Reihenfolge erscheinen.
 
-Eingabe: Hello, Arnold, how are you doing?
+	Eingabe: *Hello, Arnold, how are you doing?*
 
-Ausgabe: doing? you are how Arnold, Hello,
+	Ausgabe: *doing? you are how Arnold, Hello,*
 
 4. Elemente entfernen
 	
-	Erweitern Sie Ihre Klasse, so dass jeweils das letzte Element entfernt
-wird.
+	Erweitern Sie Ihre Klasse um eine Funktion `public Object pop()`, die jeweils das letzte Element entfernt
+und den Wert dieses Elements zurück gibt.
 
-5. Elemente an einer bestimmten Position einfügen / entfernen
-	
-	Jetzt erweitern wir unsere Liste, damit wir auch Elemente an einer
-bestimmten Position einfügen oder auch löschen können. Erstellen Sie
-eine verkettete Liste, welche aus String-Elementen besteht. Wir wollen
-folgenden Satz anpassen:
-
-*„To be or not to be, that is the question“.*
-
-*„To be or not to be, my dear Hamlet, that is the question“.*
-
-Zeigen Sie Ihre Lösungen der Lehrperson.
-
-### Weitere Aufgaben mit verketteten Listen
-
-a)  Schreiben Sie nochmals ein Programm, das Elemente von einem Benutzer
-    jeweils am Anfang einer Liste abfüllt und dabei alle bereits
+5.  Erstellen Sie eine Funktion `prepend`, welche Elemente
+    jeweils am Anfang der Liste abfüllt und dabei alle bereits
     vorhandenen Elemente entsprechend nach hinten rutscht. Das zuletzt
     eingegebene Element wird somit das erste Element in der Liste.
     Verwenden Sie dieses Mal Ihre Verkettete Liste. Welche Struktur ist
-    einfacher? Der simple Array oder ihre Liste?
+    einfacher? Der simple Array oder die Verkettete Liste?
 
-		Dokumentieren Sie beide Varianten (d.h. Sie haben beide Code-Varianten
-in separaten Klassen und verwenden Sie eine Start-Klasse, welche beide
-Varianten benützen kann).
+6. Elemente an einer bestimmten Position einfügen / entfernen
+	
+	Jetzt erweitern wir die Liste, damit Elemente an einer
+bestimmten Position eingefügt oder gelöscht werden können. Erstellen Sie
+eine verkettete Liste, welche aus String-Elementen besteht. Wir wollen
+folgenden Satz anpassen:
 
-a)  Schreiben Sie eine Methode `insertAfter(Node after, Node newNode)`,
-    welche zwei Node-Objekte einer verket­teten Liste als Argumente
-    übernimmt und das zweite nach dem ersten in die Liste einfügt.
-    Testen Sie, ob nach dem Einfügen die vorherigen Listenelemente noch
-    vorhanden sind.
+	*To be or not to be, that is the question.*
 
-Zeigen Sie Ihre Lösungen der Lehrperson.
+	*To be or not to be, my dear Hamlet, that is the question.*
+
+**Lösungsvorschlag:**
+
+`Skript2a_VK.java`
+

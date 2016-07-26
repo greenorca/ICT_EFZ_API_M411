@@ -18,7 +18,7 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained
 
 pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
 
@@ -42,11 +42,9 @@ title: Modul 411
 author:
 - Julian Kaeser
 - Sven Schirmer
+- <img src="media/farn.png"/>
 ---
 
-TODO-Liste
-----------
-* Mandelbrot-Übung eventuell auf Farn umbauen...
 
 Willkommen (zurück) bei in Java
 ========================================
@@ -58,15 +56,16 @@ In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Voraus
 Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortieralgorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortieralgorithmen selbst zu implementieren und
 deren Rechenzeit abzuschätzen.
 
-Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv
-reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
+Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
 
 Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
 Wichtige Hinweise 
 ------------------
 
-Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie nur sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+
+Die Aufgaben sind normalerweise für Konsolenanwendungen gestellt, weil diese schneller zu erstellen sind. Insbesondere die erstelten Klassen späterer Aufgaben können Sie leicht in eigene *SWING* oder *Java-FX* GUIs eingebinden.  
 
 Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillianten Ideen wieder zu verstehen :-)
 

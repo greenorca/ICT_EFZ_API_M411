@@ -4,7 +4,7 @@
 
 * anwenden und ändern Sortierfunktionen
 * anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
-* anwenden obejktorientierte Programmierparadigmen 
+* anwenden objektorientierte Programmierparadigmen 
 
 **Zeit:** 60 Minuten
 
@@ -26,8 +26,8 @@ Erstellen Sie eine Klasse `Skript1c_StringBSort`. Darin lesen Sie ein File mit 1
 alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.
 
 **Lösungsvorschlag:**
-	
-	`Skript1c_StringSort.java`
+
+`Skript1c_StringSort.java`
 
 
 ###Array einer benutzerdefinierten Klasse sortieren
@@ -42,4 +42,4 @@ In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier a
 
 **Lösungsvorschlag:**
 	
-	`Skript1c_Personen.java`
+`Skript1c_Personen.java`
