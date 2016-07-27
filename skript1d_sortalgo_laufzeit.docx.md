@@ -8,7 +8,7 @@ Elementare Algorithmen und Laufzeit-Analysen
 * Sie kennen die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
 * Sie implementieren einen Sortier-Algorithmus
 * Sie kennen Laufzeit-Komplexitätsklassen von Algorithmen
-* Sie schätzen die Laufzeitkomplexität eines Algorithmus ab.
+* Sie schätzen die Laufzeit-Komplexität eines Algorithmus ab.
 
 
 Der Bubble-Sort Algorithmus
@@ -38,7 +38,7 @@ nach oben (bzw. hinten), bis alle Blasen ihren Platz gefunden haben.
 ### Bubble-Sort manuell durchspielen
 
 Bevor wir den Algorithmus in Code umsetzen, werden wir diesen
-Algorithmus manuell durchspielen. Dazu brauchen Sie Papierschnitzel mit
+Algorithmus manuell durchspielen. Dazu brauchen Sie Papierschnipsel mit
 den unten stehenden Zahlen:
 
 <table border = 1>
@@ -91,7 +91,7 @@ Durchgang landet mindestens eine der Zahlen an seinem definitiven Platz. Tatsäc
 In einer Liste mit $n$ Zahlen existieren $n-1$ Paare von benachbarten
 Zahlen, die bei einem Durchgang verglichen werden müssen. Und wir haben
 höchstens $n$ Durchgänge. Somit sind maximal $n \cdot (n-1)$ Vergleichsoperationen
- nötig. Ausmultipliziert ergibt das $n^2-n$ Vergeichsoperationen. Da $n^2$ schneller wächst als $n$ können wir sagen, dass es ungefähr $n^2$ Vergleichsoperationen für eine Liste mit $n$ Elementen gibt. Man spricht hier von **quadratischer Komplexität**.
+ nötig. Ausmultipliziert ergibt das $n^2-n$ Vergleichsoperationen. Da $n^2$ schneller wächst als $n$ können wir sagen, dass es ungefähr $n^2$ Vergleichsoperationen für eine Liste mit $n$ Elementen gibt. Man spricht hier von **quadratischer Komplexität**.
 
 ### Aufwand im besten und im schlechtesten Fall
 
@@ -153,6 +153,6 @@ skript1d_ueb04_adv_qsort.md
 ## Wiederholungsfragen {#wdh_funkomplex}
 
 * Wie funktioniert der BubbleSort-Algorithmus?
-* Welche Laufzeit-Komplexitätsklassen gibt es? Sortieren Sie diese nach Performanz absteigend.
+* Welche Laufzeit-Komplexitätsklassen gibt es? Sortieren Sie diese nach Performance absteigend.
 * Wie bestimmen Sie die Laufzeit einer Methode?
 

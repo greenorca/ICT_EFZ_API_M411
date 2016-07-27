@@ -35,7 +35,7 @@ Die elementare Datenstruktur: Array
 
 Eine wichtige elementare Datenstruktur haben Sie bereits kennengelernt:
 das Feld oder Array. Ein **Array ist eine feste Anzahl von einzelnen
-Daten eines bestimmten Datentyps**, welche zusammen­hängend gespeichert
+Daten eines bestimmten Datentyps**, welche zusammenhängend gespeichert
 werden und über einen Index zugänglich sind. Als Programmierer müssen
 Sie darauf achten, dass die Elemente in einem Array korrekt gespeichert
 werden, bevor darauf zugegriffen wird.
@@ -92,15 +92,15 @@ Betrachten Sie nochmals die Parameterliste der `main`-Funktion. Was für ein Dat
 
 Werden Arrays mit Datentypen mit fester Breite $b$ (`int, float, double, Time` etc.) angelegt, kann die Speicheradresse $x_{n}$ des *n*-ten Elements von der Startadresse des Arrays $s_{0}$ ausgehend berechnet werden: $x_{n}= s_{0} + n \cdot b$
 
-In der C/C++ Programmierung spricht man von Speicherarithmetik.
+In der C/C++ Programmierung spricht man von Speicher-Arithmetik.
 
 ### Praktische Anwendung von Arrays
 
 Die feste Anzahl von Speicherplätzen in einem Array erscheint auf dem
 ersten Blick ungünstig. Für Berechnungen im 3D Bereich (Gaming) oder in
-der Bildbearbeitung sind Arrays jedoch erste Wahl, da moderne
+der Bildverarbeitung sind Arrays jedoch erste Wahl, da moderne
 Prozessoren mit SIMD Einheiten die entsprechenden Feld- und
-Matrizenoperationen höchst effizient ohne Schleifen abarbeiten.
+Matrix-Operationen höchst effizient ohne Schleifen abarbeiten.
 Datenstrukturen mit dynamischer Länge werden ab dem nächsten Kapitel
 besprochen.
 
@@ -144,9 +144,9 @@ in einem Array mit 5 Elementen versuchen, mit dem Index
 `ArrayIndexOutOfBounds`-Exception abgebrochen.
 
 
-### Benutzereingabe über Konsole oder GUI
+### Benutzer-Eingabe über Konsole oder GUI
 
-Die Wahl der Benutzereingabe (und Ausgabe) werden wir nicht festlegen.
+Die Wahl der Benutzer-Eingabe (und Ausgabe) werden wir nicht festlegen.
 Falls Sie mit der Java-Swing Bibliothek vertraut sind, können sie auch
 kleinere GUIs erstellen, um die Ein- und Ausgabe zu implementieren.
 Andernfalls verwenden Sie die Ein-und Ausgabe der Konsole.
@@ -158,12 +158,12 @@ Wir werden in den folgenden Aufgaben mit primitiven Arrays arbeiten
 (z.B. für int oder double Daten). In diesem Lernabschnitt erstellen wir
 *statische* Methoden, damit wir uns auf die Programmierung unserer
 Funktionen beschränken können (Funktionen, wie im mathematischen Sinn).
-Später werden wir klasseneigene Funktionen implementieren.
+Später werden wir Klassen-eigene Funktionen implementieren.
 
 **Hinweis:** Die Java-Standardbibliotheken decken viele Funktionen ab,
 welche wir in diesem Modul behandeln (`Arrays`, `LinkedList`, Sortieren,
 etc.). Wir wollen aber zuerst diese Datenstrukturen und Algorithmen
-*selbst implementieren*, bevor wir auf vorge­fertigte Klassen
+*selbst implementieren*, bevor wir auf vorgefertigte Klassen
 zurückgreifen.
 
 

@@ -27,7 +27,7 @@
 Sie nutzen eine `ArrayList` zur Verwaltung von Flughäfen samst dreistelligen Flughafencode, Land und Stadtnamen (siehe
 airport_codes.txt). Der Airport-Code steht jeweils am Zeilenende in Klammern.
 
-1. Schreiben Sie zunächste eine Klasse, `Airport`, welche die notwendigen Attribute `airport`, `country` und `city` enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.
+1. Schreiben Sie zunächst eine Klasse, `Airport`, welche die notwendigen Attribute `airport`, `country` und `city` enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.
 
 2. Erstellen Sie eine Klasse `AirportManagement`. Diese enthält ein Attribut `airportList` vom Datentyp `ArrayList<Airport>`. 
 

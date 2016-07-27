@@ -19,7 +19,7 @@ Sortierverfahren.
 
 ### Optional: Insert-Sort
 
-Ein weiterer Sortierungs-Algorithmus ist der Insert-Sort. Untersuchen
+Ein weiterer Sortier-Algorithmus ist der Insert-Sort. Untersuchen
 Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?
 
 Implementieren Sie den Insert-Sort und zeigen Sie die Unterschiede zum

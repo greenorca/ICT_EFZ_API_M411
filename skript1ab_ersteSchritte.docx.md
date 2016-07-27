@@ -18,7 +18,7 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained
 
 pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
 
@@ -53,21 +53,21 @@ In der Informatiker-Welt läuft nichts ohne Datenstrukturen und Algorithmen. Ein
 
 In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Vorausgesetzt werden gute Kenntnisse aus den Modulen 403 (Prozedurale Programmierung) und 226A+B (Objektorientierte Programmierung). Sie können frei wählen, mit welcher Entwicklungsumgebung Sie arbeiten. Bevorzugte Umgebungen sind Netbeans und Eclipse.
 
-Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortieralgorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortieralgorithmen selbst zu implementieren und
+Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortier-Algorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortier-Algorithmen selbst zu implementieren und
 deren Rechenzeit abzuschätzen.
 
 Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
 
-Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie erstellen erste Webapplikationsprogramme und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
+Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie kommunizieren mit Web-Services und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
 Wichtige Hinweise 
 ------------------
 
-Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zu hause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
 
-Die Aufgaben sind normalerweise für Konsolenanwendungen gestellt, weil diese schneller zu erstellen sind. Insbesondere die erstelten Klassen späterer Aufgaben können Sie leicht in eigene *SWING* oder *Java-FX* GUIs eingebinden.  
+Die Aufgaben sind normalerweise für Konsolen-Anwendungen gestellt, weil diese schneller zu erstellen sind. Insbesondere die erstellten Klassen späterer Aufgaben können Sie leicht in eigene *SWING* oder *Java-FX* GUIs einbinden.  
 
-Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillianten Ideen wieder zu verstehen :-)
+Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillanten Ideen wieder zu verstehen :-)
 
 ~~~~~~~~~~~~~~~~~~
 /** 
@@ -100,7 +100,7 @@ Handlungsziele nach ICT-Vorgaben (BiVo 2014)
   + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
   + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
   + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
-  + Kennt Notationen um Algorithmen dazustellen wie z.B. Struktogrammen, PAP usw.
+  + Kennt Notationen um Algorithmen darzustellen wie z.B. Struktogrammen, PAP usw.
     	<hr/> 
 3. **Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren.** 	
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
@@ -147,7 +147,7 @@ Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 |**Lektion 21 – 24**  | - Miniprojekt (LB2)                                  |
 +---------------------+------------------------------------------------------+
 |**Lektion 25 – 32**  | - HashMap                                            |
-|                     | - JSON mit WebServices, optional XML                 |
+|                     | - JSON mit Web-Services, optional XML                 |
 +---------------------+------------------------------------------------------+
 |**Lektion 33 – 36**  | - Rekursion                                          |
 |                     | - optional Backtracking                              |
@@ -260,8 +260,8 @@ aussehen, welche alle Zeilen einliest und auf der Konsole ausgibt?
 
 ### Erstellen eines BufferedReader
 
-Zum Instanziieren eines `BufferedReader`-Objekts müssen wir im Konstruktor angeben, von
-welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Enstprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReaders` als Parameter erstellen wir
+Zum Instantiieren eines `BufferedReader`-Objekts müssen wir im Konstruktor angeben, von
+welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir
 zunächst eine `BufferedReader` Instanz.
 
 ~~~~~~~~~~~~~~
@@ -277,11 +277,11 @@ catch(FileNotFoundException ioex){
 }
 ~~~~~~~~~~~~~~~
 
-Die Verwendung des `FileReaders` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block
+Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block
 (zu Exceptions ausführlich mehr später). 
 
 
-### Buffered Reader oder Scanner?
+### BufferedReader oder Scanner?
 
 Neben dem `BufferedReader` kann man auch die `Scanner` Klasse verwenden.
 Die Effizienz beim Einlesen von einem File ist ungefähr dieselbe. Die
@@ -289,7 +289,7 @@ Scanner-Klasse bietet weitere Methoden, um das Parsen (das
 „Strukturieren“ eines Input-Streams) besser zu bewältigen. Jedoch ist
 Scanner nicht „thread safe“. Das heisst, gleichzeitige Dateizugriffe müssen von aussen vermieden werden.
 
-Die Scanner-Klasse eignet sich hervorragend, um Benutzereingaben via
+Die Scanner-Klasse eignet sich hervorragend, um Benutzer-Eingaben via
 Konsole einzulesen. Siehe auch die InputReader Klasse. Sie können
 gerne beide Varianten für das Einlesen von Files ausprobieren.
 
@@ -349,7 +349,7 @@ finally {
 
 Zum Erstellen einer `Scanner` Instanz verwenden Sie ein `File`-Objekt.
 Der Konstruktor von `BufferedReader` verwendet einen `FileReader`. Bei beiden Varianten
-wird das File zeilenweise in je eine String Objekt eingelesen. 
+wird das File zeilenweise in je ein `String`-Objekt eingelesen. 
 
 Beiden Varianten beenden das Lesen mit der Methode `close()`, um
 den Dateizugriff wieder freizugeben und den Eingabestrom zu schliessen.
@@ -362,7 +362,7 @@ Oft werden Daten strukturiert in lesbaren Text-Dateien abgelegt. So können zum
 Beispiel Excel-Tabellen oder Datenbank-Abfragen im CSV-Format gespeichert werden, so dass jede
 Zeile der Tabelle eine Zeile im Text File ergibt. Innerhalb der Zeilen
 sind die Spalten durch ein spezielles Trennzeichen getrennt (CSV steht
-für Comma Separated Values). Ausser dem Komma sind das Semikolon oder
+für *Comma Separated Values*). Ausser dem Komma sind das Semikolon oder
 ein Tabulator gebräuchliche Trennzeichen.
 
 Eine CSV Datei mit Personendaten kann beispielsweise so aussehen:
@@ -389,7 +389,7 @@ for (String p: lineParts ) {
 Auch Zahlen (im Beispiel das Geburtsjahr) werden zunächst als String
 eingelesen, wie alle anderen Zeichenketten auch. Solange wir damit nicht
 rechnen wollen, spielt das auch keine Rolle. Meistens ist aber nötig, diese Felder in richtig Zahlen umzuwandeln.
-Dazu dienen die entsprechenden `Parse`-Methoden der Klassen `Integer` und `Double`:
+Dazu dienen die entsprechenden `parse`-Methoden der Klassen `Integer` und `Double`:
 
 ~~~~~~~~~~~~~~~~
 String x = "42";

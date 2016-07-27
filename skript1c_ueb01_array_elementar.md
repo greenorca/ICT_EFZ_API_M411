@@ -33,6 +33,6 @@ soll jeweils das neue Element an der ersten Stelle im Array eingefügt
 werden und die bereits vorhandenen Elemente hinten angefügt werden. Nach
 jeder Einfüge-Operation sollen alle Elemente des Arrays zurückgegeben werden.
 
-	**Lösunsvorschlag:**
+	**Lösungsvorschlag:**
 	
 	`Skript1c_ArrayOps.java`

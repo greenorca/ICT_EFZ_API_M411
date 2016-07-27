@@ -72,7 +72,7 @@ Collections-Bibliothek enthalten:
 Arrays. Wie bei `ArrayList` ist ein `Vector` dynamisch erweiterbar, hat
 aber den Vorteil, dass es **synchronized** ist (d.h. er kann nicht gleichzeitig von mehreren Prozess geändert werden).
 
-Die Verwendung des Interfaces `Collection` ermöglicht die Definition des *inneren* Datentyps schon bei der Instanziierung eines Collections-Objekts:
+Die Verwendung des Interfaces `Collection` ermöglicht die Definition des *inneren* Datentyps schon bei der Instantiierung eines Collection-Objekts:
 
 `List<String> myStrings = new ArrayList<String>();`
 
@@ -91,7 +91,7 @@ Die Klassen `ArrayList`, `Vector` und `LinkedList` stellen dynamische Datenstruk
 * `remove(int index)`
 * `get(int index)`
 
-Äusserlich betrachtet erfüllen diese Funktionen das Gleiche in allen drei Klassen. Laufzeittechnisch bestehen jedoch Unterschiede:
+Äusserlich betrachtet erfüllen diese Funktionen das Gleiche in allen drei Klassen. Laufzeit-technisch bestehen jedoch Unterschiede:
 
 * `ArrayList` und `Vector` sind intern als Array implementiert. Zugriffe auf die einzelnen Elemente sind also sehr schnell und unabhängig von der Anzahl der enthaltenen Elemente. Jedoch sind Operationen wie das Hinzufügen oder Entfernen von Elementen rechenintensiv, da das gesamte Feld neu strukturiert werden muss. Der Vorteil bei der Benutzung der `Vector`-Klasse liegt insbesondere in der Absicherung für gleichzeitige Zugriffe bei paralleler Programmierung.
 * Die Klasse `LinkedList` ist intern als verkettete Liste implementiert und unterstützt das Durchschreiten von vorne nach hinten. Die Zugriffszeit auf einzelne Elemente ist abhängig von der Position und steigt linear mit der Anzahl der Elemente. Das Gleiche trifft auf Einfüge- und Löschoperationen zu.    
@@ -149,7 +149,7 @@ Lambda-Funktion übergeben.
 
 Gegeben ist folgendes Szenario: Die Klasse `Person` enthält die Attribute `familyName, firstName, city`
 und `birthDate` als Strings. In der ArrayList `kundenverwaltung` sind alle
-Kunden der Topomedics AG instanziert. Nun kann die Liste mit der `sort()`
+Kunden der Topomedics AG instantiiert. Nun kann die Liste mit der `sort()`
 Funktion beispielsweise nach `familyName` sortiert werden:
 
 ~~~~~~~~~~~~~~~~~~

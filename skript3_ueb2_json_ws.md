@@ -14,7 +14,7 @@ Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mitt
 <http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich>
 
 Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen
-Java-Webservice Client und parsen Sie die JSON Serverantwort mittels
+Java-Web-Service Client und parsen Sie die JSON Serverantwort mittels
 *JSONArray* und *JSONObject*.
 
 Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das

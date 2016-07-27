@@ -9,7 +9,7 @@
 Sie implementieren die Schnittstellen `Iterable<Object>` und `Iterator<Object>` in Ihrer Stack-Klasse.
 
 Wie muss die Methode `next()` aussehen, damit wir jeweils das nächste
-Element (und dessen Inhalt) bekommen? Ergänzen Sie den untenstehenden
+Element (und dessen Inhalt) bekommen? Ergänzen Sie den unten stehenden
 Code in Ihrem Programm:
 
 ~~~~~~~~~~~~~~~~~
@@ -34,8 +34,7 @@ implementieren.
 ### Array umgekehrt ausgeben mit Verwendung von `Iterator`
 
 Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein `int`-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei
-das Interface `Iterator` und passen Sie dievom Interface verlangten
-Methoden an, also:
+das Interface `Iterator` und passen Sie die vom Interface verlangten Methoden an, also:
 
 `public boolean hasNext()`
 

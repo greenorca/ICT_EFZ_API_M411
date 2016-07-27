@@ -10,7 +10,7 @@
 
 Erstellen Sie eine Klasse, welche mittels der `java.io.File` Klasse alle
 Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht.
-Implementieren Sie eine Benutzer­schnittstelle, damit der Benutzer nach
+Implementieren Sie eine Benutzer-Schnittstelle, damit der Benutzer nach
 einer bestimmten Datei suchen kann.
 
 **Alternative**: Sie können dasselbe Prinzip auch auf eine XML-Struktur
@@ -49,7 +49,7 @@ else {
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Verwenden Sie die Rekursion, um das wiederholte Suchen nach der
-Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche
+Zahl durch ­zuführen. Geben Sie aus, wie viele Schritte die Suche
 benötigt.
 
 **Lösungsvorschlag:**

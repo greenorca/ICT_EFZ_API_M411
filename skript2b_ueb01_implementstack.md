@@ -10,7 +10,7 @@
 
 Implementieren Sie Ihre `Stack` Klasse mit den `push` und `pop`
 Methoden. Bei `push` wird ein Element zuoberst hinzugefügt. Bei `pop`
-wird das aktuelle Element entfernt. Sie könen den Code Ihrer `Node`-
+wird das aktuelle Element entfernt. Sie können den Code Ihrer `Node`-
 Klasse der Verketten Liste für die interne Datenstruktur übernehmen.
 
 Testen Sie die Funktionalität mit einem geeigneten Testrahmen.
@@ -23,7 +23,7 @@ im `Stack` hat. Die Methode gibt einen boolean zurück.
 ###Stack ergänzen
 
 Ergänzen Sie `Stack` um eine Methode `peek()`, welche das zuletzt auf
-dem Stapel gelegte Element zurückliefert ohne es zu entfernen.
+dem Stapel gelegte Element zurück liefert ohne es zu entfernen.
 
 ###Palindrome prüfen (25 Minuten)
  

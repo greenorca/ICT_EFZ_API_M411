@@ -4,7 +4,7 @@ Dynamische Datenstrukturen II: Stacks und Queues
 Lernziele {#lernziele_stacks_queues}
 -----------
 * beschreiben Eigenschaften der Datenstruktur Stack (Stapel) und Queue
-* einsetzen Datatenstrukturen Stack und Queue
+* einsetzen Datenstrukturen Stack und Queue
 * implementieren und anwenden Interface `Iterator`
 
 Die verkettete Liste als Stapel-Speicher
@@ -112,7 +112,7 @@ Anstatt der üblichen (und fehleranfälligen) `for`-Schleife zum Durchlaufen all
 des Stacks bzw. der Verketteten Liste sollen nun Iteratoren eingesetzt werden.
 
 Iteratoren erlauben dem Benutzer, nacheinander auf jedes Element einer
-Datenmenge zuzugreifen, unabhängig wie die dahinterliegende
+Datenmenge zuzugreifen, unabhängig wie die dahinter liegende
 Datenstruktur implementiert ist. Der Iterator kümmert sich dabei hinter den Kulissen 
 um die Grenzen der Datenstruktur.
 

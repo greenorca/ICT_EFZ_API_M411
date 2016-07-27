@@ -5,21 +5,21 @@ Lernziele {#lernziele_xmljson}
 ----------
 * beschreiben den Aufbau von baumartigen JSON- und XML-Datenstrukturen
 * nutzen Parser, um JSON- und XML-Strukturen zu lesen und in Objekte umzuwandeln
-* nutzen JSON- und XML-basierte Webservices 
+* nutzen JSON- und XML-basierte Web-Services 
 
 Die Datenstruktur JSON
 -----------------------
 
 Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen
 verschachtelten Unterelementen mit beliebig vielen Unterelementen und
-Attributen. Im Vegleich zu den normalisierten Tabellenstrukturen relationaler Datenbanken stellen Bäume gewissermassen die Daten *nicht-normalisierte* Ansicht über alle Tabellen dar. 
+Attributen. Im Vergleich zu den normalisierten Tabellenstrukturen relationaler Datenbanken stellen Bäume gewissermassen die Daten *nicht-normalisierte* Ansicht über alle Tabellen dar. 
 
 ![Schematischer Aufbau einer Baum-Struktur](media/xml-tree.png){}
 
 
-JSON (JavaScript Object Notation) ist eine populäre Variante zur
+JSON (*Javascript Object Notation*) ist eine populäre Variante zur
 hierarchischen Abbildung von Informationen. Ursprünglich war JSON nur
-eine Erweiterung von JavaScript. Seit 2005 bzw. 2006 setzen Yahoo,
+eine Erweiterung von Javascript. Seit 2005 bzw. 2006 setzen Yahoo,
 Google und viele andere JSON als Datenübertragungsformat für interaktive
 Webseiten (AJAX) und Web-Services ein.
 
@@ -99,16 +99,16 @@ obj.keys().forEachRemaining(key -> {
 );
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wenn JSON gleichartig aufgebaut Daten verwendet, können Sie die Listen-Objekte in eine entsprechende Java-Klassen einlesen und beipielsweise als `ArrayList` ablegen. Dies spart für die weitere Verarbeitung viel Zeit, da JSON nicht immer und immer wieder geparst werden muss.  
+Wenn JSON gleichartig aufgebaut Daten verwendet, können Sie die Listen-Objekte in eine entsprechende Java-Klassen einlesen und beispielsweise als `ArrayList` ablegen. Dies spart für die weitere Verarbeitung viel Zeit, da JSON nicht immer und immer wieder geparst werden muss.  
 
-###JSON – Webservices nutzen
+###JSON – Web-Services nutzen
 
 Wie bereits erwähnt, sind JSON-Datenstrukturen sehr häufig als
-Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein
+Datenstruktur von Web-Services anzutreffen. Ein Web-Service ist ein
 http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen
 wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl
 definierten JSON- oder XML-Datenstrukturen beantwortet. Der Client sendet
-Parameter für den Webservice werden entweder via GET in der URL oder als
+Parameter für den Web-Service werden entweder via GET in der URL oder als
 POST Request. Ein ausführliches Beispiel dazu finden Sie in der nachfolgenden Übung.
 
 ```include
@@ -161,7 +161,7 @@ enthalten die entsprechenden Klassenattribute und Werte (als Strings).
 Damit wird ein plattform­unabhängiges Austauschformat für Datenobjekte
 erreicht. Entsprechend können Daten unter anderem via XML zwischen C++,
 Java, PHP und .NET ausgetauscht werden. Und deshalb ist XML
-beispielsweise für Webservices so interessant geworden.
+beispielsweise für Web-Services so interessant geworden.
 
 ###XML Parser
 
@@ -314,17 +314,17 @@ Parsen Sie das XML-File `cd_catalog.xml` wie im obigen Beispiel in ein
 DOM ab und geben Sie für jede CD den Titel, den Künstler und das Jahr
 aus.
 
-###XML – Webservices nutzen
+###XML – Web-Services nutzen
 
 Wie bereits erwähnt, sind XML Datenstrukturen sehr häufig als
-Datenstruktur von Webservices anzutreffen. Ein Webservice ist ein
+Datenstruktur von Web-Services anzutreffen. Ein Web-Service ist ein
 http-Server, der auf einer bestimmte URL auf parametrisierte Anfragen
 wartet und diese (meist mittels Datenbanken-Zugriff) mit wohl
 definierten XML- oder JSON-Datenstrukturen beantwortet. Der Client sendet
-Parameter für den Webservice werden entweder via GET in der URL oder als
+Parameter für den Web-Service werden entweder via GET in der URL oder als
 POST Request.
 
-Holen wir uns von einem Dictionaire-Webservice die Definitionen für einen
+Holen wir uns von einem Dictionaire-Web-Service die Definitionen für einen
 bestimmten Begriff:
 
 <http://services.aonaware.com/DictService/DictService.asmx/Define?word=xml>
@@ -332,7 +332,7 @@ bestimmten Begriff:
 Kopieren Sie zunächst diesen Link in Ihren Webbrowser und interpretieren
 Sie die Antwort des Servers.
 
-Wie können solche Webservices aus einem Programm benutzt werden? Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:
+Wie können solche Web-Services aus einem Programm benutzt werden? Um den Service aus Java aufzurufen, benötigen Sie eine URL-Verbindung. Unten ­stehender Code zeigt Ihnen eine Verbindung sowie eine einfache Ausgabe als String:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 String searchWord = "xml";
@@ -371,4 +371,4 @@ Wiederholungsfragen {#wdh_xml_json}
 
 * XML und JSON sind baumartige Datenstrukturen. Was bedeutet das?
 * Was ist der Unterschied zwischen XML und JSON?
-* Wie können XML- und JSON basierte Webservices mit Java benutzt werden?
+* Wie können XML- und JSON basierte Web-Services mit Java benutzt werden?

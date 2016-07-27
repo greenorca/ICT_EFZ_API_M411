@@ -13,7 +13,7 @@ Rekursion
 ---------
 
 Die Rekursion ist ein zentrales Konzept in der Computerwissenschaft, um
-komplexere Probleme in einfache-überschaubare Problemgebiete zu
+komplexere Probleme in einfache, überschaubare Problemgebiete zu
 unterteilen. Auch hier gilt das alte Sprichwort: *Teile und Herrsche*. Eine einfache Definition von Rekursion ist:
 
 *Ein Problem wird mit einer Funktion in ein Teil-Problem zerlegt, das
@@ -62,7 +62,9 @@ int fak(n){
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `fak(n-1)` aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitspeicher (auf dem *Stack*) angelegt. Beim Erreichen der Abbruchbedingung (hier `n==1`) werden die Speicherbereiche vom Stack wieder von oben nach unten freigegeben.
+Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `fak(n-1)` aus. Tatsächlich wird für jedem rekursiven Aufruf ein neuer Abschnitt im Arbeitsspeicher (auf dem *Stack*) angelegt. Darin wird die Rücksprung-Adresse und die lokalen Variablen der aufgerufenen Funktion abgelegt. Beim Erreichen der Abbruchbedingung(hier `n==1`) und damit dem Ende des Unterprogramm-Aufrufs werden diese Speicherbereiche vom Stack wieder von oben nach unten freigegeben.
+
+Detailiertere Informationen über *Stack*- und *Heap*-Speichermanagement finden Sie unter [http://www.fh-wedel.de/~si/seminare/ws02/Ausarbeitung/2.jvm/javavm2.htm](http://www.fh-wedel.de/~si/seminare/ws02/Ausarbeitung/2.jvm/javavm2.htm).
 
 ![Auf- und Abbau des Programmstacks](media/rekursion_stack.png)
 
@@ -91,7 +93,9 @@ aufgerufen wird.
 **Beispiel: Rekursives durchlaufen von Baumstrukturen**
 
 Rekursion eignen sich auch zum Durchsuchen von Baum-Strukturen, um die
-einzelnen Knoten durchzugehen. Wir können mit der Function `visitRecursively` JSON- oder XML-Srukturen durchlaufen und dabei alle Child-Elemente (Kinder) in der Struktur rekursiv aufrufen:
+einzelnen Knoten zu durchlaufen (traversieren). Wir können mit der Funktion `visitRecursively` 
+JSON- oder XML-Strukturen durchlaufen und dabei alle Child-Elemente (Kinder) 
+in der Struktur rekursiv aufrufen:
 
 ~~~~~~~~~~~~~~~~~~~~~~~
 public void visitRecursively(Node node) {
@@ -183,7 +187,7 @@ Form eines Baumes vor:
 Der Baum ist eine abstrakte Struktur, um Lösungswege zu
 veranschaulichen. Bei den meisten Problemen haben wir keine
 Baumstruktur, sondern müssen mit anderen Datenstrukturen (z.Bsp. Arrays)
-arbeiten. In Pseudo-code sieht ein Backtracking-Algorithmus wie folgt
+arbeiten. In Pseudocode sieht ein Backtracking-Algorithmus wie folgt
 aus:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~

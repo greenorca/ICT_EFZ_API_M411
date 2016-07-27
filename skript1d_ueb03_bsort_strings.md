@@ -17,7 +17,7 @@ $5 > 2$ vs. $'D' > 'B'$
 Vergleichen Sie dazu die ASCII-Tabelle [siehe Wikipedia](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle).
 
 Sollen nun ganze Worte alphabetisch geordnet werden, müssen ggf. weitere
-aufeinanderfolgende Buchstaben miteinander verglichen werden. Z.B. liegt
+aufeinander folgende Buchstaben miteinander verglichen werden. Z.B. liegt
 "Muheim" vor "Mutzer".
 
 ###Strings sortieren

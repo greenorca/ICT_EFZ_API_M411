@@ -1,7 +1,7 @@
 ## Übung: Numerische Ein-/Ausgaben
 **Lernziele:**
 
-* einlesen und verarbeiten Benutzereingaben
+* einlesen und verarbeiten Benutzer-Eingaben
 * einlesen Zahlenformate
 * Arbeiten mit `Java-Calendar` Klassen.
 
@@ -13,7 +13,7 @@
 
 	`Hallo Peter, du wirst in diesem Jahr 34 Jahre alt.`
 
-	Dabei soll der Name und das Alter den Benutzereingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Datum aus der `Calendar`-Klasse.
+	Dabei soll der Name und das Alter den Benutzer-Eingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Datum aus der `Calendar`-Klasse.
 
 Erstellen Sie zunächst ein Struktogramm für die Funktion `tellAge()`. Dann implementieren und testen Sie Ihre Funktion.
 

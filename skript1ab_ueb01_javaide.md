@@ -2,7 +2,7 @@
 **Lernziele:**
 
 * beherrschen den Umgang mit einer Entwicklungsumgebung
-* einlesen und verarbeiten Benutzereingaben
+* einlesen und verarbeiten Benutzer-Eingaben
 
 **Zeit:** 45 Minuten
 

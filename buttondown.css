@@ -64,6 +64,7 @@ div.ueb{
 section.level1{
 	padding: 5px 10px;
 	border: 1px solid #aaa;
+	 page-break-after: always;
 }
 
 #TOC ul, #TOC ul ul{

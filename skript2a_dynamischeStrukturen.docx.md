@@ -127,7 +127,7 @@ public class MyLinkedList {
 Ganz wichtig ist, dass im Konstruktor eine Liste mit einem Element
 erstellt wird. Wir verwenden dabei das vorderste Element (`head`). Das
 vorderste Element hat noch keinen Verweis auf ein Nächstes, deshalb
-setzen wir den Knoten next auf null.
+setzen wir den Knoten `next` auf null.
 
 ###Elemente hinzufügen:
 
