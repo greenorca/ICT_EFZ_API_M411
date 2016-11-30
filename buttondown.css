@@ -61,6 +61,24 @@ div.ueb{
 
 }*/
 
+/*nav {
+    width: 35%;
+    display: inline-block;
+    position: fixed;
+    top: 20px;
+}
+
+article {
+    width: 63%;
+    height: 100%;
+    overflow-y: scroll;
+    display: inline-block;
+    padding-left: 7px;
+    position: fixed;
+    top: 20px;
+    left: 36%;
+}*/
+
 section.level1{
 	padding: 5px 10px;
 	border: 1px solid #aaa;
@@ -84,6 +102,20 @@ section.level1{
 
 #TOC ul ul li{
 	border: none;
+}
+
+div.lsg{
+	background-color: #fab;
+	padding: 5px;
+}
+
+div.lsg ul{
+	background-color: #eee;
+	padding: 5px 0 5px 20px;
+}
+
+div.lsg table{
+	background-color: #eee;
 }
 
 div#header, header
