@@ -3,6 +3,7 @@
 **Lernziele:**
 
 * erstellen Klasse zum zeilenweisen Lesen von Textdateien
+* konvertieren Textzeilen zu Datenobjekten
 * vergleichen Strings
 * umwandeln String in numerische Datentypen
 
@@ -26,8 +27,11 @@ Personen jeweils am Ende der Zeile aus.
 	
 	`Skript1_SimpleCsvReader.java`
 
-2. Kopieren Sie die Klasse und nennen Sie die Kopie `Skript1_SearchCsvReader`. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die `daten.csv` eingelesenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum
-Vergleich von zwei String-Variablen der Operator `==` **nicht** verwendet
+2. Erstellen Sie eine Klasse Person mit den *private* Attributen bzw. Klassenvariablen `name`, `vorname` (String) und `geburtsjahr` (int). Die Parameter sollen im Konstruktor übergeben werden. Zusätzlich erstellen Sie die notwendigen *GETTER* Funktionen für die Klassenvariablen.
+
+Sorgen Sie nun in der `main()` der `Skript1_SimpleCsvReader` dafür, dass für jede Zeile der `daten.csv` ein entsprechendes Objekt vom Typ `Person` angelegt wird. Prüfen Sie die Richtigkeit der erstellten Objekte manuell innerhalb der Schleife zum Einlesen.
+
+3. Kopieren Sie die Klasse `Skript1_SimpleCsvReader` und nennen Sie die Kopie `Skript1_SearchCsvReader`. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die `daten.csv` eingelesenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator `==` **nicht** verwendet
 werden kann. Stattdessen verwenden Sie die Methode `equals` der Klasse `String`.
 
 	**Lösungsvorschlag:**
