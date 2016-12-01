@@ -9,10 +9,10 @@
 **Zeit:** 60 Minuten
 
 Der Bubble-Sort ist für numerische wie auch alphanumerische
-Sortieraufgaben geeignet. Dies darum, weil sich die Problematik in den
+Sortieraufgaben geeignet. Dies funktioniert, weil sich die Problematik in den
 beiden Fällen nicht unterscheidet: 
 
-$5 > 2$ vs. $'D' > 'B'$
+`5 > 2` vs. `'D' > 'B'`
 
 Vergleichen Sie dazu die ASCII-Tabelle [siehe Wikipedia](https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle).
 
@@ -36,7 +36,7 @@ In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier a
 
 1. Erstellen Sie eine Klasse `Skript1c_PersonBsort`. Erstellen Sie nun eine Klasse `Person` mit den Attributen `Vorname`, `Nachname` und `Geburtsjahr`. Der Konstruktor der Klasse `Person` übergibt alle diese Parameter. 
 
-2. Erstellen Sie eine Klassenvariable `Person[] personenArray`. Diese soll in einer Klassenfunktion `readPersonFile` mit den Personen aus das Datei `daten.csv` gefüllt werden (siehe `Skript1_SimpleCsvReader`). Beachten Sie, dass die Anzahl der Personen variable ist und am Ende der Funktion der Array `personenArray` nur gültige Werte enthält.  
+2. Erstellen Sie eine Klassenvariable `Person[] personenArray`. Diese soll in einer Klassenfunktion `readPersonFile` mit den Personen aus das Datei `daten.csv` gefüllt werden (siehe `Skript1_SimpleCsvReader`). Beachten Sie, dass die Anzahl der Personen variabel ist und am Ende der Funktion der Array `personenArray` nur gültige Werte enthält. 
 
 3. Erstellen Sie eine Sortierfunktion, die Ihren Array nach dem Nachnamen *absteigend* sortiert. Geben Sie `personen` vor und nach dem Sortieren aus.
 

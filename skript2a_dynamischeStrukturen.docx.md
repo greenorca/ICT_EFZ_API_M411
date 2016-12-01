@@ -15,17 +15,16 @@ Lernziele {#lernziele_vk}
 
 ##Eine elementare Datenstruktur: Verkettete Liste
 
-Das Arbeiten mit einer fixen Grösse von Elementen stösst sehr schnell an
-seine Grenzen, vor allem wenn wir es mit dynamischen Datenmengen zu tun
-haben.
+Objekt-Arrays sind denkbar ungeeignet, wenn wir dynamische Datenmengen (veränderliche Anzahl von Objekten) verwalten wüssen.
 
-Hier kommt eine weitere elementare Datenstruktur zur Anwendung, welche
-ihre Grösse verändern kann (was wir bei einem Array nicht können). Die
-Verkettete Liste (engl. *LinkedList*) kann mit dynamischen Datenmengen
+Als schlaue Alternative kommt eine weitere elementare Datenstruktur zur Anwendung, welche
+ihre Grösse schnell und unkompliziert verändern kann (was wir bei einem Array nicht können): 
+
+Die Verkettete Liste (Abk. **VK**, engl. *LinkedList*) kann mit dynamischen Datenmengen
 umgehen. Ein weiterer Vorteil ist, dass sie eine höhere Flexibilität
 ermöglicht, indem die Elemente in effizienter Weise umgeordnet werden
 können. Dafür ist ein schneller Zugriff auf ein Element über den
-Positionsindex nicht möglich.
+Positionsindex nicht möglich. Das erklärt sich aus der internen Struktur der verketteten Liste:
 
 Jedes Element der einfach verketteten Liste enthält neben dem
 eigentlichen Wert die Speicheradresse des nächsten Listenelements. Die
@@ -34,7 +33,9 @@ ist damit die Verknüpfung oder das Bindeglied innerhalb der Liste, durch
 den jedes Element das nächste Element kennt.
 
 Ein Element ist somit ein Knoten ("Node"), welches durch Verkettung bzw.
-Verknüpfung auf den nächsten Knoten verweist ("next").
+Verknüpfung auf den nächsten Knoten verweist ("next"). 
+
+Der Zugriff auf eine VK erfolgt grundsätzlich vom ersten Element der Liste (*head*). Daraus folgt, dass eine VK immer von Anfang an durchschritten werden muss, bis das gewünschte Element an einer bestimmten Position geliefert werden kann.
 
 ![Notation einfach verkettete Liste, Quelle: CrunchifyCode](media/vk.png){width="80%"}
 

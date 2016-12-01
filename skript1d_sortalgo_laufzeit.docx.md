@@ -99,8 +99,9 @@ Wenn die Liste bereits sortiert ist, vergleicht der Algorithmus alle
 $n-1$ benachbarten Zahlenpaare einmal und stellt fest, dass es nichts zu
 tun gibt. Damit ist er fertig und es werden keine Zahlen vertauscht. Das
 ist der beste und schnellste Fall und benötigt $n-1$ Vergleiche und 0
-Vertauschungen.
+Vertauschungen. Hier ist die Laufzeitkomplexität *linear*.
 
+Im schlechtesten Fall ist die Liste genau andersherum sortiert, wie gewünscht. Dann müssen genau $n \cdot (n-1)$ Tauschoperationen und Vergleiche durchgeführt werden. Da der Aufwand einer Tauschoperation $3$ beträgt, erhalten wir folgende Komplexität: $3 \cdot n \cdot (n-1) = 3n^2 - 3n$. Konstanten können bei der Schätzung der Laufzeitanalyse weggelassen werden. Betrachtet wird immer nur der Summand mit dem grössten Exponenten.  Also ist die Laufzeitkomplexitätsklasse im schlechtesten Fall ebenfalls *quadratisch*.
 
 ```include
 skript1d_ueb01_bsort_laufzeit.md
