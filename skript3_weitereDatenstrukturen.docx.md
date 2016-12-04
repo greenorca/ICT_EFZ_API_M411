@@ -14,7 +14,7 @@ Baumartige Datenstrukturen bestehen aus einem Wurzelelement mit beliebig vielen
 verschachtelten Unterelementen mit beliebig vielen Unterelementen und
 Attributen. Im Vergleich zu den normalisierten Tabellenstrukturen relationaler Datenbanken stellen Bäume gewissermassen die Daten *nicht-normalisierte* Ansicht über alle Tabellen dar. 
 
-![Schematischer Aufbau einer Baum-Struktur](media/xml-tree.png){}
+![Schematischer Aufbau einer Baum-Struktur](media/xml-tree.png){#fig:fig_tree}
 
 
 JSON (*Javascript Object Notation*) ist eine populäre Variante zur
@@ -118,7 +118,7 @@ skript3_ueb2_json_ws.md
 Einführung in XML
 ------------------
 
-XML (eXtensible Markup Language) ist eine sogenannte Baumstruktur bzw.
+XML (eXtensible Markup Language) ist ebenfalls eine Baumstruktur bzw.
 hierarchische Datenstruktur. XML gibt es schon seit 1998 und war
 ursprünglich als Dokumenten-Format konzipiert. Microsoft Word Dokumente
 werden beispielsweise als XML-Dokumente gespeichert. XML wird häufig zur
@@ -132,12 +132,10 @@ Attributen. Ein Element wird in der XML-Welt Node genannt. Eine Node
 besteht auch hier aus einem Start-TAG und einem End-TAG. Dazwischen
 befindet sich der Node-Inhalt.
 
-![Schematischer Aufbau eines XML-Dokuments](media/xml-tree.png){}
-
 Im Gegensatz zu HTML sind die Namen der
 Nodes nicht von einem Consortium global festgeschrieben, sondern werden
 für den jeweiligen Anwendungsfall definiert. Wollen wir beispielsweise
-unsere Liste der Klasse Person als XML abspeichern, könnte das Dokument
+unsere Liste der Klasse Person (siehe Abb. @fig:fig_tree) als XML abspeichern, könnte das Dokument
 bzw. als Baumstruktur so aussehen:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -275,10 +273,11 @@ und nur deren Text-Inhalte angezeigt:
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 NodeList list = generateNodeList("cd_catalog.xml");
-	for (int i=0; i <list.getLength(); i++){
-		System.out.println(list.intem(i).getTextContent);
+for (int i=0; i < list.getLength(); i++){
+  System.out.println(list.intem(i).getTextContent);
 }
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Will man stattdessen auf den Inhalt bestimmter Kinder-Elemente
 zugreifen, geht man folgendermassen vor:
 

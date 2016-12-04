@@ -66,14 +66,14 @@ Die Funktion gibt das Produkt von `n` multipliziert mit dem Rückgabewert von `f
 
 Detailiertere Informationen über *Stack*- und *Heap*-Speichermanagement finden Sie unter [http://www.fh-wedel.de/~si/seminare/ws02/Ausarbeitung/2.jvm/javavm2.htm](http://www.fh-wedel.de/~si/seminare/ws02/Ausarbeitung/2.jvm/javavm2.htm).
 
-![Auf- und Abbau des Programmstacks](media/rekursion_stack.png)
+![Auf- und Abbau des Programmstacks](media/rekursion_stack.png){#fig:fig_progstack}
 
-**Beispiel: Fibonacci-Reihe berechnen **
+**Beispiel: Fibonacci-Reihe berechnen**
 
 Die Fibonacci-Reihe (1,1,2,3,5,8,…)
 kann mittels Rekursion berechnet werden:
 
-![Fibonacci-Folge, Quelle: [*https://de.wikipedia.org/wiki/Fibonacci-Folge*](https://de.wikipedia.org/wiki/Fibonacci-Folge)](media/Fibonacci_sequence_-_optional_starting_with_zero.jpg){}
+![Fibonacci-Folge, Quelle: [*https://de.wikipedia.org/wiki/Fibonacci-Folge*](https://de.wikipedia.org/wiki/Fibonacci-Folge)](media/Fibonacci_sequence_-_optional_starting_with_zero.jpg){#fig:fig_fibo}
 
 ~~~~~~~~~~~~~~~~
 public int calculate(int number) {
@@ -90,7 +90,14 @@ Die Methode `calculate` ist ein Beispiel einer
 *Mehrfach-Rekursion*, da die Methode gleich mehrmals (hier zweimal)
 aufgerufen wird.
 
-**Beispiel: Rekursives durchlaufen von Baumstrukturen**
+**Beispiel: MergeSort**
+ 
+Das *MergeSort*-Verfahren zum Sortieren von Listen arbeitet ebenfalls mit einer Mehrfach-Rekursion. Er besteht aus den zwei Funktionen *Mischen* und *Zusammenführen*. Details zur Implementierung finden Sie unter [https://de.wikipedia.org/wiki/Mergesort](https://de.wikipedia.org/wiki/Mergesort) oder [https://tinohempel.de/info/info/ti/mergesort.htm](https://tinohempel.de/info/info/ti/mergesort.htm).
+
+
+Die Laufzeitkomplexität von von *MergeSort* ($O(n \cdot log(n))$) ist wesentlich günstiger als die von *BubbleSort* ($O(n^2)$). Dafür benötigt *MergeSort* wesentlich mehr Arbeitsspeicher, und ist eher für Listen als für Arrays geeignet. 
+
+**Beispiel: Rekursives Durchlaufen von Baumstrukturen**
 
 Rekursion eignen sich auch zum Durchsuchen von Baum-Strukturen, um die
 einzelnen Knoten zu durchlaufen (traversieren). Wir können mit der Funktion `visitRecursively` 
@@ -123,7 +130,7 @@ ein Problem iterativ (also mit einer Schleife) oder rekursiv zu lösen.
 Gewisse Programmiersprachen verbieten explizit die Iteration und
 bevorzugen die Rekursion (z.Bsp. LISP oder Prolog).
 
-Beispiel: Eine Funktion soll die Zahlen von n1 bis n2 ausgeben, wobei n1 <= n2 sein soll.
+Beispiel: Eine Funktion soll die Zahlen von `n1` bis `n2` ausgeben, wobei `n1 <= n2` sein soll.
 
 Als Iteration würden wir es so programmieren:
 
@@ -170,7 +177,7 @@ gesucht. Am einfachsten stellt man sich das Suchen nach einer Lösung in
 Form eines Baumes vor:
 
 
-![](media/tree.gif){}   
+![Baum-Struktur](media/tree.gif){#fig:fig_tree2}   
 
 1. Man beginnt bei *Root* und hat A oder B zur Auswahl. Man wählt A.                                                                          
 2. Bei A haben wir C oder D zur Auswahl. Man wählt C.                                                                          

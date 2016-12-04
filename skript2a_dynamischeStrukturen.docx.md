@@ -28,16 +28,16 @@ Positionsindex nicht möglich. Das erklärt sich aus der internen Struktur der v
 
 Jedes Element der einfach verketteten Liste enthält neben dem
 eigentlichen Wert die Speicheradresse des nächsten Listenelements. Die
-Speicheradresse nennt man in der C / C++ Welt auch Zeiger. Der "Zeiger"
+Speicheradresse nennt man in der C / C++ Welt auch Zeiger. Der *Zeiger*
 ist damit die Verknüpfung oder das Bindeglied innerhalb der Liste, durch
 den jedes Element das nächste Element kennt.
 
-Ein Element ist somit ein Knoten ("Node"), welches durch Verkettung bzw.
-Verknüpfung auf den nächsten Knoten verweist ("next"). 
+Ein Element ist somit ein Knoten (*Node*), welches durch Verkettung bzw.
+Verknüpfung auf den nächsten Knoten verweist (*next*). 
 
 Der Zugriff auf eine VK erfolgt grundsätzlich vom ersten Element der Liste (*head*). Daraus folgt, dass eine VK immer von Anfang an durchschritten werden muss, bis das gewünschte Element an einer bestimmten Position geliefert werden kann.
 
-![Notation einfach verkettete Liste, Quelle: CrunchifyCode](media/vk.png){width="80%"}
+![Notation einfach verkettete Liste, Quelle: CrunchifyCode](media/vk.png){#fig:fig_notation_vk}
 
 Neben der einfach verketteten Liste gibt es auch doppelt verkettete
 Listen. Die Nodes der doppelt verketteten Liste enthalten neben der

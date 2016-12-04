@@ -20,7 +20,7 @@ Erstellen Sie je eine Funktion `getMinimum` und `getMaximum`. Die Funktionen sol
 
 In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder `a` und `b` in das Ergebnisfeld `c` wird elementweise das erste Element von `a` mit dem ersten Element von `b` addiert und im ersten Element von `c` gespeichert. 
 
-![Array addieren](media/array_addition.png)
+![Array addieren](media/array_addition.png){#fig:fig_array_add}
 
 Dies funktioniert nur, wenn die Arrays die gleiche Länge haben.
 Erstellen Sie eine statische Funktion `addArray`. `addArray` erhält zwei `int`-Arrays als Parameter und gibt einen `int`-Array als Summe der Eingabe-Arrays zurück. Vor der Addition soll die Funktion prüfen, ob die Eingabefelder gleich lang sind. 
@@ -47,7 +47,7 @@ Vergleichen Sie den Zeitaufwand, wenn Sie das gleiche 1000 mal mit System.arrayC
 Viele Systembefehle funktionieren nur auf der Konsole bzw. im Terminal. Oft bringen solche Programme eine Unzahl von verschiedenen Parametern mit (z.B. `dir *.txt`).
 Sie erstellen nun selbst ein solches Konsolenprogramm zum Bestimmen des Maximums und Minimums von Zahlenreihen in einer beliebigen Datei (eine Zeile enthält eine Zahl). Der Dateiname soll dabei als Parameter übergeben werden.
 
-![Java-Programm compilieren und mit Paramtern aufrufen](media/java_terminal_param.png)
+![Java-Programm compilieren und mit Parametern aufrufen](media/java_terminal_param.png){#fig:fig_terminal_params}
 
 1. Erstellen Sie eine neue Klasse `StatistikTool` mit `main(String[] args)` Funktion.
 2. `String[] args` enthält alle via Konsole übergebenen Parameter (Leerzeichen-getrennt). Geben Sie in der `main` alle Elemente des `args`-Arrays auf der Konsole aus. Starten Sie Ihrer Klasse via Commandozeile `java StatistikTool "D://numbers.txt" alpha beta gagga` und prüfen Sie die Ausgabe.

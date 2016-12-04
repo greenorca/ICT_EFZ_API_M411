@@ -52,7 +52,7 @@ Verwenden Sie für diese Lösung ihren eigenen `Stack`.
 1. Mischen Sie die Karten in Ihrem Stack.
 2. Entwerfen Sie eine grafische Oberfläche für ein Kartenspiel. Dazu leiten Sie Ihre `Card`-Klasse von `JPanel` ab und erstellen eine Klassenmethode `public void paint(Graphics g)`, in der die jeweilige Karte als JPanel gerendert wird. Den Stack können Sie beispielsweise auf einer JLayeredPane realisieren.
 
-![Beispiel Black Jack](media/swing_blackjack.png)
+![Beispiel Black Jack](media/swing_blackjack.png){#fig:fig_blackjack}
  
 
 

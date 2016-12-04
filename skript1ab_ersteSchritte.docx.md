@@ -1,5 +1,8 @@
 <!--
+# Requirements:
 PATH=$HOME/.cabal/bin:$PATH
+## numbering for figures (https://github.com/tomduck/pandoc-fignos#installation) 
+pip3 install --upgrade pandoc-fignos
 
 #BULK convert from DOCX with image export in separate directories
 n=1
@@ -18,7 +21,7 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained; cp M411_book.html ~/Desktop/WISS/Modul_411/IFZ_524_ZH/m411_skript/
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained --filter pandoc-fignos; cp M411_book.html ~/Desktop/WISS/Modul_411/IFZ_524_ZH/m411_skript/
 
 
 pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
@@ -459,6 +462,7 @@ skript2a_dynamischeStrukturen.docx.md
 skript2b_dynamischeStrukturen.docx.md
 ```
 [Zurück zum Inhaltsverzeichnis](#TOC)
+
 ```include 
 skript2c_JavaCollections.docx.md
 ```
@@ -467,6 +471,7 @@ skript2c_JavaCollections.docx.md
 <!--skript2d_miniProjekt.docx.md-->
 skript3_weitereDatenstrukturen.docx.md
 ```
+
 [Zurück zum Inhaltsverzeichnis](#TOC)
 ```include 
 <!--skript4b_Mandelbrot.docx.md-->

@@ -71,8 +71,7 @@ werden. Folgende Regeln gelten:
 
 2.  Grössere Platten dürfen NICHT auf Kleinere gelegt werden.
 
-![](media/hanoi.jpeg){width="4.864583333333333in"
-height="2.1413385826771654in"}
+![Die Türme von Hanoi](media/hanoi.jpeg){#fig:fig_hanoi}
 
 Implementieren Sie eine Klasse, welches dieses Problem löst. Die Anzahl
 Platten soll vom Benutzer bestimmt werden.

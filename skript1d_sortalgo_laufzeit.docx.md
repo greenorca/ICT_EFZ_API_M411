@@ -18,7 +18,7 @@ reicht von simplen Datensätzen zu grossen Datenvolumen. Es gibt sehr
 viele Sortier-Algorithmen. Den Klassiker *BubbleSort* werden wir hier näher betrachten:
 
 ![Quelle:
-[*http://www.tinohempel.de/info/info/ti/bubblesort.htm*](http://www.tinohempel.de/info/info/ti/bubblesort.htm)](media/pap_bsort.png){width="80%"}
+[*http://www.tinohempel.de/info/info/ti/bubblesort.htm*](http://www.tinohempel.de/info/info/ti/bubblesort.htm)](media/pap_bsort.png){#fig:fig_strukto_bsort}
 
 
 In jedem Durchgang wird das Feld (bzw. Array) von links nach rechts

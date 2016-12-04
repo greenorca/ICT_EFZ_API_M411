@@ -55,12 +55,9 @@ Möglich sind zwei Arten der Initialisierung:
 ~~~~~~~~
 int[] myIntArray = new int[10];
 Person[] myPersonArray = new Person[100];
-~~~~~~~~
 
-`Datentyp varname = {wert1, wert2,…};` // sowohl Anzahl Elemente als auch
-    Werte definieren.
+Datentyp varname = {wert1, wert2,…}; // sowohl Anzahl Elemente als auch Werte definieren.
 
-~~~~~~~~
 int[] myIntArray = {12,43,1,7,56};
 String[] myStrings = {"Hallo","Welt"};
 ~~~~~~~~
@@ -84,8 +81,7 @@ Die Array-Eigenschaft *length* gibt die Anzahl der Elemente (N) des Arrays
 an. Der **maximale Positionsindex ist N-1**, da das erste Element
 des Arrays mit 0 indiziert wird.
 
-![Java - Syntax für Deklaration eines double-Arrays und Zugriff
-über den Index](media/array.png){width="60%"}
+![Array-Deklaration und Zugriff über den Index](media/array.png){#fig:fig_array1}
 
 Betrachten Sie nochmals die Parameterliste der `main`-Funktion. Was für ein Datentyp wird 
 übergeben? Wozu kann der Parameter `String[] args` genutzt werden?

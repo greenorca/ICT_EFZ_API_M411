@@ -18,10 +18,9 @@ Der Stack arbeitet nach dem LIFO-Prinzip ("last in – first out"). Als
 Analogie können Sie sich den Stack wie einen Stapel Teller in der Mensa
 vorstellen:
 
-![](media/teller.png){width="1.65625in"
-height="2.31875in"}
-![](media/stack_ops.png){width="4.959722222222222in"
-height="1.8333333333333333in"}
+![Tellerstapel](media/teller.png){#fig:fig_teller}
+
+![Stack-Prinzip](media/stack_ops.png){#fig:fig_stack}
 
 Die Grundoperationen für einen Stack sind:
 

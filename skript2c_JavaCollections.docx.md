@@ -30,7 +30,7 @@ Schnittstelle selbst beinhaltet allerdings keinen Code. Schnittstelle
 heisst auf Englisch interface. Beide Begriffe werden hier synonym
 gebraucht.
 
-![Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html](media/java_util_collection.png){width="80%"}
+![Quelle: http://www.beingjavaguys.com/2013/03/java-collection-framework.html](media/java_util_collection.png){#fig:fig_collectionframework}
 
 Bei der Benutzung einer Klasse, die diese Schnittstelle imple­mentiert, wissen Entwickler, welche Funktionen vorhanden sind.
 Dies dient der schnelleren und stabileren Software-Entwicklung.
@@ -98,7 +98,7 @@ Die Klassen `ArrayList`, `Vector` und `LinkedList` stellen dynamische Datenstruk
 
 Die folgende Abbildung illustriert die Laufzeitabhängigkeiten:
 
-![Laufzeitverhalten von LinkedList und ArrayList, Quelle: [www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)](media/arraylist-vs-linkedlist1.png) 
+![Laufzeitverhalten von LinkedList und ArrayList, Quelle: [www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)](media/arraylist-vs-linkedlist1.png){#fig:fig_laufzeit}
 
 **Zusammenfassung**: Setzen Sie `ArrayList` oder `Vector` ein, wenn Sie sehr schnelle Lesezugriffe benötigen und relativ wenige Einfüge- und Löschoperationen zu erwarten sind. Andernfalls ist die `LinkedList` ein guter Kandidat.
 
@@ -242,7 +242,7 @@ Die `map`-Datenstruktur unterstützt üblicherweise 2 Operationen:
 * `get(key)` --&gt; suchen* nach dem Wert, der zu dem gegebenen
     Schlüssel gehört
 
-![](media/hashmap.png){width="80%"}
+![Hashmap](media/hashmap.png){#fig:fig_hashmap}
 
 Dabei muss darauf geachtet werden, dass es nicht zu doppelten Einträgen
 (doppelte Schlüssel) kommt. Somit wird folgende Regel implementiert:

@@ -17,7 +17,7 @@ Geometrische Fraktale sind - vereinfacht gesagt - Grafiken, die durch wiederholt
 
 Wenn Sie sich aufmerksam in der Natur umschauen, werden Sie viele Beispiele fraktaler Muster erkennen. Betrachten Sie eine Schneeflocke unter der Lupe, oder Romanesco (vor dem Kochen), oder ganz gewöhnliche Bäume. In diese Übung lernen Sie einen Farn zu zeichnen, wie im Bild dargestellt.
 
-![Fraktales Farn](media/farn.png)
+![Fraktales Farn](media/farn.png){#fig:fig_farn1}
 
 Zunächst benötigen wir eine sogenannte `Turtle`-Klasse, welche einfach *nur* aufeinanderfolgende Striche mit bestimmten Winkel und Länge auf der Oberfläche zeichnet:
 
@@ -72,7 +72,7 @@ class Turtle {
 
 Das eigentliche Berechnen des Fraktals ist nicht wirklich schwer. Betrachten Sie die folgende Abbildung gemeinsam mit dem Quellcode der Funktion `farnwedel`.
 
-![Farn-Fraktal mit 3 Rekursionsstufen](media/farn_simple.png)
+![Farn-Fraktal mit 3 Rekursionsstufen](media/farn_simple.png){#fig:fig_farn2}
 
 Wir führen dies der Einfachheit halber in einem *Applet* aus:
 
