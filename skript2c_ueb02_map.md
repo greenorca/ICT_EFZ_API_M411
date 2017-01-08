@@ -27,17 +27,11 @@ Wie können Sie die eingegebenen Telefonnummern persistent abspeichern, so dass 
 
 ###Zusatz-Aufgabe: `HashMap` für grössere Datenmengen verwenden 
 
-Wir verwenden nun die `HashMap` für die Flughafen-Liste (siehe
-airport-codes.txt). Sie können die Klasse `Airport` weiter verwenden. Erstellen Sie eine Klasse `AirportMap`, welche die Datei airport-codes.txt zeilenweise einliest in ein HashMap einliest. Der Airport – Code
-steht jeweils am Zeilenende in Klammern.
-
-Erweitern Sie die Klasse, so dass nach einem Flughafen-Code gesucht
-werden kann. (entweder via Konsole oder GUI)
-
+Wir erweitern die Klasse `AirportManagement` um eine Funktion, die für jedes Land die Anzahl der Flughäfen ausgibt. Legen Sie dazu innerhalb der neuen Klassenmethode eine `HashMap<String, Integer>` an und füllen Sie diese in einem Schleifendurchlauf über die Airport-Liste mit den verschiedenen Ländern. Ist ein Land schon in der HashMap enthalten, inkrementieren Sie den Integer-Wert. Zum Schluss geben Sie die Länder und Anzahl der Flughäfen auf der Konsole aus.
 
 **Lösungsvorschlag:**
 
-`Skript2c_AirportMap.java`
+`AirportView.java`, `Airport.java`
 
 <!--
 ###Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)

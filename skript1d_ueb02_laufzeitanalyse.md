@@ -18,7 +18,7 @@ public int[][] calcCrossProduct(int[] vector){
 	int[][] result = new int[vector.length][vector.length];
 	for (int i=0; i < vector.length;i++)
 		for (int j = 0; j<vector.length;j++)
-			result[i][j]=vector[i]*vector[j];
+			result[i][j]=vector[i] \cdot vector[j];
 	
 	return result;
 }

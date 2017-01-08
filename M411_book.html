@@ -1014,7 +1014,7 @@ for (int i = 0; i &gt; N; i++){
 int[][] result = new int[vector.length][vector.length];
 for (int i=0; i &lt; vector.length;i++)
 	for (int j = 0; j&lt;vector.length;j++)
-		result[i][j]=vector[i]*vector[j];
+		result[i][j]=vector[i] \cdot vector[j];
 
 return result;
 }</code></pre></li>
@@ -1720,10 +1720,9 @@ phoneBook.put(&quot;Prince Harry&quot;, &quot;(0044)79854 4512&quot;);</code></p
 </section>
 <section id="zusatz-aufgabe-hashmap-für-grössere-datenmengen-verwenden" class="level3">
 <h3><span class="header-section-number">9.10.2</span> Zusatz-Aufgabe: <code>HashMap</code> für grössere Datenmengen verwenden</h3>
-<p>Wir verwenden nun die <code>HashMap</code> für die Flughafen-Liste (siehe airport-codes.txt). Sie können die Klasse <code>Airport</code> weiter verwenden. Erstellen Sie eine Klasse <code>AirportMap</code>, welche die Datei airport-codes.txt zeilenweise einliest in ein HashMap einliest. Der Airport – Code steht jeweils am Zeilenende in Klammern.</p>
-<p>Erweitern Sie die Klasse, so dass nach einem Flughafen-Code gesucht werden kann. (entweder via Konsole oder GUI)</p>
+<p>Wir erweitern die Klasse <code>AirportManagement</code> um eine Funktion, die für jedes Land die Anzahl der Flughäfen ausgibt. Legen Sie dazu innerhalb der neuen Klassenmethode eine <code>HashMap&lt;String, Integer&gt;</code> an und füllen Sie diese in einem Schleifendurchlauf über die Airport-Liste mit den verschiedenen Ländern. Ist ein Land schon in der HashMap enthalten, inkrementieren Sie den Integer-Wert. Zum Schluss geben Sie die Länder und Anzahl der Flughäfen auf der Konsole aus.</p>
 <p><strong>Lösungsvorschlag:</strong></p>
-<p><code>Skript2c_AirportMap.java</code></p>
+<p><code>AirportView.java</code>, <code>Airport.java</code></p>
 <!--
 ###Zusatz-Aufgabe: Tech-Support System implementieren (TODO Rework)
 

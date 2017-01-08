@@ -27,6 +27,7 @@
 <li><a href="#übung-anwenden-map-datenstruktur">Übung: Anwenden <code>map</code>-Datenstruktur</a></li>
 <li><a href="#übung-google-web-service-mit-json-verwenden">Übung: Google Web-Service mit JSON verwenden</a></li>
 <li><a href="#übung-rekursive-algorithmen-erstellen-und-anwenden">Übung: Rekursive Algorithmen erstellen und anwenden</a></li>
+<li><a href="#übung-fraktales-farn-erstellen">Übung: Fraktales Farn erstellen</a></li>
 <li><a href="#übung-mandelbrot---funktion-erstellen">Übung: Mandelbrot - Funktion erstellen</a></li>
 </ul>
 </nav>
@@ -35,7 +36,7 @@
 <p><strong>Lernziele:</strong></p>
 <ul>
 <li>beherrschen den Umgang mit einer Entwicklungsumgebung</li>
-<li>einlesen und verarbeiten Benutzereingaben</li>
+<li>einlesen und verarbeiten Benutzer-Eingaben</li>
 </ul>
 <p><strong>Zeit:</strong> 45 Minuten</p>
 <p>Erstellen Sie in Ihrer Entwicklungsumgebung ein neues Java-Projekt mit dem Namen <code>M411</code>. In diesem Projekt erstellen Sie alle folgenden Klassen.</p>
@@ -52,7 +53,7 @@
 <h2>Übung: Numerische Ein-/Ausgaben</h2>
 <p><strong>Lernziele:</strong></p>
 <ul>
-<li>einlesen und verarbeiten Benutzereingaben</li>
+<li>einlesen und verarbeiten Benutzer-Eingaben</li>
 <li>einlesen Zahlenformate</li>
 <li>Arbeiten mit <code>Java-Calendar</code> Klassen.</li>
 </ul>
@@ -61,7 +62,7 @@
 <li><p>Suchen Sie im Internet oder in der Java-Hilfe Informationen zur <code>Calendar</code>-Klasse. Geben Sie zunächst das aktuelle Datum zeilenweise aus: zuerst das Jahr, dann den Monat und schliesslich den Tag und Wochentag. Vermeiden Sie die Benutzung von <code>depreciated</code>-Funktionen.</p></li>
 <li><p>Erstellen Sie eine Klasse <code>AgeCalculator</code> mit der Methode <code>public void tellAge()</code>. Diese Methode soll den Benutzer nach seinem Namen und seinem Jahrgang und Geburtsmonat fragen. Wenn der Geburtsmonat dem aktuellen Monat entspricht, soll zusätzlich nach dem Geburtstag gefragt werden. Im Anschluss wird die folgende Meldung ausgeben:</p>
 <p><code>Hallo Peter, du wirst in diesem Jahr 34 Jahre alt.</code></p>
-<p>Dabei soll der Name und das Alter den Benutzereingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Datum aus der <code>Calendar</code>-Klasse.</p></li>
+<p>Dabei soll der Name und das Alter den Benutzer-Eingaben entsprechen. Verwenden Sie für die Berechnung des Alters das aktuelle Datum aus der <code>Calendar</code>-Klasse.</p></li>
 </ul>
 <p>Erstellen Sie zunächst ein Struktogramm für die Funktion <code>tellAge()</code>. Dann implementieren und testen Sie Ihre Funktion.</p>
 <p><lsg> <strong>Lösungsvorschlag</strong></p>
@@ -82,10 +83,10 @@
 <p>Speichern Sie obigen Text als Datei im Projektordner mit dem Namen <code>daten.csv</code> ab.</p>
 <ol type="1">
 <li><p>Erstellen Sie eine neue Java-Klasse <code>Skript1_SimpleCsvReader</code> im Projekt <code>M411</code>, welches diese Datei liest und Zeile für Zeile wieder auf der Konsole ausgibt. Geben Sie zusätzlich das Alter der Personen jeweils am Ende der Zeile aus.</p>
-<p><strong>Lösunsvorschlag:</strong></p>
+<p><strong>Lösungsvorschlag:</strong></p>
 <p><code>Skript1_SimpleCsvReader.java</code></p></li>
-<li><p>Kopieren Sie die Klasse und nennen Sie die Kopie <code>Skript1_SearchCsvReader</code>. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die <code>daten.csv</code> eingelsenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator <code>==</code> <strong>nicht</strong> verwendet werden kann. Stattdessen verwenden Sie die Methode <code>equals</code> der Klasse <code>String</code>.</p>
-<p><strong>Lösunsvorschlag:</strong></p>
+<li><p>Kopieren Sie die Klasse und nennen Sie die Kopie <code>Skript1_SearchCsvReader</code>. Erweitern Sie die Klasse so, dass zuerst der Benutzer einem Vornamen eingibt. Dann wird die <code>daten.csv</code> eingelesenen und von allen Personen mit diesem Vornamen der ganze Namen und das Alter auf der Konsole ausgegeben. Beachten Sie dabei, dass zum Vergleich von zwei String-Variablen der Operator <code>==</code> <strong>nicht</strong> verwendet werden kann. Stattdessen verwenden Sie die Methode <code>equals</code> der Klasse <code>String</code>.</p>
+<p><strong>Lösungsvorschlag:</strong></p>
 <p><code>Skript1_SearchCsvReader.java</code></p></li>
 </ol>
 </section>
@@ -97,7 +98,7 @@
 </ul>
 <p><strong>Zeit:</strong> 25 Minuten</p>
 <p><strong>Aufgabe</strong></p>
-<p>Erstellen Sie eine Klasse <code>Skript1_MyWriter</code>. In der <code>main</code>-Funktion wird <strong>eine</strong> beliebige Benutzereingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei als neue Zeile einfügt werden.</p>
+<p>Erstellen Sie eine Klasse <code>Skript1_MyWriter</code>. In der <code>main</code>-Funktion wird <strong>eine</strong> beliebige Benutzer-Eingabe von der Konsole eingelesen. Dieser soll jeweils am Anfang einer Textdatei als neue Zeile einfügt werden.</p>
 <p><strong>Lösungsvorschlag:</strong></p>
 <p><code>Skript1_MyWriter.java</code> ## Übung: Elementare Array - Funktionalität</p>
 <p><strong>Lernziel:</strong></p>
@@ -116,12 +117,15 @@
 <section id="arrays-addieren" class="level3">
 <h3>Arrays addieren</h3>
 <p>In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder <code>a</code> und <code>b</code> in das Ergebnisfeld <code>c</code> wird elementweise das erste Element von <code>a</code> mit dem ersten Element von <code>b</code> addiert und im ersten Element von <code>c</code> gespeichert.</p>
+<figure>
+<img src="media/array_addition.png" alt="Array addieren" /><figcaption>Array addieren</figcaption>
+</figure>
 <p>Dies funktioniert nur, wenn die Arrays die gleiche Länge haben. Erstellen Sie eine statische Funktion <code>addArray</code>. <code>addArray</code> erhält zwei <code>int</code>-Arrays als Parameter und gibt einen <code>int</code>-Array als Summe der Eingabe-Arrays zurück. Vor der Addition soll die Funktion prüfen, ob die Eingabefelder gleich lang sind.</p>
 </section>
 <section id="elemente-nachrutschen" class="level3">
 <h3>Elemente nachrutschen</h3>
 <p>Erstellen Sie ein Funktion <code>prepend</code> mit einen Array und einen <code>int</code>-Wert in der Parameterliste. In der Funktion soll jeweils das neue Element an der ersten Stelle im Array eingefügt werden und die bereits vorhandenen Elemente hinten angefügt werden. Nach jeder Einfüge-Operation sollen alle Elemente des Arrays zurückgegeben werden.</p>
-<pre><code>**Lösunsvorschlag:**
+<pre><code>**Lösungsvorschlag:**
 
 `Skript1c_ArrayOps.java`</code></pre>
 </section>
@@ -300,7 +304,7 @@ return index;
 <p>Der Bubble-Sort ist für numerische wie auch alphanumerische Sortieraufgaben geeignet. Dies darum, weil sich die Problematik in den beiden Fällen nicht unterscheidet:</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mo>&gt;</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">5 &gt; 2</annotation></semantics></math> vs. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>′</mi><mi>D</mi><mi>′</mi><mo>&gt;</mo><mi>′</mi><mi>B</mi><mi>′</mi></mrow><annotation encoding="application/x-tex">&#39;D&#39; &gt; &#39;B&#39;</annotation></semantics></math></p>
 <p>Vergleichen Sie dazu die ASCII-Tabelle <a href="https://de.wikipedia.org/wiki/American_Standard_Code_for_Information_Interchange#ASCII-Tabelle">siehe Wikipedia</a>.</p>
-<p>Sollen nun ganze Worte alphabetisch geordnet werden, müssen ggf. weitere aufeinanderfolgende Buchstaben miteinander verglichen werden. Z.B. liegt &quot;Muheim&quot; vor &quot;Mutzer&quot;.</p>
+<p>Sollen nun ganze Worte alphabetisch geordnet werden, müssen ggf. weitere aufeinander folgende Buchstaben miteinander verglichen werden. Z.B. liegt &quot;Muheim&quot; vor &quot;Mutzer&quot;.</p>
 <section id="strings-sortieren" class="level3">
 <h3>Strings sortieren</h3>
 <p>Erstellen Sie eine Klasse <code>Skript1c_StringBSort</code>. Darin lesen Sie ein File mit 10 Strings ein und sortieren Sie diese in alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Konsole aus.</p>
@@ -333,7 +337,7 @@ return index;
 </section>
 <section id="optional-insert-sort" class="level3">
 <h3>Optional: Insert-Sort</h3>
-<p>Ein weiterer Sortierungs-Algorithmus ist der Insert-Sort. Untersuchen Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?</p>
+<p>Ein weiterer Sortier-Algorithmus ist der Insert-Sort. Untersuchen Sie das Prinzip des Insert-Sort. Was ist der Unterschied zum Quick-Sort?</p>
 <p>Implementieren Sie den Insert-Sort und zeigen Sie die Unterschiede zum Quick-Sort.</p>
 <hr>
 <p>Vergleichen Sie diese Sort-Algorithmen mit dem Bubble-Sort, indem Sie auch die Dauer messen.</p>
@@ -401,7 +405,7 @@ return index;
 </section>
 <section id="stack-klasse-erstellen" class="level3">
 <h3>Stack Klasse erstellen</h3>
-<p>Implementieren Sie Ihre <code>Stack</code> Klasse mit den <code>push</code> und <code>pop</code> Methoden. Bei <code>push</code> wird ein Element zuoberst hinzugefügt. Bei <code>pop</code> wird das aktuelle Element entfernt. Sie könen den Code Ihrer <code>Node</code>- Klasse der Verketten Liste für die interne Datenstruktur übernehmen.</p>
+<p>Implementieren Sie Ihre <code>Stack</code> Klasse mit den <code>push</code> und <code>pop</code> Methoden. Bei <code>push</code> wird ein Element zuoberst hinzugefügt. Bei <code>pop</code> wird das aktuelle Element entfernt. Sie können den Code Ihrer <code>Node</code>- Klasse der Verketten Liste für die interne Datenstruktur übernehmen.</p>
 <p>Testen Sie die Funktionalität mit einem geeigneten Testrahmen.</p>
 </section>
 <section id="isempty-methode-implementieren" class="level3">
@@ -410,7 +414,7 @@ return index;
 </section>
 <section id="stack-ergänzen" class="level3">
 <h3>Stack ergänzen</h3>
-<p>Ergänzen Sie <code>Stack</code> um eine Methode <code>peek()</code>, welche das zuletzt auf dem Stapel gelegte Element zurückliefert ohne es zu entfernen.</p>
+<p>Ergänzen Sie <code>Stack</code> um eine Methode <code>peek()</code>, welche das zuletzt auf dem Stapel gelegte Element zurück liefert ohne es zu entfernen.</p>
 </section>
 <section id="palindrome-prüfen-25-minuten" class="level3">
 <h3>Palindrome prüfen (25 Minuten)</h3>
@@ -441,7 +445,7 @@ return index;
 <section id="methode-next-implementieren" class="level3">
 <h3>Methode <code>next()</code> implementieren</h3>
 <p>Sie implementieren die Schnittstellen <code>Iterable&lt;Object&gt;</code> und <code>Iterator&lt;Object&gt;</code> in Ihrer Stack-Klasse.</p>
-<p>Wie muss die Methode <code>next()</code> aussehen, damit wir jeweils das nächste Element (und dessen Inhalt) bekommen? Ergänzen Sie den untenstehenden Code in Ihrem Programm:</p>
+<p>Wie muss die Methode <code>next()</code> aussehen, damit wir jeweils das nächste Element (und dessen Inhalt) bekommen? Ergänzen Sie den unten stehenden Code in Ihrem Programm:</p>
 <pre><code>@Override
 public Object next() {
 
@@ -457,8 +461,7 @@ public Object next() {
 ### Array umgekehrt ausgeben mit Verwendung von `Iterator`
 
 Schreiben Sie eine neue Stack-Klasse. Im Konstruktor wird ein `int`-Array entgegen genommen und dessen Elemente in den Stack eingelesen. Eine weitere Klassenmethode soll die Stack-Elemente in umgekehrter Reihenfolge ausgeben. Implementieren Sie dabei
-das Interface `Iterator` und passen Sie dievom Interface verlangten
-Methoden an, also:
+das Interface `Iterator` und passen Sie die vom Interface verlangten Methoden an, also:
 
 `public boolean hasNext()`
 
@@ -495,7 +498,7 @@ Methoden an, also:
 <h3>Flughafen-Liste implementieren</h3>
 <p>Sie nutzen eine <code>ArrayList</code> zur Verwaltung von Flughäfen samst dreistelligen Flughafencode, Land und Stadtnamen (siehe airport_codes.txt). Der Airport-Code steht jeweils am Zeilenende in Klammern.</p>
 <ol type="1">
-<li><p>Schreiben Sie zunächste eine Klasse, <code>Airport</code>, welche die notwendigen Attribute <code>airport</code>, <code>country</code> und <code>city</code> enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.</p></li>
+<li><p>Schreiben Sie zunächst eine Klasse, <code>Airport</code>, welche die notwendigen Attribute <code>airport</code>, <code>country</code> und <code>city</code> enthält. Die drei Attribute sollen im Konstruktor der Klasse übergeben werden.</p></li>
 <li><p>Erstellen Sie eine Klasse <code>AirportManagement</code>. Diese enthält ein Attribut <code>airportList</code> vom Datentyp <code>ArrayList&lt;Airport&gt;</code>.</p></li>
 <li><p>Studieren Sie den Aufbau der <code>airport_codes.txt</code>. Schreiben Sie eine Funktion <code>readAirports(String fileName)</code>. Die Funktion soll die in <code>filename</code> angegebene Datei öffnen und die entsprechenden <code>Airport</code>-Objekte in der <code>airportList</code>einfügen. Dazu müssen Sie bestimmte Sonderfälle unterscheiden und gerne auch fehlerhafte Zeilen für die Fehlersuche anzeigen. Erstellen Sie in der <code>main()</code>-Funktion der <code>AirportManagement</code>-Klasse einen geeigneten Testrahmen und prüfen Sie die korrekte Arbeitsweise Ihrer Funktion.</p></li>
 <li><p>Erstellen Sie eine Klassenfunktion <code>sortByCode()</code>. Diese Funktion soll intern die <code>airportList</code> nach dem dreistelligen Code sortieren. Nutzen Sie dazu die <code>sort</code>-Methode aus dem <code>java.util</code>-Package. Prüfen Sie die korrekte Arbeitsweise, indem Sie sich die ersten 10 Flughäfen vor und nach dem Sortieren ausgeben lassen.</p></li>
@@ -563,7 +566,7 @@ und entsprechenden Antworten (*value*).
 <h3>Google Maps nutzen</h3>
 <p>Wir wollen anhand einer Adresse die exakte Längen- und Breitengrad-Angaben mittels der Google-Map – API suchen. Geben Sie dazu zunächst folgende URL im Browser ein und interpretieren Sie die Antwort des Servers:</p>
 <p><a href="http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich" class="uri">http://maps.googleapis.com/maps/api/geocode/json?address=Hohlstrasse+535,Zuerich</a></p>
-<p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Webservice Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
+<p>Sie sehen eine Liste von Adresskomponenten. Erstellen Sie einen Java-Web-Service Client und parsen Sie die JSON Serverantwort mittels <em>JSONArray</em> und <em>JSONObject</em>.</p>
 <p>Eine Beispiel-Implementierung finden Sie weiter unten. Setzen Sie das Beispiel selbst um und erweitern Sie es nach Belieben in ein sinnvolles objektorientiertes Programm.</p>
 <pre><code>public static void main(String[] args){
     String url = &quot;http://maps.googleapis.com/maps/api/geocode/json?address=&quot; 
@@ -611,7 +614,7 @@ und entsprechenden Antworten (*value*).
 <p><strong>Zeit:</strong> 30 + 25 + 60 Minuten</p>
 <section id="rekursives-durchgehen-aller-files-oder-elemente" class="level3">
 <h3>Rekursives Durchgehen aller Files oder Elemente</h3>
-<p>Erstellen Sie eine Klasse, welche mittels der <code>java.io.File</code> Klasse alle Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht. Implementieren Sie eine Benutzer­schnittstelle, damit der Benutzer nach einer bestimmten Datei suchen kann.</p>
+<p>Erstellen Sie eine Klasse, welche mittels der <code>java.io.File</code> Klasse alle Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht. Implementieren Sie eine Benutzer-Schnittstelle, damit der Benutzer nach einer bestimmten Datei suchen kann.</p>
 <p><strong>Alternative</strong>: Sie können dasselbe Prinzip auch auf eine XML-Struktur anwenden (mit DOM) und diese dabei nach einem bestimmten Element durchsuchen.</p>
 <p><strong>Lösungsvorschlag (erweitert):</strong></p>
 <p><code>Skript4a_RekursiveDirectoryLister.java</code></p>
@@ -635,7 +638,7 @@ else {
     else if (guess &lt; number) //number is higher: change lowerborder
         lowerborder = guess+1;
 }</code></pre>
-<p>Verwenden Sie die Rekursion, um das wiederholte Suchen nach der Zahl durch­zuführen. Geben Sie aus, wie viele Schritte die Suche benötigt.</p>
+<p>Verwenden Sie die Rekursion, um das wiederholte Suchen nach der Zahl durch ­zuführen. Geben Sie aus, wie viele Schritte die Suche benötigt.</p>
 <p><strong>Lösungsvorschlag:</strong></p>
 <p><code>Skript4_RecursiveBinarySearch.java</code></p>
 </section>
@@ -670,6 +673,129 @@ Schritt 3: bewege Platte a nach Turm 3</code></pre>
 </ol>
 <p><strong>Lösungsvorschlag:</strong></p>
 <p><code>Skript4_Hanoi.java</code></p>
+</section>
+</section>
+<section id="übung-fraktales-farn-erstellen" class="level2">
+<h2>Übung: Fraktales Farn erstellen</h2>
+<p><strong>Lernziele</strong></p>
+<ul>
+<li>arbeiten sich in fremden Java-Code ein</li>
+<li>nutzen und verändern komplexe rekursive Funktionen</li>
+</ul>
+<p><strong>Zeit:</strong> 60 Minuten</p>
+<section id="fraktale" class="level3">
+<h3>Fraktale</h3>
+<p>Geometrische Fraktale sind - vereinfacht gesagt - Grafiken, die durch wiederholte Anwendung des gleichen Bildungsvorschrift (bzw. -algorithmus) entstehen. Bekannte Vertreter geometrischer Fraktale sind:</p>
+<ul>
+<li>Koch-Kurve</li>
+<li>Farn</li>
+<li>Schneeflocke</li>
+<li>Mandelbrot (basieren auf komplexen Zahlen)</li>
+</ul>
+<p>Wenn Sie sich aufmerksam in der Natur umschauen, werden Sie viele Beispiele fraktaler Muster erkennen. Betrachten Sie eine Schneeflocke unter der Lupe, oder Romanesco (vor dem Kochen), oder ganz gewöhnliche Bäume. In diese Übung lernen Sie einen Farn zu zeichnen, wie im Bild dargestellt.</p>
+<figure>
+<img src="media/farn.png" alt="Fraktales Farn" /><figcaption>Fraktales Farn</figcaption>
+</figure>
+<p>Zunächst benötigen wir eine sogenannte <code>Turtle</code>-Klasse, welche einfach <em>nur</em> aufeinanderfolgende Striche mit bestimmten Winkel und Länge auf der Oberfläche zeichnet:</p>
+<pre><code>/**
+ * 
+ * @author http://alfred-nussbaumer.at/ikt/informatik/wpf/JAVA/javahtml/node192.html
+ * Die Instanzvariablen a und b legen die Startposition bzw. die aktuelle Position der Turtle. 
+ * Die Klasse Container stellt ein Objekt zur Verfügung, das andere Objekte enthalten kann; hier ist das die Zeichenfläche g. 
+ * In der Methode fd(strecke) wird zunächst der aktuelle Winkel der Turtle ins Bogenmaß umgerechnet. 
+ * Aus der Strecke und dem Winkel wird mit Hilfe der Winkelfunktionen der Zuwachs für dx und dy berechnet 
+ * und dann die Linie von (x,y) nach (x+dx,y+dy) gezeichnet. Die neue Position wird anschließend wieder in x und y gespeichert. 
+ * In der Methode rt(winkel) wird der negative Drehwinkel einfach zum aktuellen Winkel addiert 
+ * (das Vorzeichen des Drehwinkels ergibt sich aus der Orientierung der y-Achse von oben nach unten).
+ */
+class Turtle {
+  double x;
+  double y;
+  double alpha;
+  Container c;
+  Graphics g;
+
+  /**
+   * ctor
+   * @param ct graphics container instance (das 2D Obejkt, in dem &quot;gemalt&quot;wird)
+   * @param x   Startpunkt Abstand von links
+   * @param y Startpunkt Abstand von oben
+   */
+  Turtle(Container ct, double x, double y) {
+      c = ct;
+      g = c.getGraphics();
+      g.setColor(Color.green);
+      this.x = x;
+      this.y = y;
+      alpha = -70;  //Startwinkel
+  }
+
+  public void forward (double strecke) {
+      double aa = alpha * Math.PI / 180;
+      double dx = strecke * Math.cos(aa);
+      double dy = strecke * Math.sin(aa);
+      g.drawLine((int)x, (int) y, (int) (x+dx), (int) (y+dy));
+      x+=dx;
+      y+=dy;
+  }
+
+  public void rightTurn(double winkel) {
+      alpha = alpha - winkel;
+  }
+}</code></pre>
+<p>Das eigentliche Berechnen des Fraktals ist nicht wirklich schwer. Betrachten Sie die folgende Abbildung gemeinsam mit dem Quellcode der Funktion <code>farnwedel</code>.</p>
+<figure>
+<img src="media/farn_simple.png" alt="Farn-Fraktal mit 3 Rekursionsstufen" /><figcaption>Farn-Fraktal mit 3 Rekursionsstufen</figcaption>
+</figure>
+<p>Wir führen dies der Einfachheit halber in einem <em>Applet</em> aus:</p>
+<pre><code>/**
+ * 
+ * @author http://alfred-nussbaumer.at/ikt/informatik/wpf/JAVA/javahtml/node197.html
+ *
+ */
+public class Farn extends Applet {
+
+    public void paint (Graphics g) {
+        this.setBackground(Color.white);
+        Turtle t = new Turtle(this,100,450);
+        farnwedel(t,100);
+    }
+
+    /**
+     * rekursive Funktion zum Erstellen des Farn-Fraktals
+     * @param t Turtle (Zeichner)
+     * @param strecke 
+     */
+    public void farnwedel(Turtle t, double strecke) {
+        if (strecke&gt;1) {
+            t.forward(strecke);
+            t.rightTurn(-60);
+            farnwedel(t,strecke/2);
+            t.rightTurn(50);
+            farnwedel(t,4*strecke/5);
+            t.rightTurn(50);
+            farnwedel(t,strecke/2);
+            t.rightTurn(-40);
+            t.forward(-strecke);
+        }
+    }
+}</code></pre>
+<p>Analysieren Sie die Wirkungsweise der Funktion <code>farnwedel</code> und beantworten Sie die folgenden Fragen:</p>
+<ol type="1">
+<li><p>Was ist die Abbruchbedingung für die rekursive Aufrufe?</p>
+<p>____________________________________</p>
+<p>____________________________________</p>
+<p>____________________________________</p></li>
+<li><p>Wie oft ruft sich <code>farnwedel</code> in jedem Durchlauf selbst auf?</p>
+<p>____________________________________</p>
+<p>____________________________________</p>
+<p>____________________________________</p></li>
+<li><p>Erstellen Sie aus obigen Code Ihr eigenes Farn-Programm.</p></li>
+<li><p>Ändern Sie die Parameter des äusseren <code>farnwedel</code>-Aufrufs, so dass das Fraktal grösser dargestellt wird.</p></li>
+<li><p>Kommentieren Sie die letzten beiden Zeilen im der Funktion <code>farnwedel</code>-Aufrufe aus. Starten Sie das Applet und erklären Sie die signifikant andere Darstellung.</p></li>
+</ol>
+<p><strong>Lösungsvorschlag:</strong></p>
+<p><code>Skript4_Farn.java</code></p>
 </section>
 </section>
 <section id="übung-mandelbrot---funktion-erstellen" class="level2">
