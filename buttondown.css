@@ -39,8 +39,33 @@
    Only appears if one of those three are in the document.
 */
 body {
-	max-width: 900px;
+
 }
+
+header{
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#TOC{
+	width: 30%;
+	position: absolute;
+	top: 150px;
+	bottom: 5px;
+	overflow-y: scroll;	
+}
+
+
+article{
+	width: 65%;
+	display: inline-block;
+	position: absolute;
+	left: 33%;
+	top: 150px;
+	bottom: 5px;
+	overflow-y: scroll;
+}
+
 img{
 	max-width: 450px;
 	margin: 5px auto;
@@ -85,6 +110,10 @@ section.level1{
 	 page-break-after: always;
 }
 
+section.level1 h1{
+	font-size: 1.8em;
+}
+
 #TOC ul, #TOC ul ul{
 	list-style: none;
 }
@@ -123,12 +152,19 @@ div#header, header
     /* Put border on bottom. Separates it from TOC or body that comes after it. */
     border-bottom: 1px solid #aaa;
     margin-bottom: 0.5em;
+    background-image: url(media/wiss.png);
+		background-position: top right;
+		background-repeat: no-repeat;
+		background-size: 120px 75px;
     }
 
-.title, .subtitle /* Pandoc title header (h1.title) */
-    {
+.title, .subtitle /* Pandoc title header (h1.title) */{
     text-align: center;
-    }
+}
+
+.subtitle{
+	font-style: italic;
+}
 
 .author, .date /* Pandoc author(s) and date headers (h2.author and h3.date) */
     {
@@ -561,4 +597,17 @@ div.footnotes li[id^="fn"] /* A footnote item within that div */
         {
         display:none;
         }
+        
+    #TOC{
+			width:100%;
+			float: none;  
+			display:block;  
+			position: inherit;
+    }
+    article{
+			width:100%;
+			float: none;  
+			display:block;  
+			position: inherit;			    
+    }
     }

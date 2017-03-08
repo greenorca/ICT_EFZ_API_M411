@@ -43,28 +43,23 @@ pandoc_title_block
 ---
 subtitle: Datenstrukturen und Algorithmen
 title: Modul 411
-author:
-- Julian Kaeser
-- Sven Schirmer
-- <img src="media/farn.png"/>
 ---
 
+<article>
 
-Willkommen (zurück) bei in Java
-========================================
+# Willkommen (zurück) bei in Java
 
 In der Informatiker-Welt läuft nichts ohne Datenstrukturen und Algorithmen. Eine einfache Bitmap-Datei beispielsweise besteht aus einer (meist) dreidimensionalen Tabelle bzw. Feld. Unkomprimierte Audio-Dateien enthalten ebenfalls Felder. In diesem Modul lernen Sie verschiedene komplexe Datenstrukturen und deren grundlegende Eigenschaften kennen. Mit diesem Wissen können Sie wichtige Entscheidungen für Ihre eigenen Software-Projekte treffen.
 
-In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Vorausgesetzt werden gute Kenntnisse aus den Modulen 403 (Prozedurale Programmierung) und 226A+B (Objektorientierte Programmierung). Sie können frei wählen, mit welcher Entwicklungsumgebung Sie arbeiten. Bevorzugte Umgebungen sind Netbeans und Eclipse.
+In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Vorausgesetzt werden gute Kenntnisse aus den Modulen 403 (Prozedurale Programmierung) und 226A+B (Objektorientierte Programmierung). Sie können frei wählen, mit welcher Entwicklungsumgebung Sie arbeiten. Zur Abschlussprüfung werden Sie jedoch Eclipse einsetzen.
 
-Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortier-Algorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortier-Algorithmen selbst zu implementieren und
-deren Rechenzeit abzuschätzen.
+Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortier-Algorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortier-Algorithmen selbst zu implementieren und deren Rechenzeit abzuschätzen.
 
 Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
 
 Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie kommunizieren mit Web-Services und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
-Wichtige Hinweise 
+Wichtige Hinweise für Lernende
 ------------------
 
 Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zu hause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
@@ -136,26 +131,36 @@ Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
 +---------------------+------------------------------------------------------+
 |**Lektion 1 -4**     |- einfache Klassen; main Methode                      |
-|                     |- Eingabe-/Ausgabe für Konsole und Dateien						 |
+|                     |- Eingabe-/Ausgabe für Konsole und Dateien		         |
 +---------------------+------------------------------------------------------+                
 |**Lektion 5 – 10**   |- Arrays                                              |
 |                     |- Sortier-Algorithmen                                 |
 |                     |- Laufzeitkomplexität                                 |
 +---------------------+------------------------------------------------------+
 |**Lektion 11 – 16**  | - Verkettete Liste                                   |
+|                     | - Iteratoren, Template-Klassen                       |
 +---------------------+------------------------------------------------------+
 |**Lektion 17 – 20**  | - Stack, Queue                                       |
-|                     | - Java Collections                                   |
-|                     | - Iteratoren                                         |
+|                     | - Java Collections und HashMaps                      |
+|                     | - HashMaps                                           |
 +---------------------+------------------------------------------------------+
-|**Lektion 21 – 24**  | - Miniprojekt (LB2)                                  |
+|**Lektion 21 – 24**  | - Miniprojekt                                        |
 +---------------------+------------------------------------------------------+
-|**Lektion 25 – 32**  | - HashMap                                            |
-|                     | - JSON mit Web-Services, optional XML                 |
+|**Lektion 25 – 32**  | - Rekursion (Übung SnippetSearch)                    |
+|                     |                                                      |
 +---------------------+------------------------------------------------------+
-|**Lektion 33 – 36**  | - Rekursion                                          |
-|                     | - optional Backtracking                              |
+|**Lektion 33 – 36**  | - JSON mit Web-Services                              |
+|                     | - optional XML                                       |
 +---------------------+------------------------------------------------------+
+|**Lektion 37 – 40**  | - LB                                                 |
+|                     | - Review Modul                                       |
++---------------------+------------------------------------------------------+
+
+## Hinweis für Verbesserungen
+
+Für Hinweise und Verbesserungsvorschläge besuchen Sie bitte das entsprechende Github-Projekt unter [https://github.com/greenorca/ICT_EFZ_API_M411](https://github.com/greenorca/ICT_EFZ_API_M411).
+
+Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt. 
 
 
 Klassen erstellen
@@ -478,4 +483,4 @@ skript3_weitereDatenstrukturen.docx.md
 skript4_rekursionUndBacktracking.docx.md
 ```
 [Zurück zum Inhaltsverzeichnis](#TOC)
--->
+</article>

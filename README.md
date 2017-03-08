@@ -28,3 +28,11 @@ pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filt
 ~~~~~~~~~~~~~~~
 pandoc -s skript1ab_ersteSchritte.docx.md -o M411_BOOK.pdf --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml
 ~~~~~~~~~~~~~~~~~~~
+
+** MD -> DOCX **
+
+```
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.docx --toc --toc-depth 3 --filter pandoc-include -c buttondown.css -N --section -s --mathml
+
+for f in *.md; do pandoc -s $f -o docx/$f.docx  -s --mathml; done
+```

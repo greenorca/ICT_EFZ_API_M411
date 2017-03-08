@@ -6,20 +6,40 @@
 
 **Zeit:** 30 + 25 + 60 Minuten
 
-###Rekursives Durchgehen aller Files oder Elemente
+###Rekursive Java Snippet-Suche
 
-Erstellen Sie eine Klasse, welche mittels der `java.io.File` Klasse alle
+1. Erstellen Sie eine Klasse, welche mittels der `java.io.File` Klasse alle
 Verzeichnisse auflistet und dabei rekursiv jedes Verzeichnis durchgeht.
 Implementieren Sie eine Benutzer-Schnittstelle, damit der Benutzer nach
 einer bestimmten Datei suchen kann.
 
-**Alternative**: Sie können dasselbe Prinzip auch auf eine XML-Struktur
-anwenden (mit DOM) und diese dabei nach einem bestimmten Element
-durchsuchen.
+2. Je länger Sie mit Java und Eclipse programmieren, desto mehr Projekte sammeln sich in Ihrem *workspace* an. Damit Sie bestimmte Code-Abschnitte (Snippets) schneller finden, erstellen Sie sich eine Klasse *RecursiveDirectoryListener*, die Ihnen die Suche in Ihren *workspace* erleichtert. Innerhalb der Klasse erstellen Sie eine Methode mit folgendem Kopf:
+
+~~~~~~~~~~~~~~~~~~~~~~~
+	/**
+	 * recursive function to traverse directory 
+	 * and search containing *.java files for given pattern (e.g. "BufferedReader"),
+	 * search is not case sensitive 
+	 * @param pattern search string
+	 * @param directory base directory
+	 * @return a LinkedList containing all files that matched the given pattern
+	 */
+	public LinkedList<File> findCodeForPattern(String pattern, File directory)
+~~~~~~~~~~~~~~~~~~~~~~~
+
+**Erweiterung**:  Erstellen Sie eine kleine Swing-GUI, um die Aufgabe abzurunden. Ihren *RecursiveDirectoryListener* können Sie selbstverständlich dazu weiter verwenden.
+
+![Beispiel-Anwendung für SnippetSuche](media/SwingSnippetSearch.png)
 
 **Lösungsvorschlag (erweitert):**
 
-`Skript4a_RekursiveDirectoryLister.java`
+`Skript4a_FileSearchView.java`
+
+`Skript4a_RecusriveFileSearch.java`
+
+**Alternative**: Sie können dasselbe Prinzip auch auf eine XML-Struktur
+anwenden (mit DOM) und diese dabei nach einem bestimmten Element
+durchsuchen.
 
 ###Binäre Suche
 
