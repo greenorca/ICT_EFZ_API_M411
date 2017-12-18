@@ -55,14 +55,13 @@ In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Voraus
 
 Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortier-Algorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortier-Algorithmen selbst zu implementieren und deren Rechenzeit abzuschätzen.
 
-Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
+Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen im Paket `java.utils` implementiert.
 
 Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie kommunizieren mit Web-Services und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
-Wichtige Hinweise für Lernende
-------------------
+## Wichtige Hinweise für Lernende
 
-Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zu hause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
 
 Die Aufgaben sind normalerweise für Konsolen-Anwendungen gestellt, weil diese schneller zu erstellen sind. Insbesondere die erstellten Klassen späterer Aufgaben können Sie leicht in eigene *SWING* oder *Java-FX* GUIs einbinden.  
 
@@ -75,7 +74,7 @@ Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beisp
 public class Genius{
 
 	/**
-	 * answers a question
+	 * answers a question.
 	 * @param question is the query
 	 * @return the answer to the question of Life, the Universe and everything
 	 */
@@ -86,21 +85,20 @@ public class Genius{
 ~~~~~~~~~~~~~~~~~~
 
 
-Handlungsziele nach ICT-Vorgaben (BiVo 2014)
--------------------------------------------
+## Handlungsziele nach ICT-Vorgaben (BiVo 2014)
 
 1. **Für ein gegebenes Problem eine geeignete Datenstruktur definieren und mit den Mitteln einer Programmiersprache, wie Structs, Referenzen / Zeiger und Arrays umsetzen.** 	
   + Kennt den Unterschied zwischen Wertevariablen und Referenzvariablen / Zeigervariablen.
   + Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.
   + Kennt Konzept und Nutzen von verketteten Datenstrukturen.
   + Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.
-<hr/>    	 
+		<hr/>
 2. **Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen.**
   + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
   + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
   + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
   + Kennt Notationen um Algorithmen darzustellen wie z.B. Struktogrammen, PAP usw.
-    	<hr/> 
+    	<hr/>
 3. **Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren.** 	
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
   + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
@@ -111,7 +109,7 @@ Handlungsziele nach ICT-Vorgaben (BiVo 2014)
   + Kennt den Aufbau von iterativen Algorithmen.
   + Kennt den Aufbau von rekursiven Algorithmen.
   + Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.
-    	<hr/> 
+    	<hr/>
 5. **Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können.** 	
   + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
   + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
@@ -129,32 +127,25 @@ Kursablauf
 
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
-+---------------------+------------------------------------------------------+
-|**Lektion 1 -4**     |- einfache Klassen; main Methode                      |
-|                     |- Eingabe-/Ausgabe für Konsole und Dateien		         |
-+---------------------+------------------------------------------------------+                
-|**Lektion 5 – 10**   |- Arrays                                              |
-|                     |- Sortier-Algorithmen                                 |
-|                     |- Laufzeitkomplexität                                 |
-+---------------------+------------------------------------------------------+
+| Block				  | Thema                                                |
+|:--------------------|:-----------------------------------------------------|
+|**Lektion 1 -4**     | - einfache Klassen; main Methode                     |
+|                     | - Eingabe-/Ausgabe für Konsole und Dateien           |
+|**Lektion 5 – 10**   | - Arrays                                             |
+|                     | - Sortier-Algorithmen                                |
+|                     | - Laufzeitkomplexität                                |
 |**Lektion 11 – 16**  | - Verkettete Liste                                   |
 |                     | - Iteratoren, Template-Klassen                       |
-+---------------------+------------------------------------------------------+
 |**Lektion 17 – 20**  | - Stack, Queue                                       |
 |                     | - Java Collections und HashMaps                      |
 |                     | - HashMaps                                           |
-+---------------------+------------------------------------------------------+
 |**Lektion 21 – 24**  | - Miniprojekt                                        |
-+---------------------+------------------------------------------------------+
 |**Lektion 25 – 32**  | - Rekursion (Übung SnippetSearch)                    |
-|                     |                                                      |
-+---------------------+------------------------------------------------------+
 |**Lektion 33 – 36**  | - JSON mit Web-Services                              |
 |                     | - optional XML                                       |
-+---------------------+------------------------------------------------------+
 |**Lektion 37 – 40**  | - LB                                                 |
 |                     | - Review Modul                                       |
-+---------------------+------------------------------------------------------+
+
 
 ## Hinweis für Verbesserungen
 
@@ -163,8 +154,7 @@ Für Hinweise und Verbesserungsvorschläge besuchen Sie bitte das entsprechende 
 Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt. 
 
 
-Klassen erstellen
-====================
+# Klassen erstellen
 
 ## Lernziele
 
@@ -176,7 +166,7 @@ Klassen erstellen
 
 Hier ist der Code einer kleinen Java-Klasse, welche zum Begrüssen verschiedener Personen verwendet werden kann:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
 public class WelcomeMessage{
 
 	public void sayHello(String name){
@@ -188,7 +178,7 @@ public class WelcomeMessage{
 		msg.sayHello("Mirjam");
 	}
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
 
 
 Ein Java-Programm wird immer so ausgeführt, dass die main-Methode einer bestimmten Klasse aufgerufen wird. Diese muss genau so deklariert sein, wie Sie der ersten Zeile sehen. In der main-Methode (ein neuer Name für Funktion) wird dann üblicherweise ein Objekt erzeugt, in unserem Beispiel in Zeile 7. Von diesem Objekt werden dann Methoden aufgerufen, z.B. Zeile 8 und 9.
@@ -198,41 +188,38 @@ skript1ab_ueb01_javaide.md
 ```
 
 
-Ein- und Ausgabe über die Konsole
-===================================
+# Ein- und Ausgabe über die Konsole
 
-Ausgabe
--------------
+## Ausgabe
 
 Im obigen kleinen Beispiel haben Sie schon gesehen, wie Text auf der
 Konsole ausgegeben werden kann, nämlich mit der Methode
 `System.out.println`. Vielleicht ist Ihnen auch aufgefallen, wie Texte
-einfach mit + zusammengesetzt werden. Das Gleiche gilt auch für
+einfach mit `+` zusammengesetzt werden. Das Gleiche gilt auch für
 Zahlenwerte, wie das folgende Beispiel zeigt:
 
-~~~~~~~~~~~~~
+~~~
 int a = 5;
 int b = 6;
 
-System.out.println("Die Summe von "+ a +" und "+ b +" ist "+(a+b));
-~~~~~~~~~~~~~~
+System.out.println("Die Summe von " + a + " und " + b + " ist " + (a+b));
+~~~
 
-Wie sieht die Ausgabe aus, wenn Sie beim Ausdruck (a+b) die Klammern
+Wie sieht die Ausgabe aus, wenn Sie beim Ausdruck `(a+b)` die Klammern
 weglassen? Probieren Sie das aus und erklären Sie Ihre Beobachtungen.
 
-Eingabe
---------------------
+## Eingabe
 
 Um Texte oder Zahlen von der Konsole einzulesen, müssen wir ein Objekt
 der Klasse `Scanner` (das ist eine Klasse aus der Standard Java-Library)
 erzeugen. Dieses Objekt gibt uns dann auf Aufforderung hin den nächsten
 Text oder die nächste Zahl:
 
-~~~~~~~~~~
+~~~
 Scanner scan = new Scanner(System.in);
 int a = scan.nextInt();
 String s = scan.next();
-~~~~~~~~~~
+~~~
 
 ```include
 skript1ab_ueb02_scanner.md
@@ -240,18 +227,16 @@ skript1ab_ueb02_scanner.md
 
 Quelle: BBW Unterlagen, St.Dütsch. August 2015
 
-Strukturiere Daten lesen und schreiben
-======================================
+# Strukturiere Daten lesen und schreiben
 
-Lernziele {#lernziele_file_io}
-----------------------
+## Lernziele {#lernziele_file_io}
 
 * Sie können in einem Programm aus einem File Daten lesen
 * Strukturierte Textzeilen zerlegen und diese in geeignete Datenobjekte abfüllen
 * Ausgaben in Textfiles durch Formatierung strukturieren
 
-BufferedReader
------------------------
+## BufferedReader
+
 Wir werden uns hier zunächst nur mit Text Files beschäftigen, welche
 eine `Zeilenstruktur` aufweisen, in denen also Informationseinheiten
 durch einen Zeilenumbruch voneinander getrennt sind.
@@ -270,10 +255,9 @@ aussehen, welche alle Zeilen einliest und auf der Konsole ausgibt?
 ### Erstellen eines BufferedReader
 
 Zum Instantiieren eines `BufferedReader`-Objekts müssen wir im Konstruktor angeben, von
-welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir
-zunächst eine `BufferedReader` Instanz.
+welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir zunächst eine `BufferedReader` Instanz.
 
-~~~~~~~~~~~~~~
+~~~
 String fileName = "C:\tmp\daten.csv";
 
 try{
@@ -284,10 +268,9 @@ try{
 catch(FileNotFoundException ioex){ 
 	System.out.println("Datei "+fileName+" not found"); 
 }
-~~~~~~~~~~~~~~~
+~~~
 
-Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block
-(zu Exceptions ausführlich mehr später). 
+Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block (zu Exceptions ausführlich mehr später). 
 
 
 ### BufferedReader oder Scanner?
@@ -307,7 +290,7 @@ Die Unterschiede beim Einlesen einzelner Zeilen aus Text-Dateien sind:
 <tr><th>Scanner</th><th>BufferedReader</th></tr>
 <tr>
 <td>
-~~~~~~~~~~~~~~~~~~~~~~
+~~~
 Scanner input = null;
 try {
  File f = new File("C:/tmp/1.csv");
@@ -321,11 +304,11 @@ try {
 catch (Exception ex) {
  ex.printStackTrace(); 
 } 
-~~~~~~~~~~~~~~~~~~~~~~
+~~~
 </td>
 
 <td>
-~~~~
+~~~
 BufferedReader bfr = null;
 try {
  String inputLine;
@@ -351,7 +334,7 @@ finally {
    ex.printStackTrace();
  }
 }
-~~~~~~
+~~~
 </td>
 </tr>
 </table>
@@ -365,8 +348,8 @@ den Dateizugriff wieder freizugeben und den Eingabestrom zu schliessen.
 
 Beachten Sie, dass die Objekte `input` und `bfr` bereits vor dem `try`-Block angelegt werden und damit die Sichtbarkeit dieser Objekte ausserhalb des `try` sicherzustellen.
 
-Strukturierte Textfiles
------------------------------
+## Strukturierte Textfiles
+
 Oft werden Daten strukturiert in lesbaren Text-Dateien abgelegt. So können zum
 Beispiel Excel-Tabellen oder Datenbank-Abfragen im CSV-Format gespeichert werden, so dass jede
 Zeile der Tabelle eine Zeile im Text File ergibt. Innerhalb der Zeilen
@@ -383,15 +366,14 @@ Eine CSV Datei mit Personendaten kann beispielsweise so aussehen:
 Nach dem Auslesen einer Zeile wird der String, welcher eine Zeile enthält, mit der `lineSplit()`
 Methode zerlegt. 
 
-~~~~~~~~~~~~~~~~~~~~
-String line = "Huber;Peter;1955";	// contains one line which must be processed
-String[] lineParts = line.split(";"); // split line at occurences of semicolon
+~~~
+String line = "Huber;Peter;1955";	     // contains one line which must be processed
+String[] lineParts = line.split(";");    // split line at occurences of semicolon
 // loop over all parts of the line
 for (String p: lineParts ) {
 	System.out.println(p);
 }
-~~~~~~~~~~~~~~~~~~~~
-
+~~~
 
 ### Nummerische Werte behandeln
 
@@ -400,12 +382,12 @@ eingelesen, wie alle anderen Zeichenketten auch. Solange wir damit nicht
 rechnen wollen, spielt das auch keine Rolle. Meistens ist aber nötig, diese Felder in richtig Zahlen umzuwandeln.
 Dazu dienen die entsprechenden `parse`-Methoden der Klassen `Integer` und `Double`:
 
-~~~~~~~~~~~~~~~~
+~~~
 String x = "42";
 String y = "3.14";
 int intVal = Integer.parseInt(x);
 double doubleVal = Double.parseDouble(doubleStr);
-~~~~~~~~~~~~~~~~~
+~~~
 
 ```include
 skript1ab_ueb03_csvread.md
@@ -415,26 +397,26 @@ skript1ab_ueb03_csvread.md
 ## Daten strukturiert in ein File schreiben
 
 Die geeignetste Klasse zum Schreiben von Textdateien ist `PrintWriter`.
-Einem neuen `PrintWriter-Objekt` (`prnt`) wird beim Erstellen ein
+Einem neuen `PrintWriter-Objekt` wird beim Erstellen ein
 String mit dem Pfad und Dateinamen oder ein `File`-Objekt übergeben. Das Objekt stellt die Methode `write` zur Verfügung. Diese ähnelt der Klasse `PrintStream`, mit der Sie
 beispielsweise bei `System.out.println` arbeiten.
 
-~~~~~~~~~~~
+~~~
 public static void main(String[] args) {
-		try {
-			PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
-			String[] names = {"Alpha","Beta","Gaga"};
-			int i = 0;
-			for (String n : names){
-				prnt.write(""+i+";"+n+System.lineSeparator());
-				i++;
-			}
-			prnt.close();
-		} catch (IOException e) {
-			e.printStackTrace();
+	try {
+		PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
+		String[] names = {"Alpha","Beta","Gaga"};
+		int i = 0;
+		for (String n : names){
+			prnt.write(""+i+";"+n+System.lineSeparator());
+			i++;
 		}
+		prnt.close();
+	} catch (IOException e) {
+		e.printStackTrace();
 	}
-~~~~~~~~~~~~~~~~~~~~~
+}
+~~~
 
 
 ```include
@@ -442,8 +424,8 @@ skript1ab_ueb04_csvwrite.md
 ```
 
 
-Wiederholungsfragen {#wdh_intro}
---------------------
+## Wiederholungsfragen {#wdh_intro}
+
 1. Welche Methode einer Klasse wird beim Start des Programms zuerst aufgerufen?
 2. Wie können Sie eine Anzahl Attribute für ein bestimmtes Objekt schon beim Erstellen übergeben?
 3. Welche Klassen helfen Ihnen, Konsoleneingaben und Textdateien zu lesen?
