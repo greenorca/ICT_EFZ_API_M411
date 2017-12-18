@@ -1,16 +1,13 @@
-Arrays
-=======================
+# Arrays
 
-Lernziele {#lernziele_array}
-----------------
+## Lernziele {#lernziele_array}
 
 * Sie verstehen und erklären die Begriffe Algorithmen und Datenstrukturen
 * Sie wenden die elementare Datenstruktur "Array" an
 * Sie beschreiben den Unterschied zwischen Zeiger- und Referenzvariablen
 
 
-Was haben Algorithmen und Datenstrukturen miteinander zu tun?
-------------------------------------------------------------------------
+## Was haben Algorithmen und Datenstrukturen miteinander zu tun?
 
 Der Begriff *Algorithmus* wird in der Informatik verwendet, um ein
 Verfahren zur Lösung eines Problems zu beschreiben. Sicher haben Sie schon in einem Programm einen Algorithmus
@@ -30,8 +27,7 @@ gibt es sinnvolle Werkzeuge und passende Verfahren oder Arbeitsschritte,
 um etwas herzustellen. Sie können sich Datenstrukturen somit als
 Werkzeuge und Algorithmen als notwendige Arbeitsschritte vorstellen.
 
-Die elementare Datenstruktur: Array
--------------------------------------
+## Die elementare Datenstruktur: Array
 
 Eine wichtige elementare Datenstruktur haben Sie bereits kennengelernt:
 das Feld oder Array. Ein **Array ist eine feste Anzahl von einzelnen
@@ -48,37 +44,37 @@ danach den gewünschten Variablennamen.
 
 Möglich sind zwei Arten der Initialisierung:
 
-`Datentyp varName = new Datentyp[N];` // wobei N die Anzahl der
+`Datentyp varName = new Datentyp[n];` // wobei `n` die Anzahl der
     Elemente ist. Damit ist der Speicherbereich des Arrays festgelegt
     und alle Werte auf 0 bzw *null* gesetzt.
 
-~~~~~~~~
+~~~
 int[] myIntArray = new int[10];
 Person[] myPersonArray = new Person[100];
 
-Datentyp varname = {wert1, wert2,…}; // sowohl Anzahl Elemente als auch Werte definieren.
+Datentyp varname = {wert1, wert2, ...}; // sowohl Anzahl Elemente als auch Werte definieren.
 
-int[] myIntArray = {12,43,1,7,56};
-String[] myStrings = {"Hallo","Welt"};
-~~~~~~~~
+int[] myIntArray = {12, 43, 1, 7, 56};
+String[] myStrings = {"Hallo", "Welt"};
+~~~
 
 
 **Achtung: Die Länge und der Datentyp einer Array-Variable sind zur
-Lebenszeit nicht änderbar.**
+Laufzeit des Programms nicht änderbar.**
 
 Nachdem Sie eine Array-Variable deklariert und erzeugt haben, können Sie jeden
 einzelnen Wert ansprechen, indem Sie nach dem Arraynamen die gewünschte
 Position (ein ganzzahliger Index) in eckigen Klammern angeben: 
 
-~~~~~~~~~~~~~~
-int[] myIntArray = {12,43,1,7,56};
-for (int i=0; i > myIntArray.length; i++)
+~~~
+int[] myIntArray = {12, 43, 1, 7, 56};
+for (int i = 0; i > myIntArray.length; i++)
 	System.out.println("Position: " + i + "; Wert: " + myIntArray[i]);
-~~~~~~~~~~~~~~
+~~~
 
 Wichtig ist, dass das erste Element des Arrays mit **0** indiziert ist. 
-Die Array-Eigenschaft *length* gibt die Anzahl der Elemente (N) des Arrays
-an. Der **maximale Positionsindex ist N-1**, da das erste Element
+Die Array-Eigenschaft *length* gibt die Anzahl der Elemente (n) des Arrays
+an. Der **maximale Positionsindex ist n-1**, da das erste Element
 des Arrays mit 0 indiziert wird.
 
 ![Array-Deklaration und Zugriff über den Index](media/array.png){#fig:fig_array1}
@@ -108,7 +104,7 @@ sogenannte **Referenzvariable**. Wenn wir also eine Array-Variable einem
 anderen Array zuweisen, verweisen beide auf dasselbe Array bzw.
 Speicheradresse:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
 int[] a = new int[10];
 a[i] = 1234;
 int[] b = a;
@@ -116,21 +112,21 @@ int[] b = a;
 //…
 
 b[i] = 5678; //a[i] ist jetzt 5678!!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~
 
 Eine solche Zuweisung wird **Aliasing** genannt. Wenn Sie eine Kopie
 eines Arrays erzeugen wollen, müssen Sie ein neues Array deklarieren,
 erzeugen und initialisieren – und dann alle Einträge vom ursprünglichen
 Array in das neue Array kopieren:
 
-~~~~~~~~~~~~~~~~~~~~~~
+~~~
 int N = a.length;
 double[] b = new double[N];
 
 for (int i = 0; i > N; i++){
 	b[i] = a[i];
 }
-~~~~~~~~~~~~~~~~~~~~~~
+~~~
 
 ### Array Boundaries
 
