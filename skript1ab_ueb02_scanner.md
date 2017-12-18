@@ -1,13 +1,13 @@
 ## Übung: Numerische Ein-/Ausgaben
 **Lernziele:**
 
-* einlesen und verarbeiten Benutzer-Eingaben
-* einlesen Zahlenformate
+* Einlesen und verarbeiten von Benutzer-Eingaben
+* Einlesen von Zahlenformaten
 * Arbeiten mit `Java-Calendar` Klassen.
 
 **Zeit:** 60 Minuten
 
-* Suchen Sie im Internet oder in der Java-Hilfe Informationen zur `Calendar`-Klasse. Geben Sie zunächst das aktuelle Datum zeilenweise aus: zuerst das Jahr, dann den Monat und schliesslich den Tag und Wochentag. Vermeiden Sie die Benutzung von `depreciated`-Funktionen.
+* Suchen Sie im Internet oder in der Java-Hilfe Informationen zur `Calendar`-Klasse. Geben Sie zunächst das aktuelle Datum zeilenweise aus: zuerst das Jahr, dann den Monat und schliesslich den Tag und Wochentag. Vermeiden Sie die Benutzung von `deprecated`-Funktionen.
  
 * Erstellen Sie eine Klasse `AgeCalculator` mit der Methode `public void tellAge()`. Diese Methode soll den Benutzer nach seinem Namen und seinem Jahrgang und Geburtsmonat fragen. Wenn der Geburtsmonat dem aktuellen Monat entspricht, soll zusätzlich nach dem Geburtstag gefragt werden. Im Anschluss wird die folgende Meldung ausgeben:
 
@@ -20,6 +20,6 @@ Erstellen Sie zunächst ein Struktogramm für die Funktion `tellAge()`. Dann imp
 <lsg>
 **Lösungsvorschlag**
 
-`WelcomeMessage.java`
+`AgeCalculator.java`
 
 </lsg>
