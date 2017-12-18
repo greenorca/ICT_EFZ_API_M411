@@ -1,7 +1,7 @@
-# ICT_EFZ_API_M411
+# ICT\_EFZ\_API_M411
 Open-Source Kursbuch für Modul 411 "Datenstrukturen und Algorithmen" für EFZ Applikationsentwicklung Schweiz
 
-Dies ist ein Versuch, für o.g. Modul ein Kursbuch samst Übungen zu erstellen, welches sowohl den ICT-HANOKS (https://cf.ict-berufsbildung.ch/modules.php?name=Mbk&a=20101&cmodnr=411&noheader=1) 
+Dies ist ein Versuch, für o.g. Modul ein Kursbuch samt Übungen zu erstellen, welches sowohl den ICT-HANOKS <https://cf.ict-berufsbildung.ch/modules.php?name=Mbk&a=20101&cmodnr=411&noheader=1>
 als auch dem Niveau der Lernenden in der Berufsgrundbildung entspricht.
 
 Die Quellen für die einzelnen Kapitel sind im *markdown* geschrieben. Mit *pandoc* können aus den Quellen HTML, DOCX, PDF uvm. generiert werden. Zusätzlich ist das cabal Package mit dem include-Filter notwendig. 
@@ -19,6 +19,7 @@ pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 **MD -> HTML (just toolbox exercises)**
+
 ~~~~~~~~~~~~~~~~~~~~~~
 pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
 ~~~~~~~~~~~~~~~~~~~~~~
