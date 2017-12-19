@@ -2,10 +2,10 @@
 
 **Lernziel:**
 
-* deklarieren und instanziieren Arrays
-* beherrschen elementweisen Zugriff mit Indexen
-* iterieren über alle Elemente eines Arrays
-* erstellen elementare Array-Funktionen 
+* Deklarieren und Instanziieren von Arrays
+* Beherrschen von elementweisenem Zugriff mit Indices
+* Iterieren über alle Elemente eines Arrays
+* Erstellen elementarer Array-Funktionen 
 
 
 **Zeit:** 45 Minuten
@@ -18,7 +18,7 @@ Erstellen Sie je eine Funktion `getMinimum` und `getMaximum`. Die Funktionen sol
 
 ### Arrays addieren
 
-In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder `a` und `b` in das Ergebnisfeld `c` wird elementweise das erste Element von `a` mit dem ersten Element von `b` addiert und im ersten Element von `c` gespeichert. 
+In der Vektoralgebra (die mathematische Grundlage für 3D - Games) müssen oft Arrays miteinander verrechnet werden. Für die Addition zweier Felder `a` und `b` in das Ergebnisfeld `c` wird elementweise das erste Element von `a` mit dem ersten Element von `b` addiert und im ersten Element von `c` gespeichert, dann dasselbe für das zweite Element und alle weiteren. 
 
 ![Array addieren](media/array_addition.png){#fig:fig_array_add}
 
@@ -29,7 +29,7 @@ Erstellen Sie eine statische Funktion `addArray`. `addArray` erhält zwei `int`-
 
 Erstellen Sie ein Funktion `prepend` mit einen Array und einen `int`-Wert in der Parameterliste. In der Funktion
 soll jeweils das neue Element an der ersten Stelle im Array eingefügt
-werden und die bereits vorhandenen Elemente hinten angefügt werden. Nach
+und die bereits vorhandenen Elemente hinten angefügt werden. Nach
 jeder Einfüge-Operation sollen alle Elemente des Arrays zurückgegeben werden.
 
 
@@ -50,8 +50,8 @@ Sie erstellen nun selbst ein solches Konsolenprogramm zum Bestimmen des Maximums
 ![Java-Programm compilieren und mit Parametern aufrufen](media/java_terminal_param.png){#fig:fig_terminal_params}
 
 1. Erstellen Sie eine neue Klasse `StatistikTool` mit `main(String[] args)` Funktion.
-2. `String[] args` enthält alle via Konsole übergebenen Parameter (Leerzeichen-getrennt). Geben Sie in der `main` alle Elemente des `args`-Arrays auf der Konsole aus. Starten Sie Ihrer Klasse via Commandozeile `java StatistikTool "D://numbers.txt" alpha beta gagga` und prüfen Sie die Ausgabe.
-Prüfen Sie, ob mit `args[0]` 
+2. `String[] args` enthält alle via Konsole übergebenen Parameter (Leerzeichen-getrennt). Geben Sie in der `main` alle Elemente des `args`-Arrays auf der Konsole aus. Starten Sie Ihrer Klasse via Commandozeile `java StatistikTool "D://numbers.txt" alpha beta gagga` und prüfen Sie die Ausgabe. Sie müssen natürlich den Pfad zu Ihrer Datei angeben.
+Prüfen Sie, ob mit `args[0]` der Name des Programms ausgeben wird.
 3. Anstatt die `args` auszugeben, erstellen Sie mit dem ersten Parameter ein `File`-Objekt und daraus ein `BufferedReader`-Objekt. Wenn das nicht klappt, geben Sie eine Fehlermeldung *ungültige Datei* aus.
 4. Da Sie nicht wissen, wie viele Elemente die Liste enthält, lesen Sie zeilenweise vom BufferedReader und parsen sofort die Zahlenwerte. Wenn der aktuelle Wert kleiner als das aktuelle Minimum bzw. grösser als das aktuelle Maximum ist, speichern Sie den aktuellen Wert an der entsprechenden Stelle. 
 5. Enthält die aktuelle Zeile keine Zahl, fangen Sie die entsprechende Exception und geben eine sinnvolle Fehlermeldung aus, bovor die nächste Zeile gelesen wird.
