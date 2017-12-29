@@ -21,7 +21,7 @@ done
 echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 
 # MD -> HTML
-pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained --filter pandoc-fignos; cp M411_book.html ~/Desktop/WISS/Modul_411/IFZ_524_ZH/m411_skript/
+pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book20171222.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained --filter pandoc-fignos; cp M411_book.html ~/Desktop/WISS/Modul_411/IFZ_524_ZH/m411_skript/
 
 
 pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
@@ -69,7 +69,7 @@ Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beisp
 
 ```java
 /** 
-	Genius provides the answer to the question of Life, the Universe and everything 
+    Genius provides the answer to the question of Life, the Universe and everything
 */
 public class Genius{
 
@@ -79,6 +79,7 @@ public class Genius{
 	 * @return the answer to the question of Life, the Universe and everything
 	 */
 	public int answerQuestion(String question){
+    System.sleep(7.5e6 * 365 * 24 * 60 * 60 * 1000); // wait 7.5 Mio years
 		return 42;	
 	}
 }
@@ -121,27 +122,31 @@ public class Genius{
   + Kennt die Anwendung eines Debuggers für die Untersuchung von Heap und Stack zur Laufzeit und/oder ein Tool zur Laufzeitanalyse für Grössen wie Memory Leaks, Aufrufhäufigkeit und Verweildauer von Funktionen, etc.
 <hr/>
 
-Kursablauf
-----------
+## Kursablauf
 
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
 | Block				  | Thema                                                |
 |:--------------------|:-----------------------------------------------------|
-|**Lektion 1 -4**     | - einfache Klassen; main Methode                     |
-|                     | - Eingabe-/Ausgabe für Konsole und Dateien           |
-|**Lektion 5 – 10**   | - Arrays                                             |
-|                     | - Sortier-Algorithmen                                |
-|                     | - Laufzeitkomplexität                                |
+|**Lektion 1 -4**     |- einfache Klassen; main Methode                      |
+|                     |- Eingabe-/Ausgabe für Konsole und Dateien            |
++---------------------+------------------------------------------------------+
+|**Lektion 5 – 10**   |- Arrays                                              |
+|                     |- Sortier-Algorithmen                                 |
+|                     |- Laufzeitkomplexität                                 |
++---------------------+------------------------------------------------------+
 |**Lektion 11 – 16**  | - Verkettete Liste                                   |
 |                     | - Iteratoren, Template-Klassen                       |
++---------------------+------------------------------------------------------+
 |**Lektion 17 – 20**  | - Stack, Queue                                       |
 |                     | - Java Collections und HashMaps                      |
 |                     | - HashMaps                                           |
++---------------------+------------------------------------------------------+
 |**Lektion 21 – 24**  | - Miniprojekt                                        |
 |**Lektion 25 – 32**  | - Rekursion (Übung SnippetSearch)                    |
 |**Lektion 33 – 36**  | - JSON mit Web-Services                              |
 |                     | - optional XML                                       |
++---------------------+------------------------------------------------------+
 |**Lektion 37 – 40**  | - LB                                                 |
 |                     | - Review Modul                                       |
 
@@ -236,10 +241,10 @@ Quelle: BBW Unterlagen, St.Dütsch. August 2015
 ## BufferedReader
 
 Wir werden uns hier zunächst nur mit Text Files beschäftigen, welche
-eine `Zeilenstruktur` aufweisen, in denen also Informationseinheiten
+eine *Zeilenstruktur* aufweisen, in denen also Informationseinheiten
 durch einen Zeilenumbruch voneinander getrennt sind.
 
-Die Klasse `BufferedReader` aus der `Java Library` stellt die Methode
+Die Klasse `BufferedReader` aus der *Java Library* stellt die Methode
 `readLine()` mit dem Rückgabetyp String zur Verfügung.
 
 Diese Methode liefert immer jeweils die nächste ungelesene Zeile von der
@@ -259,12 +264,12 @@ welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen 
 String fileName = "C:\tmp\daten.csv";
 
 try{
-	FileReader fr = new FileReader(fileName);
-	BufferedReader br = new BufferedReader(fr);
-	//....
+    FileReader fr = new FileReader(fileName);
+    BufferedReader br = new BufferedReader(fr);
+    //....
 }
 catch(FileNotFoundException ioex){ 
-	System.out.println("Datei "+fileName+" not found"); 
+    System.out.println("Datei "+fileName+" not found");
 }
 ```
 
@@ -336,6 +341,7 @@ finally {
 }
 ```
 </td>
+
 </tr>
 </table>
 

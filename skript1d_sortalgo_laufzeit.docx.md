@@ -141,8 +141,7 @@ Algorithmen.
 | n^3^            | kubisch       | 1000      | 10^6^        | 10^9^       | 10^12^
 | 2^n^            | exponentiell  | 1000      | 10^30^       | 10^300^     | 10^3000^
 
-Komplexitätsklassen und Beispiele, nach M.Wirsing; LMU
-München 2008
+* Komplexitätsklassen und Beispiele, nach M.Wirsing; LMU München 2008 *
 
 ```include
 skript1d_ueb02_laufzeitanalyse.md
