@@ -2,7 +2,7 @@
 
 **Lernziele**
 
-* erstellen und benutzen Stack-Datenstruktur in akademischer und praktischer Variante
+* Erstellen und Benutzen Stack-Datenstruktur in akademischer und praktischer Variante
 
 **Zeit:** 30 + 45 + x Minuten
 
@@ -39,6 +39,7 @@ Verwenden Sie für diese Lösung ihren eigenen `Stack`.
 
 
 ###Kartenstapel implementieren (45 Minuten)
+
 *Einführung:* Sie wollen gern ein PC-Kartenspiel entwickeln. Dazu wird zunächst ein Kartenstapel benötigt. Die einzelnen Karten sollen als Objekte der Klasse `Card` mit den Attributen `String farbe`, `int wert` und `String anzeige` angelegt werden. Damit es ein echter Kartenstapel wird, speichern Sie alle Karten in einem Stack ab.
 
 *Auftrag:* Erstellen Sie einen Stack von Patience- bzw. Solitär-Karten (52 Karten, 4 Farben {Karo, Herz, Pik, Kreuz} mit den Zahlen 2 bis 10, Bube, Dame, König, Ass). Zur späteren Spielimplementierung geben Sie den Zahlen-Karten die Werte 2 - 10 zu. Bube bekommt Wert 11, Dame den Wert 12, König = 13 und Ass = 14. Nutzen Sie sinnvolle Schleifenkonstrukte zum Generieren der Karten.

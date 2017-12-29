@@ -67,7 +67,7 @@ Die Aufgaben sind normalerweise für Konsolen-Anwendungen gestellt, weil diese s
 
 Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillanten Ideen wieder zu verstehen :-)
 
-~~~~~~~~~~~~~~~~~~
+```java
 /** 
 	Genius provides the answer to the question of Life, the Universe and everything 
 */
@@ -82,8 +82,7 @@ public class Genius{
 		return 42;	
 	}
 }
-~~~~~~~~~~~~~~~~~~
-
+```
 
 ## Handlungsziele nach ICT-Vorgaben (BiVo 2014)
 
@@ -166,7 +165,7 @@ Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt.
 
 Hier ist der Code einer kleinen Java-Klasse, welche zum Begrüssen verschiedener Personen verwendet werden kann:
 
-~~~
+```java
 public class WelcomeMessage{
 
 	public void sayHello(String name){
@@ -178,8 +177,7 @@ public class WelcomeMessage{
 		msg.sayHello("Mirjam");
 	}
 }
-~~~
-
+```
 
 Ein Java-Programm wird immer so ausgeführt, dass die main-Methode einer bestimmten Klasse aufgerufen wird. Diese muss genau so deklariert sein, wie Sie der ersten Zeile sehen. In der main-Methode (ein neuer Name für Funktion) wird dann üblicherweise ein Objekt erzeugt, in unserem Beispiel in Zeile 7. Von diesem Objekt werden dann Methoden aufgerufen, z.B. Zeile 8 und 9.
 
@@ -198,12 +196,12 @@ Konsole ausgegeben werden kann, nämlich mit der Methode
 einfach mit `+` zusammengesetzt werden. Das Gleiche gilt auch für
 Zahlenwerte, wie das folgende Beispiel zeigt:
 
-~~~
+```java
 int a = 5;
 int b = 6;
 
 System.out.println("Die Summe von " + a + " und " + b + " ist " + (a+b));
-~~~
+```
 
 Wie sieht die Ausgabe aus, wenn Sie beim Ausdruck `(a+b)` die Klammern
 weglassen? Probieren Sie das aus und erklären Sie Ihre Beobachtungen.
@@ -215,11 +213,11 @@ der Klasse `Scanner` (das ist eine Klasse aus der Standard Java-Library)
 erzeugen. Dieses Objekt gibt uns dann auf Aufforderung hin den nächsten
 Text oder die nächste Zahl:
 
-~~~
+```java
 Scanner scan = new Scanner(System.in);
 int a = scan.nextInt();
 String s = scan.next();
-~~~
+```
 
 ```include
 skript1ab_ueb02_scanner.md
@@ -257,7 +255,7 @@ aussehen, welche alle Zeilen einliest und auf der Konsole ausgibt?
 Zum Instantiieren eines `BufferedReader`-Objekts müssen wir im Konstruktor angeben, von
 welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir zunächst eine `BufferedReader` Instanz.
 
-~~~
+```java
 String fileName = "C:\tmp\daten.csv";
 
 try{
@@ -268,7 +266,7 @@ try{
 catch(FileNotFoundException ioex){ 
 	System.out.println("Datei "+fileName+" not found"); 
 }
-~~~
+```
 
 Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block (zu Exceptions ausführlich mehr später). 
 
@@ -290,7 +288,8 @@ Die Unterschiede beim Einlesen einzelner Zeilen aus Text-Dateien sind:
 <tr><th>Scanner</th><th>BufferedReader</th></tr>
 <tr>
 <td>
-~~~
+
+```java
 Scanner input = null;
 try {
  File f = new File("C:/tmp/1.csv");
@@ -304,11 +303,12 @@ try {
 catch (Exception ex) {
  ex.printStackTrace(); 
 } 
-~~~
+```
 </td>
 
 <td>
-~~~
+
+```java
 BufferedReader bfr = null;
 try {
  String inputLine;
@@ -334,7 +334,7 @@ finally {
    ex.printStackTrace();
  }
 }
-~~~
+```
 </td>
 </tr>
 </table>
@@ -359,21 +359,23 @@ ein Tabulator gebräuchliche Trennzeichen.
 
 Eine CSV Datei mit Personendaten kann beispielsweise so aussehen:
 
-`Huber;Peter;1955`<br>
-`Meier;Irene;1960`<br>
-`Muster;Anna;1974`
+```
+Huber;Peter;1955
+Meier;Irene;1960
+Muster;Anna;1974
+```
 
 Nach dem Auslesen einer Zeile wird der String, welcher eine Zeile enthält, mit der `lineSplit()`
 Methode zerlegt. 
 
-~~~
+```java
 String line = "Huber;Peter;1955";	     // contains one line which must be processed
 String[] lineParts = line.split(";");    // split line at occurences of semicolon
 // loop over all parts of the line
 for (String p: lineParts ) {
 	System.out.println(p);
 }
-~~~
+```
 
 ### Nummerische Werte behandeln
 
@@ -382,17 +384,16 @@ eingelesen, wie alle anderen Zeichenketten auch. Solange wir damit nicht
 rechnen wollen, spielt das auch keine Rolle. Meistens ist aber nötig, diese Felder in richtig Zahlen umzuwandeln.
 Dazu dienen die entsprechenden `parse`-Methoden der Klassen `Integer` und `Double`:
 
-~~~
+```java
 String x = "42";
 String y = "3.14";
 int intVal = Integer.parseInt(x);
 double doubleVal = Double.parseDouble(doubleStr);
-~~~
+```
 
 ```include
 skript1ab_ueb03_csvread.md
 ```
-
 
 ## Daten strukturiert in ein File schreiben
 
@@ -401,7 +402,7 @@ Einem neuen `PrintWriter-Objekt` wird beim Erstellen ein
 String mit dem Pfad und Dateinamen oder ein `File`-Objekt übergeben. Das Objekt stellt die Methode `write` zur Verfügung. Diese ähnelt der Klasse `PrintStream`, mit der Sie
 beispielsweise bei `System.out.println` arbeiten.
 
-~~~
+```java
 public static void main(String[] args) {
 	try {
 		PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
@@ -416,8 +417,7 @@ public static void main(String[] args) {
 		e.printStackTrace();
 	}
 }
-~~~
-
+```
 
 ```include
 skript1ab_ueb04_csvwrite.md

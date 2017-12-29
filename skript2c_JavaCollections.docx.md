@@ -1,18 +1,15 @@
-Dynamische Datenstrukturen III: Java Collections
-================================================
+# Dynamische Datenstrukturen III: Java Collections
 
-Lernziele {#lernziele_javacollections}
------------
-* kennen den Aufbau der Java Collections
-* erklären am Beispiel des Collection Interfaces die Bedeutung von
+## Lernziele {#lernziele_javacollections}
+* Kennen den Aufbau der Java Collections
+* Erklären am Beispiel des Collection Interfaces die Bedeutung von
     Schnittstellen
-* erklären die Bedeutung von generischen Klassen und Schnittstellen
-* nutzen wichtige Datenstrukturen der Java Collection-Library
-* anwenden Lambda-Funktionen für Suche und Sortieren innerhalb einer
+* Erklären die Bedeutung von generischen Klassen und Schnittstellen
+* Nutzen wichtige Datenstrukturen der Java Collection-Library
+* Anwenden Lambda-Funktionen für Suche und Sortieren innerhalb einer
     Collection
 
-Datenstrukturen in Java: Die Collections-Bibliothek
------------------------------------------------------
+## Datenstrukturen in Java: Die Collections-Bibliothek
 
 Das Package `java.util` stellt häufig genutzte Datenstrukturen wie Listen,
 Stacks und Queues mit wichtigen Funktionen bereit. Durch den Einsatz
@@ -20,8 +17,7 @@ dieser Klassen können sich Entwickler viel Zeit zum Erstellen und Testen
 solcher Datenstrukturen sparen und sich auf die eigentliche
 Problemlösung konzentrieren.
 
-Die Schnittstellen Collection und List
-------------------------------------------
+## Die Schnittstellen Collection und List
 
 Die Datenstrukturen aus `java.util` nutzen die gemeinsame Schnittstelle
 `Collection`. Diese Schnittstelle definiert allgemeine Methoden und
@@ -53,13 +49,13 @@ Index-Adressen auf Listenelemente zuzugreifen:
 Mit dem ebenfalls definierten `ListIterator` können die Datenstrukturen
 vorwärts *und* rückwärts durchschritten werden.
 
-##Implementierung der Schnittstellen in Klassen des `java.util` Pakets 
+## Implementierung der Schnittstellen in Klassen des `java.util` Pakets 
 
 Die bisher behandelten Datenstrukturen sind in Java auch in der
 Collections-Bibliothek enthalten:
 
-  ***verwendete Datenstruktur***   | ***In Collections-Bibliothek***
-  ---------------------------------+---------------------------------
+  **verwendete Datenstruktur**    | **In Collections-Bibliothek**
+  :--------------------------------|:---------------------------------
   primitiver Array                | `ArrayList*` oder `Arrays`
   Verkettete Liste                | `LinkedList*`
   Eigener Stack / Stapel          | `Stack**`
@@ -67,10 +63,10 @@ Collections-Bibliothek enthalten:
 
 `*` beide Klassen implementieren das Interface `List`
 
-`**` Wie in Abbildung 1 sichtbar, ist der `Stack` eine Erweiterung der
-`Vector` Klasse. Der `Vector` wiederum ist eine spezielle Form eines
-Arrays. Wie bei `ArrayList` ist ein `Vector` dynamisch erweiterbar, hat
-aber den Vorteil, dass es **synchronized** ist (d.h. er kann nicht gleichzeitig von mehreren Prozess geändert werden).
+`**` Wie in Abbildung 1 sichtbar, ist der `Stack` eine Erweiterung der  
+	`Vector` Klasse. Der `Vector` wiederum ist eine spezielle Form eines  
+	Arrays. Wie bei `ArrayList` ist ein `Vector` dynamisch erweiterbar, hat  
+	aber den Vorteil, dass es **synchronized** ist (d.h. er kann nicht  	gleichzeitig von mehreren Prozess geändert werden).
 
 Die Verwendung des Interfaces `Collection` ermöglicht die Definition des *inneren* Datentyps schon bei der Instantiierung eines Collection-Objekts:
 
@@ -81,8 +77,7 @@ Die Verwendung des Interfaces `Collection` ermöglicht die Definition des *inner
 Solche Klassen und Schnittstellen werden in Java *generisch* bezeichnet.
 In C++ wird der Begriff Template-Klasse genutzt.
 
-Anwendungsgebiete von `ArrayList`, `Vector` und `LinkedList`
-------------------------------------------------------------
+# Anwendungsgebiete von `ArrayList`, `Vector` und `LinkedList`
 
 Die Klassen `ArrayList`, `Vector` und `LinkedList` stellen dynamische Datenstrukturen dar. Die Anzahl der darin gespeicherten Elemente darf sich also zur Laufzeit des Programms ändern. Da alle diese Klassen das `List`-Interface implementieren, stehen (unter anderem) folgende Methoden zur Verfügung:
 
@@ -104,27 +99,25 @@ Die folgende Abbildung illustriert die Laufzeitabhängigkeiten:
 
 Weitere Informationen finden Sie hier: [www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/](http://www.programcreek.com/2013/03/arraylist-vs-linkedlist-vs-vector/)
 
-Die `foreach`-Schleife mit Collections 
--------------------------------------------
+## Die `foreach`-Schleife mit Collections 
 
 Eine grundlegende Operation auf Collections ist die Verwendung von
 `foreach` zum Durchlaufen und Bearbeiten aller Elemente in einer Collection. Im Gegensatz zum klassischen `for` müssen Sie hier keine `int`-Schleifenvariable hochzählen und am Ende abbrechen. Das jeweilige Listenelement steht Ihnen direkt zur Verfügung (im Beispiel `String s`). Das führt zu sehr kompaktem Code, wie in diesem Beispiel für einen Stack:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 Stack<String> collection = new Stack<String>();
-…
+...
 for (String s: collection){
 	System.out.println("Element = " + s);
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 
 Welche andere `for`-Schleife könnte man für die gleiche Operation
 verwenden? Notieren Sie diese andere `for`-Schleife (diese sollten sie jetzt
 ziemlich gut kennen)
 
 Beide Schleifen (`foreach` und das normale `for`) sind eine Kurzform für
-ein `while`-Konstrukt. Wen man das Interface `Iterator` verwendet, kann
+ein `while`-Konstrukt. Wenn man das Interface `Iterator` verwendet, kann
 man eine sehr elegante while-Schleife verwenden. Wir haben das schon bei
 der Erweiterung unseres Stacks angetroffen:
 
@@ -132,11 +125,11 @@ Der `Iterator` selbst ist ein Interface. Sobald eine Klasse dieses
 Interface implementiert, hat es automatisch das Verhalten eines
 Iterators. Siehe dazu die JavaDoc-Hilfe unter `java.util.Iterator`.
 
-Lambda-Funktionen 
-------------------
+## Lambda-Funktionen 
+
 Wie haben vorher einige Sortierfunktionen selbst erstellt. `java.utils` stellt auch hier hocheffiziente fertige Funktionen zur Verfügung, welche die Programmierer nur noch parametrisieren müssen. Dies geschieht mit sogenannten *Lambda-Funktionen*. 
 Lambda-Funktionen stammen aus der Welt der funktionalen Programmierung
-(LISP). Sie wurden mit Java SE8 zur Sprachspezifikation hinzugefügt und
+(z.B. aus der Sprache _LISP_). Sie wurden mit Java SE8 zur Sprachspezifikation hinzugefügt und
 ermöglichen sehr elegante Sortier- und Suchfunktionen. Wir wollen hier zwei
 Beispiele genauer ansehen.
 
@@ -152,15 +145,15 @@ und `birthDate` als Strings. In der ArrayList `kundenverwaltung` sind alle
 Kunden der Topomedics AG instantiiert. Nun kann die Liste mit der `sort()`
 Funktion beispielsweise nach `familyName` sortiert werden:
 
-~~~~~~~~~~~~~~~~~~
+```java
 // loading all data from file into list...
 ArrayList<Person> kundenverwaltung = loadAllData();
 
 // in-place sort by familyName
-kundenverwaltung.sort((p1,p2)->p1.familyName.compareTo(p2.familyName));
-~~~~~~~~~~~~~~~~~~
+kundenverwaltung.sort( (p1,p2) -> p1.familyName.compareTo(p2.familyName));
+```
 
-Die Funktion void `sort(..)` hat einen Lambda-Ausdruck als Parameter, der
+Die Funktion `void sort(..)` hat einen Lambda-Ausdruck als Parameter, der
 das Sortierkriterium beschreibt. `(p1, p2)` sind frei wählbare Variablennamen
 für die jeweils zwei zu vergleichenden Listenelemente der internen
 Sortierfunktion, ähnlich wie Sie dass vom BubbleSort Verfahren kennen. 
@@ -168,7 +161,7 @@ Entsprechend sind `p1` und `p2` im Beispiel vom Datentyp Person. Zur Laufzeit f�
 
 Die Zeichenfolge `->` stellt die Zuordnung der Variablen zur eigentlichen Vergleichsfunktion dar. 
 
-Danach folgt der eigentliche Vergleich: Wir wollen Nach Familiennamen aufsteigend sortieren. Also greifen auf das Attribut `familyname` von `p1` zu. Dieses ist vom Datentyp String stellt die String-Funktion `compare` bereit. `compare` bekommt das `familyName`-Attribut von `p2` als Parameter. `String.compare` gibt -1 zurück, wenn `p1.familyname` im Alphabet vor `p2.familyName` kommt bzw. 1 im umgekehrten Fall. Der `sort(..)`-Befehl kümmert sich im Hintergrund um allfällige Tauschoperationen.
+Danach folgt der eigentliche Vergleich: Wir wollen nach Familiennamen aufsteigend sortieren. Also greifen wir auf das Attribut `familyname` von `p1` zu. Dieses ist vom Datentyp String stellt die String-Funktion `compare` bereit. `compare` bekommt das `familyName`-Attribut von `p2` als Parameter. `String.compare` gibt -1 zurück, wenn `p1.familyname` im Alphabet vor `p2.familyName` kommt bzw. 1 im umgekehrten Fall. Der `sort(..)`-Befehl kümmert sich im Hintergrund um allfällige Tauschoperationen.
 
 Da `sort(..)` keinen Rückgabetyp hat, wird `kundenverwaltung` in sich selbst
 sortiert. Auf Englisch heisst das "in-place".
@@ -192,11 +185,11 @@ aus Appenzell stammen. Dazu können wir entweder klassisch alle Elemente
 der `kundenverwaltung` Liste einzeln aufrufen und das `city`-Attribut
 auf "Appenzell" vergleichen. Eleganter ist folgender Befehl (die Zeilenumbrüche dienen der Lesbarkeit):
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 List<Person> appenzeller = kundenverwaltung.stream().
-	filter(p->p.city.equals("Appenzell")).//filter by city!
+	filter(p->p.city.equals("Appenzell")).    //filter by city!
 	collect(Collectors.toList());
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Hier werden die Elemente der Liste `kundenverwaltung` mit der `stream()`
 -Funktion zunächst an die Funktion `filter(..)` übergeben.
@@ -225,16 +218,16 @@ skript2c_ueb01_lambda.md
 ```
 
 
-Die `Map`-Datenstruktur
-------------------------
+## Die `Map`-Datenstruktur
+
 
 Die `Map` Datenstruktur verwaltet Verbindungen von Werten (*values*)
-mit Schlüsseln (*key*). Primär dient diese Datenstruktur zum schnellen Auffinden von `values` anhand der `keys`, wobei `values` auch komplexe Objekte sein können. Vergleichbar ist die `map` mit Tabellen in Relationalen Datenbanken. Hier entspricht der Primärschlüssel dem `key` einer `map`.
+mit Schlüsseln (*key*). Primär dient diese Datenstruktur zum schnellen Auffinden von `values` anhand der `keys`, wobei `values` auch komplexe Objekte sein können. Vergleichbar ist die `map` mit Tabellen in relationalen Datenbanken. Hier entspricht der Primärschlüssel dem `key` einer `map`.
 
 Die `map`-Struktur wird sehr oft eingesetzt. Ein klassisches Beispiel ist
 das Telefonbuch (oder die Kontakte auf Ihrem Smartphone). Auch im
 BigData Bereich werden derartige Key-Value Datenbanken häufig eingesetzt
-(Cassandra von Facebook).
+(z.B. Cassandra von Facebook).
 
 Die `map`-Datenstruktur unterstützt üblicherweise 2 Operationen:
 
@@ -258,12 +251,12 @@ der `HashMap`.
 
 Code-Beispiel:
 
-~~~~~~~~~~~~~~~~~~~~~~
+```java
 HashMap<String, String> phoneBook = new HashMap<String,String>();
 
 phoneBook.put("Lisa Jones", "(402) 4536 4674");
 phoneBook.put("Prince Harry", "(0044)79854 4512");
-~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ```include 
 skript2c_ueb02_map.md

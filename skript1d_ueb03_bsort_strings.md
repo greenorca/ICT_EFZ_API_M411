@@ -2,9 +2,9 @@
 
 **Lernziele:**
 
-* anwenden und ändern Sortierfunktionen
-* anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
-* anwenden objektorientierte Programmierparadigmen 
+* Anwenden und Ändern Sortierfunktionen
+* Anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
+* Anwenden objektorientierte Programmierparadigmen 
 
 **Zeit:** 60 Minuten
 
@@ -32,11 +32,11 @@ alphabetischer Reihenfolge. Danach geben Sie die 10 sortierten Strings in der Ko
 
 ###Array einer benutzerdefinierten Klasse sortieren
 
-In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier arbeiten Sie wieder richtig objektorientiert, d.h. Daten werden in Klassenvariablen gespeichert und Funktionalität ist in Klassenmethoden implementiert. Die `main`-Funktion dient nur als Testrahmen.
+In dieser Aufgabe lernen Sie, Arrays von Benutzerklassen zu sortieren. Ab hier arbeiten Sie wieder richtig objektorientiert, d.h. Daten werden in Instanzvariablen gespeichert und Funktionalität ist in Instanzmethoden implementiert. Die `main`-Funktion dient nur als Testrahmen.
 
-1. Erstellen Sie eine Klasse `Skript1c_PersonBsort`. Erstellen Sie nun eine Klasse `Person` mit den Attributen `Vorname`, `Nachname` und `Geburtsjahr`. Der Konstruktor der Klasse `Person` übergibt alle diese Parameter. 
+1. Erstellen Sie eine Klasse `Skript1c_PersonBsort`. Erstellen Sie nun eine Klasse `Person` mit den Attributen `vorname`, `nachname` und `geburtsjahr`. Der Konstruktor der Klasse `Person` übernimmt alle diese Parameter. 
 
-2. Erstellen Sie eine Klassenvariable `Person[] personenArray`. Diese soll in einer Klassenfunktion `readPersonFile` mit den Personen aus das Datei `daten.csv` gefüllt werden (siehe `Skript1_SimpleCsvReader`). Beachten Sie, dass die Anzahl der Personen variabel ist und am Ende der Funktion der Array `personenArray` nur gültige Werte enthält. 
+2. Erstellen Sie eine Instanzvariable `Person[] personenArray`. Diese soll in einer Instanzfunktion `readPersonFile` mit den Personen aus das Datei `daten.csv` gefüllt werden (siehe `Skript1_SimpleCsvReader`). Beachten Sie, dass die Anzahl der Personen variabel ist und am Ende der Funktion das Array `personenArray` nur gültige Werte enthält. 
 
 3. Erstellen Sie eine Sortierfunktion, die Ihren Array nach dem Nachnamen *absteigend* sortiert. Geben Sie `personen` vor und nach dem Sortieren aus.
 

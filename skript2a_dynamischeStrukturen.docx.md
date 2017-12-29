@@ -1,17 +1,17 @@
-Dynamische Datenstrukturen: Verkettete Liste
-============================================
-Lernziele {#lernziele_vk}
---------------
-- kennen den Unterschied zwischen Wertevariablen und
+#Dynamische Datenstrukturen: Verkettete Liste
+
+##Lernziele {#lernziele_vk}
+
+- Kennen des Unterschieds zwischen Wertevariablen und
     Referenzvariablen / Zeigervariablen.
-- kennen Sprachmittel einer Programmiersprache für das Deklarieren
+- Kennen von Sprachmitteln einer Programmiersprache für das Deklarieren
     und das Arbeiten mit Werte- und Referenzvariablen.
-- beschreiben das Konzept und den Nutzen von
+- Beschreiben des Konzepts und den Nutzen von
     verketteten Datenstrukturen.
-- zeichen eine Notation für die Darstellung von
+- Zeichen einer Notation für die Darstellung von
     verketteten Datenstrukturen.
-- implementieren eine einfach verkettete Liste
-- sortieren einfach verkettete Listen
+- Implementieren einer einfach verketteten Liste
+- Sortieren einfach verketteter Listen
 
 ##Eine elementare Datenstruktur: Verkettete Liste
 
@@ -28,11 +28,11 @@ Positionsindex nicht möglich. Das erklärt sich aus der internen Struktur der v
 
 Jedes Element der einfach verketteten Liste enthält neben dem
 eigentlichen Wert die Speicheradresse des nächsten Listenelements. Die
-Speicheradresse nennt man in der C / C++ Welt auch Zeiger. Der *Zeiger*
+Speicheradresse nennt man in der C/C++ Welt auch Zeiger. Der *Zeiger*
 ist damit die Verknüpfung oder das Bindeglied innerhalb der Liste, durch
 den jedes Element das nächste Element kennt.
 
-Ein Element ist somit ein Knoten (*Node*), welches durch Verkettung bzw.
+Ein Element ist somit ein Knoten (*Node*), welcher durch Verkettung bzw.
 Verknüpfung auf den nächsten Knoten verweist (*next*). 
 
 Der Zugriff auf eine VK erfolgt grundsätzlich vom ersten Element der Liste (*head*). Daraus folgt, dass eine VK immer von Anfang an durchschritten werden muss, bis das gewünschte Element an einer bestimmten Position geliefert werden kann.
@@ -46,20 +46,19 @@ Vorgängerelement.
 
 ###Implementierung
 
-In einer objektorientierten Sprache ist die Implementierung von verketteten Listen nicht
-sehr schwierig.
+In einer objektorientierten Sprache ist die Implementierung von verketteten Listen nicht sehr schwierig.
 
 **Die Node-Klasse**
 
 Wir beginnen mit dem Node-Object als innere Klasse, welche die
 Knotenabstraktion definiert:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 private class Node{
 	Item item;
 	Node next;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Ein `Node`-Objekt besitzt zwei Instanzvariablen: eine vom abstrakten Typ
 `Item` (ein parametrisierter Typ, den Sie selber bestimmen können) und
@@ -73,7 +72,7 @@ darauf erhalten sollen.
 
 **Beispiel für die innere Klasse:**
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 private class Node{
 	//these are private
 	private Object item;
@@ -91,12 +90,11 @@ private class Node{
 		item = value;
 	}
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
+```
 
 Die Instanzvariable `item` wird in unserem Beispiel als `Object`
 Datentyp deklariert und kann damit alle von Object abgeleiteten
-Datentypen aufnehmen (also `int, double, String`,...).
+Datentypen aufnehmen (also `Integer, Double, String`,...).
 
 Der Basis-Konstruktor setzt das nächste Element auf *null*, weil es nur
 das aktuelle Element initialisiert. Die Klasse `Node` hat natürlich auch
@@ -109,7 +107,7 @@ handelt.
 Ausserhalb der inneren Klasse implementieren wir die eigentliche Klasse
 `MyLinkedList`, in welcher die Node-Objekte verkettet werden:
 
-~~~~~~~~~~~~~~~~~~~~~~~
+```
 public class MyLinkedList {
 	private Node head; //reference to the head node
 	private int listCount; //counter used for looping
@@ -123,11 +121,11 @@ public class MyLinkedList {
 	}
 …
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Ganz wichtig ist, dass im Konstruktor eine Liste mit einem Element
 erstellt wird. Wir verwenden dabei das vorderste Element (`head`). Das
-vorderste Element hat noch keinen Verweis auf ein Nächstes, deshalb
+vorderste Element hat noch keinen Verweis auf ein nächstes, deshalb
 setzen wir den Knoten `next` auf null.
 
 ###Elemente hinzufügen:
@@ -137,7 +135,7 @@ jeweils von `head` ausgehend zunächst das Ende der Liste gesucht werden.
 
 Innerhalb der MyLinkedListKlasse:
 
-~~~~~~~~~~~~~~~~~~~~
+```
 public void append(Object value){
 	Node newElement = new Node(value);
 	Node current = this.head; //set current to head (start) of the list
@@ -151,7 +149,7 @@ public void append(Object value){
 	//increment list counter:
 	listCount++;
 }
-~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Wichtig sind die letzten 4 Zeilen. Das aktuelle Element `current` (dh.
 das letzte) zeigt neu auf ein weiteres Element. Das wird somit zum neuen
@@ -165,10 +163,10 @@ skript2a_ueb01_vk.md
 ## Verkettete Liste vs. Array
 
 Ein grosser Vorteil der verketteten Liste ist die dynamische Grösse. Die
-Anzahl Elemente müssen nicht fix definiert sein. Anderseits ist der
+Anzahl Elemente muss nicht fix definiert sein. Anderseits ist der
 Zugriff in einer verketteten Liste viel mühsamer als in einem Array. In
 einem Array können wir jederzeit via Index direkt auf ein Element
-zugreifen. In der verketteten Liste müssen wir die Liste bis zum
+zugreifen. In der verketteten Liste müssen wir die Liste jeweils bis zum
 gewünschten Element durchschreiten.
 
 

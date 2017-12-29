@@ -2,9 +2,9 @@
 
 **Lernziele**
 
-* üben systematische Vorgehensweise für Problemanalyse.
-* erstellen Algorithmen in einer Programmiersprache.
-* kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen
+* Üben systematische Vorgehensweise für Problemanalyse.
+* Erstellen Algorithmen in einer Programmiersprache.
+* Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen
 
 **Zeit: ** 60 Minuten
 
@@ -18,19 +18,18 @@ der Bubble-Sort hat. Verwenden Sie dabei die `System`-Klasse mit der
 statischen Methode `currentTimeMillis()`. Testen Sie dann die in der
 Tabelle angegebenen Szenarien und komplettieren Sie die Tabelle für Ihr Moduljournal:
 
-  **Elemente**   **Art der Werte**          **n Durchläufe**   **n Tauschoperationen**   **Rechenzeit**
-  -------------- -------------------------- ------------------ ------------------------- ----------------
-  1000           aufsteigende Reihenfolge                                                
-  1000           zufällige Werte                                                         
-  1000           absteigende Reihenfolge                                                 
-  2000           aufsteigende Reihenfolge                                                
-  2000           zufällige Werte                                                         
-  2000           absteigende Reihenfolge                                                 
-  4000           aufsteigende Reihenfolge                                                
-  4000           zufällige Werte                                                         
-  4000           absteigende Reihenfolge                                                 
-  -------------- -------------------------- ------------------ ------------------------- ----------------
-
+ | **Elemente**  | **Art der Werte**          |**n Durchläufe**   |**n Tauschoperationen**   |**Rechenzeit**
+ | --------------| -------------------------- |------------------ |------------------------- |----------------
+ | 1000          | aufsteigende Reihenfolge   |                   |                          | 
+ | 1000          | zufällige Werte            |                   |                          |
+ | 1000          | absteigende Reihenfolge    |                   |                          | 
+ | 2000          | aufsteigende Reihenfolge   |                   |                          |
+ | 2000          | zufällige Werte            |                   |                          |
+ | 2000          | absteigende Reihenfolge    |                   |                          |
+ | 4000          | aufsteigende Reihenfolge   |                   |                          |
+ | 4000          | zufällige Werte            |                   |                          |
+ | 4000          | absteigende Reihenfolge    |                   |                          |
+ 
 	
 **Lösungsvorschlag:**
 	

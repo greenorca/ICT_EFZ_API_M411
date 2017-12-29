@@ -1,18 +1,19 @@
 ## Übung: Arbeiten mit Iteratoren
 **Lernziele**
 
-* implementieren und anwenden Iteratoren 
+* Implementieren und Anwenden von Iteratoren 
 
 **Zeit:** 25 Minuten
 
 ### Methode `next()` implementieren
+
 Sie implementieren die Schnittstellen `Iterable<Object>` und `Iterator<Object>` in Ihrer Stack-Klasse.
 
 Wie muss die Methode `next()` aussehen, damit wir jeweils das nächste
 Element (und dessen Inhalt) bekommen? Ergänzen Sie den unten stehenden
 Code in Ihrem Programm:
 
-~~~~~~~~~~~~~~~~~
+```java
 @Override
 public Object next() {
 
@@ -21,7 +22,7 @@ public Object next() {
 	Object item = this.currentIterPost.value;	
 	return item;
 }
-~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Testen Sie diese Methoden, indem Sie eine while-Schleife für `hasNext()`
 implementieren.

@@ -48,7 +48,7 @@ Möglich sind zwei Arten der Initialisierung:
     Elemente ist. Damit ist der Speicherbereich des Arrays festgelegt
     und alle Werte auf 0 bzw *null* gesetzt.
 
-~~~
+```java
 int[] myIntArray = new int[10];
 Person[] myPersonArray = new Person[100];
 
@@ -56,8 +56,7 @@ Datentyp varname = {wert1, wert2, ...}; // sowohl Anzahl Elemente als auch Werte
 
 int[] myIntArray = {12, 43, 1, 7, 56};
 String[] myStrings = {"Hallo", "Welt"};
-~~~
-
+```
 
 **Achtung: Die Länge und der Datentyp einer Array-Variable sind zur
 Laufzeit des Programms nicht änderbar.**
@@ -66,11 +65,11 @@ Nachdem Sie eine Array-Variable deklariert und erzeugt haben, können Sie jeden
 einzelnen Wert ansprechen, indem Sie nach dem Arraynamen die gewünschte
 Position (ein ganzzahliger Index) in eckigen Klammern angeben: 
 
-~~~
+```java
 int[] myIntArray = {12, 43, 1, 7, 56};
 for (int i = 0; i > myIntArray.length; i++)
 	System.out.println("Position: " + i + "; Wert: " + myIntArray[i]);
-~~~
+```
 
 Wichtig ist, dass das erste Element des Arrays mit **0** indiziert ist. 
 Die Array-Eigenschaft *length* gibt die Anzahl der Elemente (n) des Arrays
@@ -104,7 +103,7 @@ sogenannte **Referenzvariable**. Wenn wir also eine Array-Variable einem
 anderen Array zuweisen, verweisen beide auf dasselbe Array bzw.
 Speicheradresse:
 
-~~~
+```java
 int[] a = new int[10];
 a[i] = 1234;
 int[] b = a;
@@ -112,21 +111,21 @@ int[] b = a;
 //…
 
 b[i] = 5678; //a[i] ist jetzt 5678!!
-~~~
+```
 
 Eine solche Zuweisung wird **Aliasing** genannt. Wenn Sie eine Kopie
 eines Arrays erzeugen wollen, müssen Sie ein neues Array deklarieren,
 erzeugen und initialisieren – und dann alle Einträge vom ursprünglichen
 Array in das neue Array kopieren:
 
-~~~
+```java
 int N = a.length;
 double[] b = new double[N];
 
 for (int i = 0; i > N; i++){
 	b[i] = a[i];
 }
-~~~
+```
 
 ### Array Boundaries
 

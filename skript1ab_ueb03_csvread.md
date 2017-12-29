@@ -11,11 +11,13 @@
 
 Wir werden eine Textdatei mit folgender Struktur verwenden:
 
-`Huber;Peter;1955`<br>
-`Meier;Irene;1960`<br>
-`Muster;Anna;1974`<br>
-`Kohli;Jan;1998`<br>
-`Manser;Mario;1999`
+```
+Huber;Peter;1955
+Meier;Irene;1960
+Muster;Anna;1974
+Kohli;Jan;1998
+Manser;Mario;1999
+```
 
 Speichern Sie obigen Text als Datei im Projektordner mit dem Namen `daten.csv` ab.
 
