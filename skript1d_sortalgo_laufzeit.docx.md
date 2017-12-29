@@ -1,5 +1,4 @@
-Elementare Algorithmen und Laufzeit-Analysen
-=============================================
+# Elementare Algorithmen und Laufzeit-Analysen
 
 **Lernziele:**
 
@@ -11,8 +10,8 @@ Elementare Algorithmen und Laufzeit-Analysen
 * Sie schätzen die Laufzeit-Komplexität eines Algorithmus ab.
 
 
-Der Bubble-Sort Algorithmus
--------------------------------------------------
+## Der Bubble-Sort Algorithmus
+
 Das Sortieren gehört zu den Standard-Abläufen in der Informatik und
 reicht von simplen Datensätzen zu grossen Datenvolumen. Es gibt sehr
 viele Sortier-Algorithmen. Den Klassiker *BubbleSort* werden wir hier näher betrachten:
@@ -132,18 +131,17 @@ Algorithmus zur Laufzeit benötigen.
 Die folgende Tabelle illustriert die wichtigsten Komplexitätsklassen von
 Algorithmen.
 
-**f(n)**                         **f(10)**   **f(100)**   **f(1000)**   **f(10000)**
----------------- --------------- ----------- ------------ ------------- --------------
-1                konstant        1           1            1             1
-log~2~(n)        logarithmisch   3           7            10            13
-n                linear          10          100          1000          10^4^
-n \* log~2~(n)                   30          700          10^4^         13 \* 10^4^
-n^2^             quadratisch     100         10^4^        10^6^         10^8^
-n^3^             kubisch         1000        10^6^        10^9^         10^12^
-2^n^             exponentiell    1000        10^30^       10^300^       10^3000^
+|**f(n)**        |               | **f(10)** | **f(100)** | **f(1000)** | **f(10000)** |
+|----------------|---------------|-----------|------------|-------------|--------------|
+|1               | konstant      | 1         | 1          | 1           | 1
+|log~2~(n)       | logarithmisch | 3         | 7          | 10          | 13
+|n               | linear        | 10        | 100        | 1000        | 10^4^
+|n \* log~2~(n)  |               | 30        | 700        | 10^4^       | 13 \* 10^4^
+|n^2^            | quadratisch   | 100       | 10^4^      | 10^6^       | 10^8^
+|n^3^            | kubisch       | 1000      | 10^6^      | 10^9^       | 10^12^
+|2^n^            | exponentiell  | 1000      | 10^30^     | 10^300^     | 10^3000^
 
-Komplexitätsklassen und Beispiele, nach M.Wirsing; LMU
-München 2008
+* Komplexitätsklassen und Beispiele, nach M.Wirsing; LMU München 2008 *
 
 ```include
 skript1d_ueb02_laufzeitanalyse.md
