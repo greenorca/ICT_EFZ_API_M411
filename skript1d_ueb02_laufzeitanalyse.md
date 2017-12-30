@@ -7,13 +7,14 @@
 
 **Hilfsmittel:** Skript, kein PC
 
-**Aufgabe: ** 
+**Aufgabe:** 
 Bestimmen Sie die Laufzeit und Komplexitätsklasse der folgenden drei
 Algorithmen. Schreiben Sie den Rechenweg vollständig unter oder neben
 die Funktionen.
 
 a) 
-~~~~~~~~~~~~~~~~~~~~~~~
+
+```
 public int[][] calcCrossProduct(int[] vector){
 	int[][] result = new int[vector.length][vector.length];
 	for (int i=0; i < vector.length;i++)
@@ -22,24 +23,26 @@ public int[][] calcCrossProduct(int[] vector){
 	
 	return result;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-<br/><br/><hr/>
 <br/>
-
+<br/>
 <hr/>
-<br/>
 
+<br/>
 <hr/>
-<br/>
 
+<br/>
 <hr/>
+
 <br/>
+<hr/>
 
-
+<br/>
 	
-b) 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+b)
+ 
+```
 public float getMean(int[] arr){
 	int sum = 0;
 	for (int i : arr)
@@ -47,22 +50,26 @@ public float getMean(int[] arr){
 
 	return sum/arr.length;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-<br/><br/><hr/>
 <br/>
-
-<hr/>
 <br/>
-
 <hr/>
+
 <br/>
-
 <hr/>
+
+<br/>
+<hr/>
+
+<br/>
+<hr/>
+
 <br/>
 
 c)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+```
 // arr must be sorted before
 public int findBinary(int [] arr, int search){
 	int index = (int) Math.floor(arr.length/2);
@@ -79,16 +86,19 @@ public int findBinary(int [] arr, int search){
 
 	return index;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
-<br/><br/><hr/>
 <br/>
-
-<hr/>
 <br/>
-
 <hr/>
+
 <br/>
-
 <hr/>
+
+<br/>
+<hr/>
+
+<br/>
+<hr/>
+
 <br/>

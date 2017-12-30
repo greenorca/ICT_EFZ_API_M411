@@ -1,20 +1,19 @@
-Dynamische Datenstrukturen II: Stacks und Queues
-==========================================
+# Dynamische Datenstrukturen II: Stacks und Queues
 
-Lernziele {#lernziele_stacks_queues}
------------
-* beschreiben Eigenschaften der Datenstruktur Stack (Stapel) und Queue
-* einsetzen Datenstrukturen Stack und Queue
-* implementieren und anwenden Interface `Iterator`
+## Lernziele {#lernziele_stacks_queues}
 
-Die verkettete Liste als Stapel-Speicher
----------------------------------------------------
+* Beschreiben Eigenschaften der Datenstruktur Stack (Stapel) und Queue
+* Einsetzen Datenstrukturen Stack und Queue
+* Implementieren und Anwenden Interface `Iterator`
+
+## Die verkettete Liste als Stapel-Speicher
+
 
 Mit Hilfe der *verketteten Liste*, können wir eine weitere häufig
 benützte Datenstruktur mit speziellen Eigenschaften umsetzen: den
 Stapel, bzw. Stack.
 
-Der Stack arbeitet nach dem LIFO-Prinzip ("last in – first out"). Als
+Der Stack arbeitet nach dem LIFO-Prinzip ("**L**ast **I**n – **F**irst **O**ut"). Als
 Analogie können Sie sich den Stack wie einen Stapel Teller in der Mensa
 vorstellen:
 
@@ -24,9 +23,8 @@ vorstellen:
 
 Die Grundoperationen für einen Stack sind:
 
-*push* -&gt; ein Element zuoberst hinzufügen
-
-*pop* -&gt; das Element zuoberst entfernen
+- *push* -&gt; ein Element zuoberst hinzufügen
+- *pop* -&gt; das Element zuoberst entfernen
 
 Praktische Anwendung finden Stack-Datenstrukturen beispielsweise in
 *UNDO* Funktionen von Bild- und Dokumentbearbeitungsprogrammen. Weniger
@@ -43,7 +41,7 @@ sich sehr gut, um einen Stack umzusetzen. Wir schreiben somit eine
 `Stack`-Klasse, welche die Datenstruktur der verketteten Liste wieder
 verwendet:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 public class MyStack {
 	//reference to the first element in stack (=last added element)
 	private Node first;
@@ -57,11 +55,11 @@ public class MyStack {
 
 	//TODO:add push and pop methods here
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Wir fügen ein Element zuvorderst in die Kette, mit einer `push` Methode:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 //Adds element to the top of the list
 public void push(Object value){
 	//the new element is the last in the list:
@@ -70,12 +68,12 @@ public void push(Object value){
 	first.setNext(current);
 	listCount++;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Die Funktion `pop` entnimmt das oberste Element der Liste und gibt es
 zurück:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 //Removes top element from stack
 public Object pop(){
 	Object value = first.value;
@@ -83,17 +81,17 @@ public Object pop(){
 	listCount--;
 	return value;
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 Ein Aufruf in der main-Methode sieht somit wie folgt aus:
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```java
 MyStack list = new MyStack();
 list.push("to");
 list.push("be");
 list.push("or");
 list.push("not");
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ```include
 skript2b_ueb01_implementstack.md
@@ -101,7 +99,7 @@ skript2b_ueb01_implementstack.md
 
 ##Die Verkettete Liste als Warteschlange
 
-Eine weitere wichtige Spezialform der Verketteten Liste ist die Warteschlange (engl. Queue). Wie an der Supermarkt-Kasse werden bei einer Queue neue Elemente hinten angehängt. Entfernt werden nur Elemente von vorne. Dabei spricht man vom FIFO (First-In First-Out), im Gegensatz zum LIFO bei der Stack-Datenstruktur. 
+Eine weitere wichtige Spezialform der Verketteten Liste ist die Warteschlange (engl. Queue). Wie an der Supermarkt-Kasse werden bei einer Queue neue Elemente hinten angehängt. Entfernt werden nur Elemente von vorne. Dabei spricht man vom FIFO (**F**irst-**I**n **F**irst-**O**ut), im Gegensatz zum LIFO bei der Stack-Datenstruktur. 
 
 Bedeutende praktische Anwendung für Queues sind beispielsweise Anzeigetafeln für Zugsabfahrten an Bahnhöfen oder Callcenter-Routingsysteme.   
 
@@ -123,11 +121,11 @@ Iteratoren benutzt werden.
 Gewissermassen sind Iteratoren die Vorfahren der foreach-Schleife in
 Java, PHP & Co.
 
-Zum Implementieren des Iterators innerhalb der Verketteten Liste bzw. Stack verwenden wir das Interface (Schnittstelle) `Iterable` und `Iterator`. Damit wird die Wiederverwendbarkeit sichergestellt und die Einarbeitungszeit für externe Programmierer reduziert. Zum Verwenden der Schnittstellen schreiben wir das **implements**
+Zum Implementieren des Iterators innerhalb der Verketteten Liste bzw. Stack verwenden wir die Interfaces (Schnittstelle) `Iterable` und `Iterator`. Damit wird die Wiederverwendbarkeit sichergestellt und die Einarbeitungszeit für andere Programmierer reduziert. Zum Verwenden der Schnittstellen schreiben wir das **implements**
 Schlüsselwort und die beiden Schnittstellennamen in der Klassendeklaration hinter den Klassennamen.
 
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-public class MyStack implements Iterable<Object>, Iterator<Object>{
+```java
+public class MyStack implements Iterable<Object>, Iterator<Object> {
 
 	//reference to the first element in stack (=last added element)
 	private Node first;
@@ -135,26 +133,26 @@ public class MyStack implements Iterable<Object>, Iterator<Object>{
 
 	//…
 }
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+```
 
 `Iterable<Object>` und `Iterator<Object>` sind sogenannte
 generische Schnittstellen. D.h sie können auf verschieden Datentypen
-innerhalb der implementierenden Datenstruktur angewandt werden. Für eine Liste mit Elementen der Klasse `Person` spezialisieren Sie die Schnittstelle entsprechend: `public class MyStack implements Iterable<Person>, Iterator<Person>`.
+innerhalb der implementierenden Datenstruktur angewandt werden. Für eine Liste mit Elementen der Klasse `Person` spezialisieren Sie die Schnittstelle entsprechend: `public class MyStack implements Iterable<Person>, Iterator<Person> {...}`.
 
 Für die Generischen Schnittstellen in unserer Datenstruktur benutzen wir also den gleichen Datentyp wie in der
-Node-Klasse enthalten. Zusätzlich benötigen wir eine neue `Stack`-Klassenvariable zur Verwaltung der aktuellen Listenpostion: `currentIterPos`. `currentIterPos` ist vom Datentyp `Node`.
+Node-Klasse enthalten. Zusätzlich benötigen wir eine neue `Stack`-Instanzvariable zur Verwaltung der aktuellen Listenpostion: `currentIterPos`. `currentIterPos` ist vom Datentyp `Node`.
 
 Das Interface `Iterable` verlangt, dass wir die Methode `public
 Iterator<Object> iterator()` innerhalb der Klasse MyStack
 implementieren. Nichts einfacher als das:
 
-~~~~~~~~~~~~~~~~~
+```java
 public Iterator<Object> iterator(){
 
 	this.currentIterPos = this.head; //set current position=top of stack
 	return this;
 }
-~~~~~~~~~~~~~~~~~
+```
 
 Das Interface `Iterator` verlangt zwingend, dass folgende Methoden
 implementiert sind:
@@ -171,12 +169,12 @@ Uns interessiert vor allem `hasNext()` und `next()`. Für `hasNext()`
 prüfen wir, ob das aktuelle Element noch einen Nachfolger hat. Das sieht
 dann wie folgt aus:
 
-~~~~~~~~~~~~~~~~~~~~~~
+```java
 @Override
 public boolean hasNext() {
 	return this.currentIterPos.next != null; // return false if null
 }
-~~~~~~~~~~~~~~~~~~~~~~
+```
 
 ```include
 skript2b_ueb02_iteratoren.md

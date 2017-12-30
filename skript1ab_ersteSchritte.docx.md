@@ -55,13 +55,13 @@ In diesem Modul werden wir mit der Programmiersprache Java SE 8 arbeiten. Voraus
 
 Zur Verwaltung der Datenstrukturen werden spezielle Funktionen bzw. Algorithmen benötigt. Wichtige Beispiele sind Such- und Sortier-Algorithmen. Wie immer in der Informatik gibt es verschiedene Wege, solche Algorithmen zu programmieren, und entsprechend kann die Laufzeit stark variieren. Sie lernen, einfache Sortier-Algorithmen selbst zu implementieren und deren Rechenzeit abzuschätzen.
 
-Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen in der java.utils Bibliothek implementiert.
+Die meisten Programmiersprachen liefern häufig benötigte Datenstrukturen und die dazugehörigen Algorithmen gleich mit. Damit wird der Aufwand für die Implementierung und das Testen in der Software-Entwicklung massiv reduziert. In der Programmiersprache Java sind diese Datenstrukturen im Paket `java.utils` implementiert.
 
 Abschliessend werden wichtige moderne Datenstrukturen und dafür benötigte Methoden vorgestellt. Sie kommunizieren mit Web-Services und lernen die wichtigsten Datenformate des Internets und deren Auswertefunktionen kennen.
 
 ## Wichtige Hinweise für Lernende
 
-Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zu hause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
+Programmieren lernt man nicht nur vom Zuhören, sondern insbesondere vom selbstständigen (und häufigen) Ausprobieren, Anwenden. Fehler machen gehört dazu, aus denen lernen Sie am meisten. Ihren Erfolg können Sie sichern, indem Sie alle Übungsaufgaben zuhause selbstständig nach den entsprechenden Lektionen bearbeiten. Übung macht den Meister!
 
 Die Aufgaben sind normalerweise für Konsolen-Anwendungen gestellt, weil diese schneller zu erstellen sind. Insbesondere die erstellten Klassen späterer Aufgaben können Sie leicht in eigene *SWING* oder *Java-FX* GUIs einbinden.  
 
@@ -73,18 +73,17 @@ Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beisp
 */
 public class Genius{
 
-    /**
-    * answers a question
-    * @param question is the query
-    * @return the answer to the question of Life, the Universe and everything
-    */
-    public int answerQuestion(String question){
-        System.sleep(7.5e6 * 365 * 24 * 60 * 60 * 1000); // wait 7.5 Mio years
-        return 42;
-    }
+	/**
+	 * answers a question.
+	 * @param question is the query
+	 * @return the answer to the question of Life, the Universe and everything
+	 */
+	public int answerQuestion(String question){
+    System.sleep(7.5e6 * 365 * 24 * 60 * 60 * 1000); // wait 7.5 Mio years
+		return 42;	
+	}
 }
 ```
-
 
 ## Handlungsziele nach ICT-Vorgaben (BiVo 2014)
 
@@ -93,13 +92,13 @@ public class Genius{
   + Kennt Sprachmittel einer Programmiersprache für das Deklarieren und das Arbeiten mit Werte- und Referenzvariablen.
   + Kennt Konzept und Nutzen von verketteten Datenstrukturen.
   + Kennt eine Notation für die Darstellung von verketteten Datenstrukturen.
-<hr/>    	 
+		<hr/>
 2. **Ein Problem analysieren und einen geeigneten Algorithmus zur Lösung mit den Grundelementen Zuweisung, Verzweigung und Schleife entwerfen und mit Prozeduren und Funktionen umsetzen.**
   + Kennt eine systematische Vorgehensweise für die Analyse eines Problems.
   + Kennt die Grundelemente von Algorithmen und deren Umsetzung in einer Programmiersprache.
   + Kennt die Sprachmittel einer Programmiersprache für das Deklarieren und Aufrufen von Funktionen und Prozeduren.
   + Kennt Notationen um Algorithmen darzustellen wie z.B. Struktogrammen, PAP usw.
-    	<hr/> 
+    	<hr/>
 3. **Algorithmen und Datenstrukturen hinsichtlich Speicher- und Zeitkomplexität analysieren und dokumentieren.** 	
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
   + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
@@ -110,7 +109,7 @@ public class Genius{
   + Kennt den Aufbau von iterativen Algorithmen.
   + Kennt den Aufbau von rekursiven Algorithmen.
   + Kennt Vor- und Nachteile sowie geeignete Einsatzgebiete des iterativen und des rekursiven Ansatzes.
-    	<hr/> 
+    	<hr/>
 5. **Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können.** 	
   + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
   + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
@@ -127,7 +126,8 @@ public class Genius{
 
 Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
-+---------------------+------------------------------------------------------+
+| Block				  | Thema                                                |
+|:--------------------|:-----------------------------------------------------|
 |**Lektion 1 -4**     |- einfache Klassen; main Methode                      |
 |                     |- Eingabe-/Ausgabe für Konsole und Dateien            |
 +---------------------+------------------------------------------------------+
@@ -143,16 +143,13 @@ Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 |                     | - HashMaps                                           |
 +---------------------+------------------------------------------------------+
 |**Lektion 21 – 24**  | - Miniprojekt                                        |
-+---------------------+------------------------------------------------------+
 |**Lektion 25 – 32**  | - Rekursion (Übung SnippetSearch)                    |
-|                     |                                                      |
-+---------------------+------------------------------------------------------+
 |**Lektion 33 – 36**  | - JSON mit Web-Services                              |
 |                     | - optional XML                                       |
 +---------------------+------------------------------------------------------+
 |**Lektion 37 – 40**  | - LB                                                 |
 |                     | - Review Modul                                       |
-+---------------------+------------------------------------------------------+
+
 
 ## Hinweis für Verbesserungen
 
@@ -162,7 +159,6 @@ Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt.
 
 
 # Klassen erstellen
-
 
 ## Lernziele
 
@@ -188,7 +184,6 @@ public class WelcomeMessage{
 }
 ```
 
-
 Ein Java-Programm wird immer so ausgeführt, dass die main-Methode einer bestimmten Klasse aufgerufen wird. Diese muss genau so deklariert sein, wie Sie der ersten Zeile sehen. In der main-Methode (ein neuer Name für Funktion) wird dann üblicherweise ein Objekt erzeugt, in unserem Beispiel in Zeile 7. Von diesem Objekt werden dann Methoden aufgerufen, z.B. Zeile 8 und 9.
 
 ```include
@@ -198,23 +193,22 @@ skript1ab_ueb01_javaide.md
 
 # Ein- und Ausgabe über die Konsole
 
-
 ## Ausgabe
 
 Im obigen kleinen Beispiel haben Sie schon gesehen, wie Text auf der
 Konsole ausgegeben werden kann, nämlich mit der Methode
 `System.out.println`. Vielleicht ist Ihnen auch aufgefallen, wie Texte
-einfach mit + zusammengesetzt werden. Das Gleiche gilt auch für
+einfach mit `+` zusammengesetzt werden. Das Gleiche gilt auch für
 Zahlenwerte, wie das folgende Beispiel zeigt:
 
 ```java
 int a = 5;
 int b = 6;
 
-System.out.println("Die Summe von "+ a +" und "+ b +" ist "+(a+b));
+System.out.println("Die Summe von " + a + " und " + b + " ist " + (a+b));
 ```
 
-Wie sieht die Ausgabe aus, wenn Sie beim Ausdruck (a+b) die Klammern
+Wie sieht die Ausgabe aus, wenn Sie beim Ausdruck `(a+b)` die Klammern
 weglassen? Probieren Sie das aus und erklären Sie Ihre Beobachtungen.
 
 ## Eingabe
@@ -264,8 +258,7 @@ aussehen, welche alle Zeilen einliest und auf der Konsole ausgibt?
 ### Erstellen eines BufferedReader
 
 Zum Instantiieren eines `BufferedReader`-Objekts müssen wir im Konstruktor angeben, von
-welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir
-zunächst eine `BufferedReader` Instanz.
+welcher Quelle gelesen werden soll. In unserem Fall sollen Text-Dateien gelesen werden. Entsprechend ist die Quelle ein `FileReader`-Objekt. Der Konstruktor der `FileReader`-Klasse erfordert den Pfad zum zu lesenden File als String. Mit der Instanz des `FileReader` als Parameter erstellen wir zunächst eine `BufferedReader` Instanz.
 
 ```java
 String fileName = "C:\tmp\daten.csv";
@@ -280,8 +273,7 @@ catch(FileNotFoundException ioex){
 }
 ```
 
-Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block
-(zu Exceptions ausführlich mehr später). 
+Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block (zu Exceptions ausführlich mehr später). 
 
 
 ### BufferedReader oder Scanner?
@@ -302,7 +294,7 @@ Die Unterschiede beim Einlesen einzelner Zeilen aus Text-Dateien sind:
 <tr>
 <td>
 
-~~~
+```java
 Scanner input = null;
 try {
  File f = new File("C:/tmp/1.csv");
@@ -316,12 +308,12 @@ try {
 catch (Exception ex) {
  ex.printStackTrace(); 
 } 
-
-~~~
+```
 </td>
 
 <td>
-~~~
+
+```java
 BufferedReader bfr = null;
 try {
  String inputLine;
@@ -347,8 +339,9 @@ finally {
    ex.printStackTrace();
  }
 }
-~~~
+```
 </td>
+
 </tr>
 </table>
 
@@ -372,22 +365,23 @@ ein Tabulator gebräuchliche Trennzeichen.
 
 Eine CSV Datei mit Personendaten kann beispielsweise so aussehen:
 
-`Huber;Peter;1955`<br>
-`Meier;Irene;1960`<br>
-`Muster;Anna;1974`
+```
+Huber;Peter;1955
+Meier;Irene;1960
+Muster;Anna;1974
+```
 
 Nach dem Auslesen einer Zeile wird der String, welcher eine Zeile enthält, mit der `lineSplit()`
 Methode zerlegt. 
 
-
-~~~
-String line = "Huber;Peter;1955";	// contains one line which must be processed
-String[] lineParts = line.split(";"); // split line at occurences of semicolon
+```java
+String line = "Huber;Peter;1955";	     // contains one line which must be processed
+String[] lineParts = line.split(";");    // split line at occurences of semicolon
 // loop over all parts of the line
 for (String p: lineParts ) {
 	System.out.println(p);
 }
-~~~
+```
 
 ### Nummerische Werte behandeln
 
@@ -396,41 +390,40 @@ eingelesen, wie alle anderen Zeichenketten auch. Solange wir damit nicht
 rechnen wollen, spielt das auch keine Rolle. Meistens ist aber nötig, diese Felder in richtig Zahlen umzuwandeln.
 Dazu dienen die entsprechenden `parse`-Methoden der Klassen `Integer` und `Double`:
 
-~~~
+```java
 String x = "42";
 String y = "3.14";
 int intVal = Integer.parseInt(x);
 double doubleVal = Double.parseDouble(doubleStr);
-~~~
+```
 
 ```include
 skript1ab_ueb03_csvread.md
 ```
 
-
 ## Daten strukturiert in ein File schreiben
 
 Die geeignetste Klasse zum Schreiben von Textdateien ist `PrintWriter`.
-Einem neuen `PrintWriter-Objekt` (`prnt`) wird beim Erstellen ein
+Einem neuen `PrintWriter-Objekt` wird beim Erstellen ein
 String mit dem Pfad und Dateinamen oder ein `File`-Objekt übergeben. Das Objekt stellt die Methode `write` zur Verfügung. Diese ähnelt der Klasse `PrintStream`, mit der Sie
 beispielsweise bei `System.out.println` arbeiten.
 
-~~~
+```java
 public static void main(String[] args) {
-    try {
-            PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");
-            String[] names = {"Alpha","Beta","Gaga"};
-            int i = 0;
-            for (String n : names){
-                    prnt.write(""+i+";"+n+System.lineSeparator());
-                    i++;
-            }
-            prnt.close();
-    } catch (IOException e) {
-            e.printStackTrace();
-    }
+	try {
+		PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
+		String[] names = {"Alpha","Beta","Gaga"};
+		int i = 0;
+		for (String n : names){
+			prnt.write(""+i+";"+n+System.lineSeparator());
+			i++;
+		}
+		prnt.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
 }
-~~~
+```
 
 ```include
 skript1ab_ueb04_csvwrite.md

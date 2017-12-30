@@ -2,9 +2,9 @@
 
 **Lernziele:**
 
-* erstellen eigene verkettete Liste
-* anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
-* anwenden objektorientierte Programmierparadigmen 
+* Erstellen eigene verkettete Liste
+* Anwenden Sortieralgorithmen für komplexe benutzerdefinierte Klassen
+* Anwenden objektorientierte Programmierparadigmen 
 
 **Zeit:** 60 Minuten
 

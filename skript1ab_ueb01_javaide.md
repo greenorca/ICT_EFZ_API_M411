@@ -1,8 +1,8 @@
 ## Übung: Java IDE und Ein-/Ausgaben
 **Lernziele:**
 
-* beherrschen den Umgang mit einer Entwicklungsumgebung
-* einlesen und verarbeiten Benutzer-Eingaben
+* Beherrschen des Umgangs mit einer Entwicklungsumgebung
+* Einlesen und verarbeiten von Benutzer-Eingaben
 
 **Zeit:** 45 Minuten
 
