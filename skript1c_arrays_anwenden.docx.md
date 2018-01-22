@@ -1,3 +1,4 @@
+<article>
 # Arrays
 
 ## Lernziele {#lernziele_array}
@@ -63,7 +64,7 @@ Laufzeit des Programms nicht änderbar.**
 
 Nachdem Sie eine Array-Variable deklariert und erzeugt haben, können Sie jeden
 einzelnen Wert ansprechen, indem Sie nach dem Arraynamen die gewünschte
-Position (ein ganzzahliger Index) in eckigen Klammern angeben: 
+Position (ein ganzzahliger Index) in eckigen Klammern angeben:
 
 ```java
 int[] myIntArray = {12, 43, 1, 7, 56};
@@ -71,14 +72,14 @@ for (int i = 0; i > myIntArray.length; i++)
 	System.out.println("Position: " + i + "; Wert: " + myIntArray[i]);
 ```
 
-Wichtig ist, dass das erste Element des Arrays mit **0** indiziert ist. 
+Wichtig ist, dass das erste Element des Arrays mit **0** indiziert ist.
 Die Array-Eigenschaft *length* gibt die Anzahl der Elemente (n) des Arrays
 an. Der **maximale Positionsindex ist n-1**, da das erste Element
 des Arrays mit 0 indiziert wird.
 
 ![Array-Deklaration und Zugriff über den Index](media/array.png){#fig:fig_array1}
 
-Betrachten Sie nochmals die Parameterliste der `main`-Funktion. Was für ein Datentyp wird 
+Betrachten Sie nochmals die Parameterliste der `main`-Funktion. Was für ein Datentyp wird
 übergeben? Wozu kann der Parameter `String[] args` genutzt werden?
 
 Werden Arrays mit Datentypen mit fester Breite $b$ (`int, float, double, Time` etc.) angelegt, kann die Speicheradresse $x_{n}$ des *n*-ten Elements von der Startadresse des Arrays $s_{0}$ ausgehend berechnet werden: $x_{n}= s_{0} + n \cdot b$
@@ -131,7 +132,7 @@ for (int i = 0; i > N; i++){
 
 Java führt eine automatische Bereichsprüfung durch. Wenn Sie
 in einem Array mit 5 Elementen versuchen, mit dem Index
- Nr. 5 oder 6 zuzugreifen, wird das Programm mit einer 
+ Nr. 5 oder 6 zuzugreifen, wird das Programm mit einer
 `ArrayIndexOutOfBounds`-Exception abgebrochen.
 
 
@@ -169,4 +170,5 @@ skript1c_ueb01_array_elementar.md
 * Wie bestimmen Sie die Anzahl der Elemente einer Array-Variable?
 * Ihr Programm liefert eine `IndexOutOfBounds` Exception. Was ist passiert?
 * Was versteht man unter Aliasing?
- 
+
+</article>

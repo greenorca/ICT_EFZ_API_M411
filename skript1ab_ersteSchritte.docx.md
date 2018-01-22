@@ -1,18 +1,17 @@
 <!--
 # Requirements:
-PATH=$HOME/.cabal/bin:$PATH
-## numbering for figures (https://github.com/tomduck/pandoc-fignos#installation) 
+## numbering for figures (https://github.com/tomduck/pandoc-fignos#installation)
 pip3 install --upgrade pandoc-fignos
 
 #BULK convert from DOCX with image export in separate directories
 n=1
-for x in skript*.docx; do 
+for x in skript*.docx; do
 mkdir media$n
 pandoc -s $x -t markdown -o markdownX/$x.md --extract-media=media$n
 n=$((n+1))
 done
 # move the pics from export to markdown directory
-for i in `seq 2 10`; 
+for i in `seq 2 10`;
 	do mkdir media$i
 	cp ../media$i/media/* media$i/
 done
@@ -24,7 +23,7 @@ echo "text"|cat - yourfile > /tmp/out && mv /tmp/out yourfile
 pandoc -s skript1ab_ersteSchritte.docx.md -o M411_book20171222.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css -N --section -s --mathml --self-contained --filter pandoc-fignos; cp M411_book.html ~/Desktop/WISS/Modul_411/IFZ_524_ZH/m411_skript/
 
 
-pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 --filter pandoc-include -c buttondown.css --section -s --mathml
+pandoc -s skrip*ueb*.md -o M411_toolbox.html -t html5 --toc --toc-depth 2 -c buttondown.css --section -s --mathml
 
 
 # -s: Header (Title, etc)
@@ -68,7 +67,7 @@ Die Aufgaben sind normalerweise für Konsolen-Anwendungen gestellt, weil diese s
 Dokumentieren Sie Ihren Quellcode von Anfang an JavaDoc-kompatibel, wie im Beispiel beschrieben. Damit haben Sie später eine Chance, Ihre brillanten Ideen wieder zu verstehen :-)
 
 ```java
-/** 
+/**
     Genius provides the answer to the question of Life, the Universe and everything
 */
 public class Genius{
@@ -80,7 +79,7 @@ public class Genius{
 	 */
 	public int answerQuestion(String question){
     System.sleep(7.5e6 * 365 * 24 * 60 * 60 * 1000); // wait 7.5 Mio years
-		return 42;	
+		return 42;
 	}
 }
 ```
@@ -103,7 +102,7 @@ public class Genius{
   + Kennt Möglichkeiten zur Analyse von Zeit- und Speicherkomplexität von Algorithmen und Datenstrukturen.
   + Kennt Komplexitätsklassen von Algorithmen (z.B. lineare, exponentielle Komplexität).
   + Kennt Notationen zur Dokumentation der Speicher- und Zeitkomplexität eines Algorithmus.
-    	<hr/> 
+    	<hr/>
 4. **Ein komplexeres Problem auf kleinere Teilprobleme zurückführen und je nach Problemstellung Iteration oder Rekursion einsetzen.** 	
   + Kennt ein Vorgehen bei der Aufteilung eines komplexen Problems in kleinere Teilprobleme.
   + Kennt den Aufbau von iterativen Algorithmen.
@@ -113,7 +112,7 @@ public class Genius{
 5. **Abstrakte Datentypen, wie Liste, Set, Map etc. und die darauf definierten Operationen kennen und zielgerichtet einsetzen können.** 	
   + Kennt eine Programmbibliothek, die ADTs wie Liste, Set, Map, etc. zur Verfügung stellt und deren Anwendung.
   + Kennt Eigenschaften von einzelnen abstrakten Datentypen.
-    	<hr/> 
+    	<hr/>
 6. **Datenstrukturen und Algorithmen mit dem Debugger und weiteren Tools untersuchen und dabei speziell die Situation auf Stack und Heap Analysieren und in geeigneter Form darstellen.** 	
   + Kennt das Speicherlayout für einen Prozess mit den Bereichen Programmcode, globale Variablen, Stack und Heap.
   + Kennt die Anordnung von lokalen Variablen und Parametern in einem Stackframe.
@@ -155,7 +154,7 @@ Die 40 zur Verfügung stehenden Lektionen können wie folgt aufgeteilt werden:
 
 Für Hinweise und Verbesserungsvorschläge besuchen Sie bitte das entsprechende Github-Projekt unter [https://github.com/greenorca/ICT_EFZ_API_M411](https://github.com/greenorca/ICT_EFZ_API_M411).
 
-Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt. 
+Die Lösungsskripte werden nur für Dozenten zur Verfügung gestellt.
 
 
 # Klassen erstellen
@@ -249,7 +248,7 @@ Die Klasse `BufferedReader` aus der *Java Library* stellt die Methode
 
 Diese Methode liefert immer jeweils die nächste ungelesene Zeile von der
 aktuellen Quelle des Readers. Wenn keine Zeilen mehr vorhanden sind gibt
-readLine den Wert null zurück. 
+readLine den Wert null zurück.
 
 Nehmen Sie an, Sie haben in der
 Variablen `br` ein `BufferedReader`-Objekt. Wie könnte eine Schleife
@@ -268,12 +267,12 @@ try{
     BufferedReader br = new BufferedReader(fr);
     //....
 }
-catch(FileNotFoundException ioex){ 
+catch(FileNotFoundException ioex){
     System.out.println("Datei "+fileName+" not found");
 }
 ```
 
-Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block (zu Exceptions ausführlich mehr später). 
+Die Verwendung des `FileReader` kann zu Ausnahmesituationen (`Exceptions`) führen, wenn die angegebene Datei nicht lesbar ist. Setzen Sie Ihren Code entsprechende in einen `try-catch`-Block (zu Exceptions ausführlich mehr später).
 
 
 ### BufferedReader oder Scanner?
@@ -304,10 +303,10 @@ try {
   System.out.println(line);
  }
  input.close();
-} 
+}
 catch (Exception ex) {
- ex.printStackTrace(); 
-} 
+ ex.printStackTrace();
+}
 ```
 </td>
 
@@ -324,17 +323,17 @@ try {
  while ((inputLine = bfr.readLine()) != null) {
    System.out.println(inputLine);
  }
-	
-} 
+
+}
 catch (IOException e) {
    e.printStackTrace();
-} 
+}
 finally {
  try {
   if (bfr != null) {
 	   bfr.close();
   }
- } 
+ }
  catch (IOException ex) {
    ex.printStackTrace();
  }
@@ -347,7 +346,7 @@ finally {
 
 Zum Erstellen einer `Scanner` Instanz verwenden Sie ein `File`-Objekt.
 Der Konstruktor von `BufferedReader` verwendet einen `FileReader`. Bei beiden Varianten
-wird das File zeilenweise in je ein `String`-Objekt eingelesen. 
+wird das File zeilenweise in je ein `String`-Objekt eingelesen.
 
 Beiden Varianten beenden das Lesen mit der Methode `close()`, um
 den Dateizugriff wieder freizugeben und den Eingabestrom zu schliessen.
@@ -372,7 +371,7 @@ Muster;Anna;1974
 ```
 
 Nach dem Auslesen einer Zeile wird der String, welcher eine Zeile enthält, mit der `lineSplit()`
-Methode zerlegt. 
+Methode zerlegt.
 
 ```java
 String line = "Huber;Peter;1955";	     // contains one line which must be processed
@@ -411,7 +410,7 @@ beispielsweise bei `System.out.println` arbeiten.
 ```java
 public static void main(String[] args) {
 	try {
-		PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");	
+		PrintWriter prnt = new PrintWriter("/tmp/gugus.txt");
 		String[] names = {"Alpha","Beta","Gaga"};
 		int i = 0;
 		for (String n : names){
@@ -439,36 +438,5 @@ skript1ab_ueb04_csvwrite.md
 
 [Zurück zum Inhaltsverzeichnis](#TOC)
 
-```include 
-skript1c_arrays_anwenden.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
-```include 
-skript1d_sortalgo_laufzeit.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
-```include 
-skript2a_dynamischeStrukturen.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
-```include 
-skript2b_dynamischeStrukturen.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
 
-```include 
-skript2c_JavaCollections.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
-```include 
-<!--skript2d_miniProjekt.docx.md-->
-skript3_weitereDatenstrukturen.docx.md
-```
-
-[Zurück zum Inhaltsverzeichnis](#TOC)
-```include 
-<!--skript4b_Mandelbrot.docx.md-->
-skript4_rekursionUndBacktracking.docx.md
-```
-[Zurück zum Inhaltsverzeichnis](#TOC)
 </article>
